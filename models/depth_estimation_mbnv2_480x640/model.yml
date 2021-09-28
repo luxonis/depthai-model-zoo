@@ -6,10 +6,10 @@ files:
   - name: FP16/depth_estimation_mbnv2_480x640.xml
     size: 216378
     sha256: 9e332b6262831dd291363160315f009d828d3a7fac658ed7aa1dab144b11cd75
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth-mbnv2/depth_estimation_mbnv2_480x640.xml
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.xml
   - name: FP16/depth_estimation_mbnv2_480x640.bin
     size: 26252162
     sha256: c00c3ebea9417ce2560798ccaa812f265626d6ae095ef42a6293252bd2086ba9
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth-mbnv2/depth_estimation_mbnv2_480x640.bin
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.bin
 framework: dldt
 license: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/149_depth_estimation
