@@ -1,0 +1,15 @@
+description: >-
+  Object Detection, Lane Segmentation, Line Segmentation
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolop_320x320
+task_type: object_detection
+files:
+  - name: FP16/yolop_320x320.xml
+    size: 582488
+    sha256: 96586619ad12e863a0747172aa485d1ca7b1d55f9030bb00a7efffb80bfd3e6d
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolop_320x320/yolop_320x320.xml
+  - name: FP16/yolop_320x320.bin
+    size: 15872074
+    sha256: 43d8c3539605a0cc2e4be5b355c9c2ca0c3544683e1a725cf1071390375d084a
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolop_320x320/yolop_320x320.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolop_320x320
