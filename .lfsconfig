@@ -1,2 +1,2 @@
 [lfs]
-	url = http://69.164.214.171:5000/luxonis/depthai-model-zoo.git
+	url = "https://lukasz@luxonis.com:AP6K4gLNT7MoqzEeU4Fojft8amm@depthailfs.jfrog.io/artifactory/api/lfs/luxonis-gitlfs"
