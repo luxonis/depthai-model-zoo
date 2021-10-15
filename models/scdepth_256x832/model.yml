@@ -1,0 +1,15 @@
+description: >-
+  Depth Estimation
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/scdepth_256x832
+task_type: monocular_depth_estimation
+files:
+  - name: FP16/scdepth_256x832.xml
+    size: 139118
+    sha256: 5addce08f176f6119fca4cd36d579a298cc826dfbea1e7257ccf2d2839acc52e
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/scdepth_256x832/scdepth_256x832.xml
+  - name: FP16/scdepth_256x832.bin
+    size: 28644944
+    sha256: 4656c0da656628c7d155face0449af21a23f3bd920e362124b08bdc393811f89
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/scdepth_256x832/scdepth_256x832.bin
+framework: dldt
+license: https://github.com/JiawangBian/SC-SfMLearner-Release
