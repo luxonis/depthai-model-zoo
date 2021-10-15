@@ -6,10 +6,10 @@ files:
   - name: FP16/mobile_object_localizer_192x192.xml
     size: 305433
     sha256: bab4c34aba0904f3038235b2d3f4f5640de68fd69df3e7095b0b27a0093f428a
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.xml
   - name: FP16/mobile_object_localizer_192x192.bin
     size: 3488504
     sha256: ce1e7e25b6f644b0dcb90ae71a955e6cbc9a7d80632979e9482eb83d9d18fc66
     source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.bin
 framework: dldt
-license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/mobile_object_localizer_192x192
+license: https://tfhub.dev/google/lite-model/object_detection/mobile_object_localizer_v1/1/default/1
