@@ -1,0 +1,13 @@
+name: Update BlobConverter API
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  blobconverter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send update
+        run: curl https://blobconverter.luxonis.com/update
