@@ -2,9 +2,9 @@
 <net name="depth_estimation_mbnv2_240x320" version="10">
 	<layers>
 		<layer id="0" name="input.1" type="Parameter" version="opset1">
-			<data shape="1, 3, 240, 320" element_type="f16"/>
+			<data element_type="f16" shape="1, 3, 240, 320"/>
 			<output>
-				<port id="0" precision="FP16" names="input.1">
+				<port id="0" precision="FP16">
 					<dim>1</dim>
 					<dim>3</dim>
 					<dim>240</dim>
@@ -12,10 +12,10 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="1" name="709" type="Const" version="opset1">
-			<data element_type="f16" shape="32, 3, 3, 3" offset="0" size="1728"/>
+		<layer id="1" name="input.1/scale_copy" type="Const" version="opset1">
+			<data element_type="f16" offset="0" shape="32, 3, 3, 3" size="1728"/>
 			<output>
-				<port id="0" precision="FP16" names="709">
+				<port id="0" names="709" precision="FP16">
 					<dim>32</dim>
 					<dim>3</dim>
 					<dim>3</dim>
@@ -24,7 +24,7 @@
 			</output>
 		</layer>
 		<layer id="2" name="Conv_0/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="2, 2" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="2, 2"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -48,8 +48,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="3" name="Conv_0/Dims3831" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 32, 1, 1" offset="1728" size="64"/>
+		<layer id="3" name="Conv_0/Dims4187" type="Const" version="opset1">
+			<data element_type="f16" offset="1728" shape="1, 32, 1, 1" size="64"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -76,7 +76,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="708">
+				<port id="2" names="708" precision="FP16">
 					<dim>1</dim>
 					<dim>32</dim>
 					<dim>120</dim>
@@ -85,7 +85,7 @@
 			</output>
 		</layer>
 		<layer id="5" name="Clip_3" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -95,7 +95,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="347">
+				<port id="1" names="347" precision="FP16">
 					<dim>1</dim>
 					<dim>32</dim>
 					<dim>120</dim>
@@ -104,9 +104,9 @@
 			</output>
 		</layer>
 		<layer id="6" name="712" type="Const" version="opset1">
-			<data element_type="f16" shape="32, 1, 1, 3, 3" offset="1792" size="576"/>
+			<data element_type="f16" offset="1792" shape="32, 1, 1, 3, 3" size="576"/>
 			<output>
-				<port id="0" precision="FP16" names="712">
+				<port id="0" names="712" precision="FP16">
 					<dim>32</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -116,7 +116,7 @@
 			</output>
 		</layer>
 		<layer id="7" name="Conv_4/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -141,8 +141,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="8" name="Conv_4/Dims4143" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 32, 1, 1" offset="2368" size="64"/>
+		<layer id="8" name="Conv_4/Dims3977" type="Const" version="opset1">
+			<data element_type="f16" offset="2368" shape="1, 32, 1, 1" size="64"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -169,7 +169,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="711">
+				<port id="2" names="711" precision="FP16">
 					<dim>1</dim>
 					<dim>32</dim>
 					<dim>120</dim>
@@ -178,7 +178,7 @@
 			</output>
 		</layer>
 		<layer id="10" name="Clip_7" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -188,7 +188,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="352">
+				<port id="1" names="352" precision="FP16">
 					<dim>1</dim>
 					<dim>32</dim>
 					<dim>120</dim>
@@ -197,9 +197,9 @@
 			</output>
 		</layer>
 		<layer id="11" name="715" type="Const" version="opset1">
-			<data element_type="f16" shape="16, 32, 1, 1" offset="2432" size="1024"/>
+			<data element_type="f16" offset="2432" shape="16, 32, 1, 1" size="1024"/>
 			<output>
-				<port id="0" precision="FP16" names="715">
+				<port id="0" names="715" precision="FP16">
 					<dim>16</dim>
 					<dim>32</dim>
 					<dim>1</dim>
@@ -208,7 +208,7 @@
 			</output>
 		</layer>
 		<layer id="12" name="Conv_8/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -232,8 +232,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="13" name="Conv_8/Dims3957" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 16, 1, 1" offset="3456" size="32"/>
+		<layer id="13" name="Conv_8/Dims4055" type="Const" version="opset1">
+			<data element_type="f16" offset="3456" shape="1, 16, 1, 1" size="32"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -260,7 +260,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="714">
+				<port id="2" names="714" precision="FP16">
 					<dim>1</dim>
 					<dim>16</dim>
 					<dim>120</dim>
@@ -269,9 +269,9 @@
 			</output>
 		</layer>
 		<layer id="15" name="718" type="Const" version="opset1">
-			<data element_type="f16" shape="96, 16, 1, 1" offset="3488" size="3072"/>
+			<data element_type="f16" offset="3488" shape="96, 16, 1, 1" size="3072"/>
 			<output>
-				<port id="0" precision="FP16" names="718">
+				<port id="0" names="718" precision="FP16">
 					<dim>96</dim>
 					<dim>16</dim>
 					<dim>1</dim>
@@ -280,7 +280,7 @@
 			</output>
 		</layer>
 		<layer id="16" name="Conv_9/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -304,8 +304,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="17" name="Conv_9/Dims3951" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 96, 1, 1" offset="6560" size="192"/>
+		<layer id="17" name="Conv_9/Dims4163" type="Const" version="opset1">
+			<data element_type="f16" offset="6560" shape="1, 96, 1, 1" size="192"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -332,7 +332,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="717">
+				<port id="2" names="717" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>120</dim>
@@ -341,7 +341,7 @@
 			</output>
 		</layer>
 		<layer id="19" name="Clip_12" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -351,7 +351,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="359">
+				<port id="1" names="359" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>120</dim>
@@ -360,9 +360,9 @@
 			</output>
 		</layer>
 		<layer id="20" name="721" type="Const" version="opset1">
-			<data element_type="f16" shape="96, 1, 1, 3, 3" offset="6752" size="1728"/>
+			<data element_type="f16" offset="6752" shape="96, 1, 1, 3, 3" size="1728"/>
 			<output>
-				<port id="0" precision="FP16" names="721">
+				<port id="0" names="721" precision="FP16">
 					<dim>96</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -372,7 +372,7 @@
 			</output>
 		</layer>
 		<layer id="21" name="Conv_13/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="2, 2" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="2, 2"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -397,8 +397,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="22" name="Conv_13/Dims4023" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 96, 1, 1" offset="8480" size="192"/>
+		<layer id="22" name="Conv_13/Dims4175" type="Const" version="opset1">
+			<data element_type="f16" offset="8480" shape="1, 96, 1, 1" size="192"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -425,7 +425,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="720">
+				<port id="2" names="720" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>60</dim>
@@ -434,7 +434,7 @@
 			</output>
 		</layer>
 		<layer id="24" name="Clip_16" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -444,7 +444,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="364">
+				<port id="1" names="364" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>60</dim>
@@ -453,9 +453,9 @@
 			</output>
 		</layer>
 		<layer id="25" name="724" type="Const" version="opset1">
-			<data element_type="f16" shape="24, 96, 1, 1" offset="8672" size="4608"/>
+			<data element_type="f16" offset="8672" shape="24, 96, 1, 1" size="4608"/>
 			<output>
-				<port id="0" precision="FP16" names="724">
+				<port id="0" names="724" precision="FP16">
 					<dim>24</dim>
 					<dim>96</dim>
 					<dim>1</dim>
@@ -464,7 +464,7 @@
 			</output>
 		</layer>
 		<layer id="26" name="Conv_17/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -488,8 +488,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="27" name="Conv_17/Dims4179" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 24, 1, 1" offset="13280" size="48"/>
+		<layer id="27" name="Conv_17/Dims4085" type="Const" version="opset1">
+			<data element_type="f16" offset="13280" shape="1, 24, 1, 1" size="48"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -516,7 +516,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="723">
+				<port id="2" names="723" precision="FP16">
 					<dim>1</dim>
 					<dim>24</dim>
 					<dim>60</dim>
@@ -525,9 +525,9 @@
 			</output>
 		</layer>
 		<layer id="29" name="727" type="Const" version="opset1">
-			<data element_type="f16" shape="144, 24, 1, 1" offset="13328" size="6912"/>
+			<data element_type="f16" offset="13328" shape="144, 24, 1, 1" size="6912"/>
 			<output>
-				<port id="0" precision="FP16" names="727">
+				<port id="0" names="727" precision="FP16">
 					<dim>144</dim>
 					<dim>24</dim>
 					<dim>1</dim>
@@ -536,7 +536,7 @@
 			</output>
 		</layer>
 		<layer id="30" name="Conv_18/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -560,8 +560,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="31" name="Conv_18/Dims4059" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 144, 1, 1" offset="20240" size="288"/>
+		<layer id="31" name="Conv_18/Dims4013" type="Const" version="opset1">
+			<data element_type="f16" offset="20240" shape="1, 144, 1, 1" size="288"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -588,7 +588,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="726">
+				<port id="2" names="726" precision="FP16">
 					<dim>1</dim>
 					<dim>144</dim>
 					<dim>60</dim>
@@ -597,7 +597,7 @@
 			</output>
 		</layer>
 		<layer id="33" name="Clip_21" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -607,7 +607,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="371">
+				<port id="1" names="371" precision="FP16">
 					<dim>1</dim>
 					<dim>144</dim>
 					<dim>60</dim>
@@ -616,9 +616,9 @@
 			</output>
 		</layer>
 		<layer id="34" name="730" type="Const" version="opset1">
-			<data element_type="f16" shape="144, 1, 1, 3, 3" offset="20528" size="2592"/>
+			<data element_type="f16" offset="20528" shape="144, 1, 1, 3, 3" size="2592"/>
 			<output>
-				<port id="0" precision="FP16" names="730">
+				<port id="0" names="730" precision="FP16">
 					<dim>144</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -628,7 +628,7 @@
 			</output>
 		</layer>
 		<layer id="35" name="Conv_22/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -653,8 +653,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="36" name="Conv_22/Dims4047" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 144, 1, 1" offset="23120" size="288"/>
+		<layer id="36" name="Conv_22/Dims3911" type="Const" version="opset1">
+			<data element_type="f16" offset="23120" shape="1, 144, 1, 1" size="288"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -681,7 +681,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="729">
+				<port id="2" names="729" precision="FP16">
 					<dim>1</dim>
 					<dim>144</dim>
 					<dim>60</dim>
@@ -690,7 +690,7 @@
 			</output>
 		</layer>
 		<layer id="38" name="Clip_25" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -700,7 +700,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="376">
+				<port id="1" names="376" precision="FP16">
 					<dim>1</dim>
 					<dim>144</dim>
 					<dim>60</dim>
@@ -709,9 +709,9 @@
 			</output>
 		</layer>
 		<layer id="39" name="733" type="Const" version="opset1">
-			<data element_type="f16" shape="24, 144, 1, 1" offset="23408" size="6912"/>
+			<data element_type="f16" offset="23408" shape="24, 144, 1, 1" size="6912"/>
 			<output>
-				<port id="0" precision="FP16" names="733">
+				<port id="0" names="733" precision="FP16">
 					<dim>24</dim>
 					<dim>144</dim>
 					<dim>1</dim>
@@ -720,7 +720,7 @@
 			</output>
 		</layer>
 		<layer id="40" name="Conv_26/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -744,8 +744,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="41" name="Conv_26/Dims4095" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 24, 1, 1" offset="30320" size="48"/>
+		<layer id="41" name="Conv_26/Dims3995" type="Const" version="opset1">
+			<data element_type="f16" offset="30320" shape="1, 24, 1, 1" size="48"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -772,7 +772,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="732">
+				<port id="2" names="732" precision="FP16">
 					<dim>1</dim>
 					<dim>24</dim>
 					<dim>60</dim>
@@ -797,7 +797,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="379">
+				<port id="2" names="379" precision="FP16">
 					<dim>1</dim>
 					<dim>24</dim>
 					<dim>60</dim>
@@ -806,9 +806,9 @@
 			</output>
 		</layer>
 		<layer id="44" name="736" type="Const" version="opset1">
-			<data element_type="f16" shape="144, 24, 1, 1" offset="30368" size="6912"/>
+			<data element_type="f16" offset="30368" shape="144, 24, 1, 1" size="6912"/>
 			<output>
-				<port id="0" precision="FP16" names="736">
+				<port id="0" names="736" precision="FP16">
 					<dim>144</dim>
 					<dim>24</dim>
 					<dim>1</dim>
@@ -817,7 +817,7 @@
 			</output>
 		</layer>
 		<layer id="45" name="Conv_28/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -841,8 +841,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="46" name="Conv_28/Dims4191" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 144, 1, 1" offset="37280" size="288"/>
+		<layer id="46" name="Conv_28/Dims3887" type="Const" version="opset1">
+			<data element_type="f16" offset="37280" shape="1, 144, 1, 1" size="288"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -869,7 +869,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="735">
+				<port id="2" names="735" precision="FP16">
 					<dim>1</dim>
 					<dim>144</dim>
 					<dim>60</dim>
@@ -878,7 +878,7 @@
 			</output>
 		</layer>
 		<layer id="48" name="Clip_31" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -888,7 +888,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="384">
+				<port id="1" names="384" precision="FP16">
 					<dim>1</dim>
 					<dim>144</dim>
 					<dim>60</dim>
@@ -897,9 +897,9 @@
 			</output>
 		</layer>
 		<layer id="49" name="739" type="Const" version="opset1">
-			<data element_type="f16" shape="144, 1, 1, 3, 3" offset="37568" size="2592"/>
+			<data element_type="f16" offset="37568" shape="144, 1, 1, 3, 3" size="2592"/>
 			<output>
-				<port id="0" precision="FP16" names="739">
+				<port id="0" names="739" precision="FP16">
 					<dim>144</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -909,7 +909,7 @@
 			</output>
 		</layer>
 		<layer id="50" name="Conv_32/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="2, 2" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="2, 2"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -934,8 +934,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="51" name="Conv_32/Dims3933" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 144, 1, 1" offset="40160" size="288"/>
+		<layer id="51" name="Conv_32/Dims3989" type="Const" version="opset1">
+			<data element_type="f16" offset="40160" shape="1, 144, 1, 1" size="288"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -962,7 +962,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="738">
+				<port id="2" names="738" precision="FP16">
 					<dim>1</dim>
 					<dim>144</dim>
 					<dim>30</dim>
@@ -971,7 +971,7 @@
 			</output>
 		</layer>
 		<layer id="53" name="Clip_35" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -981,7 +981,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="389">
+				<port id="1" names="389" precision="FP16">
 					<dim>1</dim>
 					<dim>144</dim>
 					<dim>30</dim>
@@ -990,9 +990,9 @@
 			</output>
 		</layer>
 		<layer id="54" name="742" type="Const" version="opset1">
-			<data element_type="f16" shape="32, 144, 1, 1" offset="40448" size="9216"/>
+			<data element_type="f16" offset="40448" shape="32, 144, 1, 1" size="9216"/>
 			<output>
-				<port id="0" precision="FP16" names="742">
+				<port id="0" names="742" precision="FP16">
 					<dim>32</dim>
 					<dim>144</dim>
 					<dim>1</dim>
@@ -1001,7 +1001,7 @@
 			</output>
 		</layer>
 		<layer id="55" name="Conv_36/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1025,8 +1025,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="56" name="Conv_36/Dims3837" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 32, 1, 1" offset="49664" size="64"/>
+		<layer id="56" name="Conv_36/Dims4001" type="Const" version="opset1">
+			<data element_type="f16" offset="49664" shape="1, 32, 1, 1" size="64"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1053,7 +1053,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="741">
+				<port id="2" names="741" precision="FP16">
 					<dim>1</dim>
 					<dim>32</dim>
 					<dim>30</dim>
@@ -1062,9 +1062,9 @@
 			</output>
 		</layer>
 		<layer id="58" name="745" type="Const" version="opset1">
-			<data element_type="f16" shape="192, 32, 1, 1" offset="49728" size="12288"/>
+			<data element_type="f16" offset="49728" shape="192, 32, 1, 1" size="12288"/>
 			<output>
-				<port id="0" precision="FP16" names="745">
+				<port id="0" names="745" precision="FP16">
 					<dim>192</dim>
 					<dim>32</dim>
 					<dim>1</dim>
@@ -1073,7 +1073,7 @@
 			</output>
 		</layer>
 		<layer id="59" name="Conv_37/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1097,8 +1097,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="60" name="Conv_37/Dims4155" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 192, 1, 1" offset="62016" size="384"/>
+		<layer id="60" name="Conv_37/Dims3941" type="Const" version="opset1">
+			<data element_type="f16" offset="62016" shape="1, 192, 1, 1" size="384"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1125,7 +1125,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="744">
+				<port id="2" names="744" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>30</dim>
@@ -1134,7 +1134,7 @@
 			</output>
 		</layer>
 		<layer id="62" name="Clip_40" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1144,7 +1144,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="396">
+				<port id="1" names="396" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>30</dim>
@@ -1153,9 +1153,9 @@
 			</output>
 		</layer>
 		<layer id="63" name="748" type="Const" version="opset1">
-			<data element_type="f16" shape="192, 1, 1, 3, 3" offset="62400" size="3456"/>
+			<data element_type="f16" offset="62400" shape="192, 1, 1, 3, 3" size="3456"/>
 			<output>
-				<port id="0" precision="FP16" names="748">
+				<port id="0" names="748" precision="FP16">
 					<dim>192</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -1165,7 +1165,7 @@
 			</output>
 		</layer>
 		<layer id="64" name="Conv_41/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1190,8 +1190,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="65" name="Conv_41/Dims4011" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 192, 1, 1" offset="65856" size="384"/>
+		<layer id="65" name="Conv_41/Dims4235" type="Const" version="opset1">
+			<data element_type="f16" offset="65856" shape="1, 192, 1, 1" size="384"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1218,7 +1218,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="747">
+				<port id="2" names="747" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>30</dim>
@@ -1227,7 +1227,7 @@
 			</output>
 		</layer>
 		<layer id="67" name="Clip_44" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1237,7 +1237,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="401">
+				<port id="1" names="401" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>30</dim>
@@ -1246,9 +1246,9 @@
 			</output>
 		</layer>
 		<layer id="68" name="751" type="Const" version="opset1">
-			<data element_type="f16" shape="32, 192, 1, 1" offset="66240" size="12288"/>
+			<data element_type="f16" offset="66240" shape="32, 192, 1, 1" size="12288"/>
 			<output>
-				<port id="0" precision="FP16" names="751">
+				<port id="0" names="751" precision="FP16">
 					<dim>32</dim>
 					<dim>192</dim>
 					<dim>1</dim>
@@ -1257,7 +1257,7 @@
 			</output>
 		</layer>
 		<layer id="69" name="Conv_45/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1281,8 +1281,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="70" name="Conv_45/Dims3909" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 32, 1, 1" offset="78528" size="64"/>
+		<layer id="70" name="Conv_45/Dims3863" type="Const" version="opset1">
+			<data element_type="f16" offset="78528" shape="1, 32, 1, 1" size="64"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1309,7 +1309,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="750">
+				<port id="2" names="750" precision="FP16">
 					<dim>1</dim>
 					<dim>32</dim>
 					<dim>30</dim>
@@ -1334,7 +1334,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="404">
+				<port id="2" names="404" precision="FP16">
 					<dim>1</dim>
 					<dim>32</dim>
 					<dim>30</dim>
@@ -1343,9 +1343,9 @@
 			</output>
 		</layer>
 		<layer id="73" name="754" type="Const" version="opset1">
-			<data element_type="f16" shape="192, 32, 1, 1" offset="78592" size="12288"/>
+			<data element_type="f16" offset="78592" shape="192, 32, 1, 1" size="12288"/>
 			<output>
-				<port id="0" precision="FP16" names="754">
+				<port id="0" names="754" precision="FP16">
 					<dim>192</dim>
 					<dim>32</dim>
 					<dim>1</dim>
@@ -1354,7 +1354,7 @@
 			</output>
 		</layer>
 		<layer id="74" name="Conv_47/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1378,8 +1378,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="75" name="Conv_47/Dims4083" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 192, 1, 1" offset="90880" size="384"/>
+		<layer id="75" name="Conv_47/Dims4109" type="Const" version="opset1">
+			<data element_type="f16" offset="90880" shape="1, 192, 1, 1" size="384"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1406,7 +1406,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="753">
+				<port id="2" names="753" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>30</dim>
@@ -1415,7 +1415,7 @@
 			</output>
 		</layer>
 		<layer id="77" name="Clip_50" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1425,7 +1425,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="409">
+				<port id="1" names="409" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>30</dim>
@@ -1434,9 +1434,9 @@
 			</output>
 		</layer>
 		<layer id="78" name="757" type="Const" version="opset1">
-			<data element_type="f16" shape="192, 1, 1, 3, 3" offset="91264" size="3456"/>
+			<data element_type="f16" offset="91264" shape="192, 1, 1, 3, 3" size="3456"/>
 			<output>
-				<port id="0" precision="FP16" names="757">
+				<port id="0" names="757" precision="FP16">
 					<dim>192</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -1446,7 +1446,7 @@
 			</output>
 		</layer>
 		<layer id="79" name="Conv_51/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1471,8 +1471,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="80" name="Conv_51/Dims3981" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 192, 1, 1" offset="94720" size="384"/>
+		<layer id="80" name="Conv_51/Dims4145" type="Const" version="opset1">
+			<data element_type="f16" offset="94720" shape="1, 192, 1, 1" size="384"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1499,7 +1499,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="756">
+				<port id="2" names="756" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>30</dim>
@@ -1508,7 +1508,7 @@
 			</output>
 		</layer>
 		<layer id="82" name="Clip_54" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1518,7 +1518,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="414">
+				<port id="1" names="414" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>30</dim>
@@ -1527,9 +1527,9 @@
 			</output>
 		</layer>
 		<layer id="83" name="760" type="Const" version="opset1">
-			<data element_type="f16" shape="32, 192, 1, 1" offset="95104" size="12288"/>
+			<data element_type="f16" offset="95104" shape="32, 192, 1, 1" size="12288"/>
 			<output>
-				<port id="0" precision="FP16" names="760">
+				<port id="0" names="760" precision="FP16">
 					<dim>32</dim>
 					<dim>192</dim>
 					<dim>1</dim>
@@ -1538,7 +1538,7 @@
 			</output>
 		</layer>
 		<layer id="84" name="Conv_55/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1562,8 +1562,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="85" name="Conv_55/Dims3927" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 32, 1, 1" offset="107392" size="64"/>
+		<layer id="85" name="Conv_55/Dims3935" type="Const" version="opset1">
+			<data element_type="f16" offset="107392" shape="1, 32, 1, 1" size="64"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1590,7 +1590,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="759">
+				<port id="2" names="759" precision="FP16">
 					<dim>1</dim>
 					<dim>32</dim>
 					<dim>30</dim>
@@ -1615,7 +1615,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="417">
+				<port id="2" names="417" precision="FP16">
 					<dim>1</dim>
 					<dim>32</dim>
 					<dim>30</dim>
@@ -1624,9 +1624,9 @@
 			</output>
 		</layer>
 		<layer id="88" name="763" type="Const" version="opset1">
-			<data element_type="f16" shape="192, 32, 1, 1" offset="107456" size="12288"/>
+			<data element_type="f16" offset="107456" shape="192, 32, 1, 1" size="12288"/>
 			<output>
-				<port id="0" precision="FP16" names="763">
+				<port id="0" names="763" precision="FP16">
 					<dim>192</dim>
 					<dim>32</dim>
 					<dim>1</dim>
@@ -1635,7 +1635,7 @@
 			</output>
 		</layer>
 		<layer id="89" name="Conv_57/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1659,8 +1659,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="90" name="Conv_57/Dims4077" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 192, 1, 1" offset="119744" size="384"/>
+		<layer id="90" name="Conv_57/Dims3983" type="Const" version="opset1">
+			<data element_type="f16" offset="119744" shape="1, 192, 1, 1" size="384"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1687,7 +1687,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="762">
+				<port id="2" names="762" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>30</dim>
@@ -1696,7 +1696,7 @@
 			</output>
 		</layer>
 		<layer id="92" name="Clip_60" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1706,7 +1706,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="422">
+				<port id="1" names="422" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>30</dim>
@@ -1715,9 +1715,9 @@
 			</output>
 		</layer>
 		<layer id="93" name="766" type="Const" version="opset1">
-			<data element_type="f16" shape="192, 1, 1, 3, 3" offset="120128" size="3456"/>
+			<data element_type="f16" offset="120128" shape="192, 1, 1, 3, 3" size="3456"/>
 			<output>
-				<port id="0" precision="FP16" names="766">
+				<port id="0" names="766" precision="FP16">
 					<dim>192</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -1727,7 +1727,7 @@
 			</output>
 		</layer>
 		<layer id="94" name="Conv_61/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="2, 2" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="2, 2"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1752,8 +1752,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="95" name="Conv_61/Dims3921" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 192, 1, 1" offset="123584" size="384"/>
+		<layer id="95" name="Conv_61/Dims3881" type="Const" version="opset1">
+			<data element_type="f16" offset="123584" shape="1, 192, 1, 1" size="384"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1780,7 +1780,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="765">
+				<port id="2" names="765" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>15</dim>
@@ -1789,7 +1789,7 @@
 			</output>
 		</layer>
 		<layer id="97" name="Clip_64" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1799,7 +1799,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="427">
+				<port id="1" names="427" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>15</dim>
@@ -1808,9 +1808,9 @@
 			</output>
 		</layer>
 		<layer id="98" name="769" type="Const" version="opset1">
-			<data element_type="f16" shape="64, 192, 1, 1" offset="123968" size="24576"/>
+			<data element_type="f16" offset="123968" shape="64, 192, 1, 1" size="24576"/>
 			<output>
-				<port id="0" precision="FP16" names="769">
+				<port id="0" names="769" precision="FP16">
 					<dim>64</dim>
 					<dim>192</dim>
 					<dim>1</dim>
@@ -1819,7 +1819,7 @@
 			</output>
 		</layer>
 		<layer id="99" name="Conv_65/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1843,8 +1843,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="100" name="Conv_65/Dims4053" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 64, 1, 1" offset="148544" size="128"/>
+		<layer id="100" name="Conv_65/Dims4073" type="Const" version="opset1">
+			<data element_type="f16" offset="148544" shape="1, 64, 1, 1" size="128"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1871,7 +1871,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="768">
+				<port id="2" names="768" precision="FP16">
 					<dim>1</dim>
 					<dim>64</dim>
 					<dim>15</dim>
@@ -1880,9 +1880,9 @@
 			</output>
 		</layer>
 		<layer id="102" name="772" type="Const" version="opset1">
-			<data element_type="f16" shape="384, 64, 1, 1" offset="148672" size="49152"/>
+			<data element_type="f16" offset="148672" shape="384, 64, 1, 1" size="49152"/>
 			<output>
-				<port id="0" precision="FP16" names="772">
+				<port id="0" names="772" precision="FP16">
 					<dim>384</dim>
 					<dim>64</dim>
 					<dim>1</dim>
@@ -1891,7 +1891,7 @@
 			</output>
 		</layer>
 		<layer id="103" name="Conv_66/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1915,8 +1915,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="104" name="Conv_66/Dims4185" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 384, 1, 1" offset="197824" size="768"/>
+		<layer id="104" name="Conv_66/Dims4127" type="Const" version="opset1">
+			<data element_type="f16" offset="197824" shape="1, 384, 1, 1" size="768"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1943,7 +1943,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="771">
+				<port id="2" names="771" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -1952,7 +1952,7 @@
 			</output>
 		</layer>
 		<layer id="106" name="Clip_69" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -1962,7 +1962,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="434">
+				<port id="1" names="434" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -1971,9 +1971,9 @@
 			</output>
 		</layer>
 		<layer id="107" name="775" type="Const" version="opset1">
-			<data element_type="f16" shape="384, 1, 1, 3, 3" offset="198592" size="6912"/>
+			<data element_type="f16" offset="198592" shape="384, 1, 1, 3, 3" size="6912"/>
 			<output>
-				<port id="0" precision="FP16" names="775">
+				<port id="0" names="775" precision="FP16">
 					<dim>384</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -1983,7 +1983,7 @@
 			</output>
 		</layer>
 		<layer id="108" name="Conv_70/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2008,8 +2008,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="109" name="Conv_70/Dims4167" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 384, 1, 1" offset="205504" size="768"/>
+		<layer id="109" name="Conv_70/Dims4031" type="Const" version="opset1">
+			<data element_type="f16" offset="205504" shape="1, 384, 1, 1" size="768"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2036,7 +2036,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="774">
+				<port id="2" names="774" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2045,7 +2045,7 @@
 			</output>
 		</layer>
 		<layer id="111" name="Clip_73" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2055,7 +2055,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="439">
+				<port id="1" names="439" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2064,9 +2064,9 @@
 			</output>
 		</layer>
 		<layer id="112" name="778" type="Const" version="opset1">
-			<data element_type="f16" shape="64, 384, 1, 1" offset="206272" size="49152"/>
+			<data element_type="f16" offset="206272" shape="64, 384, 1, 1" size="49152"/>
 			<output>
-				<port id="0" precision="FP16" names="778">
+				<port id="0" names="778" precision="FP16">
 					<dim>64</dim>
 					<dim>384</dim>
 					<dim>1</dim>
@@ -2075,7 +2075,7 @@
 			</output>
 		</layer>
 		<layer id="113" name="Conv_74/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2099,8 +2099,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="114" name="Conv_74/Dims3843" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 64, 1, 1" offset="255424" size="128"/>
+		<layer id="114" name="Conv_74/Dims4067" type="Const" version="opset1">
+			<data element_type="f16" offset="255424" shape="1, 64, 1, 1" size="128"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2127,7 +2127,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="777">
+				<port id="2" names="777" precision="FP16">
 					<dim>1</dim>
 					<dim>64</dim>
 					<dim>15</dim>
@@ -2152,7 +2152,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="442">
+				<port id="2" names="442" precision="FP16">
 					<dim>1</dim>
 					<dim>64</dim>
 					<dim>15</dim>
@@ -2161,9 +2161,9 @@
 			</output>
 		</layer>
 		<layer id="117" name="781" type="Const" version="opset1">
-			<data element_type="f16" shape="384, 64, 1, 1" offset="255552" size="49152"/>
+			<data element_type="f16" offset="255552" shape="384, 64, 1, 1" size="49152"/>
 			<output>
-				<port id="0" precision="FP16" names="781">
+				<port id="0" names="781" precision="FP16">
 					<dim>384</dim>
 					<dim>64</dim>
 					<dim>1</dim>
@@ -2172,7 +2172,7 @@
 			</output>
 		</layer>
 		<layer id="118" name="Conv_76/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2196,8 +2196,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="119" name="Conv_76/Dims4221" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 384, 1, 1" offset="304704" size="768"/>
+		<layer id="119" name="Conv_76/Dims4199" type="Const" version="opset1">
+			<data element_type="f16" offset="304704" shape="1, 384, 1, 1" size="768"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2224,7 +2224,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="780">
+				<port id="2" names="780" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2233,7 +2233,7 @@
 			</output>
 		</layer>
 		<layer id="121" name="Clip_79" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2243,7 +2243,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="447">
+				<port id="1" names="447" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2252,9 +2252,9 @@
 			</output>
 		</layer>
 		<layer id="122" name="784" type="Const" version="opset1">
-			<data element_type="f16" shape="384, 1, 1, 3, 3" offset="305472" size="6912"/>
+			<data element_type="f16" offset="305472" shape="384, 1, 1, 3, 3" size="6912"/>
 			<output>
-				<port id="0" precision="FP16" names="784">
+				<port id="0" names="784" precision="FP16">
 					<dim>384</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -2264,7 +2264,7 @@
 			</output>
 		</layer>
 		<layer id="123" name="Conv_80/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2289,8 +2289,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="124" name="Conv_80/Dims4149" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 384, 1, 1" offset="312384" size="768"/>
+		<layer id="124" name="Conv_80/Dims4133" type="Const" version="opset1">
+			<data element_type="f16" offset="312384" shape="1, 384, 1, 1" size="768"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2317,7 +2317,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="783">
+				<port id="2" names="783" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2326,7 +2326,7 @@
 			</output>
 		</layer>
 		<layer id="126" name="Clip_83" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2336,7 +2336,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="452">
+				<port id="1" names="452" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2345,9 +2345,9 @@
 			</output>
 		</layer>
 		<layer id="127" name="787" type="Const" version="opset1">
-			<data element_type="f16" shape="64, 384, 1, 1" offset="313152" size="49152"/>
+			<data element_type="f16" offset="313152" shape="64, 384, 1, 1" size="49152"/>
 			<output>
-				<port id="0" precision="FP16" names="787">
+				<port id="0" names="787" precision="FP16">
 					<dim>64</dim>
 					<dim>384</dim>
 					<dim>1</dim>
@@ -2356,7 +2356,7 @@
 			</output>
 		</layer>
 		<layer id="128" name="Conv_84/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2380,8 +2380,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="129" name="Conv_84/Dims3915" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 64, 1, 1" offset="362304" size="128"/>
+		<layer id="129" name="Conv_84/Dims4229" type="Const" version="opset1">
+			<data element_type="f16" offset="362304" shape="1, 64, 1, 1" size="128"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2408,7 +2408,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="786">
+				<port id="2" names="786" precision="FP16">
 					<dim>1</dim>
 					<dim>64</dim>
 					<dim>15</dim>
@@ -2433,7 +2433,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="455">
+				<port id="2" names="455" precision="FP16">
 					<dim>1</dim>
 					<dim>64</dim>
 					<dim>15</dim>
@@ -2442,9 +2442,9 @@
 			</output>
 		</layer>
 		<layer id="132" name="790" type="Const" version="opset1">
-			<data element_type="f16" shape="384, 64, 1, 1" offset="362432" size="49152"/>
+			<data element_type="f16" offset="362432" shape="384, 64, 1, 1" size="49152"/>
 			<output>
-				<port id="0" precision="FP16" names="790">
+				<port id="0" names="790" precision="FP16">
 					<dim>384</dim>
 					<dim>64</dim>
 					<dim>1</dim>
@@ -2453,7 +2453,7 @@
 			</output>
 		</layer>
 		<layer id="133" name="Conv_86/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2477,8 +2477,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="134" name="Conv_86/Dims4107" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 384, 1, 1" offset="411584" size="768"/>
+		<layer id="134" name="Conv_86/Dims3971" type="Const" version="opset1">
+			<data element_type="f16" offset="411584" shape="1, 384, 1, 1" size="768"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2505,7 +2505,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="789">
+				<port id="2" names="789" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2514,7 +2514,7 @@
 			</output>
 		</layer>
 		<layer id="136" name="Clip_89" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2524,7 +2524,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="460">
+				<port id="1" names="460" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2533,9 +2533,9 @@
 			</output>
 		</layer>
 		<layer id="137" name="793" type="Const" version="opset1">
-			<data element_type="f16" shape="384, 1, 1, 3, 3" offset="412352" size="6912"/>
+			<data element_type="f16" offset="412352" shape="384, 1, 1, 3, 3" size="6912"/>
 			<output>
-				<port id="0" precision="FP16" names="793">
+				<port id="0" names="793" precision="FP16">
 					<dim>384</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -2545,7 +2545,7 @@
 			</output>
 		</layer>
 		<layer id="138" name="Conv_90/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2570,8 +2570,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="139" name="Conv_90/Dims3963" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 384, 1, 1" offset="419264" size="768"/>
+		<layer id="139" name="Conv_90/Dims3893" type="Const" version="opset1">
+			<data element_type="f16" offset="419264" shape="1, 384, 1, 1" size="768"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2598,7 +2598,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="792">
+				<port id="2" names="792" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2607,7 +2607,7 @@
 			</output>
 		</layer>
 		<layer id="141" name="Clip_93" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2617,7 +2617,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="465">
+				<port id="1" names="465" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2626,9 +2626,9 @@
 			</output>
 		</layer>
 		<layer id="142" name="796" type="Const" version="opset1">
-			<data element_type="f16" shape="64, 384, 1, 1" offset="420032" size="49152"/>
+			<data element_type="f16" offset="420032" shape="64, 384, 1, 1" size="49152"/>
 			<output>
-				<port id="0" precision="FP16" names="796">
+				<port id="0" names="796" precision="FP16">
 					<dim>64</dim>
 					<dim>384</dim>
 					<dim>1</dim>
@@ -2637,7 +2637,7 @@
 			</output>
 		</layer>
 		<layer id="143" name="Conv_94/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2661,8 +2661,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="144" name="Conv_94/Dims4017" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 64, 1, 1" offset="469184" size="128"/>
+		<layer id="144" name="Conv_94/Dims3899" type="Const" version="opset1">
+			<data element_type="f16" offset="469184" shape="1, 64, 1, 1" size="128"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2689,7 +2689,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="795">
+				<port id="2" names="795" precision="FP16">
 					<dim>1</dim>
 					<dim>64</dim>
 					<dim>15</dim>
@@ -2714,7 +2714,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="468">
+				<port id="2" names="468" precision="FP16">
 					<dim>1</dim>
 					<dim>64</dim>
 					<dim>15</dim>
@@ -2723,9 +2723,9 @@
 			</output>
 		</layer>
 		<layer id="147" name="799" type="Const" version="opset1">
-			<data element_type="f16" shape="384, 64, 1, 1" offset="469312" size="49152"/>
+			<data element_type="f16" offset="469312" shape="384, 64, 1, 1" size="49152"/>
 			<output>
-				<port id="0" precision="FP16" names="799">
+				<port id="0" names="799" precision="FP16">
 					<dim>384</dim>
 					<dim>64</dim>
 					<dim>1</dim>
@@ -2734,7 +2734,7 @@
 			</output>
 		</layer>
 		<layer id="148" name="Conv_96/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2758,8 +2758,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="149" name="Conv_96/Dims3867" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 384, 1, 1" offset="518464" size="768"/>
+		<layer id="149" name="Conv_96/Dims4025" type="Const" version="opset1">
+			<data element_type="f16" offset="518464" shape="1, 384, 1, 1" size="768"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2786,7 +2786,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="798">
+				<port id="2" names="798" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2795,7 +2795,7 @@
 			</output>
 		</layer>
 		<layer id="151" name="Clip_99" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2805,7 +2805,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="473">
+				<port id="1" names="473" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2814,9 +2814,9 @@
 			</output>
 		</layer>
 		<layer id="152" name="802" type="Const" version="opset1">
-			<data element_type="f16" shape="384, 1, 1, 3, 3" offset="519232" size="6912"/>
+			<data element_type="f16" offset="519232" shape="384, 1, 1, 3, 3" size="6912"/>
 			<output>
-				<port id="0" precision="FP16" names="802">
+				<port id="0" names="802" precision="FP16">
 					<dim>384</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -2826,7 +2826,7 @@
 			</output>
 		</layer>
 		<layer id="153" name="Conv_100/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2851,8 +2851,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="154" name="Conv_100/Dims3993" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 384, 1, 1" offset="526144" size="768"/>
+		<layer id="154" name="Conv_100/Dims3947" type="Const" version="opset1">
+			<data element_type="f16" offset="526144" shape="1, 384, 1, 1" size="768"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2879,7 +2879,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="801">
+				<port id="2" names="801" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2888,7 +2888,7 @@
 			</output>
 		</layer>
 		<layer id="156" name="Clip_103" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2898,7 +2898,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="478">
+				<port id="1" names="478" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -2907,9 +2907,9 @@
 			</output>
 		</layer>
 		<layer id="157" name="805" type="Const" version="opset1">
-			<data element_type="f16" shape="96, 384, 1, 1" offset="526912" size="73728"/>
+			<data element_type="f16" offset="526912" shape="96, 384, 1, 1" size="73728"/>
 			<output>
-				<port id="0" precision="FP16" names="805">
+				<port id="0" names="805" precision="FP16">
 					<dim>96</dim>
 					<dim>384</dim>
 					<dim>1</dim>
@@ -2918,7 +2918,7 @@
 			</output>
 		</layer>
 		<layer id="158" name="Conv_104/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2942,8 +2942,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="159" name="Conv_104/Dims3891" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 96, 1, 1" offset="600640" size="192"/>
+		<layer id="159" name="Conv_104/Dims4121" type="Const" version="opset1">
+			<data element_type="f16" offset="600640" shape="1, 96, 1, 1" size="192"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -2970,7 +2970,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="804">
+				<port id="2" names="804" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>15</dim>
@@ -2979,9 +2979,9 @@
 			</output>
 		</layer>
 		<layer id="161" name="808" type="Const" version="opset1">
-			<data element_type="f16" shape="576, 96, 1, 1" offset="600832" size="110592"/>
+			<data element_type="f16" offset="600832" shape="576, 96, 1, 1" size="110592"/>
 			<output>
-				<port id="0" precision="FP16" names="808">
+				<port id="0" names="808" precision="FP16">
 					<dim>576</dim>
 					<dim>96</dim>
 					<dim>1</dim>
@@ -2990,7 +2990,7 @@
 			</output>
 		</layer>
 		<layer id="162" name="Conv_105/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3014,8 +3014,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="163" name="Conv_105/Dims4113" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 576, 1, 1" offset="711424" size="1152"/>
+		<layer id="163" name="Conv_105/Dims4019" type="Const" version="opset1">
+			<data element_type="f16" offset="711424" shape="1, 576, 1, 1" size="1152"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3042,7 +3042,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="807">
+				<port id="2" names="807" precision="FP16">
 					<dim>1</dim>
 					<dim>576</dim>
 					<dim>15</dim>
@@ -3051,7 +3051,7 @@
 			</output>
 		</layer>
 		<layer id="165" name="Clip_108" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3061,7 +3061,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="485">
+				<port id="1" names="485" precision="FP16">
 					<dim>1</dim>
 					<dim>576</dim>
 					<dim>15</dim>
@@ -3070,9 +3070,9 @@
 			</output>
 		</layer>
 		<layer id="166" name="811" type="Const" version="opset1">
-			<data element_type="f16" shape="576, 1, 1, 3, 3" offset="712576" size="10368"/>
+			<data element_type="f16" offset="712576" shape="576, 1, 1, 3, 3" size="10368"/>
 			<output>
-				<port id="0" precision="FP16" names="811">
+				<port id="0" names="811" precision="FP16">
 					<dim>576</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -3082,7 +3082,7 @@
 			</output>
 		</layer>
 		<layer id="167" name="Conv_109/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3107,8 +3107,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="168" name="Conv_109/Dims3855" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 576, 1, 1" offset="722944" size="1152"/>
+		<layer id="168" name="Conv_109/Dims3953" type="Const" version="opset1">
+			<data element_type="f16" offset="722944" shape="1, 576, 1, 1" size="1152"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3135,7 +3135,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="810">
+				<port id="2" names="810" precision="FP16">
 					<dim>1</dim>
 					<dim>576</dim>
 					<dim>15</dim>
@@ -3144,7 +3144,7 @@
 			</output>
 		</layer>
 		<layer id="170" name="Clip_112" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3154,7 +3154,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="490">
+				<port id="1" names="490" precision="FP16">
 					<dim>1</dim>
 					<dim>576</dim>
 					<dim>15</dim>
@@ -3163,9 +3163,9 @@
 			</output>
 		</layer>
 		<layer id="171" name="814" type="Const" version="opset1">
-			<data element_type="f16" shape="96, 576, 1, 1" offset="724096" size="110592"/>
+			<data element_type="f16" offset="724096" shape="96, 576, 1, 1" size="110592"/>
 			<output>
-				<port id="0" precision="FP16" names="814">
+				<port id="0" names="814" precision="FP16">
 					<dim>96</dim>
 					<dim>576</dim>
 					<dim>1</dim>
@@ -3174,7 +3174,7 @@
 			</output>
 		</layer>
 		<layer id="172" name="Conv_113/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3198,8 +3198,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="173" name="Conv_113/Dims3885" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 96, 1, 1" offset="834688" size="192"/>
+		<layer id="173" name="Conv_113/Dims4181" type="Const" version="opset1">
+			<data element_type="f16" offset="834688" shape="1, 96, 1, 1" size="192"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3226,7 +3226,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="813">
+				<port id="2" names="813" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>15</dim>
@@ -3251,7 +3251,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="493">
+				<port id="2" names="493" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>15</dim>
@@ -3260,9 +3260,9 @@
 			</output>
 		</layer>
 		<layer id="176" name="817" type="Const" version="opset1">
-			<data element_type="f16" shape="576, 96, 1, 1" offset="834880" size="110592"/>
+			<data element_type="f16" offset="834880" shape="576, 96, 1, 1" size="110592"/>
 			<output>
-				<port id="0" precision="FP16" names="817">
+				<port id="0" names="817" precision="FP16">
 					<dim>576</dim>
 					<dim>96</dim>
 					<dim>1</dim>
@@ -3271,7 +3271,7 @@
 			</output>
 		</layer>
 		<layer id="177" name="Conv_115/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3295,8 +3295,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="178" name="Conv_115/Dims4161" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 576, 1, 1" offset="945472" size="1152"/>
+		<layer id="178" name="Conv_115/Dims4007" type="Const" version="opset1">
+			<data element_type="f16" offset="945472" shape="1, 576, 1, 1" size="1152"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3323,7 +3323,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="816">
+				<port id="2" names="816" precision="FP16">
 					<dim>1</dim>
 					<dim>576</dim>
 					<dim>15</dim>
@@ -3332,7 +3332,7 @@
 			</output>
 		</layer>
 		<layer id="180" name="Clip_118" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3342,7 +3342,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="498">
+				<port id="1" names="498" precision="FP16">
 					<dim>1</dim>
 					<dim>576</dim>
 					<dim>15</dim>
@@ -3351,9 +3351,9 @@
 			</output>
 		</layer>
 		<layer id="181" name="820" type="Const" version="opset1">
-			<data element_type="f16" shape="576, 1, 1, 3, 3" offset="946624" size="10368"/>
+			<data element_type="f16" offset="946624" shape="576, 1, 1, 3, 3" size="10368"/>
 			<output>
-				<port id="0" precision="FP16" names="820">
+				<port id="0" names="820" precision="FP16">
 					<dim>576</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -3363,7 +3363,7 @@
 			</output>
 		</layer>
 		<layer id="182" name="Conv_119/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3388,8 +3388,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="183" name="Conv_119/Dims3861" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 576, 1, 1" offset="956992" size="1152"/>
+		<layer id="183" name="Conv_119/Dims4157" type="Const" version="opset1">
+			<data element_type="f16" offset="956992" shape="1, 576, 1, 1" size="1152"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3416,7 +3416,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="819">
+				<port id="2" names="819" precision="FP16">
 					<dim>1</dim>
 					<dim>576</dim>
 					<dim>15</dim>
@@ -3425,7 +3425,7 @@
 			</output>
 		</layer>
 		<layer id="185" name="Clip_122" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3435,7 +3435,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="503">
+				<port id="1" names="503" precision="FP16">
 					<dim>1</dim>
 					<dim>576</dim>
 					<dim>15</dim>
@@ -3444,9 +3444,9 @@
 			</output>
 		</layer>
 		<layer id="186" name="823" type="Const" version="opset1">
-			<data element_type="f16" shape="96, 576, 1, 1" offset="958144" size="110592"/>
+			<data element_type="f16" offset="958144" shape="96, 576, 1, 1" size="110592"/>
 			<output>
-				<port id="0" precision="FP16" names="823">
+				<port id="0" names="823" precision="FP16">
 					<dim>96</dim>
 					<dim>576</dim>
 					<dim>1</dim>
@@ -3455,7 +3455,7 @@
 			</output>
 		</layer>
 		<layer id="187" name="Conv_123/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3479,8 +3479,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="188" name="Conv_123/Dims3879" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 96, 1, 1" offset="1068736" size="192"/>
+		<layer id="188" name="Conv_123/Dims3965" type="Const" version="opset1">
+			<data element_type="f16" offset="1068736" shape="1, 96, 1, 1" size="192"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3507,7 +3507,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="822">
+				<port id="2" names="822" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>15</dim>
@@ -3532,7 +3532,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="506">
+				<port id="2" names="506" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>15</dim>
@@ -3541,9 +3541,9 @@
 			</output>
 		</layer>
 		<layer id="191" name="826" type="Const" version="opset1">
-			<data element_type="f16" shape="576, 96, 1, 1" offset="1068928" size="110592"/>
+			<data element_type="f16" offset="1068928" shape="576, 96, 1, 1" size="110592"/>
 			<output>
-				<port id="0" precision="FP16" names="826">
+				<port id="0" names="826" precision="FP16">
 					<dim>576</dim>
 					<dim>96</dim>
 					<dim>1</dim>
@@ -3552,7 +3552,7 @@
 			</output>
 		</layer>
 		<layer id="192" name="Conv_125/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3576,8 +3576,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="193" name="Conv_125/Dims4119" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 576, 1, 1" offset="1179520" size="1152"/>
+		<layer id="193" name="Conv_125/Dims4103" type="Const" version="opset1">
+			<data element_type="f16" offset="1179520" shape="1, 576, 1, 1" size="1152"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3604,7 +3604,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="825">
+				<port id="2" names="825" precision="FP16">
 					<dim>1</dim>
 					<dim>576</dim>
 					<dim>15</dim>
@@ -3613,7 +3613,7 @@
 			</output>
 		</layer>
 		<layer id="195" name="Clip_128" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3623,7 +3623,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="511">
+				<port id="1" names="511" precision="FP16">
 					<dim>1</dim>
 					<dim>576</dim>
 					<dim>15</dim>
@@ -3632,9 +3632,9 @@
 			</output>
 		</layer>
 		<layer id="196" name="829" type="Const" version="opset1">
-			<data element_type="f16" shape="576, 1, 1, 3, 3" offset="1180672" size="10368"/>
+			<data element_type="f16" offset="1180672" shape="576, 1, 1, 3, 3" size="10368"/>
 			<output>
-				<port id="0" precision="FP16" names="829">
+				<port id="0" names="829" precision="FP16">
 					<dim>576</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -3644,7 +3644,7 @@
 			</output>
 		</layer>
 		<layer id="197" name="Conv_129/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="2, 2" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="2, 2"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3669,8 +3669,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="198" name="Conv_129/Dims3939" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 576, 1, 1" offset="1191040" size="1152"/>
+		<layer id="198" name="Conv_129/Dims3929" type="Const" version="opset1">
+			<data element_type="f16" offset="1191040" shape="1, 576, 1, 1" size="1152"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3697,7 +3697,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="828">
+				<port id="2" names="828" precision="FP16">
 					<dim>1</dim>
 					<dim>576</dim>
 					<dim>8</dim>
@@ -3706,7 +3706,7 @@
 			</output>
 		</layer>
 		<layer id="200" name="Clip_132" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3716,7 +3716,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="516">
+				<port id="1" names="516" precision="FP16">
 					<dim>1</dim>
 					<dim>576</dim>
 					<dim>8</dim>
@@ -3725,9 +3725,9 @@
 			</output>
 		</layer>
 		<layer id="201" name="832" type="Const" version="opset1">
-			<data element_type="f16" shape="160, 576, 1, 1" offset="1192192" size="184320"/>
+			<data element_type="f16" offset="1192192" shape="160, 576, 1, 1" size="184320"/>
 			<output>
-				<port id="0" precision="FP16" names="832">
+				<port id="0" names="832" precision="FP16">
 					<dim>160</dim>
 					<dim>576</dim>
 					<dim>1</dim>
@@ -3736,7 +3736,7 @@
 			</output>
 		</layer>
 		<layer id="202" name="Conv_133/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3760,8 +3760,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="203" name="Conv_133/Dims3969" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 160, 1, 1" offset="1376512" size="320"/>
+		<layer id="203" name="Conv_133/Dims4151" type="Const" version="opset1">
+			<data element_type="f16" offset="1376512" shape="1, 160, 1, 1" size="320"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3788,7 +3788,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="831">
+				<port id="2" names="831" precision="FP16">
 					<dim>1</dim>
 					<dim>160</dim>
 					<dim>8</dim>
@@ -3797,9 +3797,9 @@
 			</output>
 		</layer>
 		<layer id="205" name="835" type="Const" version="opset1">
-			<data element_type="f16" shape="960, 160, 1, 1" offset="1376832" size="307200"/>
+			<data element_type="f16" offset="1376832" shape="960, 160, 1, 1" size="307200"/>
 			<output>
-				<port id="0" precision="FP16" names="835">
+				<port id="0" names="835" precision="FP16">
 					<dim>960</dim>
 					<dim>160</dim>
 					<dim>1</dim>
@@ -3808,7 +3808,7 @@
 			</output>
 		</layer>
 		<layer id="206" name="Conv_134/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3832,8 +3832,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="207" name="Conv_134/Dims4137" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 960, 1, 1" offset="1684032" size="1920"/>
+		<layer id="207" name="Conv_134/Dims4079" type="Const" version="opset1">
+			<data element_type="f16" offset="1684032" shape="1, 960, 1, 1" size="1920"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3860,7 +3860,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="834">
+				<port id="2" names="834" precision="FP16">
 					<dim>1</dim>
 					<dim>960</dim>
 					<dim>8</dim>
@@ -3869,7 +3869,7 @@
 			</output>
 		</layer>
 		<layer id="209" name="Clip_137" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3879,7 +3879,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="523">
+				<port id="1" names="523" precision="FP16">
 					<dim>1</dim>
 					<dim>960</dim>
 					<dim>8</dim>
@@ -3888,9 +3888,9 @@
 			</output>
 		</layer>
 		<layer id="210" name="838" type="Const" version="opset1">
-			<data element_type="f16" shape="960, 1, 1, 3, 3" offset="1685952" size="17280"/>
+			<data element_type="f16" offset="1685952" shape="960, 1, 1, 3, 3" size="17280"/>
 			<output>
-				<port id="0" precision="FP16" names="838">
+				<port id="0" names="838" precision="FP16">
 					<dim>960</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -3900,7 +3900,7 @@
 			</output>
 		</layer>
 		<layer id="211" name="Conv_138/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3925,8 +3925,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="212" name="Conv_138/Dims4197" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 960, 1, 1" offset="1703232" size="1920"/>
+		<layer id="212" name="Conv_138/Dims4049" type="Const" version="opset1">
+			<data element_type="f16" offset="1703232" shape="1, 960, 1, 1" size="1920"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3953,7 +3953,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="837">
+				<port id="2" names="837" precision="FP16">
 					<dim>1</dim>
 					<dim>960</dim>
 					<dim>8</dim>
@@ -3962,7 +3962,7 @@
 			</output>
 		</layer>
 		<layer id="214" name="Clip_141" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -3972,7 +3972,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="528">
+				<port id="1" names="528" precision="FP16">
 					<dim>1</dim>
 					<dim>960</dim>
 					<dim>8</dim>
@@ -3981,9 +3981,9 @@
 			</output>
 		</layer>
 		<layer id="215" name="841" type="Const" version="opset1">
-			<data element_type="f16" shape="160, 960, 1, 1" offset="1705152" size="307200"/>
+			<data element_type="f16" offset="1705152" shape="160, 960, 1, 1" size="307200"/>
 			<output>
-				<port id="0" precision="FP16" names="841">
+				<port id="0" names="841" precision="FP16">
 					<dim>160</dim>
 					<dim>960</dim>
 					<dim>1</dim>
@@ -3992,7 +3992,7 @@
 			</output>
 		</layer>
 		<layer id="216" name="Conv_142/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4016,8 +4016,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="217" name="Conv_142/Dims3999" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 160, 1, 1" offset="2012352" size="320"/>
+		<layer id="217" name="Conv_142/Dims4037" type="Const" version="opset1">
+			<data element_type="f16" offset="2012352" shape="1, 160, 1, 1" size="320"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4044,7 +4044,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="840">
+				<port id="2" names="840" precision="FP16">
 					<dim>1</dim>
 					<dim>160</dim>
 					<dim>8</dim>
@@ -4069,7 +4069,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="531">
+				<port id="2" names="531" precision="FP16">
 					<dim>1</dim>
 					<dim>160</dim>
 					<dim>8</dim>
@@ -4078,9 +4078,9 @@
 			</output>
 		</layer>
 		<layer id="220" name="844" type="Const" version="opset1">
-			<data element_type="f16" shape="960, 160, 1, 1" offset="2012672" size="307200"/>
+			<data element_type="f16" offset="2012672" shape="960, 160, 1, 1" size="307200"/>
 			<output>
-				<port id="0" precision="FP16" names="844">
+				<port id="0" names="844" precision="FP16">
 					<dim>960</dim>
 					<dim>160</dim>
 					<dim>1</dim>
@@ -4089,7 +4089,7 @@
 			</output>
 		</layer>
 		<layer id="221" name="Conv_144/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4113,8 +4113,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="222" name="Conv_144/Dims4065" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 960, 1, 1" offset="2319872" size="1920"/>
+		<layer id="222" name="Conv_144/Dims4139" type="Const" version="opset1">
+			<data element_type="f16" offset="2319872" shape="1, 960, 1, 1" size="1920"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4141,7 +4141,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="843">
+				<port id="2" names="843" precision="FP16">
 					<dim>1</dim>
 					<dim>960</dim>
 					<dim>8</dim>
@@ -4150,7 +4150,7 @@
 			</output>
 		</layer>
 		<layer id="224" name="Clip_147" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4160,7 +4160,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="536">
+				<port id="1" names="536" precision="FP16">
 					<dim>1</dim>
 					<dim>960</dim>
 					<dim>8</dim>
@@ -4169,9 +4169,9 @@
 			</output>
 		</layer>
 		<layer id="225" name="847" type="Const" version="opset1">
-			<data element_type="f16" shape="960, 1, 1, 3, 3" offset="2321792" size="17280"/>
+			<data element_type="f16" offset="2321792" shape="960, 1, 1, 3, 3" size="17280"/>
 			<output>
-				<port id="0" precision="FP16" names="847">
+				<port id="0" names="847" precision="FP16">
 					<dim>960</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -4181,7 +4181,7 @@
 			</output>
 		</layer>
 		<layer id="226" name="Conv_148/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4206,8 +4206,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="227" name="Conv_148/Dims4041" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 960, 1, 1" offset="2339072" size="1920"/>
+		<layer id="227" name="Conv_148/Dims4097" type="Const" version="opset1">
+			<data element_type="f16" offset="2339072" shape="1, 960, 1, 1" size="1920"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4234,7 +4234,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="846">
+				<port id="2" names="846" precision="FP16">
 					<dim>1</dim>
 					<dim>960</dim>
 					<dim>8</dim>
@@ -4243,7 +4243,7 @@
 			</output>
 		</layer>
 		<layer id="229" name="Clip_151" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4253,7 +4253,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="541">
+				<port id="1" names="541" precision="FP16">
 					<dim>1</dim>
 					<dim>960</dim>
 					<dim>8</dim>
@@ -4262,9 +4262,9 @@
 			</output>
 		</layer>
 		<layer id="230" name="850" type="Const" version="opset1">
-			<data element_type="f16" shape="160, 960, 1, 1" offset="2340992" size="307200"/>
+			<data element_type="f16" offset="2340992" shape="160, 960, 1, 1" size="307200"/>
 			<output>
-				<port id="0" precision="FP16" names="850">
+				<port id="0" names="850" precision="FP16">
 					<dim>160</dim>
 					<dim>960</dim>
 					<dim>1</dim>
@@ -4273,7 +4273,7 @@
 			</output>
 		</layer>
 		<layer id="231" name="Conv_152/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4297,8 +4297,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="232" name="Conv_152/Dims4089" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 160, 1, 1" offset="2648192" size="320"/>
+		<layer id="232" name="Conv_152/Dims4115" type="Const" version="opset1">
+			<data element_type="f16" offset="2648192" shape="1, 160, 1, 1" size="320"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4325,7 +4325,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="849">
+				<port id="2" names="849" precision="FP16">
 					<dim>1</dim>
 					<dim>160</dim>
 					<dim>8</dim>
@@ -4350,7 +4350,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="544">
+				<port id="2" names="544" precision="FP16">
 					<dim>1</dim>
 					<dim>160</dim>
 					<dim>8</dim>
@@ -4359,9 +4359,9 @@
 			</output>
 		</layer>
 		<layer id="235" name="853" type="Const" version="opset1">
-			<data element_type="f16" shape="960, 160, 1, 1" offset="2648512" size="307200"/>
+			<data element_type="f16" offset="2648512" shape="960, 160, 1, 1" size="307200"/>
 			<output>
-				<port id="0" precision="FP16" names="853">
+				<port id="0" names="853" precision="FP16">
 					<dim>960</dim>
 					<dim>160</dim>
 					<dim>1</dim>
@@ -4370,7 +4370,7 @@
 			</output>
 		</layer>
 		<layer id="236" name="Conv_154/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4394,8 +4394,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="237" name="Conv_154/Dims3975" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 960, 1, 1" offset="2955712" size="1920"/>
+		<layer id="237" name="Conv_154/Dims4205" type="Const" version="opset1">
+			<data element_type="f16" offset="2955712" shape="1, 960, 1, 1" size="1920"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4422,7 +4422,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="852">
+				<port id="2" names="852" precision="FP16">
 					<dim>1</dim>
 					<dim>960</dim>
 					<dim>8</dim>
@@ -4431,7 +4431,7 @@
 			</output>
 		</layer>
 		<layer id="239" name="Clip_157" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4441,7 +4441,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="549">
+				<port id="1" names="549" precision="FP16">
 					<dim>1</dim>
 					<dim>960</dim>
 					<dim>8</dim>
@@ -4450,9 +4450,9 @@
 			</output>
 		</layer>
 		<layer id="240" name="856" type="Const" version="opset1">
-			<data element_type="f16" shape="960, 1, 1, 3, 3" offset="2957632" size="17280"/>
+			<data element_type="f16" offset="2957632" shape="960, 1, 1, 3, 3" size="17280"/>
 			<output>
-				<port id="0" precision="FP16" names="856">
+				<port id="0" names="856" precision="FP16">
 					<dim>960</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -4462,7 +4462,7 @@
 			</output>
 		</layer>
 		<layer id="241" name="Conv_158/WithoutBiases" type="GroupConvolution" version="opset1">
-			<data strides="1, 1" pads_begin="1, 1" pads_end="1, 1" dilations="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4487,8 +4487,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="242" name="Conv_158/Dims4209" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 960, 1, 1" offset="2974912" size="1920"/>
+		<layer id="242" name="Conv_158/Dims3917" type="Const" version="opset1">
+			<data element_type="f16" offset="2974912" shape="1, 960, 1, 1" size="1920"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4515,7 +4515,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="855">
+				<port id="2" names="855" precision="FP16">
 					<dim>1</dim>
 					<dim>960</dim>
 					<dim>8</dim>
@@ -4524,7 +4524,7 @@
 			</output>
 		</layer>
 		<layer id="244" name="Clip_161" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4534,7 +4534,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="554">
+				<port id="1" names="554" precision="FP16">
 					<dim>1</dim>
 					<dim>960</dim>
 					<dim>8</dim>
@@ -4543,9 +4543,9 @@
 			</output>
 		</layer>
 		<layer id="245" name="859" type="Const" version="opset1">
-			<data element_type="f16" shape="320, 960, 1, 1" offset="2976832" size="614400"/>
+			<data element_type="f16" offset="2976832" shape="320, 960, 1, 1" size="614400"/>
 			<output>
-				<port id="0" precision="FP16" names="859">
+				<port id="0" names="859" precision="FP16">
 					<dim>320</dim>
 					<dim>960</dim>
 					<dim>1</dim>
@@ -4554,7 +4554,7 @@
 			</output>
 		</layer>
 		<layer id="246" name="Conv_162/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4578,8 +4578,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="247" name="Conv_162/Dims4125" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 320, 1, 1" offset="3591232" size="640"/>
+		<layer id="247" name="Conv_162/Dims4061" type="Const" version="opset1">
+			<data element_type="f16" offset="3591232" shape="1, 320, 1, 1" size="640"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4606,7 +4606,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="858">
+				<port id="2" names="858" precision="FP16">
 					<dim>1</dim>
 					<dim>320</dim>
 					<dim>8</dim>
@@ -4615,9 +4615,9 @@
 			</output>
 		</layer>
 		<layer id="249" name="862" type="Const" version="opset1">
-			<data element_type="f16" shape="1280, 320, 1, 1" offset="3591872" size="819200"/>
+			<data element_type="f16" offset="3591872" shape="1280, 320, 1, 1" size="819200"/>
 			<output>
-				<port id="0" precision="FP16" names="862">
+				<port id="0" names="862" precision="FP16">
 					<dim>1280</dim>
 					<dim>320</dim>
 					<dim>1</dim>
@@ -4626,7 +4626,7 @@
 			</output>
 		</layer>
 		<layer id="250" name="Conv_163/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="0, 0" pads_end="0, 0" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4650,8 +4650,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="251" name="Conv_163/Dims4029" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 1280, 1, 1" offset="4411072" size="2560"/>
+		<layer id="251" name="Conv_163/Dims3875" type="Const" version="opset1">
+			<data element_type="f16" offset="4411072" shape="1, 1280, 1, 1" size="2560"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4678,7 +4678,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="861">
+				<port id="2" names="861" precision="FP16">
 					<dim>1</dim>
 					<dim>1280</dim>
 					<dim>8</dim>
@@ -4687,7 +4687,7 @@
 			</output>
 		</layer>
 		<layer id="253" name="Clip_166" type="Clamp" version="opset1">
-			<data min="0" max="6"/>
+			<data max="6" min="0"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4697,7 +4697,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="1" precision="FP16" names="561">
+				<port id="1" names="561" precision="FP16">
 					<dim>1</dim>
 					<dim>1280</dim>
 					<dim>8</dim>
@@ -4706,9 +4706,9 @@
 			</output>
 		</layer>
 		<layer id="254" name="decoder.conv2.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="768, 1280, 1, 1" offset="4413632" size="1966080"/>
+			<data element_type="f16" offset="4413632" shape="768, 1280, 1, 1" size="1966080"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.conv2.weight">
+				<port id="0" names="decoder.conv2.weight" precision="FP16">
 					<dim>768</dim>
 					<dim>1280</dim>
 					<dim>1</dim>
@@ -4717,7 +4717,7 @@
 			</output>
 		</layer>
 		<layer id="255" name="Conv_167/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4741,8 +4741,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="256" name="Conv_167/Dims4035" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 768, 1, 1" offset="6379712" size="1536"/>
+		<layer id="256" name="Conv_167/Dims4169" type="Const" version="opset1">
+			<data element_type="f16" offset="6379712" shape="1, 768, 1, 1" size="1536"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4769,7 +4769,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="562">
+				<port id="2" names="562" precision="FP16">
 					<dim>1</dim>
 					<dim>768</dim>
 					<dim>10</dim>
@@ -4793,16 +4793,16 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="259" name="Conv_162/Shape/Gathered_input_port_1/value1187017370" type="Const" version="opset1">
-			<data element_type="i32" shape="2" offset="6381248" size="8"/>
+		<layer id="259" name="Conv_162/Shape/Gathered_input_port_1/value1190217931" type="Const" version="opset1">
+			<data element_type="i32" offset="6381248" shape="2" size="8"/>
 			<output>
 				<port id="0" precision="I32">
 					<dim>2</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="260" name="Conv_162/Shape/Gathered_input_port_2/value1187217472" type="Const" version="opset1">
-			<data element_type="i64" shape="" offset="6381256" size="8"/>
+		<layer id="260" name="Conv_162/Shape/Gathered_input_port_2/value1190417880" type="Const" version="opset1">
+			<data element_type="i64" offset="6381256" shape="" size="8"/>
 			<output>
 				<port id="0" precision="I64"/>
 			</output>
@@ -4824,8 +4824,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="262" name="2924292617391" type="Const" version="opset1">
-			<data element_type="f32" shape="4" offset="6381264" size="16"/>
+		<layer id="262" name="2935293717667" type="Const" version="opset1">
+			<data element_type="f32" offset="6381264" shape="4" size="16"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>4</dim>
@@ -4848,7 +4848,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="264" name="2923" type="Convert" version="opset1">
+		<layer id="264" name="2934" type="Convert" version="opset1">
 			<data destination_type="f32"/>
 			<input>
 				<port id="0" precision="I64">
@@ -4877,8 +4877,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="266" name="Resize_186/Add_input_port_1/value292217385" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="6381280" size="4"/>
+		<layer id="266" name="Resize_186/Add_input_port_1/value293317526" type="Const" version="opset1">
+			<data element_type="f32" offset="6381280" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -4901,24 +4901,24 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="268" name="Resize_186/StridedSlice_scales_input_port_1/value291117409" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381284" size="8"/>
+		<layer id="268" name="Resize_186/StridedSlice_scales_input_port_1/value292217472" type="Const" version="opset1">
+			<data element_type="i64" offset="6381284" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="269" name="Resize_186/StridedSlice_scales_input_port_2/value291317436" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381292" size="8"/>
+		<layer id="269" name="Resize_186/StridedSlice_scales_input_port_2/value292417814" type="Const" version="opset1">
+			<data element_type="i64" offset="6381292" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="270" name="Resize_186/StridedSlice_scales_input_port_3/value291517478" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381300" size="8"/>
+		<layer id="270" name="Resize_186/StridedSlice_scales_input_port_3/value292617430" type="Const" version="opset1">
+			<data element_type="i64" offset="6381300" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
@@ -4926,7 +4926,7 @@
 			</output>
 		</layer>
 		<layer id="271" name="Resize_186/StridedSlice_scales" type="StridedSlice" version="opset1">
-			<data begin_mask="0" end_mask="0" new_axis_mask="0" shrink_axis_mask="0" ellipsis_mask="0"/>
+			<data begin_mask="0" ellipsis_mask="0" end_mask="0" new_axis_mask="0" shrink_axis_mask="0"/>
 			<input>
 				<port id="0" precision="FP32">
 					<dim>4</dim>
@@ -4947,8 +4947,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="272" name="Resize_186/axis291817499" type="Const" version="opset1">
-			<data element_type="i64" shape="2" offset="6381308" size="16"/>
+		<layer id="272" name="Resize_186/axis292917760" type="Const" version="opset1">
+			<data element_type="i64" offset="6381308" shape="2" size="16"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>2</dim>
@@ -4956,7 +4956,7 @@
 			</output>
 		</layer>
 		<layer id="273" name="Resize_186" type="Interpolate" version="opset4">
-			<data mode="linear_onnx" shape_calculation_mode="sizes" coordinate_transformation_mode="align_corners" nearest_mode="floor" antialias="false" pads_begin="0, 0, 0, 0" pads_end="0, 0, 0, 0" cube_coeff="-0.75"/>
+			<data antialias="false" coordinate_transformation_mode="align_corners" cube_coeff="-0.75" mode="linear_onnx" nearest_mode="floor" pads_begin="0, 0, 0, 0" pads_end="0, 0, 0, 0" shape_calculation_mode="sizes"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -4975,7 +4975,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="4" precision="FP16" names="581">
+				<port id="4" names="581" precision="FP16">
 					<dim>1</dim>
 					<dim>768</dim>
 					<dim>8</dim>
@@ -5000,7 +5000,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="582">
+				<port id="2" names="582" precision="FP16">
 					<dim>1</dim>
 					<dim>1088</dim>
 					<dim>8</dim>
@@ -5009,9 +5009,9 @@
 			</output>
 		</layer>
 		<layer id="275" name="decoder.up0.convA.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="384, 1088, 3, 3" offset="6381324" size="7520256"/>
+			<data element_type="f16" offset="6381324" shape="384, 1088, 3, 3" size="7520256"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.up0.convA.weight">
+				<port id="0" names="decoder.up0.convA.weight" precision="FP16">
 					<dim>384</dim>
 					<dim>1088</dim>
 					<dim>3</dim>
@@ -5020,7 +5020,7 @@
 			</output>
 		</layer>
 		<layer id="276" name="Conv_188/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -5044,8 +5044,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="277" name="Conv_188/Dims4005" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 384, 1, 1" offset="13901580" size="768"/>
+		<layer id="277" name="Conv_188/Dims3959" type="Const" version="opset1">
+			<data element_type="f16" offset="13901580" shape="1, 384, 1, 1" size="768"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -5072,7 +5072,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="583">
+				<port id="2" names="583" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>8</dim>
@@ -5080,8 +5080,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="279" name="LeakyRelu_189/weights1159217748" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="13902348" size="4"/>
+		<layer id="279" name="LeakyRelu_189/weights1161617592" type="Const" version="opset1">
+			<data element_type="f32" offset="13902348" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -5101,7 +5101,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="584">
+				<port id="2" names="584" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>8</dim>
@@ -5110,9 +5110,9 @@
 			</output>
 		</layer>
 		<layer id="281" name="decoder.up0.convB.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="384, 384, 3, 3" offset="13902352" size="2654208"/>
+			<data element_type="f16" offset="13902352" shape="384, 384, 3, 3" size="2654208"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.up0.convB.weight">
+				<port id="0" names="decoder.up0.convB.weight" precision="FP16">
 					<dim>384</dim>
 					<dim>384</dim>
 					<dim>3</dim>
@@ -5121,7 +5121,7 @@
 			</output>
 		</layer>
 		<layer id="282" name="Conv_190/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -5145,8 +5145,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="283" name="Conv_190/Dims4215" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 384, 1, 1" offset="16556560" size="768"/>
+		<layer id="283" name="Conv_190/Dims4193" type="Const" version="opset1">
+			<data element_type="f16" offset="16556560" shape="1, 384, 1, 1" size="768"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -5173,7 +5173,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="585">
+				<port id="2" names="585" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>8</dim>
@@ -5181,8 +5181,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="285" name="LeakyRelu_191/weights1156417694" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="13902348" size="4"/>
+		<layer id="285" name="LeakyRelu_191/weights1160017445" type="Const" version="opset1">
+			<data element_type="f32" offset="13902348" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -5202,7 +5202,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="586">
+				<port id="2" names="586" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>8</dim>
@@ -5226,16 +5226,16 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="288" name="Conv_133/Shape/Gathered_input_port_1/value1187817640" type="Const" version="opset1">
-			<data element_type="i32" shape="2" offset="6381248" size="8"/>
+		<layer id="288" name="Conv_133/Shape/Gathered_input_port_1/value1191017505" type="Const" version="opset1">
+			<data element_type="i32" offset="6381248" shape="2" size="8"/>
 			<output>
 				<port id="0" precision="I32">
 					<dim>2</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="289" name="Conv_133/Shape/Gathered_input_port_2/value1188017721" type="Const" version="opset1">
-			<data element_type="i64" shape="" offset="6381256" size="8"/>
+		<layer id="289" name="Conv_133/Shape/Gathered_input_port_2/value1191217718" type="Const" version="opset1">
+			<data element_type="i64" offset="6381256" shape="" size="8"/>
 			<output>
 				<port id="0" precision="I64"/>
 			</output>
@@ -5257,8 +5257,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="291" name="2956295817562" type="Const" version="opset1">
-			<data element_type="f32" shape="4" offset="16557328" size="16"/>
+		<layer id="291" name="2967296917808" type="Const" version="opset1">
+			<data element_type="f32" offset="16557328" shape="4" size="16"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>4</dim>
@@ -5281,7 +5281,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="293" name="2955" type="Convert" version="opset1">
+		<layer id="293" name="2966" type="Convert" version="opset1">
 			<data destination_type="f32"/>
 			<input>
 				<port id="0" precision="I64">
@@ -5310,8 +5310,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="295" name="Resize_210/Add_input_port_1/value295417328" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="6381280" size="4"/>
+		<layer id="295" name="Resize_210/Add_input_port_1/value296517544" type="Const" version="opset1">
+			<data element_type="f32" offset="6381280" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -5334,24 +5334,24 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="297" name="Resize_210/StridedSlice_scales_input_port_1/value294317643" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381284" size="8"/>
+		<layer id="297" name="Resize_210/StridedSlice_scales_input_port_1/value295417601" type="Const" version="opset1">
+			<data element_type="i64" offset="6381284" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="298" name="Resize_210/StridedSlice_scales_input_port_2/value294517349" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381292" size="8"/>
+		<layer id="298" name="Resize_210/StridedSlice_scales_input_port_2/value295617859" type="Const" version="opset1">
+			<data element_type="i64" offset="6381292" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="299" name="Resize_210/StridedSlice_scales_input_port_3/value294717424" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381300" size="8"/>
+		<layer id="299" name="Resize_210/StridedSlice_scales_input_port_3/value295817481" type="Const" version="opset1">
+			<data element_type="i64" offset="6381300" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
@@ -5359,7 +5359,7 @@
 			</output>
 		</layer>
 		<layer id="300" name="Resize_210/StridedSlice_scales" type="StridedSlice" version="opset1">
-			<data begin_mask="0" end_mask="0" new_axis_mask="0" shrink_axis_mask="0" ellipsis_mask="0"/>
+			<data begin_mask="0" ellipsis_mask="0" end_mask="0" new_axis_mask="0" shrink_axis_mask="0"/>
 			<input>
 				<port id="0" precision="FP32">
 					<dim>4</dim>
@@ -5380,8 +5380,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="301" name="Resize_210/axis295017784" type="Const" version="opset1">
-			<data element_type="i64" shape="2" offset="6381308" size="16"/>
+		<layer id="301" name="Resize_210/axis296117676" type="Const" version="opset1">
+			<data element_type="i64" offset="6381308" shape="2" size="16"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>2</dim>
@@ -5389,7 +5389,7 @@
 			</output>
 		</layer>
 		<layer id="302" name="Resize_210" type="Interpolate" version="opset4">
-			<data mode="linear_onnx" shape_calculation_mode="sizes" coordinate_transformation_mode="align_corners" nearest_mode="floor" antialias="false" pads_begin="0, 0, 0, 0" pads_end="0, 0, 0, 0" cube_coeff="-0.75"/>
+			<data antialias="false" coordinate_transformation_mode="align_corners" cube_coeff="-0.75" mode="linear_onnx" nearest_mode="floor" pads_begin="0, 0, 0, 0" pads_end="0, 0, 0, 0" shape_calculation_mode="sizes"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -5408,7 +5408,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="4" precision="FP16" names="605">
+				<port id="4" names="605" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>8</dim>
@@ -5433,7 +5433,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="606">
+				<port id="2" names="606" precision="FP16">
 					<dim>1</dim>
 					<dim>544</dim>
 					<dim>8</dim>
@@ -5442,9 +5442,9 @@
 			</output>
 		</layer>
 		<layer id="304" name="decoder.up1.convA.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="384, 544, 3, 3" offset="16557344" size="3760128"/>
+			<data element_type="f16" offset="16557344" shape="384, 544, 3, 3" size="3760128"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.up1.convA.weight">
+				<port id="0" names="decoder.up1.convA.weight" precision="FP16">
 					<dim>384</dim>
 					<dim>544</dim>
 					<dim>3</dim>
@@ -5453,7 +5453,7 @@
 			</output>
 		</layer>
 		<layer id="305" name="Conv_212/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -5477,8 +5477,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="306" name="Conv_212/Dims4203" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 384, 1, 1" offset="20317472" size="768"/>
+		<layer id="306" name="Conv_212/Dims4091" type="Const" version="opset1">
+			<data element_type="f16" offset="20317472" shape="1, 384, 1, 1" size="768"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -5505,7 +5505,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="607">
+				<port id="2" names="607" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>8</dim>
@@ -5513,8 +5513,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="308" name="LeakyRelu_213/weights1160417403" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="13902348" size="4"/>
+		<layer id="308" name="LeakyRelu_213/weights1159617655" type="Const" version="opset1">
+			<data element_type="f32" offset="13902348" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -5534,7 +5534,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="608">
+				<port id="2" names="608" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>8</dim>
@@ -5543,9 +5543,9 @@
 			</output>
 		</layer>
 		<layer id="310" name="decoder.up1.convB.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="384, 384, 3, 3" offset="20318240" size="2654208"/>
+			<data element_type="f16" offset="20318240" shape="384, 384, 3, 3" size="2654208"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.up1.convB.weight">
+				<port id="0" names="decoder.up1.convB.weight" precision="FP16">
 					<dim>384</dim>
 					<dim>384</dim>
 					<dim>3</dim>
@@ -5554,7 +5554,7 @@
 			</output>
 		</layer>
 		<layer id="311" name="Conv_214/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -5578,8 +5578,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="312" name="Conv_214/Dims3945" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 384, 1, 1" offset="22972448" size="768"/>
+		<layer id="312" name="Conv_214/Dims4211" type="Const" version="opset1">
+			<data element_type="f16" offset="22972448" shape="1, 384, 1, 1" size="768"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -5606,7 +5606,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="609">
+				<port id="2" names="609" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>8</dim>
@@ -5614,8 +5614,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="314" name="LeakyRelu_215/weights1160017556" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="13902348" size="4"/>
+		<layer id="314" name="LeakyRelu_215/weights1164017706" type="Const" version="opset1">
+			<data element_type="f32" offset="13902348" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -5635,7 +5635,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="610">
+				<port id="2" names="610" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>8</dim>
@@ -5659,16 +5659,16 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="317" name="Add_75/Shape/Gathered_input_port_1/value1188617847" type="Const" version="opset1">
-			<data element_type="i32" shape="2" offset="6381248" size="8"/>
+		<layer id="317" name="Add_75/Shape/Gathered_input_port_1/value1191817856" type="Const" version="opset1">
+			<data element_type="i32" offset="6381248" shape="2" size="8"/>
 			<output>
 				<port id="0" precision="I32">
 					<dim>2</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="318" name="Add_75/Shape/Gathered_input_port_2/value1188817442" type="Const" version="opset1">
-			<data element_type="i64" shape="" offset="6381256" size="8"/>
+		<layer id="318" name="Add_75/Shape/Gathered_input_port_2/value1192017382" type="Const" version="opset1">
+			<data element_type="i64" offset="6381256" shape="" size="8"/>
 			<output>
 				<port id="0" precision="I64"/>
 			</output>
@@ -5690,8 +5690,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="320" name="2988299017685" type="Const" version="opset1">
-			<data element_type="f32" shape="4" offset="22973216" size="16"/>
+		<layer id="320" name="2999300117373" type="Const" version="opset1">
+			<data element_type="f32" offset="22973216" shape="4" size="16"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>4</dim>
@@ -5714,7 +5714,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="322" name="2987" type="Convert" version="opset1">
+		<layer id="322" name="2998" type="Convert" version="opset1">
 			<data destination_type="f32"/>
 			<input>
 				<port id="0" precision="I64">
@@ -5743,8 +5743,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="324" name="Resize_234/Add_input_port_1/value298617616" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="6381280" size="4"/>
+		<layer id="324" name="Resize_234/Add_input_port_1/value299717370" type="Const" version="opset1">
+			<data element_type="f32" offset="6381280" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -5767,24 +5767,24 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="326" name="Resize_234/StridedSlice_scales_input_port_1/value297517340" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381284" size="8"/>
+		<layer id="326" name="Resize_234/StridedSlice_scales_input_port_1/value298617664" type="Const" version="opset1">
+			<data element_type="i64" offset="6381284" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="327" name="Resize_234/StridedSlice_scales_input_port_2/value297717625" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381292" size="8"/>
+		<layer id="327" name="Resize_234/StridedSlice_scales_input_port_2/value298817553" type="Const" version="opset1">
+			<data element_type="i64" offset="6381292" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="328" name="Resize_234/StridedSlice_scales_input_port_3/value297917787" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381300" size="8"/>
+		<layer id="328" name="Resize_234/StridedSlice_scales_input_port_3/value299017877" type="Const" version="opset1">
+			<data element_type="i64" offset="6381300" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
@@ -5792,7 +5792,7 @@
 			</output>
 		</layer>
 		<layer id="329" name="Resize_234/StridedSlice_scales" type="StridedSlice" version="opset1">
-			<data begin_mask="0" end_mask="0" new_axis_mask="0" shrink_axis_mask="0" ellipsis_mask="0"/>
+			<data begin_mask="0" ellipsis_mask="0" end_mask="0" new_axis_mask="0" shrink_axis_mask="0"/>
 			<input>
 				<port id="0" precision="FP32">
 					<dim>4</dim>
@@ -5813,8 +5813,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="330" name="Resize_234/axis298217538" type="Const" version="opset1">
-			<data element_type="i64" shape="2" offset="6381308" size="16"/>
+		<layer id="330" name="Resize_234/axis299317637" type="Const" version="opset1">
+			<data element_type="i64" offset="6381308" shape="2" size="16"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>2</dim>
@@ -5822,7 +5822,7 @@
 			</output>
 		</layer>
 		<layer id="331" name="Resize_234" type="Interpolate" version="opset4">
-			<data mode="linear_onnx" shape_calculation_mode="sizes" coordinate_transformation_mode="align_corners" nearest_mode="floor" antialias="false" pads_begin="0, 0, 0, 0" pads_end="0, 0, 0, 0" cube_coeff="-0.75"/>
+			<data antialias="false" coordinate_transformation_mode="align_corners" cube_coeff="-0.75" mode="linear_onnx" nearest_mode="floor" pads_begin="0, 0, 0, 0" pads_end="0, 0, 0, 0" shape_calculation_mode="sizes"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -5841,7 +5841,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="4" precision="FP16" names="629">
+				<port id="4" names="629" precision="FP16">
 					<dim>1</dim>
 					<dim>384</dim>
 					<dim>15</dim>
@@ -5866,7 +5866,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="630">
+				<port id="2" names="630" precision="FP16">
 					<dim>1</dim>
 					<dim>448</dim>
 					<dim>15</dim>
@@ -5875,9 +5875,9 @@
 			</output>
 		</layer>
 		<layer id="333" name="decoder.up2.convA.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="192, 448, 3, 3" offset="22973232" size="1548288"/>
+			<data element_type="f16" offset="22973232" shape="192, 448, 3, 3" size="1548288"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.up2.convA.weight">
+				<port id="0" names="decoder.up2.convA.weight" precision="FP16">
 					<dim>192</dim>
 					<dim>448</dim>
 					<dim>3</dim>
@@ -5886,7 +5886,7 @@
 			</output>
 		</layer>
 		<layer id="334" name="Conv_236/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -5910,8 +5910,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="335" name="Conv_236/Dims4131" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 192, 1, 1" offset="24521520" size="384"/>
+		<layer id="335" name="Conv_236/Dims4223" type="Const" version="opset1">
+			<data element_type="f16" offset="24521520" shape="1, 192, 1, 1" size="384"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -5938,7 +5938,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="631">
+				<port id="2" names="631" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>15</dim>
@@ -5946,8 +5946,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="337" name="LeakyRelu_237/weights1156817388" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="13902348" size="4"/>
+		<layer id="337" name="LeakyRelu_237/weights1162417679" type="Const" version="opset1">
+			<data element_type="f32" offset="13902348" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -5967,7 +5967,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="632">
+				<port id="2" names="632" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>15</dim>
@@ -5976,9 +5976,9 @@
 			</output>
 		</layer>
 		<layer id="339" name="decoder.up2.convB.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="192, 192, 3, 3" offset="24521904" size="663552"/>
+			<data element_type="f16" offset="24521904" shape="192, 192, 3, 3" size="663552"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.up2.convB.weight">
+				<port id="0" names="decoder.up2.convB.weight" precision="FP16">
 					<dim>192</dim>
 					<dim>192</dim>
 					<dim>3</dim>
@@ -5987,7 +5987,7 @@
 			</output>
 		</layer>
 		<layer id="340" name="Conv_238/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -6011,8 +6011,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="341" name="Conv_238/Dims3897" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 192, 1, 1" offset="25185456" size="384"/>
+		<layer id="341" name="Conv_238/Dims3857" type="Const" version="opset1">
+			<data element_type="f16" offset="25185456" shape="1, 192, 1, 1" size="384"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -6039,7 +6039,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="633">
+				<port id="2" names="633" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>15</dim>
@@ -6047,8 +6047,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="343" name="LeakyRelu_239/weights1158417760" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="13902348" size="4"/>
+		<layer id="343" name="LeakyRelu_239/weights1160417868" type="Const" version="opset1">
+			<data element_type="f32" offset="13902348" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -6068,7 +6068,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="634">
+				<port id="2" names="634" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>15</dim>
@@ -6092,16 +6092,16 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="346" name="Add_46/Shape/Gathered_input_port_1/value1189417871" type="Const" version="opset1">
-			<data element_type="i32" shape="2" offset="6381248" size="8"/>
+		<layer id="346" name="Add_46/Shape/Gathered_input_port_1/value1192617901" type="Const" version="opset1">
+			<data element_type="i32" offset="6381248" shape="2" size="8"/>
 			<output>
 				<port id="0" precision="I32">
 					<dim>2</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="347" name="Add_46/Shape/Gathered_input_port_2/value1189617325" type="Const" version="opset1">
-			<data element_type="i64" shape="" offset="6381256" size="8"/>
+		<layer id="347" name="Add_46/Shape/Gathered_input_port_2/value1192817436" type="Const" version="opset1">
+			<data element_type="i64" offset="6381256" shape="" size="8"/>
 			<output>
 				<port id="0" precision="I64"/>
 			</output>
@@ -6123,8 +6123,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="349" name="3020302217565" type="Const" version="opset1">
-			<data element_type="f32" shape="4" offset="25185840" size="16"/>
+		<layer id="349" name="3031303317565" type="Const" version="opset1">
+			<data element_type="f32" offset="25185840" shape="4" size="16"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>4</dim>
@@ -6147,7 +6147,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="351" name="3019" type="Convert" version="opset1">
+		<layer id="351" name="3030" type="Convert" version="opset1">
 			<data destination_type="f32"/>
 			<input>
 				<port id="0" precision="I64">
@@ -6176,8 +6176,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="353" name="Resize_258/Add_input_port_1/value301817595" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="6381280" size="4"/>
+		<layer id="353" name="Resize_258/Add_input_port_1/value302917424" type="Const" version="opset1">
+			<data element_type="f32" offset="6381280" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -6200,24 +6200,24 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="355" name="Resize_258/StridedSlice_scales_input_port_1/value300717358" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381284" size="8"/>
+		<layer id="355" name="Resize_258/StridedSlice_scales_input_port_1/value301817427" type="Const" version="opset1">
+			<data element_type="i64" offset="6381284" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="356" name="Resize_258/StridedSlice_scales_input_port_2/value300917766" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381292" size="8"/>
+		<layer id="356" name="Resize_258/StridedSlice_scales_input_port_2/value302017682" type="Const" version="opset1">
+			<data element_type="i64" offset="6381292" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="357" name="Resize_258/StridedSlice_scales_input_port_3/value301117724" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381300" size="8"/>
+		<layer id="357" name="Resize_258/StridedSlice_scales_input_port_3/value302217658" type="Const" version="opset1">
+			<data element_type="i64" offset="6381300" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
@@ -6225,7 +6225,7 @@
 			</output>
 		</layer>
 		<layer id="358" name="Resize_258/StridedSlice_scales" type="StridedSlice" version="opset1">
-			<data begin_mask="0" end_mask="0" new_axis_mask="0" shrink_axis_mask="0" ellipsis_mask="0"/>
+			<data begin_mask="0" ellipsis_mask="0" end_mask="0" new_axis_mask="0" shrink_axis_mask="0"/>
 			<input>
 				<port id="0" precision="FP32">
 					<dim>4</dim>
@@ -6246,8 +6246,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="359" name="Resize_258/axis301417634" type="Const" version="opset1">
-			<data element_type="i64" shape="2" offset="6381308" size="16"/>
+		<layer id="359" name="Resize_258/axis302517688" type="Const" version="opset1">
+			<data element_type="i64" offset="6381308" shape="2" size="16"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>2</dim>
@@ -6255,7 +6255,7 @@
 			</output>
 		</layer>
 		<layer id="360" name="Resize_258" type="Interpolate" version="opset4">
-			<data mode="linear_onnx" shape_calculation_mode="sizes" coordinate_transformation_mode="align_corners" nearest_mode="floor" antialias="false" pads_begin="0, 0, 0, 0" pads_end="0, 0, 0, 0" cube_coeff="-0.75"/>
+			<data antialias="false" coordinate_transformation_mode="align_corners" cube_coeff="-0.75" mode="linear_onnx" nearest_mode="floor" pads_begin="0, 0, 0, 0" pads_end="0, 0, 0, 0" shape_calculation_mode="sizes"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -6274,7 +6274,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="4" precision="FP16" names="653">
+				<port id="4" names="653" precision="FP16">
 					<dim>1</dim>
 					<dim>192</dim>
 					<dim>30</dim>
@@ -6299,7 +6299,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="654">
+				<port id="2" names="654" precision="FP16">
 					<dim>1</dim>
 					<dim>224</dim>
 					<dim>30</dim>
@@ -6308,9 +6308,9 @@
 			</output>
 		</layer>
 		<layer id="362" name="decoder.up3.convA.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="96, 224, 3, 3" offset="25185856" size="387072"/>
+			<data element_type="f16" offset="25185856" shape="96, 224, 3, 3" size="387072"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.up3.convA.weight">
+				<port id="0" names="decoder.up3.convA.weight" precision="FP16">
 					<dim>96</dim>
 					<dim>224</dim>
 					<dim>3</dim>
@@ -6319,7 +6319,7 @@
 			</output>
 		</layer>
 		<layer id="363" name="Conv_260/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -6343,8 +6343,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="364" name="Conv_260/Dims3849" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 96, 1, 1" offset="25572928" size="192"/>
+		<layer id="364" name="Conv_260/Dims3923" type="Const" version="opset1">
+			<data element_type="f16" offset="25572928" shape="1, 96, 1, 1" size="192"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -6371,7 +6371,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="655">
+				<port id="2" names="655" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>30</dim>
@@ -6379,8 +6379,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="366" name="LeakyRelu_261/weights1157217649" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="13902348" size="4"/>
+		<layer id="366" name="LeakyRelu_261/weights1163217574" type="Const" version="opset1">
+			<data element_type="f32" offset="13902348" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -6400,7 +6400,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="656">
+				<port id="2" names="656" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>30</dim>
@@ -6409,9 +6409,9 @@
 			</output>
 		</layer>
 		<layer id="368" name="decoder.up3.convB.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="96, 96, 3, 3" offset="25573120" size="165888"/>
+			<data element_type="f16" offset="25573120" shape="96, 96, 3, 3" size="165888"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.up3.convB.weight">
+				<port id="0" names="decoder.up3.convB.weight" precision="FP16">
 					<dim>96</dim>
 					<dim>96</dim>
 					<dim>3</dim>
@@ -6420,7 +6420,7 @@
 			</output>
 		</layer>
 		<layer id="369" name="Conv_262/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -6444,8 +6444,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="370" name="Conv_262/Dims3903" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 96, 1, 1" offset="25739008" size="192"/>
+		<layer id="370" name="Conv_262/Dims3851" type="Const" version="opset1">
+			<data element_type="f16" offset="25739008" shape="1, 96, 1, 1" size="192"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -6472,7 +6472,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="657">
+				<port id="2" names="657" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>30</dim>
@@ -6480,8 +6480,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="372" name="LeakyRelu_263/weights1157617736" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="13902348" size="4"/>
+		<layer id="372" name="LeakyRelu_263/weights1163617886" type="Const" version="opset1">
+			<data element_type="f32" offset="13902348" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -6501,7 +6501,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="658">
+				<port id="2" names="658" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>30</dim>
@@ -6525,16 +6525,16 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="375" name="Add_27/Shape/Gathered_input_port_1/value1190217727" type="Const" version="opset1">
-			<data element_type="i32" shape="2" offset="6381248" size="8"/>
+		<layer id="375" name="Add_27/Shape/Gathered_input_port_1/value1193417904" type="Const" version="opset1">
+			<data element_type="i32" offset="6381248" shape="2" size="8"/>
 			<output>
 				<port id="0" precision="I32">
 					<dim>2</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="376" name="Add_27/Shape/Gathered_input_port_2/value1190417574" type="Const" version="opset1">
-			<data element_type="i64" shape="" offset="6381256" size="8"/>
+		<layer id="376" name="Add_27/Shape/Gathered_input_port_2/value1193617916" type="Const" version="opset1">
+			<data element_type="i64" offset="6381256" shape="" size="8"/>
 			<output>
 				<port id="0" precision="I64"/>
 			</output>
@@ -6556,8 +6556,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="378" name="3052305417751" type="Const" version="opset1">
-			<data element_type="f32" shape="4" offset="25739200" size="16"/>
+		<layer id="378" name="3063306517772" type="Const" version="opset1">
+			<data element_type="f32" offset="25739200" shape="4" size="16"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>4</dim>
@@ -6580,7 +6580,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="380" name="3051" type="Convert" version="opset1">
+		<layer id="380" name="3062" type="Convert" version="opset1">
 			<data destination_type="f32"/>
 			<input>
 				<port id="0" precision="I64">
@@ -6609,8 +6609,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="382" name="Resize_282/Add_input_port_1/value305017460" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="6381280" size="4"/>
+		<layer id="382" name="Resize_282/Add_input_port_1/value306117454" type="Const" version="opset1">
+			<data element_type="f32" offset="6381280" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -6633,24 +6633,24 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="384" name="Resize_282/StridedSlice_scales_input_port_1/value303917700" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381284" size="8"/>
+		<layer id="384" name="Resize_282/StridedSlice_scales_input_port_1/value305017520" type="Const" version="opset1">
+			<data element_type="i64" offset="6381284" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="385" name="Resize_282/StridedSlice_scales_input_port_2/value304117655" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381292" size="8"/>
+		<layer id="385" name="Resize_282/StridedSlice_scales_input_port_2/value305217400" type="Const" version="opset1">
+			<data element_type="i64" offset="6381292" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="386" name="Resize_282/StridedSlice_scales_input_port_3/value304317400" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381300" size="8"/>
+		<layer id="386" name="Resize_282/StridedSlice_scales_input_port_3/value305417730" type="Const" version="opset1">
+			<data element_type="i64" offset="6381300" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
@@ -6658,7 +6658,7 @@
 			</output>
 		</layer>
 		<layer id="387" name="Resize_282/StridedSlice_scales" type="StridedSlice" version="opset1">
-			<data begin_mask="0" end_mask="0" new_axis_mask="0" shrink_axis_mask="0" ellipsis_mask="0"/>
+			<data begin_mask="0" ellipsis_mask="0" end_mask="0" new_axis_mask="0" shrink_axis_mask="0"/>
 			<input>
 				<port id="0" precision="FP32">
 					<dim>4</dim>
@@ -6679,8 +6679,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="388" name="Resize_282/axis304617874" type="Const" version="opset1">
-			<data element_type="i64" shape="2" offset="6381308" size="16"/>
+		<layer id="388" name="Resize_282/axis305717715" type="Const" version="opset1">
+			<data element_type="i64" offset="6381308" shape="2" size="16"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>2</dim>
@@ -6688,7 +6688,7 @@
 			</output>
 		</layer>
 		<layer id="389" name="Resize_282" type="Interpolate" version="opset4">
-			<data mode="linear_onnx" shape_calculation_mode="sizes" coordinate_transformation_mode="align_corners" nearest_mode="floor" antialias="false" pads_begin="0, 0, 0, 0" pads_end="0, 0, 0, 0" cube_coeff="-0.75"/>
+			<data antialias="false" coordinate_transformation_mode="align_corners" cube_coeff="-0.75" mode="linear_onnx" nearest_mode="floor" pads_begin="0, 0, 0, 0" pads_end="0, 0, 0, 0" shape_calculation_mode="sizes"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -6707,7 +6707,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="4" precision="FP16" names="677">
+				<port id="4" names="677" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>60</dim>
@@ -6732,7 +6732,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="678">
+				<port id="2" names="678" precision="FP16">
 					<dim>1</dim>
 					<dim>120</dim>
 					<dim>60</dim>
@@ -6741,9 +6741,9 @@
 			</output>
 		</layer>
 		<layer id="391" name="decoder.up4.convA.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="96, 120, 3, 3" offset="25739216" size="207360"/>
+			<data element_type="f16" offset="25739216" shape="96, 120, 3, 3" size="207360"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.up4.convA.weight">
+				<port id="0" names="decoder.up4.convA.weight" precision="FP16">
 					<dim>96</dim>
 					<dim>120</dim>
 					<dim>3</dim>
@@ -6752,7 +6752,7 @@
 			</output>
 		</layer>
 		<layer id="392" name="Conv_284/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -6776,8 +6776,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="393" name="Conv_284/Dims3873" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 96, 1, 1" offset="25946576" size="192"/>
+		<layer id="393" name="Conv_284/Dims3869" type="Const" version="opset1">
+			<data element_type="f16" offset="25946576" shape="1, 96, 1, 1" size="192"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -6804,7 +6804,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="679">
+				<port id="2" names="679" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>60</dim>
@@ -6812,8 +6812,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="395" name="LeakyRelu_285/weights1160817754" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="13902348" size="4"/>
+		<layer id="395" name="LeakyRelu_285/weights1161217919" type="Const" version="opset1">
+			<data element_type="f32" offset="13902348" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -6833,7 +6833,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="680">
+				<port id="2" names="680" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>60</dim>
@@ -6842,9 +6842,9 @@
 			</output>
 		</layer>
 		<layer id="397" name="decoder.up4.convB.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="96, 96, 3, 3" offset="25946768" size="165888"/>
+			<data element_type="f16" offset="25946768" shape="96, 96, 3, 3" size="165888"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.up4.convB.weight">
+				<port id="0" names="decoder.up4.convB.weight" precision="FP16">
 					<dim>96</dim>
 					<dim>96</dim>
 					<dim>3</dim>
@@ -6853,7 +6853,7 @@
 			</output>
 		</layer>
 		<layer id="398" name="Conv_286/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -6877,8 +6877,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="399" name="Conv_286/Dims4173" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 96, 1, 1" offset="26112656" size="192"/>
+		<layer id="399" name="Conv_286/Dims4043" type="Const" version="opset1">
+			<data element_type="f16" offset="26112656" shape="1, 96, 1, 1" size="192"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -6905,7 +6905,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="681">
+				<port id="2" names="681" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>60</dim>
@@ -6913,8 +6913,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="401" name="LeakyRelu_287/weights1158017820" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="13902348" size="4"/>
+		<layer id="401" name="LeakyRelu_287/weights1162817811" type="Const" version="opset1">
+			<data element_type="f32" offset="13902348" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -6934,7 +6934,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="682">
+				<port id="2" names="682" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>60</dim>
@@ -6958,16 +6958,16 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="404" name="Conv_8/Shape/Gathered_input_port_1/value1191017526" type="Const" version="opset1">
-			<data element_type="i32" shape="2" offset="6381248" size="8"/>
+		<layer id="404" name="Conv_8/Shape/Gathered_input_port_1/value1194217550" type="Const" version="opset1">
+			<data element_type="i32" offset="6381248" shape="2" size="8"/>
 			<output>
 				<port id="0" precision="I32">
 					<dim>2</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="405" name="Conv_8/Shape/Gathered_input_port_2/value1191217547" type="Const" version="opset1">
-			<data element_type="i64" shape="" offset="6381256" size="8"/>
+		<layer id="405" name="Conv_8/Shape/Gathered_input_port_2/value1194417628" type="Const" version="opset1">
+			<data element_type="i64" offset="6381256" shape="" size="8"/>
 			<output>
 				<port id="0" precision="I64"/>
 			</output>
@@ -6989,8 +6989,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="407" name="3084308617865" type="Const" version="opset1">
-			<data element_type="f32" shape="4" offset="26112848" size="16"/>
+		<layer id="407" name="3095309717523" type="Const" version="opset1">
+			<data element_type="f32" offset="26112848" shape="4" size="16"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>4</dim>
@@ -7013,7 +7013,7 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="409" name="3083" type="Convert" version="opset1">
+		<layer id="409" name="3094" type="Convert" version="opset1">
 			<data destination_type="f32"/>
 			<input>
 				<port id="0" precision="I64">
@@ -7042,8 +7042,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="411" name="Resize_306/Add_input_port_1/value308217664" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="6381280" size="4"/>
+		<layer id="411" name="Resize_306/Add_input_port_1/value309317748" type="Const" version="opset1">
+			<data element_type="f32" offset="6381280" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -7066,24 +7066,24 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="413" name="Resize_306/StridedSlice_scales_input_port_1/value307117796" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381284" size="8"/>
+		<layer id="413" name="Resize_306/StridedSlice_scales_input_port_1/value308217532" type="Const" version="opset1">
+			<data element_type="i64" offset="6381284" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="414" name="Resize_306/StridedSlice_scales_input_port_2/value307317454" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381292" size="8"/>
+		<layer id="414" name="Resize_306/StridedSlice_scales_input_port_2/value308417517" type="Const" version="opset1">
+			<data element_type="i64" offset="6381292" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="415" name="Resize_306/StridedSlice_scales_input_port_3/value307517589" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="6381300" size="8"/>
+		<layer id="415" name="Resize_306/StridedSlice_scales_input_port_3/value308617781" type="Const" version="opset1">
+			<data element_type="i64" offset="6381300" shape="1" size="8"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
@@ -7091,7 +7091,7 @@
 			</output>
 		</layer>
 		<layer id="416" name="Resize_306/StridedSlice_scales" type="StridedSlice" version="opset1">
-			<data begin_mask="0" end_mask="0" new_axis_mask="0" shrink_axis_mask="0" ellipsis_mask="0"/>
+			<data begin_mask="0" ellipsis_mask="0" end_mask="0" new_axis_mask="0" shrink_axis_mask="0"/>
 			<input>
 				<port id="0" precision="FP32">
 					<dim>4</dim>
@@ -7112,8 +7112,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="417" name="Resize_306/axis307817343" type="Const" version="opset1">
-			<data element_type="i64" shape="2" offset="6381308" size="16"/>
+		<layer id="417" name="Resize_306/axis308917556" type="Const" version="opset1">
+			<data element_type="i64" offset="6381308" shape="2" size="16"/>
 			<output>
 				<port id="0" precision="I64">
 					<dim>2</dim>
@@ -7121,7 +7121,7 @@
 			</output>
 		</layer>
 		<layer id="418" name="Resize_306" type="Interpolate" version="opset4">
-			<data mode="linear_onnx" shape_calculation_mode="sizes" coordinate_transformation_mode="align_corners" nearest_mode="floor" antialias="false" pads_begin="0, 0, 0, 0" pads_end="0, 0, 0, 0" cube_coeff="-0.75"/>
+			<data antialias="false" coordinate_transformation_mode="align_corners" cube_coeff="-0.75" mode="linear_onnx" nearest_mode="floor" pads_begin="0, 0, 0, 0" pads_end="0, 0, 0, 0" shape_calculation_mode="sizes"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -7140,7 +7140,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="4" precision="FP16" names="701">
+				<port id="4" names="701" precision="FP16">
 					<dim>1</dim>
 					<dim>96</dim>
 					<dim>120</dim>
@@ -7165,7 +7165,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="702">
+				<port id="2" names="702" precision="FP16">
 					<dim>1</dim>
 					<dim>112</dim>
 					<dim>120</dim>
@@ -7174,9 +7174,9 @@
 			</output>
 		</layer>
 		<layer id="420" name="decoder.up5.convA.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="48, 112, 3, 3" offset="26112864" size="96768"/>
+			<data element_type="f16" offset="26112864" shape="48, 112, 3, 3" size="96768"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.up5.convA.weight">
+				<port id="0" names="decoder.up5.convA.weight" precision="FP16">
 					<dim>48</dim>
 					<dim>112</dim>
 					<dim>3</dim>
@@ -7185,7 +7185,7 @@
 			</output>
 		</layer>
 		<layer id="421" name="Conv_308/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -7209,8 +7209,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="422" name="Conv_308/Dims3987" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 48, 1, 1" offset="26209632" size="96"/>
+		<layer id="422" name="Conv_308/Dims3905" type="Const" version="opset1">
+			<data element_type="f16" offset="26209632" shape="1, 48, 1, 1" size="96"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -7237,7 +7237,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="703">
+				<port id="2" names="703" precision="FP16">
 					<dim>1</dim>
 					<dim>48</dim>
 					<dim>120</dim>
@@ -7245,8 +7245,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="424" name="LeakyRelu_309/weights1158817844" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="13902348" size="4"/>
+		<layer id="424" name="LeakyRelu_309/weights1160817784" type="Const" version="opset1">
+			<data element_type="f32" offset="13902348" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -7266,7 +7266,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="704">
+				<port id="2" names="704" precision="FP16">
 					<dim>1</dim>
 					<dim>48</dim>
 					<dim>120</dim>
@@ -7275,9 +7275,9 @@
 			</output>
 		</layer>
 		<layer id="426" name="decoder.up5.convB.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="48, 48, 3, 3" offset="26209728" size="41472"/>
+			<data element_type="f16" offset="26209728" shape="48, 48, 3, 3" size="41472"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.up5.convB.weight">
+				<port id="0" names="decoder.up5.convB.weight" precision="FP16">
 					<dim>48</dim>
 					<dim>48</dim>
 					<dim>3</dim>
@@ -7286,7 +7286,7 @@
 			</output>
 		</layer>
 		<layer id="427" name="Conv_310/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -7310,8 +7310,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="428" name="Conv_310/Dims4101" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 48, 1, 1" offset="26251200" size="96"/>
+		<layer id="428" name="Conv_310/Dims4217" type="Const" version="opset1">
+			<data element_type="f16" offset="26251200" shape="1, 48, 1, 1" size="96"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -7338,7 +7338,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="705">
+				<port id="2" names="705" precision="FP16">
 					<dim>1</dim>
 					<dim>48</dim>
 					<dim>120</dim>
@@ -7346,8 +7346,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="430" name="LeakyRelu_311/weights1159617541" type="Const" version="opset1">
-			<data element_type="f32" shape="1" offset="13902348" size="4"/>
+		<layer id="430" name="LeakyRelu_311/weights1162017895" type="Const" version="opset1">
+			<data element_type="f32" offset="13902348" shape="1" size="4"/>
 			<output>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
@@ -7367,7 +7367,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="706">
+				<port id="2" names="706" precision="FP16">
 					<dim>1</dim>
 					<dim>48</dim>
 					<dim>120</dim>
@@ -7376,9 +7376,9 @@
 			</output>
 		</layer>
 		<layer id="432" name="decoder.conv3.weight" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 48, 3, 3" offset="26251296" size="864"/>
+			<data element_type="f16" offset="26251296" shape="1, 48, 3, 3" size="864"/>
 			<output>
-				<port id="0" precision="FP16" names="decoder.conv3.weight">
+				<port id="0" names="decoder.conv3.weight" precision="FP16">
 					<dim>1</dim>
 					<dim>48</dim>
 					<dim>3</dim>
@@ -7387,7 +7387,7 @@
 			</output>
 		</layer>
 		<layer id="433" name="Conv_312/WithoutBiases" type="Convolution" version="opset1">
-			<data strides="1, 1" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" auto_pad="explicit"/>
+			<data auto_pad="explicit" dilations="1, 1" pads_begin="1, 1" pads_end="1, 1" strides="1, 1"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -7411,8 +7411,8 @@
 				</port>
 			</output>
 		</layer>
-		<layer id="434" name="Conv_312/Dims4071" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 1, 1, 1" offset="26252160" size="2"/>
+		<layer id="434" name="Conv_312/Dims3845" type="Const" version="opset1">
+			<data element_type="f16" offset="26252160" shape="1, 1, 1, 1" size="2"/>
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -7439,7 +7439,7 @@
 				</port>
 			</input>
 			<output>
-				<port id="2" precision="FP16" names="707">
+				<port id="2" names="707" precision="FP16">
 					<dim>1</dim>
 					<dim>1</dim>
 					<dim>120</dim>
@@ -7942,6 +7942,7 @@
 			<generate_deprecated_IR_V7 value="False"/>
 			<input_model value="DIR/depth_estimation_mbnv2_240x320.onnx"/>
 			<input_model_is_text value="False"/>
+			<input_shape value="[1,3,240,320]"/>
 			<k value="DIR/CustomLayersMapping.xml"/>
 			<keep_shape_ops value="True"/>
 			<legacy_ir_generation value="False"/>
@@ -7952,17 +7953,19 @@
 			<model_name value="depth_estimation_mbnv2_240x320"/>
 			<output_dir value="DIR"/>
 			<placeholder_data_types value="{}"/>
+			<placeholder_shapes value="[  1   3 240 320]"/>
 			<progress value="False"/>
 			<remove_memory value="False"/>
 			<remove_output_softmax value="False"/>
-			<reverse_input_channels value="False"/>
+			<reverse_input_channels value="True"/>
 			<save_params_from_nd value="False"/>
+			<scale value="255.0"/>
 			<scale_values value="()"/>
 			<silent value="False"/>
 			<static_shape value="False"/>
 			<stream_output value="False"/>
 			<transform value=""/>
-			<unset unset_cli_parameters="batch, counts, disable_fusing, disable_gfusing, finegrain_fusing, input, input_checkpoint, input_meta_graph, input_proto, input_shape, input_symbol, mean_file, mean_file_offsets, move_to_preprocess, nd_prefix_name, output, placeholder_shapes, pretrained_model_name, saved_model_dir, saved_model_tags, scale, tensorboard_logdir, tensorflow_custom_layer_libraries, tensorflow_custom_operations_config_update, tensorflow_object_detection_api_pipeline_config, tensorflow_use_custom_operations_config, transformations_config"/>
+			<unset unset_cli_parameters="batch, counts, disable_fusing, disable_gfusing, finegrain_fusing, input, input_checkpoint, input_meta_graph, input_proto, input_symbol, mean_file, mean_file_offsets, move_to_preprocess, nd_prefix_name, output, pretrained_model_name, saved_model_dir, saved_model_tags, tensorboard_logdir, tensorflow_custom_layer_libraries, tensorflow_custom_operations_config_update, tensorflow_object_detection_api_pipeline_config, tensorflow_use_custom_operations_config, transformations_config"/>
 		</cli_parameters>
 	</meta_data>
 </net>

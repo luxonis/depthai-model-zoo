@@ -4,12 +4,12 @@ documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/dep
 task_type: monocular_depth_estimation
 files:
   - name: FP16/depth_estimation_mbnv2_480x640.xml
-    size: 216378
-    sha256: 9e332b6262831dd291363160315f009d828d3a7fac658ed7aa1dab144b11cd75
+    size: 216453
+    sha256: 82e306a2a5ca19aad452ffa7df00a421fdd37e04cc5d1b54c5ffaa6a390d0112
     source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.xml
   - name: FP16/depth_estimation_mbnv2_480x640.bin
     size: 26252162
-    sha256: c00c3ebea9417ce2560798ccaa812f265626d6ae095ef42a6293252bd2086ba9
+    sha256: 5696790752f7f172fca80d48354c342b2297ecb8e6e5259472812c1dddf01743
     source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.bin
 framework: dldt
 license: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/149_depth_estimation
