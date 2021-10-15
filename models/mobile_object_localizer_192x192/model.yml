@@ -1,7 +1,7 @@
 description: >-
   Mobile Object Localizer (192 x 192)
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/mobile_object_localizer_192x192
-task_type: object_detection
+task_type: detection
 files:
   - name: FP16/mobile_object_localizer_192x192.xml
     size: 305433

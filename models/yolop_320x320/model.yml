@@ -1,7 +1,7 @@
 description: >-
   Object Detection, Lane Segmentation, Line Segmentation
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolop_320x320
-task_type: object_detection
+task_type: detection
 files:
   - name: FP16/yolop_320x320.xml
     size: 582488
