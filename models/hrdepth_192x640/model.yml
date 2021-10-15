@@ -1,0 +1,15 @@
+description: >-
+  Depth Estimation
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/hrdepth_192x640
+task_type: monocular_depth_estimation
+files:
+  - name: FP16/hrdepth_192x640.xml
+    size: 467357
+    sha256: 566b71be2693aa5ed0558e101e084fce6f0ac31d5b787e1e9558531644e7e002
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/hrdepth_192x640/hrdepth_192x640.xml
+  - name: FP16/hrdepth_192x640.bin
+    size: 6198078
+    sha256: afae2dca3f9948ad77c79aa28af33a00eae575c4c20051cdb6b159ff420affb1
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/hrdepth_192x640/hrdepth_192x640.bin
+framework: dldt
+license: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/158_HR-Depth
