@@ -1,15 +1,15 @@
 description: >-
-  Mobile Object Localizer (192 x 192)
+  Crowd Counting using DM-Count model
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/dmcount_540x960
-task_type: detection
+task_type: feature_extraction
 files:
   - name: FP16/dmcount_540x960.xml
-    size: 305433
-    sha256: bab4c34aba0904f3038235b2d3f4f5640de68fd69df3e7095b0b27a0093f428a
+    size: 60776
+    sha256: 4e80e67e4ae7ffe2337260699f89b29e72605a5fa85fb9c412f06735c467a239
     source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.xml
   - name: FP16/dmcount_540x960.bin
-    size: 3488504
-    sha256: ce1e7e25b6f644b0dcb90ae71a955e6cbc9a7d80632979e9482eb83d9d18fc66
+    size: 42998994
+    sha256: 4e0f50ade192687d48d6c1f86aece40bbfdb19079f4a26099df68426143e2b69
     source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.bin
 framework: dldt
-license: https://tfhub.dev/google/lite-model/object_detection/mobile_object_localizer_v1/1/default/1
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/dmcount_540x960

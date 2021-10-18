@@ -3,11 +3,11 @@ description: >-
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/fast_depth_480x640
 task_type: monocular_depth_estimation
 files:
-  - name: FP16/fast_depth_480x640.xml
+  - name: fast_depth_480x640.xml
     size: 131399
     sha256: a0604aa2eb36463117cc53506786c14c78e55e8ac14b6fa09dbab1b24d99f2d3
     source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/fast_depth_480x640/fast_depth_480x640.xml
-  - name: FP16/fast_depth_256x320.bin
+  - name: fast_depth_256x320.bin
     size: 2704518
     sha256: 403fe398b8f94d989e9db1f90d57c0e3209b839f60759ddca60f17f3eda52ec1
     source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/fast_depth_256x320/fast_depth_256x320.bin
