@@ -1,0 +1,15 @@
+description: >-
+  Test Model (megadepth copy)
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/testmodel
+task_type: monocular_depth_estimation
+files:
+  - name: FP16/testmodel.xml
+    size: 441968
+    sha256: c9715a849b850704a9a3374ec90ecb9a94e734607228b68211736b3b6b98fc34
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/testmodel/testmodel.xml
+  - name: FP16/testmodel.bin
+    size: 10713862
+    sha256: 45b913bde12e19e156985289a2cf7faf8b6166a8a8f8a20aa637eb736a4902d6
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/testmodel/testmodel.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/testmodel
