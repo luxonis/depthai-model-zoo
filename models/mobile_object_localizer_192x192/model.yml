@@ -10,6 +10,6 @@ files:
   - name: FP16/dmcount_540x960.bin
     size: 3488504
     sha256: ce1e7e25b6f644b0dcb90ae71a955e6cbc9a7d80632979e9482eb83d9d18fc66
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.bin
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/dmcount_540x960/dmcount_540x960.bin
 framework: dldt
 license: https://tfhub.dev/google/lite-model/object_detection/mobile_object_localizer_v1/1/default/1

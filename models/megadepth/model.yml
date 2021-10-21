@@ -10,6 +10,6 @@ files:
   - name: FP16/megadepth.bin
     size: 10713862
     sha256: 45b913bde12e19e156985289a2cf7faf8b6166a8a8f8a20aa637eb736a4902d6
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/megadepth/megadepth.bin
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/megadepth/megadepth.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/megadepth

@@ -10,6 +10,6 @@ files:
   - name: FP16/dmcount_540x960.bin
     size: 42998994
     sha256: 4e0f50ade192687d48d6c1f86aece40bbfdb19079f4a26099df68426143e2b69
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.bin
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/dmcount_540x960/dmcount_540x960.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/dmcount_540x960

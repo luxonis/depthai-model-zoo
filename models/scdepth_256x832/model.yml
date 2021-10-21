@@ -10,6 +10,6 @@ files:
   - name: FP16/scdepth_256x832.bin
     size: 28644944
     sha256: 4656c0da656628c7d155face0449af21a23f3bd920e362124b08bdc393811f89
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/scdepth_256x832/scdepth_256x832.bin
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/scdepth_256x832/scdepth_256x832.bin
 framework: dldt
 license: https://github.com/JiawangBian/SC-SfMLearner-Release
