@@ -1,0 +1,15 @@
+description: >-
+  ImageNet Classification
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/inceptionv4_299x299
+task_type: classification
+files:
+  - name: FP16/inceptionv4_299x299.xml
+    size: 496775
+    sha256: 4574b1c016cbc1a38da68f72d7c8fdeede5578116740443072a2a72b9e917990
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/inceptionv4_299x299/inceptionv4_299x299.xml
+  - name: FP16/inceptionv4_299x299.bin
+    size: 184036488
+    sha256: ca36c599b7d3af5d3a2ea0d13b7595abb2bad4a6a9a776c9a5409abc350c131c
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/inceptionv4_299x299/inceptionv4_299x299.bin
+framework: dldt
+license: https://github.com/tensorflow/models/tree/master/research/slim/nets
