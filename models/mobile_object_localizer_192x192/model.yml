@@ -13,3 +13,20 @@ files:
     source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.bin
 framework: dldt
 license: https://tfhub.dev/google/lite-model/object_detection/mobile_object_localizer_v1/1/default/1
+meta:
+    inputs:
+      - type: image
+        shape: 3, 192, 192
+        name: normalized_input_image_tensor
+    FPS:
+        mean: 41.02
+        std: 0.01
+    backbone: MobileNetV2
+    experiment: None
+    uses_depth: false
+    source:
+      - name: TF-Hub
+        url: https://tfhub.dev/google/lite-model/object_detection/mobile_object_localizer_v1/1/default/1
+    license: 
+        name: Apache-2.0
+        url: https://opensource.org/licenses/Apache-2.0
