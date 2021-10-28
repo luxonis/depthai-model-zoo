@@ -4,8 +4,8 @@ documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/mob
 task_type: detection
 files:
   - name: FP16/mobile_object_localizer_192x192.xml
-    size: 305433
-    sha256: bab4c34aba0904f3038235b2d3f4f5640de68fd69df3e7095b0b27a0093f428a
+    size: 305434
+    sha256: 941d9ff9fd4ac40f40a9f17e0be2e43ffafeb5d402b1e94fdcca2f617fe1ae9a
     source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.xml
   - name: FP16/mobile_object_localizer_192x192.bin
     size: 3488504

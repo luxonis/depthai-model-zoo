@@ -9356,7 +9356,7 @@
 			</output>
 		</layer>
 		<layer id="527" name="lambda/NonMaxSuppressionV3" type="NonMaxSuppression" version="opset5">
-			<data box_encoding="corner" sort_result_descending="true" output_type="i32"/>
+			<data box_encoding="corner" sort_result_descending="false" output_type="i32"/>
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
