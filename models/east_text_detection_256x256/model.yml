@@ -1,7 +1,7 @@
 description: >-
   EAST text detection
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/east_text_detection_256x256
-task_type: text_detection
+task_type: detection
 files:
   - name: FP16/east_text_detection_256x256.xml
     size: 185041
