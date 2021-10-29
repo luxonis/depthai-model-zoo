@@ -1,0 +1,15 @@
+description: >-
+  ImageNet Classification
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/micronet_m0_224x224
+task_type: classification
+files:
+  - name: FP16/micronet_m0_224x224.xml
+    size: 423574
+    sha256: 069559d8d050369e26ed5daa267eb540dce31b48b5a918c89ca378eb88a7b2a8
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/micronet_m0_224x224/micronet_m0_224x224.xml
+  - name: FP16/micronet_m0_224x224.bin
+    size: 2036680
+    sha256: ec03740e655e0871850c7156246489cc69df1fa29731f85fa47bb3c1e2817295
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/micronet_m0_224x224/micronet_m0_224x224.bin
+framework: dldt
+license: https://github.com/liyunsheng13/micronet/blob/main/LICENSE
