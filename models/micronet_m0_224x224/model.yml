@@ -1,5 +1,5 @@
 description: >-
-  ImageNet Classification
+  MicroNet-m0 ImageNet Classification
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/micronet_m0_224x224
 task_type: classification
 files:
