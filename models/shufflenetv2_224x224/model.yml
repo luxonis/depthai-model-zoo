@@ -1,0 +1,15 @@
+description: >-
+  ImageNet Classification
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/shufflenetv2_224x224
+task_type: classification
+files:
+  - name: FP16/shufflenetv2_224x224.xml
+    size: 409461
+    sha256: 4425fe82c53817395f0becc576ebf5ef6dad9d3e9bea37335e6e12692bd1338e
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/shufflenetv2_224x224/shufflenetv2_224x224.xml
+  - name: FP16/shufflenetv2_224x224.bin
+    size: 4527920
+    sha256: 67a20b803941ded4fced169e96a6db67ca58a374ffbd534460fee5306798ca87
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/shufflenetv2_224x224/shufflenetv2_224x224.bin
+framework: dldt
+license: https://github.com/pytorch/vision/tree/main/torchvision/models
