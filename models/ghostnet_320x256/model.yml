@@ -1,0 +1,15 @@
+description: >-
+  ImageNet Classification
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/ghostnet_320x256
+task_type: classification
+files:
+  - name: FP16/ghostnet_320x256.xml
+    size: 378237
+    sha256: b7e1a6b6cb5be2a18c2c8bd3d14221128be44e7f6e6fd4a7f2e96ebce0b744a6
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/ghostnet_320x256/ghostnet_320x256.xml
+  - name: FP16/ghostnet_320x256.bin
+    size: 10343636
+    sha256: 76dae5b674803575204189869a28fdd7e3faa303082493c83094f37c712022b2
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/ghostnet_320x256/ghostnet_320x256.bin
+framework: dldt
+license: https://github.com/huawei-noah/CV-Backbones
