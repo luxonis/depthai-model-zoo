@@ -5,7 +5,7 @@ task_type: classification
 files:
   - name: FP16/ghostnet_320x256.xml
     size: 378237
-    sha256: b7e1a6b6cb5be2a18c2c8bd3d14221128be44e7f6e6fd4a7f2e96ebce0b744a6
+    sha256: cab6b1f884a3d0c18222a62bf1eb826a4085e80032aeb8d1fc0a5b8faef16d36
     source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/ghostnet_320x256/ghostnet_320x256.xml
   - name: FP16/ghostnet_320x256.bin
     size: 10343636
