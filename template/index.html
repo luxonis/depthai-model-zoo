@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and community">
+    <meta name="author" content="Luxonis">
+    <title>DepthAI Model Zoo</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><strong>DepthAI</strong> Model Zoo</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid root-container">
+        <div class="row">
+            <div class="col-md-3">
+                <div>
+                    <a href="#" class="list-group-item active">Model Categories</a>
+                    <ul class="list-group">
+                        {% for category_name, category_count in categories.items() %}
+                            <li class="list-group-item">
+                                {{ category_name }}
+                                <span class="label label-primary pull-right">{{ category_count }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="btn-group alg-right-pad">
+                        <button type="button" class="btn btn-default"><strong>{{ models|length }}  </strong>models</button>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                                Sort Models &nbsp;
+      <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="sortByName(true)">By A-Z Name</a></li>
+                                <li class="divider"></li>
+                                <li><a onclick="sortByName(false)">By Z-A Name</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Highest Performance</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Lowest Performance</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Highest Resolution</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">By Lowest Resolution</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="model-row">
+                    {% for model in models %}
+                        <div id="{{ model.name }}" aria-type="model-box" data-name="{{ model.name }}" data-fps="{{ model.meta.FPS.mean }}" data-resolution="{{ model.resolution_factor }}" class="col-md-4 text-center col-sm-6 col-xs-6">
+                            <div class="thumbnail product-box">
+                                <img src="assets/img/nn.png" alt="" />
+                                <div class="caption">
+                                    <h3><a href="#">{{ model.name }}</a></h3>
+                                    <p>FPS : <strong>{{ model.meta.FPS.mean }}</strong>  </p>
+                                    <p>{{ description }}</p>
+                                    <p>
+                                        {% if model.meta.source|length > 1 %}
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                                    View sources &nbsp;
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    {% for source in model.meta.source %}
+                                                        <li><a href="{{ source.url }}">{{ source.name }}</a></li>
+                                                        {% if not loop.last %}
+                                                            <li class="divider"></li>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        {% else %}
+                                            <a href="{{ model.meta.source[0].url }}" class="btn btn-success" role="button">View source</a>
+                                        {% endif %}
+                                        <a href="#" class="btn btn-primary" role="button" onclick="sortByName(true)">See Details</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 end-box ">
+        &copy; 2021 | &nbsp; All Rights Reserved | &nbsp; www.luxonis.com | &nbsp; Email us: <a href="mailto:support@luxonis.com">support@luxonis.com</a>
+    </div>
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/zooSite.js"></script>
+</body>
+</html>
