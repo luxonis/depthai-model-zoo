@@ -11,3 +11,19 @@ jobs:
     steps:
       - name: Send update
         run: curl https://blobconverter.luxonis.com/update
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - run: python3 -m pip install -r requirements.txt
+      - run: python3 generate_website.py
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
