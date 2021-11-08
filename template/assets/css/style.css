@@ -1,5 +1,5 @@
 ﻿body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: biennale, sans-serif;
     font-size: 14px;
 }
 
@@ -10,7 +10,7 @@
 
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: biennale, sans-serif;
 }
 
 .alg-right-pad {
@@ -180,4 +180,47 @@ a:hover {
 
 .model-row {
     display: flex;
+}
+
+.thumbnail-img {
+    margin-top: 10px;
+}
+
+.product-property-name {
+    display: inline-block;
+    width: 49%;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.product-property-value {
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.documentation-button {
+    float: right;
+}
+
+.list-group-header {
+    color: #fff;
+    background-color: #428bca;
+    display: block;
+    padding: 10px 15px ;
+    border: 1px solid #428bca;
+}
+
+.category {
+    cursor: pointer;
+}
+
+.category-active {
+    background-color: #dbffdb;
+}
+
+.model-box.disabled {
+    opacity: 0.2;
 }

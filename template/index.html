@@ -3,112 +3,231 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and community">
+    <meta name="description"
+          content="DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and community">
     <meta name="author" content="Luxonis">
     <title>DepthAI Model Zoo</title>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/fonts.css" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
 </head>
 <body>
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><strong>DepthAI</strong> Model Zoo</a>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><strong>DepthAI</strong> Model Zoo</a>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid root-container">
+    <div class="row">
+        <div class="col-md-3">
+            <div>
+                <div class="list-group-header">Model Categories</div>
+                <ul class="list-group">
+                    <li class="list-group-item category category-active" onclick="filterByCategory(event, 'all')">
+                        all
+                        <span class="label label-primary pull-right">{{ models|length }}</span>
+                    </li>
+                    {% for category_name, category_count in categories.items() %}
+                    <li class="list-group-item category" onclick="filterByCategory(event, '{{ category_name }}')">
+                        {{ category_name }}
+                        <span class="label label-primary pull-right">{{ category_count }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
-    </nav>
-    <div class="container-fluid root-container">
-        <div class="row">
-            <div class="col-md-3">
-                <div>
-                    <a href="#" class="list-group-item active">Model Categories</a>
-                    <ul class="list-group">
-                        {% for category_name, category_count in categories.items() %}
-                            <li class="list-group-item">
-                                {{ category_name }}
-                                <span class="label label-primary pull-right">{{ category_count }}</span>
-                            </li>
-                        {% endfor %}
-                    </ul>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="btn-group alg-right-pad">
+                    <button type="button" class="btn btn-default"><strong>{{ models|length }} </strong>models</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                            Sort Models &nbsp;
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a onclick="sortByName(true)">By A-Z Name</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="sortByName(false)">By Z-A Name</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="sortByPerformance(false)">By Highest Performance</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="sortByPerformance(true)">By Lowest Performance</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="sortByResolution(false)">By Highest Resolution</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="sortByResolution(true)">By Lowest Resolution</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="btn-group alg-right-pad">
-                        <button type="button" class="btn btn-default"><strong>{{ models|length }}  </strong>models</button>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-                                Sort Models &nbsp;
-      <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a onclick="sortByName(true)">By A-Z Name</a></li>
-                                <li class="divider"></li>
-                                <li><a onclick="sortByName(false)">By Z-A Name</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">By Highest Performance</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">By Lowest Performance</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">By Highest Resolution</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">By Lowest Resolution</a></li>
-                            </ul>
+            <div class="model-row">
+                {% for model in models %}
+                <div id="{{ model.name }}" aria-type="model-box" data-name="{{ model.name }}" data-task-type="{{ model.task_type }}"
+                     data-fps="{{ model.meta.FPS.mean }}" data-resolution="{{ model.resolution_factor }}"
+                     class="col-md-4 text-center col-sm-6 col-xs-6 model-box">
+                    <div class="thumbnail product-box">
+                        <img src="assets/img/nn.png" alt="" class="thumbnail-img"/>
+                        <div class="caption">
+                            <h3><a href="#">{{ model.name }}</a></h3>
+                            <div class="product-properties">
+                                <p>
+                                    <span class="product-property-name">Task type</span>
+                                    <span class="product-property-value">{{ model.task_type }}</span>
+                                </p>
+                                <p>
+                                    <span class="product-property-name">FPS</span>
+                                    <span class="product-property-value">{{ model.meta.FPS.mean }}</span>
+                                </p>
+                                <p>
+                                    <span class="product-property-name">Resolution</span>
+                                    {% if model.meta.inputs|length > 1 %}
+                                    <span class="product-property-value">Multiple inputs</span>
+                                    {% else %}
+                                    <span class="product-property-value">{{ model.meta.inputs[0].shape.split(',')|reverse|join('x')|replace(" ", "") }}</span>
+                                    {% endif %}
+                                </p>
+                            </div>
+                            <p>{{ description }}</p>
+                            <p>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                    Download &nbsp;
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    {% for download in model.meta.downloads %}
+                                    <li><a href="{{ download.url }}">{{ download.name }}</a></li>
+                                    {% if not loop.last %}
+                                    <li class="divider"></li>
+                                    {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-toggle="modal" data-target="#{{ model.name }}Modal">See Details</button>
                         </div>
                     </div>
                 </div>
-                <div class="model-row">
-                    {% for model in models %}
-                        <div id="{{ model.name }}" aria-type="model-box" data-name="{{ model.name }}" data-fps="{{ model.meta.FPS.mean }}" data-resolution="{{ model.resolution_factor }}" class="col-md-4 text-center col-sm-6 col-xs-6">
-                            <div class="thumbnail product-box">
-                                <img src="assets/img/nn.png" alt="" />
-                                <div class="caption">
-                                    <h3><a href="#">{{ model.name }}</a></h3>
-                                    <p>FPS : <strong>{{ model.meta.FPS.mean }}</strong>  </p>
-                                    <p>{{ description }}</p>
-                                    <p>
-                                        {% if model.meta.source|length > 1 %}
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-                                                    View sources &nbsp;
-                                                    <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    {% for source in model.meta.source %}
-                                                        <li><a href="{{ source.url }}">{{ source.name }}</a></li>
-                                                        {% if not loop.last %}
-                                                            <li class="divider"></li>
-                                                        {% endif %}
-                                                    {% endfor %}
-                                                </ul>
-                                            </div>
-                                        {% else %}
-                                            <a href="{{ model.meta.source[0].url }}" class="btn btn-success" role="button">View source</a>
-                                        {% endif %}
-                                        <a href="#" class="btn btn-primary" role="button" onclick="sortByName(true)">See Details</a>
-                                    </p>
-                                </div>
-                            </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% for model in models %}
+    <div class="modal fade" id="{{ model.name }}Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - {{ model.name }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <p>
+                            {{model.description}}
+                            <a href="{{model.documentation}}" class="btn btn-info documentation-button">See documentation</a>
+                        </p>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>Framework</h4>
+                        <span>{{model.framework}}</span>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>Task type</h4>
+                        <span>{{model.task_type}}</span>
+                    </div>
+                    <div>
+                        <h4>Inputs</h4>
+                        <ul>
+                            {% for input in model.meta.inputs %}
+                                <li>
+                                    <span>name: <strong>{{input.name}}</strong></span><br/>
+                                    <span>type: <strong>{{input.type}}</strong></span><br/>
+                                    <span>shape: <strong>{{input.shape}}</strong></span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>FPS</h4>
+                        <p><span>Mean: </span><span><strong>{{model.meta.FPS.mean}}</strong></span></p>
+                        <p><span>STD: </span><span><strong>{{model.meta.FPS.std}}</strong></span></p>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>Backbone</h4>
+                        <span>{{model.meta.backbone}}</span>
+                    </div>
+                    {% if model.meta.experiment|lower != "none" %}
+                        <div class="product-modal-single-property">
+                            <h4>Related experiment with model usage</h4>
+                            <span>{{model.meta.experiment}}</span>
                         </div>
-                    {% endfor %}
+                    {% endif %}
+                    <div class="product-modal-single-property">
+                        <h4>Uses depth info</h4>
+                        {% if model.meta.uses_depth %}
+                            <span><i class="fa fa-check-circle" aria-hidden="true"></i> Yes</span>
+                        {% else %}
+                            <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                        {% endif %}
+                    </div>
+                    <div>
+                        <h4>Sources</h4>
+                        <ul>
+                        {% for source in model.meta.source %}
+                            <li><a href="{{source.url}}">{{source.name}}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>License</h4>
+                        <span>{{model.meta.license.name}} (<a href="{{model.meta.license.url}}">See full license</a>)</span>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                            Download &nbsp;
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            {% for download in model.meta.downloads %}
+                            <li><a href="{{ download.url }}">{{ download.name }}</a></li>
+                            {% if not loop.last %}
+                            <li class="divider"></li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+{% endfor %}
 
-    <div class="col-md-12 end-box ">
-        &copy; 2021 | &nbsp; All Rights Reserved | &nbsp; www.luxonis.com | &nbsp; Email us: <a href="mailto:support@luxonis.com">support@luxonis.com</a>
-    </div>
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/zooSite.js"></script>
+<div class="col-md-12 end-box ">
+    &copy; 2021 | &nbsp; All Rights Reserved | &nbsp; www.luxonis.com | &nbsp; Email us: <a
+        href="mailto:support@luxonis.com">support@luxonis.com</a>
+</div>
+<script src="assets/js/jquery-1.10.2.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/zooSite.js"></script>
 </body>
 </html>
