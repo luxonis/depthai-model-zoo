@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and community">
+    <meta name="author" content="Luxonis">
+    <title>DepthAI Model Zoo</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="assets/css/fonts.css" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><strong>DepthAI</strong> Model Zoo</a>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid root-container">
+    <div class="row">
+        <div class="col-md-3">
+            <div>
+                <div class="list-group-header">Model Categories</div>
+                <ul class="list-group">
+                    <li class="list-group-item category category-active" onclick="filterByCategory(event, 'all')">
+                        all
+                        <span class="label label-primary pull-right">3</span>
+                    </li>
+                    
+                    <li class="list-group-item category" onclick="filterByCategory(event, 'detection')">
+                        detection
+                        <span class="label label-primary pull-right">2</span>
+                    </li>
+                    
+                    <li class="list-group-item category" onclick="filterByCategory(event, 'feature_extraction')">
+                        feature_extraction
+                        <span class="label label-primary pull-right">1</span>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="btn-group alg-right-pad">
+                    <button type="button" class="btn btn-default"><strong>3 </strong>models</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                            Sort Models &nbsp;
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a onclick="sortByName(true)">By A-Z Name</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="sortByName(false)">By Z-A Name</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="sortByPerformance(false)">By Highest Performance</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="sortByPerformance(true)">By Lowest Performance</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="sortByResolution(false)">By Highest Resolution</a></li>
+                            <li class="divider"></li>
+                            <li><a onclick="sortByResolution(true)">By Lowest Resolution</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="model-row">
+                
+                <div id="yolop_320x320" aria-type="model-box" data-name="yolop_320x320" data-task-type="detection"
+                     data-fps="11.4" data-resolution="102400"
+                     class="col-md-4 text-center col-sm-6 col-xs-6 model-box">
+                    <div class="thumbnail product-box">
+                        <img src="assets/img/nn.png" alt="" class="thumbnail-img"/>
+                        <div class="caption">
+                            <h3><a href="#">yolop_320x320</a></h3>
+                            <div class="product-properties">
+                                <p>
+                                    <span class="product-property-name">Task type</span>
+                                    <span class="product-property-value">detection</span>
+                                </p>
+                                <p>
+                                    <span class="product-property-name">FPS</span>
+                                    <span class="product-property-value">11.4</span>
+                                </p>
+                                <p>
+                                    <span class="product-property-name">Resolution</span>
+                                    
+                                    <span class="product-property-value">320x320x3</span>
+                                    
+                                </p>
+                            </div>
+                            <p></p>
+                            <p>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                    Download &nbsp;
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    
+                                    <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolop_320x320/yolop_320x320.xml">yolop_320x320.xml</a></li>
+                                    
+                                    <li class="divider"></li>
+                                    
+                                    
+                                    <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolop_320x320/yolop_320x320.bin">yolop_320x320.bin</a></li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-toggle="modal" data-target="#yolop_320x320Modal">See Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="dmcount_540x960" aria-type="model-box" data-name="dmcount_540x960" data-task-type="feature_extraction"
+                     data-fps="0.22" data-resolution="518400"
+                     class="col-md-4 text-center col-sm-6 col-xs-6 model-box">
+                    <div class="thumbnail product-box">
+                        <img src="assets/img/nn.png" alt="" class="thumbnail-img"/>
+                        <div class="caption">
+                            <h3><a href="#">dmcount_540x960</a></h3>
+                            <div class="product-properties">
+                                <p>
+                                    <span class="product-property-name">Task type</span>
+                                    <span class="product-property-value">feature_extraction</span>
+                                </p>
+                                <p>
+                                    <span class="product-property-name">FPS</span>
+                                    <span class="product-property-value">0.22</span>
+                                </p>
+                                <p>
+                                    <span class="product-property-name">Resolution</span>
+                                    
+                                    <span class="product-property-value">960x540x3</span>
+                                    
+                                </p>
+                            </div>
+                            <p></p>
+                            <p>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                    Download &nbsp;
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    
+                                    <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.xml">dmcount_540x960.xml</a></li>
+                                    
+                                    <li class="divider"></li>
+                                    
+                                    
+                                    <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/dmcount_540x960/dmcount_540x960.bin">dmcount_540x960.bin</a></li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-toggle="modal" data-target="#dmcount_540x960Modal">See Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="mobile_object_localizer_192x192" aria-type="model-box" data-name="mobile_object_localizer_192x192" data-task-type="detection"
+                     data-fps="41.02" data-resolution="36864"
+                     class="col-md-4 text-center col-sm-6 col-xs-6 model-box">
+                    <div class="thumbnail product-box">
+                        <img src="assets/img/nn.png" alt="" class="thumbnail-img"/>
+                        <div class="caption">
+                            <h3><a href="#">mobile_object_localizer_192x192</a></h3>
+                            <div class="product-properties">
+                                <p>
+                                    <span class="product-property-name">Task type</span>
+                                    <span class="product-property-value">detection</span>
+                                </p>
+                                <p>
+                                    <span class="product-property-name">FPS</span>
+                                    <span class="product-property-value">41.02</span>
+                                </p>
+                                <p>
+                                    <span class="product-property-name">Resolution</span>
+                                    
+                                    <span class="product-property-value">192x192x3</span>
+                                    
+                                </p>
+                            </div>
+                            <p></p>
+                            <p>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                    Download &nbsp;
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    
+                                    <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.xml">mobile_object_localizer_192x192.xml</a></li>
+                                    
+                                    <li class="divider"></li>
+                                    
+                                    
+                                    <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.bin">mobile_object_localizer_192x192.bin</a></li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-toggle="modal" data-target="#mobile_object_localizer_192x192Modal">See Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="modal fade" id="yolop_320x320Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - yolop_320x320</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <p>
+                            Object Detection, Lane Segmentation, Line Segmentation
+                            <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolop_320x320" class="btn btn-info documentation-button">See documentation</a>
+                        </p>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>Framework</h4>
+                        <span>dldt</span>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>Task type</h4>
+                        <span>detection</span>
+                    </div>
+                    <div>
+                        <h4>Inputs</h4>
+                        <ul>
+                            
+                                <li>
+                                    <span>name: <strong>images</strong></span><br/>
+                                    <span>type: <strong>image</strong></span><br/>
+                                    <span>shape: <strong>3, 320, 320</strong></span>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>FPS</h4>
+                        <p><span>Mean: </span><span><strong>11.4</strong></span></p>
+                        <p><span>STD: </span><span><strong>0.01</strong></span></p>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>Backbone</h4>
+                        <span>CSPDarkNet</span>
+                    </div>
+                    
+                    <div class="product-modal-single-property">
+                        <h4>Uses depth info</h4>
+                        
+                            <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                        
+                    </div>
+                    <div>
+                        <h4>Sources</h4>
+                        <ul>
+                        
+                            <li><a href="https://github.com/hustvl/YOLOP">GitHub</a></li>
+                        
+                        </ul>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>License</h4>
+                        <span>MIT (<a href="https://github.com/hustvl/YOLOP/blob/main/LICENSE">See full license</a>)</span>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                            Download &nbsp;
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            
+                            <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolop_320x320/yolop_320x320.xml">yolop_320x320.xml</a></li>
+                            
+                            <li class="divider"></li>
+                            
+                            
+                            <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolop_320x320/yolop_320x320.bin">yolop_320x320.bin</a></li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dmcount_540x960Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - dmcount_540x960</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <p>
+                            Crowd Counting using DM-Count model
+                            <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/dmcount_540x960" class="btn btn-info documentation-button">See documentation</a>
+                        </p>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>Framework</h4>
+                        <span>dldt</span>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>Task type</h4>
+                        <span>feature_extraction</span>
+                    </div>
+                    <div>
+                        <h4>Inputs</h4>
+                        <ul>
+                            
+                                <li>
+                                    <span>name: <strong>input.1</strong></span><br/>
+                                    <span>type: <strong>image</strong></span><br/>
+                                    <span>shape: <strong>3, 540, 960</strong></span>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>FPS</h4>
+                        <p><span>Mean: </span><span><strong>0.22</strong></span></p>
+                        <p><span>STD: </span><span><strong>0.01</strong></span></p>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>Backbone</h4>
+                        <span>VGG19</span>
+                    </div>
+                    
+                        <div class="product-modal-single-property">
+                            <h4>Related experiment with model usage</h4>
+                            <span>https://github.com/luxonis/depthai-experiments/tree/master/gen2-crowdcounting</span>
+                        </div>
+                    
+                    <div class="product-modal-single-property">
+                        <h4>Uses depth info</h4>
+                        
+                            <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                        
+                    </div>
+                    <div>
+                        <h4>Sources</h4>
+                        <ul>
+                        
+                            <li><a href="https://github.com/cvlab-stonybrook/DM-Count">GitHub</a></li>
+                        
+                        </ul>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>License</h4>
+                        <span>MIT (<a href="https://github.com/cvlab-stonybrook/DM-Count/blob/master/LICENSE">See full license</a>)</span>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                            Download &nbsp;
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            
+                            <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.xml">dmcount_540x960.xml</a></li>
+                            
+                            <li class="divider"></li>
+                            
+                            
+                            <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/dmcount_540x960/dmcount_540x960.bin">dmcount_540x960.bin</a></li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mobile_object_localizer_192x192Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - mobile_object_localizer_192x192</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <p>
+                            Mobile Object Localizer (192 x 192)
+                            <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/mobile_object_localizer_192x192" class="btn btn-info documentation-button">See documentation</a>
+                        </p>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>Framework</h4>
+                        <span>dldt</span>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>Task type</h4>
+                        <span>detection</span>
+                    </div>
+                    <div>
+                        <h4>Inputs</h4>
+                        <ul>
+                            
+                                <li>
+                                    <span>name: <strong>normalized_input_image_tensor</strong></span><br/>
+                                    <span>type: <strong>image</strong></span><br/>
+                                    <span>shape: <strong>3, 192, 192</strong></span>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>FPS</h4>
+                        <p><span>Mean: </span><span><strong>41.02</strong></span></p>
+                        <p><span>STD: </span><span><strong>0.01</strong></span></p>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>Backbone</h4>
+                        <span>MobileNetV2</span>
+                    </div>
+                    
+                    <div class="product-modal-single-property">
+                        <h4>Uses depth info</h4>
+                        
+                            <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                        
+                    </div>
+                    <div>
+                        <h4>Sources</h4>
+                        <ul>
+                        
+                            <li><a href="https://tfhub.dev/google/lite-model/object_detection/mobile_object_localizer_v1/1/default/1">TF-Hub</a></li>
+                        
+                        </ul>
+                    </div>
+                    <div class="product-modal-single-property">
+                        <h4>License</h4>
+                        <span>Apache-2.0 (<a href="https://opensource.org/licenses/Apache-2.0">See full license</a>)</span>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                            Download &nbsp;
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            
+                            <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.xml">mobile_object_localizer_192x192.xml</a></li>
+                            
+                            <li class="divider"></li>
+                            
+                            
+                            <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.bin">mobile_object_localizer_192x192.bin</a></li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="col-md-12 end-box ">
+    &copy; 2021 | &nbsp; All Rights Reserved | &nbsp; www.luxonis.com | &nbsp; Email us: <a
+        href="mailto:support@luxonis.com">support@luxonis.com</a>
+</div>
+<script src="assets/js/jquery-1.10.2.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/zooSite.js"></script>
+</body>
+</html>
