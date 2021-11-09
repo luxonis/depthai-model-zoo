@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<!--    font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!--    styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<!--navbvar-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+       <div><img style="width: 70px; margin-right: 10px" class="img-fluid" src="https://assets-global.website-files.com/60da16af25d60d769872821a/60da20c2fa0e620315919d91_123Asset%2015%404x-100.1-p-500.png" alt="">
+           <a class="navbar-brand" href="#">DepthAI Model Zoo</a></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="container-fluid header-row">
+    <div class="col-lg-6 p-5 text-center">
+        <div data-aos="fade-in">
+            <img src="./img/header-img.png" class="img-fluid" alt="">
+            <h1 class="my-3 fw-bold">Luxonix Model Zoo</h1>
+            <h3>Browse the latest developer documentation, including tutorials, sample code, articles, and API reference.</h3>
+        </div>
+    </div>
+</header>
+
+<!-- header end -->
+
+<div class="sticky-top w-100 p-4 bg-dark">
+    <form class="d-flex">
+        <input class="form-control me-2 filter-categories" type="search" placeholder="Name" aria-label="Search the doc">
+        <div class="dropdown">
+            <button class="btn filter-search dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+Sort Model
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item active" href="#">By A-Z Name</a></li>
+                <li><a class="dropdown-item" href="#">By Z-A Name</a></li>
+                <li><a class="dropdown-item" href="#">By Highest Performance</a></li>
+                <li><a class="dropdown-item" href="#">By Lowest Performance</a></li>
+                <li><a class="dropdown-item" href="#">By Highest Resolution</a></li>
+                <li><a class="dropdown-item" href="#">By Lowest Resolution</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+        </div>
+    </form>
+
+</div>
+
+<!-- container -->
+
+<div class="container">
+    <div class="row">
+        <div class="row flex-row justify-content-center rounded-3 py-5 container_ModelCard">
+            <div class="col-md-5 card" data-aos="fade-up">
+                <img src="./img/core.png" class="img-fluid card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Yolop_320x320</h2>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Task type <span>detection</span></li>
+                    <li class="list-group-item">FPS <span>11.4</span></li>
+                    <li class="list-group-item">Resolution <span>320x320x3</span></li>
+                </ul>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+                <div class="btn-group">
+                    <a href="#" class="card-link btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-cloud-download-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h5.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0zm-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
+                        </svg>
+                        <span>Download</span></a>
+                    <a href="#" class="card-link btn btn-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                        </svg>
+                        <span>See Details</span></a>
+                </div>
+            </div>
+            <div class="col-md-5 card" data-aos="fade-up">
+                <img src="./img/core.png" class="img-fluid card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Yolop_320x320</h2>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Task type <span>detection</span></li>
+                    <li class="list-group-item">FPS <span>11.4</span></li>
+                    <li class="list-group-item">Resolution <span>320x320x3</span></li>
+                </ul>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+                <div class="btn-group">
+                    <a href="#" class="card-link btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-cloud-download-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h5.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0zm-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
+                        </svg>
+                        <span>Download</span></a>
+                    <a href="#" class="card-link btn btn-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                        </svg>
+                        <span>See Details</span></a>
+                </div>
+            </div>
+            <div class="col-md-5 card" data-aos="fade-up">
+                <img src="./img/core.png" class="img-fluid card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Yolop_320x320</h2>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Task type <span>detection</span></li>
+                    <li class="list-group-item">FPS <span>11.4</span></li>
+                    <li class="list-group-item">Resolution <span>320x320x3</span></li>
+                </ul>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+                <div class="btn-group">
+                    <a href="#" class="card-link btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-cloud-download-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h5.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0zm-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
+                        </svg>
+                        <span>Download</span></a>
+                    <a href="#" class="card-link btn btn-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                        </svg>
+                        <span>See Details</span></a>
+                </div>
+            </div>
+            <div class="col-md-5 card" data-aos="fade-up">
+                <img src="./img/core.png" class="img-fluid card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">Yolop_320x320</h2>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Task type <span>detection</span></li>
+                    <li class="list-group-item">FPS <span>11.4</span></li>
+                    <li class="list-group-item">Resolution <span>320x320x3</span></li>
+                </ul>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+                <div class="btn-group">
+                    <a href="#" class="card-link btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-cloud-download-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h5.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0zm-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z"/>
+                        </svg>
+                        <span>Download</span></a>
+                    <a href="#" class="card-link btn btn-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                        </svg>
+                        <span>See Details</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init(
+  );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</div>
+</html>
