@@ -13,3 +13,22 @@ files:
     source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/megadepth/megadepth.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/megadepth
+meta:
+    inputs:
+      - type: image
+        shape: 3, 192, 256
+        name: input.1
+    FPS:
+        mean: 4.80
+        std: 0.01
+    backbone: HG
+    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-mega-depth
+    uses_depth: false
+    source:
+      - name: GitHub
+        url: https://github.com/zl548/MegaDepth
+      - name: PINTO_model_zoo
+        url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/153_MegaDepth
+    license: 
+        name: MIT
+        url: https://github.com/zl548/MegaDepth/blob/master/LICENSE

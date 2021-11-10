@@ -13,3 +13,22 @@ files:
     source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/head-pose-estimation_160x160/head-pose-estimation_160x160.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/head-pose-estimation_160x160
+meta:
+    inputs:
+      - type: image
+        shape: 3, 160, 160
+        name: images
+    FPS:
+        mean: 159.92
+        std: 0.72
+    backbone: HRNetV2
+    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-head-posture-detection
+    uses_depth: false
+    source:
+      - name: GitHub
+        url: https://github.com/yinguobing/head-pose-estimation
+      - name: PINTO_model_zoo
+        url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/025_head_pose_estimation
+    license: 
+        name: MIT
+        url: https://github.com/yinguobing/head-pose-estimation/blob/master/LICENSE

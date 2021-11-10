@@ -13,3 +13,20 @@ files:
     source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/inceptionv4_299x299/inceptionv4_299x299.bin
 framework: dldt
 license: https://github.com/tensorflow/models/tree/master/research/slim/nets
+meta:
+    inputs:
+      - type: image
+        shape: 3, 299, 299
+        name: input
+    FPS:
+        mean: 8.02
+        std: 0.03
+    backbone: /
+    experiment: None
+    uses_depth: false
+    source:
+      - name: TF
+        url: https://github.com/tensorflow/models/tree/master/research/slim/nets
+    license: 
+        name: Apache-2.0
+        url: https://github.com/tensorflow/models/blob/master/LICENSE

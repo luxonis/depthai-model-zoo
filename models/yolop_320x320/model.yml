@@ -22,7 +22,7 @@ meta:
         mean: 11.40
         std: 0.01
     backbone: CSPDarkNet
-    experiment: None
+    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-yolop
     uses_depth: false
     source:
       - name: GitHub

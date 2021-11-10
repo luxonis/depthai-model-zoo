@@ -12,4 +12,23 @@ files:
     sha256: 5696790752f7f172fca80d48354c342b2297ecb8e6e5259472812c1dddf01743
     source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.bin
 framework: dldt
-license: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/149_depth_estimation
+license: https://github.com/alinstein/Depth_estimation/blob/master/LICENSE
+meta:
+    inputs:
+      - type: image
+        shape: 3, 480, 640
+        name: input.1
+    FPS:
+        mean: /
+        std: /
+    backbone: MobileNetV2
+    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-depth-mbnv2
+    uses_depth: false
+    source:
+      - name: GitHub
+        url: https://github.com/alinstein/Depth_estimation
+      - name: PINTO_model_zoo/tree/main/149_depth_estimation
+        url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/149_depth_estimation
+    license: 
+        name: MIT
+        url: https://github.com/alinstein/Depth_estimation/blob/master/LICENSE
