@@ -1,3 +1,5 @@
+name: Main workflow
+
 on:
   push:
     branches:
@@ -12,7 +14,7 @@ jobs:
         run: curl https://blobconverter.luxonis.com/update
 
   deploy:
-    name: Deploy to GitHub PagesĻ
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
     steps:
@@ -22,7 +24,6 @@ jobs:
           python-version: '3.8'
       - run: python3 -m pip install -r requirements.txt
       - run: python3 generate_website.py
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
