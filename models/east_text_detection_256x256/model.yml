@@ -13,3 +13,22 @@ files:
     source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/east_text_detection_256x256/east_text_detection_256x256.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/east_text_detection_256x256
+meta:
+    inputs:
+      - type: image
+        shape: 3, 256, 256
+        name: input_images
+    FPS:
+        mean: 22.50
+        std: 0.22
+    backbone: PVANet
+    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-ocr#gen2-text-detection--optical-character-recognition-ocr-pipeline
+    uses_depth: false
+    source:
+      - name: GitHub
+        url: https://github.com/argman/EAST
+      - name: PINTO_model_zoo
+        url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/051_East_Text_Detection
+    license: 
+        name: GPL-3.0
+        url: https://github.com/argman/EAST/blob/master/LICENSE
