@@ -32,3 +32,12 @@ meta:
     license: 
         name: MIT
         url: https://github.com/shawLyu/HR-Depth/blob/main/LICENSE
+    downloads:
+      - name: FP16/hrdepth_192x640.xml
+        size: 467357
+        sha256: 566b71be2693aa5ed0558e101e084fce6f0ac31d5b787e1e9558531644e7e002
+        source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/hrdepth_192x640/hrdepth_192x640.xml
+      - name: FP16/hrdepth_192x640.bin
+        size: 6198078
+        sha256: afae2dca3f9948ad77c79aa28af33a00eae575c4c20051cdb6b159ff420affb1
+        source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/hrdepth_192x640/hrdepth_192x640.bin
