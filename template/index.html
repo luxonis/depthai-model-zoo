@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>DepthAI Model Zoo</title>
 <!--    font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,11 +84,11 @@ Filter by category
 
 
 
-<div class="container">
+<div class="container root-container">
     <div class="row">
         <div class="row flex-row justify-content-center rounded-3 py-5 container_ModelCard">
             {% for model in models %}
-                <div class="col-md-3 card model-box" data-aos="fade-up" aria-type="model-box" id="{{ model.name }}" data-name="{{ model.name }}" data-task-type="{{ model.task_type }}"
+                <div class="col-md-3 card model-box" aria-type="model-box" id="{{ model.name }}" data-name="{{ model.name }}" data-task-type="{{ model.task_type }}"
                      data-fps="{{ model.meta.FPS.mean }}" data-resolution="{{ model.resolution_factor }}">
                     <div class="inner">
                         <div class="nn-img">

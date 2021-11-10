@@ -1,3 +1,8 @@
+function scrollToList() {
+  var y = $(".root-container")[0].offsetTop - 60;
+  setTimeout(function() {window.scrollTo(0, y);},100)
+}
+
 function setOrder(orderList) {
   var enabled = orderList.filter(order => !$("#" + order.name).hasClass("disabled"))
   var disabled = orderList.filter(order => $("#" + order.name).hasClass("disabled"))
@@ -9,6 +14,7 @@ function setOrder(orderList) {
     var order = disabled[j]
     $("div").find("#" + order.name).css({order: i + j + 1});
   }
+  scrollToList()
 }
 
 function getModelData() {
@@ -35,7 +41,6 @@ function sortByName(evt, asc) {
       if(a.name > b.name) { return asc ? 1 : -1; }
       return 0;
   });
-  $("#" + models[0].name)[0].scrollIntoView()
   setOrder(models)
   $("#sortButton")[0].innerText = evt.target.childNodes[0].nodeValue.trim()
 }
@@ -47,7 +52,6 @@ function sortByPerformance(evt, asc) {
       if(a.fps > b.fps) { return asc ? 1 : -1; }
       return 0;
   });
-  $("#" + models[0].name)[0].scrollIntoView()
   setOrder(models)
   $("#sortButton")[0].innerText = evt.target.childNodes[0].nodeValue.trim()
 }
@@ -59,7 +63,6 @@ function sortByResolution(evt, asc) {
       if(a.resolution > b.resolution) { return asc ? 1 : -1; }
       return 0;
   });
-  $("#" + models[0].name)[0].scrollIntoView()
   setOrder(models)
   $("#sortButton")[0].innerText = evt.target.childNodes[0].nodeValue.trim()
 }
@@ -80,9 +83,6 @@ function filterByCategory(event, categoryName) {
   }
   var i, j;
 
-  var elem = (matching[0] || notMatching[0])
-  $("#" + elem.name)[0].scrollIntoView()
-
   for (i = 0; i < matching.length; i++) {
     var model = matching[i]
     $("div").find("#" + model.name).css({order: i + 1}).removeClass("disabled");
@@ -91,6 +91,7 @@ function filterByCategory(event, categoryName) {
     var model = notMatching[j]
     $("div").find("#" + model.name).css({order: i + j + 1}).addClass("disabled");
   }
+  scrollToList()
   $("#categoryButton")[0].innerText = event.target.childNodes[0].nodeValue.trim()
 }
 
@@ -105,9 +106,6 @@ function filterByName(event) {
   }
   var i, j;
 
-  var elem = (matching[0] || notMatching[0])
-  $("#" + elem.name)[0].scrollIntoView()
-
   for (i = 0; i < matching.length; i++) {
     var model = matching[i]
     $("div").find("#" + model.name).css({order: i + 1}).removeClass("disabled");
@@ -116,4 +114,5 @@ function filterByName(event) {
     var model = notMatching[j]
     $("div").find("#" + model.name).css({order: i + j + 1}).addClass("disabled");
   }
+  scrollToList()
 }
