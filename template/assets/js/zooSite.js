@@ -28,7 +28,7 @@ function getModelData() {
   return models;
 }
 
-function sortByName(asc) {
+function sortByName(evt, asc) {
   var models = getModelData()
   models.sort(function(a, b) {
       if(a.name < b.name) { return asc ? -1 : 1; }
@@ -36,9 +36,10 @@ function sortByName(asc) {
       return 0;
   });
   setOrder(models)
+  $("#sortButton")[0].innerText = evt.target.childNodes[0].nodeValue.trim()
 }
 
-function sortByPerformance(asc) {
+function sortByPerformance(evt, asc) {
   var models = getModelData()
   models.sort(function(a, b) {
       if(a.fps < b.fps) { return asc ? -1 : 1; }
@@ -46,9 +47,10 @@ function sortByPerformance(asc) {
       return 0;
   });
   setOrder(models)
+  $("#sortButton")[0].innerText = evt.target.childNodes[0].nodeValue.trim()
 }
 
-function sortByResolution(asc) {
+function sortByResolution(evt, asc) {
   var models = getModelData()
   models.sort(function(a, b) {
       if(a.resolution < b.resolution) { return asc ? -1 : 1; }
@@ -56,6 +58,7 @@ function sortByResolution(asc) {
       return 0;
   });
   setOrder(models)
+  $("#sortButton")[0].innerText = evt.target.childNodes[0].nodeValue.trim()
 }
 
 function filterByCategory(event, categoryName) {
@@ -69,6 +72,28 @@ function filterByCategory(event, categoryName) {
   var matching = models.filter(model => model.taskType === categoryName).sort((a, b) => a.order - b.order);
   var notMatching = models.filter(model => model.taskType !== categoryName).sort((a, b) => a.order - b.order);
   if(categoryName === "all") {
+    matching = models;
+    notMatching = [];
+  }
+  var i, j;
+
+  for (i = 0; i < matching.length; i++) {
+    var model = matching[i]
+    $("div").find("#" + model.name).css({order: i + 1}).removeClass("disabled");
+  }
+  for (j = 0; j < notMatching.length; j++) {
+    var model = notMatching[j]
+    $("div").find("#" + model.name).css({order: i + j + 1}).addClass("disabled");
+  }
+  $("#categoryButton")[0].innerText = event.target.childNodes[0].nodeValue.trim()
+}
+
+function filterByName(event) {
+  event.preventDefault()
+  var models = getModelData()
+  var matching = models.filter(model => model.name.indexOf(event.target.value) !== -1).sort((a, b) => a.order - b.order);
+  var notMatching = models.filter(model => model.name.indexOf(event.target.value) === -1).sort((a, b) => a.order - b.order);
+  if(event.target.value === "") {
     matching = models;
     notMatching = [];
   }
