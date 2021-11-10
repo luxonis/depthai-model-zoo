@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>DepthAI Model Zoo</title>
 <!--    font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,16 +50,31 @@ Filter by category
             <ul class="dropdown-menu dropdown-menu-dark dropdown-filter" aria-labelledby="categoryButton">
                 <li class="dropdown-item active" onclick="filterByCategory(event, 'all')">
                     all
-                    <span class="label label-primary pull-right">3</span>
+                    <span class="label label-primary pull-right">15</span>
+                </li>
+                
+                <li class="dropdown-item" onclick="filterByCategory(event, 'monocular_depth_estimation')">
+                    monocular_depth_estimation
+                    <span class="label label-primary pull-right">6</span>
+                </li>
+                
+                <li class="dropdown-item" onclick="filterByCategory(event, 'classification')">
+                    classification
+                    <span class="label label-primary pull-right">4</span>
                 </li>
                 
                 <li class="dropdown-item" onclick="filterByCategory(event, 'detection')">
                     detection
-                    <span class="label label-primary pull-right">2</span>
+                    <span class="label label-primary pull-right">3</span>
                 </li>
                 
                 <li class="dropdown-item" onclick="filterByCategory(event, 'feature_extraction')">
                     feature_extraction
+                    <span class="label label-primary pull-right">1</span>
+                </li>
+                
+                <li class="dropdown-item" onclick="filterByCategory(event, 'head_pose_estimation')">
+                    head_pose_estimation
                     <span class="label label-primary pull-right">1</span>
                 </li>
                 
@@ -89,11 +104,171 @@ Filter by category
 
 
 
-<div class="container">
+<div class="container root-container">
     <div class="row">
         <div class="row flex-row justify-content-center rounded-3 py-5 container_ModelCard">
             
-                <div class="col-md-3 card model-box" data-aos="fade-up" aria-type="model-box" id="yolop_320x320" data-name="yolop_320x320" data-task-type="detection"
+                <div class="col-md-3 card model-box" aria-type="model-box" id="hrdepth_192x640" data-name="hrdepth_192x640" data-task-type="monocular_depth_estimation"
+                     data-fps="4.8" data-resolution="49152">
+                    <div class="inner">
+                        <div class="nn-img">
+                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">hrdepth_192x640</h2>
+                            <p class="card-text">Depth Estimation</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Task type <span>monocular_depth_estimation</span></li>
+                            <li class="list-group-item">FPS <span>4.8</span></li>
+                            <li class="list-group-item">
+                                Resolution
+                                
+                                <span>256x192x3</span>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dark dropdown-toggle" id="hrdepth_192x640Download" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download &nbsp;
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="hrdepth_192x640Download">
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#hrdepth_192x640Modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 card model-box" aria-type="model-box" id="megadepth" data-name="megadepth" data-task-type="monocular_depth_estimation"
+                     data-fps="4.8" data-resolution="49152">
+                    <div class="inner">
+                        <div class="nn-img">
+                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">megadepth</h2>
+                            <p class="card-text">Depth Estimation</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Task type <span>monocular_depth_estimation</span></li>
+                            <li class="list-group-item">FPS <span>4.8</span></li>
+                            <li class="list-group-item">
+                                Resolution
+                                
+                                <span>256x192x3</span>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dark dropdown-toggle" id="megadepthDownload" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download &nbsp;
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="megadepthDownload">
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#megadepthModal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 card model-box" aria-type="model-box" id="micronet_m0_224x224" data-name="micronet_m0_224x224" data-task-type="classification"
+                     data-fps="34.36" data-resolution="50176">
+                    <div class="inner">
+                        <div class="nn-img">
+                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">micronet_m0_224x224</h2>
+                            <p class="card-text">MicroNet-m0 ImageNet Classification</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Task type <span>classification</span></li>
+                            <li class="list-group-item">FPS <span>34.36</span></li>
+                            <li class="list-group-item">
+                                Resolution
+                                
+                                <span>224x224x3</span>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dark dropdown-toggle" id="micronet_m0_224x224Download" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download &nbsp;
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="micronet_m0_224x224Download">
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#micronet_m0_224x224Modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 card model-box" aria-type="model-box" id="ghostnet_320x256" data-name="ghostnet_320x256" data-task-type="classification"
+                     data-fps="53.13" data-resolution="81920">
+                    <div class="inner">
+                        <div class="nn-img">
+                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">ghostnet_320x256</h2>
+                            <p class="card-text">ImageNet Classification</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Task type <span>classification</span></li>
+                            <li class="list-group-item">FPS <span>53.13</span></li>
+                            <li class="list-group-item">
+                                Resolution
+                                
+                                <span>256x320x3</span>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dark dropdown-toggle" id="ghostnet_320x256Download" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download &nbsp;
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="ghostnet_320x256Download">
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#ghostnet_320x256Modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 card model-box" aria-type="model-box" id="yolop_320x320" data-name="yolop_320x320" data-task-type="detection"
                      data-fps="11.4" data-resolution="102400">
                     <div class="inner">
                         <div class="nn-img">
@@ -141,7 +316,7 @@ Filter by category
                     </div>
                 </div>
             
-                <div class="col-md-3 card model-box" data-aos="fade-up" aria-type="model-box" id="dmcount_540x960" data-name="dmcount_540x960" data-task-type="feature_extraction"
+                <div class="col-md-3 card model-box" aria-type="model-box" id="dmcount_540x960" data-name="dmcount_540x960" data-task-type="feature_extraction"
                      data-fps="0.22" data-resolution="518400">
                     <div class="inner">
                         <div class="nn-img">
@@ -189,7 +364,327 @@ Filter by category
                     </div>
                 </div>
             
-                <div class="col-md-3 card model-box" data-aos="fade-up" aria-type="model-box" id="mobile_object_localizer_192x192" data-name="mobile_object_localizer_192x192" data-task-type="detection"
+                <div class="col-md-3 card model-box" aria-type="model-box" id="fast_depth_256x320" data-name="fast_depth_256x320" data-task-type="monocular_depth_estimation"
+                     data-fps="40.32" data-resolution="81920">
+                    <div class="inner">
+                        <div class="nn-img">
+                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">fast_depth_256x320</h2>
+                            <p class="card-text">Monocular Depth Estimation with Fast Depth (256 x 320)</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Task type <span>monocular_depth_estimation</span></li>
+                            <li class="list-group-item">FPS <span>40.32</span></li>
+                            <li class="list-group-item">
+                                Resolution
+                                
+                                <span>320x256x3</span>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dark dropdown-toggle" id="fast_depth_256x320Download" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download &nbsp;
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="fast_depth_256x320Download">
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#fast_depth_256x320Modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 card model-box" aria-type="model-box" id="head-pose-estimation_160x160" data-name="head-pose-estimation_160x160" data-task-type="head_pose_estimation"
+                     data-fps="159.92" data-resolution="25600">
+                    <div class="inner">
+                        <div class="nn-img">
+                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">head-pose-estimation_160x160</h2>
+                            <p class="card-text">Head pose estimation</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Task type <span>head_pose_estimation</span></li>
+                            <li class="list-group-item">FPS <span>159.92</span></li>
+                            <li class="list-group-item">
+                                Resolution
+                                
+                                <span>160x160x3</span>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dark dropdown-toggle" id="head-pose-estimation_160x160Download" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download &nbsp;
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="head-pose-estimation_160x160Download">
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#head-pose-estimation_160x160Modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 card model-box" aria-type="model-box" id="depth_estimation_mbnv2_240x320" data-name="depth_estimation_mbnv2_240x320" data-task-type="monocular_depth_estimation"
+                     data-fps="20.03" data-resolution="76800">
+                    <div class="inner">
+                        <div class="nn-img">
+                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">depth_estimation_mbnv2_240x320</h2>
+                            <p class="card-text">Depth Estimation</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Task type <span>monocular_depth_estimation</span></li>
+                            <li class="list-group-item">FPS <span>20.03</span></li>
+                            <li class="list-group-item">
+                                Resolution
+                                
+                                <span>320x240x3</span>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dark dropdown-toggle" id="depth_estimation_mbnv2_240x320Download" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download &nbsp;
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="depth_estimation_mbnv2_240x320Download">
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#depth_estimation_mbnv2_240x320Modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 card model-box" aria-type="model-box" id="depth_estimation_mbnv2_480x640" data-name="depth_estimation_mbnv2_480x640" data-task-type="monocular_depth_estimation"
+                     data-fps="/" data-resolution="307200">
+                    <div class="inner">
+                        <div class="nn-img">
+                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">depth_estimation_mbnv2_480x640</h2>
+                            <p class="card-text">Depth Estimation</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Task type <span>monocular_depth_estimation</span></li>
+                            <li class="list-group-item">FPS <span>/</span></li>
+                            <li class="list-group-item">
+                                Resolution
+                                
+                                <span>640x480x3</span>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dark dropdown-toggle" id="depth_estimation_mbnv2_480x640Download" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download &nbsp;
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="depth_estimation_mbnv2_480x640Download">
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#depth_estimation_mbnv2_480x640Modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 card model-box" aria-type="model-box" id="shufflenetv2_224x224" data-name="shufflenetv2_224x224" data-task-type="classification"
+                     data-fps="151.72" data-resolution="50176">
+                    <div class="inner">
+                        <div class="nn-img">
+                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">shufflenetv2_224x224</h2>
+                            <p class="card-text">ImageNet Classification</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Task type <span>classification</span></li>
+                            <li class="list-group-item">FPS <span>151.72</span></li>
+                            <li class="list-group-item">
+                                Resolution
+                                
+                                <span>224x224x3</span>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dark dropdown-toggle" id="shufflenetv2_224x224Download" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download &nbsp;
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="shufflenetv2_224x224Download">
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#shufflenetv2_224x224Modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 card model-box" aria-type="model-box" id="east_text_detection_256x256" data-name="east_text_detection_256x256" data-task-type="detection"
+                     data-fps="22.5" data-resolution="65536">
+                    <div class="inner">
+                        <div class="nn-img">
+                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">east_text_detection_256x256</h2>
+                            <p class="card-text">EAST text detection</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Task type <span>detection</span></li>
+                            <li class="list-group-item">FPS <span>22.5</span></li>
+                            <li class="list-group-item">
+                                Resolution
+                                
+                                <span>256x256x3</span>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dark dropdown-toggle" id="east_text_detection_256x256Download" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download &nbsp;
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="east_text_detection_256x256Download">
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#east_text_detection_256x256Modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 card model-box" aria-type="model-box" id="inceptionv4_299x299" data-name="inceptionv4_299x299" data-task-type="classification"
+                     data-fps="8.02" data-resolution="89401">
+                    <div class="inner">
+                        <div class="nn-img">
+                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">inceptionv4_299x299</h2>
+                            <p class="card-text">ImageNet Classification</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Task type <span>classification</span></li>
+                            <li class="list-group-item">FPS <span>8.02</span></li>
+                            <li class="list-group-item">
+                                Resolution
+                                
+                                <span>299x299x3</span>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dark dropdown-toggle" id="inceptionv4_299x299Download" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download &nbsp;
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="inceptionv4_299x299Download">
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#inceptionv4_299x299Modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 card model-box" aria-type="model-box" id="scdepth_256x832" data-name="scdepth_256x832" data-task-type="monocular_depth_estimation"
+                     data-fps="12.89" data-resolution="131072">
+                    <div class="inner">
+                        <div class="nn-img">
+                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title">scdepth_256x832</h2>
+                            <p class="card-text">Depth Estimation</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Task type <span>monocular_depth_estimation</span></li>
+                            <li class="list-group-item">FPS <span>12.89</span></li>
+                            <li class="list-group-item">
+                                Resolution
+                                
+                                <span>512x256x3</span>
+                                
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-dark dropdown-toggle" id="scdepth_256x832Download" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Download &nbsp;
+                                </button>
+                                <ul class="dropdown-menu bg-dark" aria-labelledby="scdepth_256x832Download">
+                                    
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary" role="button" data-bs-toggle="modal" data-bs-target="#scdepth_256x832Modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3 card model-box" aria-type="model-box" id="mobile_object_localizer_192x192" data-name="mobile_object_localizer_192x192" data-task-type="detection"
                      data-fps="41.02" data-resolution="36864">
                     <div class="inner">
                         <div class="nn-img">
@@ -241,6 +736,378 @@ Filter by category
     </div>
 </div>
 
+
+    <div class="modal fade" id="hrdepth_192x640Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - hrdepth_192x640</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body car">
+                    <div class="flex-row justify-content-center">
+                        <h4 class="modal-header">
+                            Depth Estimation
+                        </h4>
+                    </div>
+                    <div class="row p-3 parent">
+                        <div class="product-modal-single-property">
+                            <h5>Framework</h5>
+                            <span>dldt</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Task type</h5>
+                            <span>monocular_depth_estimation</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Inputs</h5>
+                            <ul>
+                                
+                                    <li>
+                                        <span>name: <strong>input.1</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>type: <strong>image</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>shape: <strong>3, 192, 256</strong></span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>FPS</h5>
+                            <ul>
+                                <li><span>Mean: </span><span><strong>4.8</strong></span>
+                                    </li>
+                                <li>
+                                    <span>STD: </span><span><strong>0.01</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Backbone</h5>
+                            <span>HG</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Uses depth info</h5>
+
+                            
+                                <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                            
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Sources</h5>
+                            <ul>
+                                
+                                    <li><a href="https://github.com/shawLyu/HR-Depth">GitHub</a></li>
+                                
+                                    <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/158_HR-Depth">PINTO_model_zoo</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>License</h5>
+                            <span>MIT (<a
+                                    href="https://github.com/shawLyu/HR-Depth/blob/main/LICENSE">See full license</a>)</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer btn-group">
+                    <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/hrdepth_192x640"
+                       class="btn btn-outline-light documentation-button">See documentation</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Download &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu bg-dark">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="megadepthModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - megadepth</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body car">
+                    <div class="flex-row justify-content-center">
+                        <h4 class="modal-header">
+                            Depth Estimation
+                        </h4>
+                    </div>
+                    <div class="row p-3 parent">
+                        <div class="product-modal-single-property">
+                            <h5>Framework</h5>
+                            <span>dldt</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Task type</h5>
+                            <span>monocular_depth_estimation</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Inputs</h5>
+                            <ul>
+                                
+                                    <li>
+                                        <span>name: <strong>input.1</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>type: <strong>image</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>shape: <strong>3, 192, 256</strong></span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>FPS</h5>
+                            <ul>
+                                <li><span>Mean: </span><span><strong>4.8</strong></span>
+                                    </li>
+                                <li>
+                                    <span>STD: </span><span><strong>0.01</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Backbone</h5>
+                            <span>HG</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Uses depth info</h5>
+
+                            
+                                <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                            
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Sources</h5>
+                            <ul>
+                                
+                                    <li><a href="https://github.com/zl548/MegaDepth">GitHub</a></li>
+                                
+                                    <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/153_MegaDepth">PINTO_model_zoo</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>License</h5>
+                            <span>MIT (<a
+                                    href="https://github.com/zl548/MegaDepth/blob/master/LICENSE">See full license</a>)</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer btn-group">
+                    <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/megadepth"
+                       class="btn btn-outline-light documentation-button">See documentation</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Download &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu bg-dark">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="micronet_m0_224x224Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - micronet_m0_224x224</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body car">
+                    <div class="flex-row justify-content-center">
+                        <h4 class="modal-header">
+                            MicroNet-m0 ImageNet Classification
+                        </h4>
+                    </div>
+                    <div class="row p-3 parent">
+                        <div class="product-modal-single-property">
+                            <h5>Framework</h5>
+                            <span>dldt</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Task type</h5>
+                            <span>classification</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Inputs</h5>
+                            <ul>
+                                
+                                    <li>
+                                        <span>name: <strong>input.1</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>type: <strong>image</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>shape: <strong>3, 224, 224</strong></span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>FPS</h5>
+                            <ul>
+                                <li><span>Mean: </span><span><strong>34.36</strong></span>
+                                    </li>
+                                <li>
+                                    <span>STD: </span><span><strong>0.04</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Backbone</h5>
+                            <span>/</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Uses depth info</h5>
+
+                            
+                                <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                            
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Sources</h5>
+                            <ul>
+                                
+                                    <li><a href="https://github.com/liyunsheng13/micronet">GitHub</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>License</h5>
+                            <span>MIT (<a
+                                    href="https://github.com/liyunsheng13/micronet/blob/main/LICENSE">See full license</a>)</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer btn-group">
+                    <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/micronet_m0_224x224"
+                       class="btn btn-outline-light documentation-button">See documentation</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Download &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu bg-dark">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ghostnet_320x256Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - ghostnet_320x256</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body car">
+                    <div class="flex-row justify-content-center">
+                        <h4 class="modal-header">
+                            ImageNet Classification
+                        </h4>
+                    </div>
+                    <div class="row p-3 parent">
+                        <div class="product-modal-single-property">
+                            <h5>Framework</h5>
+                            <span>dldt</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Task type</h5>
+                            <span>classification</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Inputs</h5>
+                            <ul>
+                                
+                                    <li>
+                                        <span>name: <strong>input.1</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>type: <strong>image</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>shape: <strong>3, 320, 256</strong></span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>FPS</h5>
+                            <ul>
+                                <li><span>Mean: </span><span><strong>53.13</strong></span>
+                                    </li>
+                                <li>
+                                    <span>STD: </span><span><strong>0.92</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Backbone</h5>
+                            <span>/</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Uses depth info</h5>
+
+                            
+                                <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                            
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Sources</h5>
+                            <ul>
+                                
+                                    <li><a href="https://github.com/huawei-noah/CV-Backbones">GitHub</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>License</h5>
+                            <span>None (<a
+                                    href="None">See full license</a>)</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer btn-group">
+                    <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/ghostnet_320x256"
+                       class="btn btn-outline-light documentation-button">See documentation</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Download &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu bg-dark">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="yolop_320x320Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
@@ -433,6 +1300,752 @@ Filter by category
                                 
                                 <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/dmcount_540x960/dmcount_540x960.bin">dmcount_540x960.bin</a></li>
                                 
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="fast_depth_256x320Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - fast_depth_256x320</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body car">
+                    <div class="flex-row justify-content-center">
+                        <h4 class="modal-header">
+                            Monocular Depth Estimation with Fast Depth (256 x 320)
+                        </h4>
+                    </div>
+                    <div class="row p-3 parent">
+                        <div class="product-modal-single-property">
+                            <h5>Framework</h5>
+                            <span>dldt</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Task type</h5>
+                            <span>monocular_depth_estimation</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Inputs</h5>
+                            <ul>
+                                
+                                    <li>
+                                        <span>name: <strong>input.1</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>type: <strong>image</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>shape: <strong>3, 256, 320</strong></span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>FPS</h5>
+                            <ul>
+                                <li><span>Mean: </span><span><strong>40.32</strong></span>
+                                    </li>
+                                <li>
+                                    <span>STD: </span><span><strong>0.14</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Backbone</h5>
+                            <span>MobileNet</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Uses depth info</h5>
+
+                            
+                                <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                            
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Sources</h5>
+                            <ul>
+                                
+                                    <li><a href="https://github.com/dwofk/fast-depth">GitHub</a></li>
+                                
+                                    <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/146_FastDepth">PINTO_model_zoo</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>License</h5>
+                            <span>MIT (<a
+                                    href="https://github.com/dwofk/fast-depth/blob/master/LICENSE">See full license</a>)</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer btn-group">
+                    <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/fast_depth_256x320"
+                       class="btn btn-outline-light documentation-button">See documentation</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Download &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu bg-dark">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="head-pose-estimation_160x160Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - head-pose-estimation_160x160</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body car">
+                    <div class="flex-row justify-content-center">
+                        <h4 class="modal-header">
+                            Head pose estimation
+                        </h4>
+                    </div>
+                    <div class="row p-3 parent">
+                        <div class="product-modal-single-property">
+                            <h5>Framework</h5>
+                            <span>dldt</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Task type</h5>
+                            <span>head_pose_estimation</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Inputs</h5>
+                            <ul>
+                                
+                                    <li>
+                                        <span>name: <strong>images</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>type: <strong>image</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>shape: <strong>3, 160, 160</strong></span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>FPS</h5>
+                            <ul>
+                                <li><span>Mean: </span><span><strong>159.92</strong></span>
+                                    </li>
+                                <li>
+                                    <span>STD: </span><span><strong>0.72</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Backbone</h5>
+                            <span>HRNetV2</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Uses depth info</h5>
+
+                            
+                                <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                            
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Sources</h5>
+                            <ul>
+                                
+                                    <li><a href="https://github.com/yinguobing/head-pose-estimation">GitHub</a></li>
+                                
+                                    <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/025_head_pose_estimation">PINTO_model_zoo</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>License</h5>
+                            <span>MIT (<a
+                                    href="https://github.com/yinguobing/head-pose-estimation/blob/master/LICENSE">See full license</a>)</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer btn-group">
+                    <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/head-pose-estimation_160x160"
+                       class="btn btn-outline-light documentation-button">See documentation</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Download &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu bg-dark">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="depth_estimation_mbnv2_240x320Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - depth_estimation_mbnv2_240x320</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body car">
+                    <div class="flex-row justify-content-center">
+                        <h4 class="modal-header">
+                            Depth Estimation
+                        </h4>
+                    </div>
+                    <div class="row p-3 parent">
+                        <div class="product-modal-single-property">
+                            <h5>Framework</h5>
+                            <span>dldt</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Task type</h5>
+                            <span>monocular_depth_estimation</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Inputs</h5>
+                            <ul>
+                                
+                                    <li>
+                                        <span>name: <strong>input.1</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>type: <strong>image</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>shape: <strong>3, 240, 320</strong></span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>FPS</h5>
+                            <ul>
+                                <li><span>Mean: </span><span><strong>20.03</strong></span>
+                                    </li>
+                                <li>
+                                    <span>STD: </span><span><strong>0.7</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Backbone</h5>
+                            <span>MobileNetV2</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Uses depth info</h5>
+
+                            
+                                <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                            
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Sources</h5>
+                            <ul>
+                                
+                                    <li><a href="https://github.com/alinstein/Depth_estimation">GitHub</a></li>
+                                
+                                    <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/149_depth_estimation">PINTO_model_zoo/tree/main/149_depth_estimation</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>License</h5>
+                            <span>MIT (<a
+                                    href="https://github.com/alinstein/Depth_estimation/blob/master/LICENSE">See full license</a>)</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer btn-group">
+                    <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/depth-mbnv2"
+                       class="btn btn-outline-light documentation-button">See documentation</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Download &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu bg-dark">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="depth_estimation_mbnv2_480x640Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - depth_estimation_mbnv2_480x640</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body car">
+                    <div class="flex-row justify-content-center">
+                        <h4 class="modal-header">
+                            Depth Estimation
+                        </h4>
+                    </div>
+                    <div class="row p-3 parent">
+                        <div class="product-modal-single-property">
+                            <h5>Framework</h5>
+                            <span>dldt</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Task type</h5>
+                            <span>monocular_depth_estimation</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Inputs</h5>
+                            <ul>
+                                
+                                    <li>
+                                        <span>name: <strong>input.1</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>type: <strong>image</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>shape: <strong>3, 480, 640</strong></span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>FPS</h5>
+                            <ul>
+                                <li><span>Mean: </span><span><strong>/</strong></span>
+                                    </li>
+                                <li>
+                                    <span>STD: </span><span><strong>/</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Backbone</h5>
+                            <span>MobileNetV2</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Uses depth info</h5>
+
+                            
+                                <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                            
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Sources</h5>
+                            <ul>
+                                
+                                    <li><a href="https://github.com/alinstein/Depth_estimation">GitHub</a></li>
+                                
+                                    <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/149_depth_estimation">PINTO_model_zoo/tree/main/149_depth_estimation</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>License</h5>
+                            <span>MIT (<a
+                                    href="https://github.com/alinstein/Depth_estimation/blob/master/LICENSE">See full license</a>)</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer btn-group">
+                    <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/depth-mbnv2"
+                       class="btn btn-outline-light documentation-button">See documentation</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Download &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu bg-dark">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="shufflenetv2_224x224Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - shufflenetv2_224x224</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body car">
+                    <div class="flex-row justify-content-center">
+                        <h4 class="modal-header">
+                            ImageNet Classification
+                        </h4>
+                    </div>
+                    <div class="row p-3 parent">
+                        <div class="product-modal-single-property">
+                            <h5>Framework</h5>
+                            <span>dldt</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Task type</h5>
+                            <span>classification</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Inputs</h5>
+                            <ul>
+                                
+                                    <li>
+                                        <span>name: <strong>input.1</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>type: <strong>image</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>shape: <strong>3, 224, 224</strong></span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>FPS</h5>
+                            <ul>
+                                <li><span>Mean: </span><span><strong>151.72</strong></span>
+                                    </li>
+                                <li>
+                                    <span>STD: </span><span><strong>2.55</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Backbone</h5>
+                            <span>/</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Uses depth info</h5>
+
+                            
+                                <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                            
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Sources</h5>
+                            <ul>
+                                
+                                    <li><a href="https://github.com/pytorch/vision/tree/main/torchvision/models">GitHub</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>License</h5>
+                            <span>BSD-3 (<a
+                                    href="https://github.com/pytorch/vision/blob/main/LICENSE">See full license</a>)</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer btn-group">
+                    <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/shufflenetv2_224x224"
+                       class="btn btn-outline-light documentation-button">See documentation</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Download &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu bg-dark">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="east_text_detection_256x256Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - east_text_detection_256x256</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body car">
+                    <div class="flex-row justify-content-center">
+                        <h4 class="modal-header">
+                            EAST text detection
+                        </h4>
+                    </div>
+                    <div class="row p-3 parent">
+                        <div class="product-modal-single-property">
+                            <h5>Framework</h5>
+                            <span>dldt</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Task type</h5>
+                            <span>detection</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Inputs</h5>
+                            <ul>
+                                
+                                    <li>
+                                        <span>name: <strong>input_images</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>type: <strong>image</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>shape: <strong>3, 256, 256</strong></span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>FPS</h5>
+                            <ul>
+                                <li><span>Mean: </span><span><strong>22.5</strong></span>
+                                    </li>
+                                <li>
+                                    <span>STD: </span><span><strong>0.22</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Backbone</h5>
+                            <span>PVANet</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Uses depth info</h5>
+
+                            
+                                <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                            
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Sources</h5>
+                            <ul>
+                                
+                                    <li><a href="https://github.com/argman/EAST">GitHub</a></li>
+                                
+                                    <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/051_East_Text_Detection">PINTO_model_zoo</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>License</h5>
+                            <span>GPL-3.0 (<a
+                                    href="https://github.com/argman/EAST/blob/master/LICENSE">See full license</a>)</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer btn-group">
+                    <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/east_text_detection_256x256"
+                       class="btn btn-outline-light documentation-button">See documentation</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Download &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu bg-dark">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="inceptionv4_299x299Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - inceptionv4_299x299</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body car">
+                    <div class="flex-row justify-content-center">
+                        <h4 class="modal-header">
+                            ImageNet Classification
+                        </h4>
+                    </div>
+                    <div class="row p-3 parent">
+                        <div class="product-modal-single-property">
+                            <h5>Framework</h5>
+                            <span>dldt</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Task type</h5>
+                            <span>classification</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Inputs</h5>
+                            <ul>
+                                
+                                    <li>
+                                        <span>name: <strong>input</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>type: <strong>image</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>shape: <strong>3, 299, 299</strong></span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>FPS</h5>
+                            <ul>
+                                <li><span>Mean: </span><span><strong>8.02</strong></span>
+                                    </li>
+                                <li>
+                                    <span>STD: </span><span><strong>0.03</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Backbone</h5>
+                            <span>/</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Uses depth info</h5>
+
+                            
+                                <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                            
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Sources</h5>
+                            <ul>
+                                
+                                    <li><a href="https://github.com/tensorflow/models/tree/master/research/slim/nets">TF</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>License</h5>
+                            <span>Apache-2.0 (<a
+                                    href="https://github.com/tensorflow/models/blob/master/LICENSE">See full license</a>)</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer btn-group">
+                    <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/inceptionv4_299x299"
+                       class="btn btn-outline-light documentation-button">See documentation</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Download &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu bg-dark">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="scdepth_256x832Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Model details - scdepth_256x832</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body car">
+                    <div class="flex-row justify-content-center">
+                        <h4 class="modal-header">
+                            Depth Estimation
+                        </h4>
+                    </div>
+                    <div class="row p-3 parent">
+                        <div class="product-modal-single-property">
+                            <h5>Framework</h5>
+                            <span>dldt</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Task type</h5>
+                            <span>monocular_depth_estimation</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Inputs</h5>
+                            <ul>
+                                
+                                    <li>
+                                        <span>name: <strong>input.1</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>type: <strong>image</strong></span>
+                                    </li>
+                                    <li>
+                                        <span>shape: <strong>3, 256, 512</strong></span>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>FPS</h5>
+                            <ul>
+                                <li><span>Mean: </span><span><strong>12.89</strong></span>
+                                    </li>
+                                <li>
+                                    <span>STD: </span><span><strong>0.33</strong></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Backbone</h5>
+                            <span>DispResNet</span>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Uses depth info</h5>
+
+                            
+                                <span><i class="fa fa-times-circle" aria-hidden="true"></i> No</span>
+                            
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>Sources</h5>
+                            <ul>
+                                
+                                    <li><a href="https://github.com/JiawangBian/SC-SfMLearner-Release">GitHub</a></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="product-modal-single-property">
+                            <h5>License</h5>
+                            <span>GPL-3.0 (<a
+                                    href="https://github.com/JiawangBian/SC-SfMLearner-Release/blob/master/LICENSE">See full license</a>)</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer btn-group">
+                    <a href="https://github.com/luxonis/depthai-model-zoo/tree/main/models/scdepth_256x832"
+                       class="btn btn-outline-light documentation-button">See documentation</a>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                Download &nbsp;
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu bg-dark">
                                 
                             </ul>
                         </div>
