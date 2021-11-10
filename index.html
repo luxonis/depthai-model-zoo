@@ -41,13 +41,13 @@
 <!-- header end -->
 
 <div class="sticky-top w-100 p-4 bg-dark">
-    <form class="d-flex">
-        <input class="form-control filter-categories" type="search" placeholder="Name" aria-label="Search the doc">
+    <div class="d-flex">
+        <input onchange="filterByName(event)" class="form-control filter-categories" type="search" placeholder="Name" aria-label="Search the doc">
         <div class="dropdown">
-            <button class="btn filter-search dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn filter-search dropdown-toggle" type="button" id="categoryButton" data-bs-toggle="dropdown" aria-expanded="false">
 Filter by category
             </button>
-            <ul class="dropdown-menu dropdown-menu-dark dropdown-filter" aria-labelledby="dropdownMenuButton">
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-filter" aria-labelledby="categoryButton">
                 <li class="dropdown-item active" onclick="filterByCategory(event, 'all')">
                     all
                     <span class="label label-primary pull-right">3</span>
@@ -66,24 +66,24 @@ Filter by category
             </ul>
         </div>
         <div class="dropdown">
-            <button class="btn filter-search dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn filter-search dropdown-toggle" type="button" id="sortButton" data-bs-toggle="dropdown" aria-expanded="false">
                 Sort models
             </button>
-            <ul class="dropdown-menu dropdown-menu-dark dropdown-filter" aria-labelledby="dropdownMenuButton2">
-                <li><a class="dropdown-item" onclick="sortByName(true)">By A-Z Name</a></li>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-filter" aria-labelledby="sortButton">
+                <li><a class="dropdown-item" onclick="sortByName(event, true)">By A-Z Name</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" onclick="sortByName(false)">By Z-A Name</a></li>
+                <li><a class="dropdown-item" onclick="sortByName(event, false)">By Z-A Name</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" onclick="sortByPerformance(false)">By Highest Performance</a></li>
+                <li><a class="dropdown-item" onclick="sortByPerformance(event, false)">By Highest Performance</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" onclick="sortByPerformance(true)">By Lowest Performance</a></li>
+                <li><a class="dropdown-item" onclick="sortByPerformance(event, true)">By Lowest Performance</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" onclick="sortByResolution(false)">By Highest Resolution</a></li>
+                <li><a class="dropdown-item" onclick="sortByResolution(event, false)">By Highest Resolution</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" onclick="sortByResolution(true)">By Lowest Resolution</a></li>
+                <li><a class="dropdown-item" onclick="sortByResolution(event, true)">By Lowest Resolution</a></li>
             </ul>
         </div>
-    </form>
+    </div>
 
 </div>
 
