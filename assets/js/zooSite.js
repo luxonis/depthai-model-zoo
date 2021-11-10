@@ -35,6 +35,7 @@ function sortByName(evt, asc) {
       if(a.name > b.name) { return asc ? 1 : -1; }
       return 0;
   });
+  $("#" + models[0].name)[0].scrollIntoView()
   setOrder(models)
   $("#sortButton")[0].innerText = evt.target.childNodes[0].nodeValue.trim()
 }
@@ -46,6 +47,7 @@ function sortByPerformance(evt, asc) {
       if(a.fps > b.fps) { return asc ? 1 : -1; }
       return 0;
   });
+  $("#" + models[0].name)[0].scrollIntoView()
   setOrder(models)
   $("#sortButton")[0].innerText = evt.target.childNodes[0].nodeValue.trim()
 }
@@ -57,6 +59,7 @@ function sortByResolution(evt, asc) {
       if(a.resolution > b.resolution) { return asc ? 1 : -1; }
       return 0;
   });
+  $("#" + models[0].name)[0].scrollIntoView()
   setOrder(models)
   $("#sortButton")[0].innerText = evt.target.childNodes[0].nodeValue.trim()
 }
@@ -76,6 +79,9 @@ function filterByCategory(event, categoryName) {
     notMatching = [];
   }
   var i, j;
+
+  var elem = (matching[0] || notMatching[0])
+  $("#" + elem.name)[0].scrollIntoView()
 
   for (i = 0; i < matching.length; i++) {
     var model = matching[i]
@@ -98,6 +104,9 @@ function filterByName(event) {
     notMatching = [];
   }
   var i, j;
+
+  var elem = (matching[0] || notMatching[0])
+  $("#" + elem.name)[0].scrollIntoView()
 
   for (i = 0; i < matching.length; i++) {
     var model = matching[i]
