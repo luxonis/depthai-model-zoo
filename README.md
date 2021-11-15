@@ -1,7 +1,7 @@
 # DepthAI - Model ZOO
 [![GitHub](https://img.shields.io/github/license/luxonis/depthai-model-zoo?color=blue&style=flat-square&label=LICENSE)](https://github.com/luxonis/depthai-model-zoo/blob/main/LICENSE) [![stars](https://img.shields.io/github/stars/luxonis?affiliations=OWNER&label=LUXONIS%20STARS&style=flat-square)](https://github.com/luxonis) [![maintained](https://img.shields.io/maintenance/yes/2021?label=MAINTAINED&style=flat-square)](https://zoo.luxonis.com/) [![web-interface](https://img.shields.io/static/v1?label=WEB&message=INTERFACE&color=orange&style=flat-square)](https://zoo.luxonis.com/)
 
-![DepthAI-Model-Zoo](https://user-images.githubusercontent.com/56075061/141783929-10f1c907-06e7-4343-8218-be8f9783ef20.png)
+![DepthAI-Model-Zoo](https://user-images.githubusercontent.com/56075061/141784258-63fc40b1-6383-41e9-9b7b-d3cdde77457c.png)
 
 
 
