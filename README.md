@@ -1,7 +1,7 @@
 # DepthAI - Model ZOO
 [![GitHub](https://img.shields.io/github/license/luxonis/depthai-model-zoo?color=blue&style=flat-square&label=LICENSE)](https://github.com/luxonis/depthai-model-zoo/blob/main/LICENSE) [![stars](https://img.shields.io/github/stars/luxonis?affiliations=OWNER&label=LUXONIS%20STARS&style=flat-square)](https://github.com/luxonis) [![maintained](https://img.shields.io/maintenance/yes/2021?label=MAINTAINED&style=flat-square)](https://zoo.luxonis.com/) [![web-interface](https://img.shields.io/static/v1?label=WEB&message=INTERFACE&color=orange&style=flat-square)](https://zoo.luxonis.com/)
 
-![DepthAI-Model-Zoo](https://user-images.githubusercontent.com/56075061/141784258-63fc40b1-6383-41e9-9b7b-d3cdde77457c.png)
+![DepthAI-Model-Zoo](https://user-images.githubusercontent.com/56075061/141786001-33055085-693f-4a7b-a359-90adb5f3509d.png)
 
 
 
@@ -13,19 +13,19 @@ We try to provide already converted latest state-of-the-art models ready for use
 
 ## Usage
 
-You can download each model from our [![web-interface](https://img.shields.io/static/v1?label=WEB&message=INTERFACE&color=orange&style=flat-square)](https://zoo.luxonis.com/). Alternatively, you can use the [blobconverter](https://github.com/luxonis/blobconverter) API:
+You can download each model from our [web interface](https://zoo.luxonis.com/). Alternatively, you can use the [blobconverter](https://github.com/luxonis/blobconverter) API:
 
 1. install `blobconverter` using `pip`:
-```
-pip install blobconverter
-```
+    ```
+    pip install blobconverter
+    ```
 2. use the following snippet to download the YOLOP model and get its blob path:
-```
-model_path = blobconverter.from_zoo(name="yolop_320x320",
-                                    zoo_type="depthai",
-                                    shaves=6)
-model_path = str(model_path)
-```
+    ```
+    model_path = blobconverter.from_zoo(name="yolop_320x320",
+                                        zoo_type="depthai",
+                                        shaves=6)
+    model_path = str(model_path)
+    ```
 
 In the example above we use the YOLOP model from the DepthAI Model ZOO. In case you wish to download the model from the OpenVINO ZOO, you can omit the `zoo_type` flag. 
 
