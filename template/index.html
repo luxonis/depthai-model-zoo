@@ -101,10 +101,11 @@ Filter by category
                                         {{model.meta.nice_name}} </text>
                                 </g>
                                 <g class="active">
+                                    <rect width="100" height="100" fill="white"/>
                                     {% if model.meta.example_gif|length > 1 %}
-                                    <image height="100%" href="{{model.meta.example_gif}}" />
+                                    <image height="100%" width="100%" href="{{model.meta.example_gif}}" />
                                     {% else %}
-                                    <image height="100%" href="./assets/img/coming-soon.gif" />
+                                    <image height="100%" width="100%" href="./assets/img/coming-soon.gif" />
                                     {% endif %}
                                 </g>
                              </svg>
