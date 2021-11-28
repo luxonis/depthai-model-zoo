@@ -91,14 +91,30 @@ Filter by category
                 <div class="col-md-3 card model-box" aria-type="model-box" id="{{ model.name }}" data-name="{{ model.name }}" data-task-type="{{ model.task_type }}"
                      data-fps="{{ model.meta.FPS.mean }}" data-resolution="{{ model.resolution_factor }}">
                     <div class="inner">
-                        <div class="nn-img">
-                            <img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="...">
+                        <div class="nn-img {{ model.task_type }}">
+                            <!--img src="./assets/img/core.svg" class="img-fluid card-img-top" alt="..."-->
+                            <svg class="header" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 60" align="center">
+                                <g class="static">
+                                    <circle cx="50" cy="18" r="14" fill="white"/>
+                                    <image x="40" y="8" width="20" href="./assets/img/depthai.svg" />
+                                    <text x="50%" y="48" dominant-baseline="middle" text-anchor="middle" lengthAdjust="spacingAndGlyphs" transform="scale(1,1)" textLength="96%">
+                                        {{model.meta.nice_name}} </text>
+                                </g>
+                                <g class="active">
+                                    {% if model.meta.example_gif|length > 1 %}
+                                    <image height="100%" href="{{model.meta.example_gif}}" />
+                                    {% else %}
+                                    <image height="100%" href="./assets/img/coming-soon.gif" />
+                                    {% elseif %}
+                                </g>
+                             </svg>
                         </div>
                         <div class="card-body">
-                            <h2 class="card-title">{{ model.name }}</h2>
+                            <!--h2 class="card-title">{{ model.name }}</h2-->
                             <p class="card-text">{{ model.description }}</p>
                         </div>
                         <ul class="list-group list-group-flush">
+                            <li class="list-group-item">ZOO Name <span>{{ model.name }}</span></li>
                             <li class="list-group-item">Task type <span>{{ model.task_type }}</span></li>
                             <li class="list-group-item">FPS <span>{{ model.meta.FPS.mean }}</span></li>
                             <li class="list-group-item">
