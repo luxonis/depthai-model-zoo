@@ -105,7 +105,7 @@ Filter by category
                                     <image height="100%" href="{{model.meta.example_gif}}" />
                                     {% else %}
                                     <image height="100%" href="./assets/img/coming-soon.gif" />
-                                    {% elseif %}
+                                    {% endif %}
                                 </g>
                              </svg>
                         </div>
@@ -115,7 +115,7 @@ Filter by category
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ZOO Name <span>{{ model.name }}</span></li>
-                            <li class="list-group-item">Task type <span>{{ model.task_type }}</span></li>
+                            <li class="list-group-item">Task type <span class="{{ model.task_type }}">{{ model.task_type | replace("_"," ") | upper }}</span></li>
                             <li class="list-group-item">FPS <span>{{ model.meta.FPS.mean }}</span></li>
                             <li class="list-group-item">
                                 Resolution

@@ -10,6 +10,15 @@
 .nn-img.detection {
     background-color: #f9fcf5;
 }
+
+
+span.classification {
+   color: #CECE38;
+}
+
+span.detection {
+    color: #90C644;
+}
   
 svg g.active, svg:hover g.static {
     display: none;
