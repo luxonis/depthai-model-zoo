@@ -1,5 +1,5 @@
 description: >-
-  MicroNet-m0 ImageNet Classification
+  Image classification with MicroNet-M0 pretrained on ImageNet.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/micronet_m0_224x224
 task_type: classification
 files:
@@ -14,6 +14,7 @@ files:
 framework: dldt
 license: https://github.com/liyunsheng13/micronet/blob/main/LICENSE
 meta:
+    nice_name: MicroNet-M0
     inputs:
       - type: image
         shape: 3, 224, 224

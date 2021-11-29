@@ -1,5 +1,5 @@
 description: >-
-  Head pose estimation
+  Detect 68 facial landmarks and estimate head posture using PnP.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/head-pose-estimation_160x160
 task_type: head_pose_estimation
 files:
@@ -14,6 +14,8 @@ files:
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/head-pose-estimation_160x160
 meta:
+    nice_name: Head pose estimation
+    example_gif: https://github.com/luxonis/depthai-experiments/raw/master/gen2-head-posture-detection/media/pose.gif
     inputs:
       - type: image
         shape: 3, 160, 160

@@ -1,5 +1,5 @@
 description: >-
-  Depth Estimation
+  Depth Estimation of a given input image.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/depth-mbnv2
 task_type: monocular_depth_estimation
 files:
@@ -14,6 +14,7 @@ files:
 framework: dldt
 license: https://github.com/alinstein/Depth_estimation/blob/master/LICENSE
 meta:
+    nice_name: Depth MobileNetV2
     inputs:
       - type: image
         shape: 3, 480, 640

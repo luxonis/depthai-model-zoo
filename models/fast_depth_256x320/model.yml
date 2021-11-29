@@ -1,5 +1,5 @@
 description: >-
-  Monocular Depth Estimation with Fast Depth (256 x 320)
+  Estimate depth from RGB images using FastDepth from MIT.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/fast_depth_256x320
 task_type: monocular_depth_estimation
 files:
@@ -14,6 +14,8 @@ files:
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/fast_depth_256x320
 meta:
+    nice_name: FastDepth
+    example_gif: https://user-images.githubusercontent.com/18037362/140495636-0721dea1-7eaf-461e-9a39-23a890513324.gif
     inputs:
       - type: image
         shape: 3, 256, 320

@@ -1,5 +1,5 @@
 description: >-
-  Monocular Depth Estimation with Fast Depth (480 x 640)
+    Estimate depth from RGB images using FastDepth from MIT.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/fast_depth_480x640
 task_type: monocular_depth_estimation
 files:
@@ -13,3 +13,29 @@ files:
     source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/fast_depth_480x640/fast_depth_480x640.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/fast_depth_480x640
+meta:
+    nice_name: FastDepth
+    example_gif: https://user-images.githubusercontent.com/18037362/140495636-0721dea1-7eaf-461e-9a39-23a890513324.gif
+    inputs:
+      - type: image
+        shape: 3, 480, 640
+        name: input.1
+    FPS:
+        mean: ???
+        std: ???
+    backbone: MobileNet
+    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-fast-depth
+    uses_depth: false
+    source:
+      - name: GitHub
+        url: https://github.com/dwofk/fast-depth
+      - name: PINTO_model_zoo
+        url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/146_FastDepth
+    license: 
+        name: MIT
+        url: https://github.com/dwofk/fast-depth/blob/master/LICENSE
+    downloads:
+      - name: fast_depth_480x640.xml
+        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/fast_depth_480x640/fast_depth_480x640.xml
+      - name: fast_depth_480x640.bin
+        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/fast_depth_480x640/fast_depth_480x640.bin

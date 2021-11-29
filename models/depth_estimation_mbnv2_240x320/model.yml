@@ -1,6 +1,6 @@
 description: >-
-  Depth Estimation
-documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/depth-mbnv2
+  Estimate depth from a RGB image.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/depth_estimation_mbnv2_240x320
 task_type: monocular_depth_estimation
 files:
   - name: FP16/depth_estimation_mbnv2_240x320.xml
@@ -14,6 +14,7 @@ files:
 framework: dldt
 license: https://github.com/alinstein/Depth_estimation/blob/master/LICENSE
 meta:
+    nice_name: Depth MobileNetV2
     inputs:
       - type: image
         shape: 3, 240, 320
