@@ -116,3 +116,13 @@ function filterByName(event) {
   }
   scrollToList()
 }
+
+function openDetails(name) {
+  $("div").find('.zoo2-rect').addClass('show')
+  $("div").find("#" + name + "Details").addClass('show')
+}
+
+function hideDetails() {
+  $("div").find('.zoo2-rect').removeClass('show')
+  $("div").find('.zoo2.zoo2-group.show').removeClass('show')
+}
