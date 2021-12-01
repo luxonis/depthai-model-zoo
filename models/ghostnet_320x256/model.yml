@@ -1,5 +1,5 @@
 description: >-
-  ImageNet Classification
+  Image classification with GhostNet pretrained on ImageNet.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/ghostnet_320x256
 task_type: classification
 files:
@@ -14,6 +14,7 @@ files:
 framework: dldt
 license: https://github.com/huawei-noah/CV-Backbones
 meta:
+    nice_name: GhostNet
     inputs:
       - type: image
         shape: 3, 320, 256

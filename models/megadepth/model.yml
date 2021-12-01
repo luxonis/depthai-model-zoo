@@ -1,5 +1,5 @@
 description: >-
-  Depth Estimation
+  Estimate depth from a RGB image.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/megadepth
 task_type: monocular_depth_estimation
 files:
@@ -14,6 +14,8 @@ files:
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/megadepth
 meta:
+    nice_name: MegaDepth
+    example_gif: https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-mega-depth/imgs/example.gif
     inputs:
       - type: image
         shape: 3, 192, 256

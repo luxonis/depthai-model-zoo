@@ -1,5 +1,5 @@
 description: >-
-  Depth Estimation
+  Depth estimation from a RGB image using SC-Depth model.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/scdepth_256x832
 task_type: monocular_depth_estimation
 files:
@@ -14,6 +14,7 @@ files:
 framework: dldt
 license: https://github.com/JiawangBian/SC-SfMLearner-Release
 meta:
+    nice_name: SC-Depth
     inputs:
       - type: image
         shape: 3, 256, 512
