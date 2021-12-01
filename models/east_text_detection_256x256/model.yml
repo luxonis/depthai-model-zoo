@@ -14,7 +14,7 @@ files:
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/east_text_detection_256x256
 meta:
-    nice_name: EAST
+    verbose_name: EAST
     inputs:
       - type: image
         shape: 3, 256, 256

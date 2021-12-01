@@ -14,7 +14,7 @@ files:
 framework: dldt
 license: https://github.com/liyunsheng13/micronet/blob/main/LICENSE
 meta:
-    nice_name: MicroNet-M0
+    verbose_name: MicroNet-M0
     inputs:
       - type: image
         shape: 3, 224, 224

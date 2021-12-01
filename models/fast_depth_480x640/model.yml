@@ -14,8 +14,8 @@ files:
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/fast_depth_480x640
 meta:
-    nice_name: FastDepth
-    example_gif: https://user-images.githubusercontent.com/18037362/140495636-0721dea1-7eaf-461e-9a39-23a890513324.gif
+    verbose_name: FastDepth
+    thumbnail: https://user-images.githubusercontent.com/18037362/140495636-0721dea1-7eaf-461e-9a39-23a890513324.gif
     inputs:
       - type: image
         shape: 3, 480, 640

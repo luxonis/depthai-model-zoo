@@ -14,8 +14,8 @@ files:
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/dmcount_540x960
 meta:
-    nice_name: DM-Count
-    example_gif: https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-crowdcounting/imgs/example.gif
+    verbose_name: DM-Count
+    thumbnail: https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-crowdcounting/imgs/example.gif
     inputs:
       - type: image
         shape: 3, 540, 960

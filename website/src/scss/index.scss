@@ -22,6 +22,7 @@ $font_color_type3: rgb(35, 36, 37);
 $font_color_type4: rgb(192, 190, 190);
 
 $background_type0: var(--src) center center / contain no-repeat;
+$background_type1: var(--src) center center / cover no-repeat;
 
 $border_radius_type0: 8px 8px 8px 8px;
 $border_radius_type1: 16px 16px 16px 16px;
@@ -241,7 +242,8 @@ $border_radius_type2: 22.5px 22.5px 22.5px 22.5px;
     }
   }
   &icon {
-    background: $background_type0;
+    background: $background_type1;
+    background-size: 100% 100%;
     border-radius: $border_radius_type0;
   }
   &icon.layout {
@@ -394,15 +396,18 @@ $border_radius_type2: 22.5px 22.5px 22.5px 22.5px;
     flex-grow: 1;
     margin: 0px;
   }
+  &group1-wrapper {
+    padding: 20px 20px;
+  }
   &group1 {
     display: flex;
     cursor: pointer;
-    background: $background_type0;
+    background: $background_type1;
+    background-size: 100% 100%;
   }
   &group1.layout {
     position: relative;
     overflow: visible;
-    margin: 0px;
   }
   &content-box2 {
     display: flex;
@@ -415,7 +420,7 @@ $border_radius_type2: 22.5px 22.5px 22.5px 22.5px;
     min-height: 52px;
     width: 158px;
     min-width: 158px;
-    margin: 20px 20px 191px auto;
+    margin: 0 -15px 211px auto;
   }
   &icon3 {
     background: $background_type0;

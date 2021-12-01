@@ -75,7 +75,7 @@
             class="main-page-icon layout"
           ></div>
           <div class="main-page-fast-depth-box layout">
-            <pre class="main-page-fast-depth">{{ model.name }}</pre>
+            <pre class="main-page-fast-depth">{{ model.meta.verbose_name or model.name }}</pre>
           </div>
         </div>
         {% endfor %}
@@ -90,29 +90,31 @@
            data-task-type="{{ model.task_type }}"
            data-fps="{{ model.meta.FPS.mean }}" data-resolution="{{ model.resolution_factor }}">
         <div class="main-page-content-box1 layout">
-          <figure
-            style="--src:url('{{ model.meta.thumbnail }}'); height: 263px;"
-            class="main-page-group1 layout"
-            onclick="openDetails('{{model.name}}')"
-          >
-            {% if "author" in model.meta %}
-            <div class="main-page-content-box2 layout">
-              {% if "avatar" in model.meta.author %}
-              <div
-                style="--src:url({{ model.meta.author.avatar }})"
-                class="main-page-icon3 layout"
-              ></div>
-              {% endif %}
-              <div class="main-page-content-box2-col">
-                <div class="main-page-group2 layout">
-                  <div class="main-page-powered-by layout">Powered by</div>
-                  <div class="main-page-tom-kalina layout">{{ model.meta.author.name }}</div>
+          <div class="main-page-group1-wrapper">
+            <figure
+              style="--src:url('{{ model.meta.thumbnail }}'); height: 263px;"
+              class="main-page-group1 layout"
+              onclick="openDetails('{{model.name}}')"
+            >
+              {% if "author" in model.meta %}
+              <div class="main-page-content-box2 layout">
+                {% if "avatar" in model.meta.author %}
+                <div
+                  style="--src:url({{ model.meta.author.avatar }})"
+                  class="main-page-icon3 layout"
+                ></div>
+                {% endif %}
+                <div class="main-page-content-box2-col">
+                  <div class="main-page-group2 layout">
+                    <div class="main-page-powered-by layout">Powered by</div>
+                    <div class="main-page-tom-kalina layout">{{ model.meta.author.name }}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            {% endif %}
-          </figure>
-          <h3 class="main-page-subtitle layout">{{ model.name }}</h3>
+              {% endif %}
+            </figure>
+          </div>
+          <h3 class="main-page-subtitle layout">{{ model.meta.verbose_name or model.name }}</h3>
           <div class="main-page-paragraph-body-box layout">
             <pre class="main-page-paragraph-body">{{ model.description }}</pre>
           </div>
@@ -191,7 +193,7 @@
           onclick="hideDetails()"
         ></div>
         <h1 class="zoo2-hero-title-box layout">
-            <pre class="zoo2-hero-title">{{ model.name }}</pre>
+            <pre class="zoo2-hero-title">{{ model.meta.verbose_name or model.name }}</pre>
         </h1>
           <div
             style="--src:url('{{ model.meta.thumbnail }}')"

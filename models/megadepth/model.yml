@@ -14,8 +14,8 @@ files:
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/megadepth
 meta:
-    nice_name: MegaDepth
-    example_gif: https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-mega-depth/imgs/example.gif
+    verbose_name: MegaDepth
+    thumbnail: https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-mega-depth/imgs/example.gif
     inputs:
       - type: image
         shape: 3, 192, 256
@@ -39,8 +39,4 @@ meta:
         url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/megadepth/megadepth.xml
       - name: megadepth.bin
         url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/megadepth/megadepth.bin
-    thumbnail: https://user-images.githubusercontent.com/5244214/144071025-a2942b3e-7068-4548-bf8b-ec5fb6f1a54f.png
     featured: true
-    author:
-      name: Luxonis
-      avatar: https://assets-global.website-files.com/60da16af25d60d769872821a/60da20c2fa0e620315919d91_123Asset%2015%404x-100.1-p-500.png

@@ -14,7 +14,7 @@ files:
 framework: dldt
 license: https://github.com/alinstein/Depth_estimation/blob/master/LICENSE
 meta:
-    nice_name: Depth MobileNetV2
+    verbose_name: Depth MobileNetV2
     inputs:
       - type: image
         shape: 3, 480, 640

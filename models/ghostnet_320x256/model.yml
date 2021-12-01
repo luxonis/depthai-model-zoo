@@ -14,7 +14,7 @@ files:
 framework: dldt
 license: https://github.com/huawei-noah/CV-Backbones
 meta:
-    nice_name: GhostNet
+    verbose_name: GhostNet
     inputs:
       - type: image
         shape: 3, 320, 256

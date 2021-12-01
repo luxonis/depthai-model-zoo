@@ -14,7 +14,7 @@ files:
 framework: dldt
 license: https://github.com/shawLyu/HR-Depth/blob/main/LICENSE
 meta:
-    nice_name: HR-Depth
+    verbose_name: HR-Depth
     inputs:
       - type: image
         shape: 3, 192, 256

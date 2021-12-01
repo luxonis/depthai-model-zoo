@@ -14,7 +14,7 @@ files:
 framework: dldt
 license: https://github.com/JiawangBian/SC-SfMLearner-Release
 meta:
-    nice_name: SC-Depth
+    verbose_name: SC-Depth
     inputs:
       - type: image
         shape: 3, 256, 512

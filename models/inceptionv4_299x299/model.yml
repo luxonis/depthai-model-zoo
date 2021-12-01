@@ -14,7 +14,7 @@ files:
 framework: dldt
 license: https://github.com/tensorflow/models/tree/master/research/slim/nets
 meta:
-    nice_name: InceptionV4
+    verbose_name: InceptionV4
     inputs:
       - type: image
         shape: 3, 299, 299

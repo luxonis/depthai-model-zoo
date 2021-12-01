@@ -14,7 +14,7 @@ files:
 framework: dldt
 license: https://github.com/pytorch/vision/tree/main/torchvision/models
 meta:
-    nice_name: ShuffleNetV2
+    verbose_name: ShuffleNetV2
     inputs:
       - type: image
         shape: 3, 224, 224
