@@ -1,0 +1,1163 @@
+/* This source code is exported from pxCode, you can get more document from https://www.pxcode.io */
+.main-page-group {
+  display: flex;
+  background-color: white; }
+
+.main-page-group.layout {
+  position: relative;
+  overflow: visible;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-content-box {
+  display: flex;
+  flex-direction: column; }
+
+.main-page-content-box.layout {
+  position: relative;
+  overflow: hidden;
+  min-height: 1352px;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-flex {
+  display: flex; }
+
+.main-page-flex.layout {
+  position: relative;
+  overflow: visible;
+  flex: 0 0 auto;
+  margin: 28.5px 27px 0px 32px; }
+  @media (max-width: 991.98px) {
+    .main-page-flex.layout {
+      margin: 14px 14px 0px 16px; } }
+  @media (max-width: 767.98px) {
+    .main-page-flex.layout {
+      margin: 7px 10px 0px; } }
+  @media (max-width: 575.98px) {
+    .main-page-flex.layout {
+      margin: 4px 10px 0px; } }
+
+.main-page-image {
+  background: var(--src) center center/contain no-repeat; }
+
+.main-page-image.layout {
+  position: relative;
+  flex: 0 1 86.66px;
+  height: 11.44px;
+  width: 86.66px;
+  min-width: 86.66px;
+  margin: 3.5px 0px 5.06px; }
+
+.main-page-navbrand {
+  background: var(--src) center center/contain no-repeat;
+  position: relative;
+  flex: 0 1 86.66px;
+  height: 11.44px;
+  width: 86.66px;
+  min-width: 86.66px;
+  margin: 3.5px 0px 5.06px; }
+
+.main-page-nav-list {
+  display: flex;
+  width: 50%;
+  justify-content: space-between; }
+
+.main-page-nav-link {
+  text-decoration: none; }
+
+.main-page-nav {
+  padding-top: 15px;
+  padding-left: 35px;
+  padding-right: 35px;
+  display: flex;
+  justify-content: space-between; }
+
+.main-page-flex-spacer {
+  display: flex;
+  flex: 0 1 391.34px; }
+
+.main-page-shop {
+  font: 600 16px/1.2 "Biennale", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0.32px; }
+
+.main-page-shop.layout {
+  position: relative;
+  margin: 0px; }
+
+.main-page-flex-spacer1 {
+  display: flex;
+  flex: 0 1 59px; }
+
+.main-page-zoo {
+  font: 600 16px/1.2 "Biennale", Helvetica, Arial, serif;
+  color: #b6a603;
+  letter-spacing: 0.32px; }
+
+.main-page-zoo.layout {
+  position: relative;
+  margin: 0px; }
+
+.main-page-flex-spacer2 {
+  display: flex;
+  flex: 0 1 59px; }
+
+.main-page-documentation {
+  font: 600 16px/1.2 "Biennale", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0.32px; }
+
+.main-page-documentation.layout {
+  position: relative;
+  margin: 0px; }
+
+.main-page-flex-spacer3 {
+  display: flex;
+  flex: 0 1 64px; }
+
+.main-page-highlights {
+  font: 600 16px/1.2 "Biennale", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0.32px; }
+
+.main-page-highlights.layout {
+  position: relative;
+  margin: 0px; }
+
+.main-page-flex-spacer4 {
+  display: flex;
+  flex: 0 1 62px; }
+
+.main-page-flex1 {
+  display: flex;
+  flex-direction: column; }
+
+.main-page-flex1.layout {
+  position: relative;
+  overflow: visible;
+  flex: 0 0 auto;
+  min-height: 355px;
+  width: 467px;
+  min-width: 467px;
+  margin: 108.5px 0px 0px 32px; }
+  @media (max-width: 991.98px) {
+    .main-page-flex1.layout {
+      min-height: 355px;
+      width: 467px;
+      min-width: 467px;
+      margin: 54px 0px 0px 32px; } }
+  @media (max-width: 767.98px) {
+    .main-page-flex1.layout {
+      min-height: 355px;
+      width: 467px;
+      min-width: 467px;
+      margin: 27px 0px 0px 32px; } }
+  @media (max-width: 575.98px) {
+    .main-page-flex1.layout {
+      min-height: 355px;
+      width: 467px;
+      min-width: 467px;
+      margin: 14px 0px 0px 32px; } }
+
+.main-page-model-zoo {
+  font: 600 92px/1.08696 "Biennale", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: -1.84px; }
+  @media (max-width: 1199.98px) {
+    .main-page-model-zoo {
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: 75px;
+      text-align: left; } }
+  @media (max-width: 991.98px) {
+    .main-page-model-zoo {
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: 72px;
+      text-align: left; } }
+  @media (max-width: 767.98px) {
+    .main-page-model-zoo {
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: 68px;
+      text-align: left; } }
+
+.main-page-model-zoo.layout {
+  position: relative;
+  margin: 0px; }
+
+.main-page-featured {
+  font: 700 14px/1.8 "Biennale", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0.56px; }
+
+.main-page-featured.layout {
+  position: relative;
+  margin: 48px 0px 0px; }
+  @media (max-width: 575.98px) {
+    .main-page-featured.layout {
+      margin: 24px 0px 0px; } }
+
+.main-page-flex2 {
+  display: flex; }
+
+.main-page-flex2.layout {
+  position: relative;
+  overflow: visible;
+  margin: 15px 0px 0px;
+  gap: 15px; }
+  @media (max-width: 575.98px) {
+    .main-page-flex2.layout {
+      margin: 8px 0px 0px; } }
+
+.main-page-icon {
+  background: var(--src) center center/cover no-repeat;
+  background-size: 100% 100%;
+  border-radius: 8px 8px 8px 8px; }
+
+.main-page-icon.layout {
+  position: relative;
+  flex: 0 1 122px;
+  height: 122px;
+  width: 122px;
+  min-width: 122px;
+  margin: 0px; }
+
+.main-page-task-type {
+  white-space: nowrap;
+  font: 700 14px/1.57143 "Montserrat", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0;
+  position: relative;
+  margin: 0; }
+
+.main-page-flex2-spacer {
+  display: flex;
+  flex: 0 1 16px; }
+
+.main-page-flex3 {
+  display: flex; }
+
+.main-page-flex3.layout {
+  position: relative;
+  overflow: visible;
+  margin: 16px 0px 0px;
+  gap: 15px; }
+  @media (max-width: 575.98px) {
+    .main-page-flex3.layout {
+      margin: 8px 0px 0px; } }
+
+.main-page-flex3-col {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; }
+
+.main-page-fast-depth-box.layout {
+  position: relative;
+  flex-grow: 1;
+  margin: 0px;
+  display: inline-block; }
+
+.main-page-fast-depth {
+  overflow: visible;
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 700 10px/1.4 "Biennale", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0.4px;
+  white-space: pre-wrap; }
+
+.main-page-flex3-spacer {
+  display: flex;
+  flex: 0 1 10px; }
+
+.main-page-small-paragraph-body-box.layout {
+  position: relative;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-small-paragraph-body {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 700 10px/1.4 "Biennale", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0.4px;
+  white-space: pre-wrap; }
+
+.main-page-mega-depth-box.layout {
+  position: relative;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-mega-depth {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 700 10px/1.4 "Biennale", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0.4px;
+  white-space: pre-wrap; }
+
+.main-page-text-body {
+  font: 700 14px/1.8 "Biennale", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0.56px;
+  text-transform: uppercase; }
+
+.main-page-text-body.layout {
+  position: relative;
+  flex: 0 0 auto;
+  margin: 74px 32px 0px; }
+  @media (max-width: 991.98px) {
+    .main-page-text-body.layout {
+      margin: 37px 16px 0px; } }
+  @media (max-width: 767.98px) {
+    .main-page-text-body.layout {
+      margin: 19px 10px 0px; } }
+  @media (max-width: 575.98px) {
+    .main-page-text-body.layout {
+      margin: 10px 10px 0px; } }
+
+.main-page-flex4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; }
+
+.main-page-flex4.layout {
+  position: relative;
+  overflow: visible;
+  flex: 0 0 auto;
+  margin: 15px 32px 120px; }
+  @media (max-width: 991.98px) {
+    .main-page-flex4.layout {
+      margin: 15px 16px 60px; } }
+  @media (max-width: 767.98px) {
+    .main-page-flex4.layout {
+      margin: 15px 10px 30px; } }
+  @media (max-width: 575.98px) {
+    .main-page-flex4.layout {
+      margin: 15px 10px; } }
+
+.main-page-flex4-col {
+  display: flex;
+  flex: 1 1 348px;
+  max-width: 350px;
+  min-width: 350px; }
+  @media (max-width: 991.98px) {
+    .main-page-flex4-col {
+      flex: 0 0 100%; } }
+
+.main-page-content-box1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  border-radius: 16px 16px 16px 16px; }
+
+.main-page-content-box1.layout {
+  position: relative;
+  overflow: hidden;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-group1-wrapper {
+  padding: 20px 20px; }
+
+.main-page-group1 {
+  display: flex;
+  cursor: pointer;
+  background: var(--src) center center/cover no-repeat;
+  background-size: 100% 100%; }
+
+.main-page-group1.layout {
+  position: relative;
+  overflow: visible; }
+
+.main-page-content-box2 {
+  display: flex;
+  background-color: black;
+  border-radius: 8px 8px 8px 8px; }
+
+.main-page-content-box2.layout {
+  position: relative;
+  overflow: visible;
+  min-height: 52px;
+  width: 158px;
+  min-width: 158px;
+  margin: 0 -15px 211px auto; }
+
+.main-page-icon3 {
+  background: var(--src) center center/contain no-repeat;
+  border-radius: 8px 0px 0px 8px; }
+
+.main-page-icon3.layout {
+  position: relative;
+  flex: 0 1 53px;
+  height: 52px;
+  width: 53px;
+  min-width: 53px;
+  margin: 0px; }
+
+.main-page-content-box2-col {
+  margin-left: 10px;
+  display: flex;
+  flex: 0 1 85px; }
+
+.main-page-group2 {
+  display: flex; }
+
+.main-page-group2.layout {
+  position: relative;
+  overflow: visible;
+  height: 33px;
+  flex-grow: 1;
+  margin: 11px 18px 8px 0px; }
+
+.main-page-powered-by {
+  font: 500 9px/1.56913 "Biennale", Helvetica, Arial, serif;
+  color: #f3f3f3;
+  letter-spacing: 0.30000001192092896px; }
+
+.main-page-powered-by.layout {
+  position: absolute;
+  top: 0px;
+  bottom: 18px;
+  left: 0px;
+  flex-grow: 1;
+  right: 0px; }
+
+.main-page-tom-kalina {
+  font: 700 12px/1.735 "Biennale", Helvetica, Arial, serif;
+  color: #f3f3f3;
+  letter-spacing: 0px; }
+
+.main-page-tom-kalina.layout {
+  position: absolute;
+  top: 12px;
+  bottom: 0px;
+  left: 0px;
+  flex-grow: 1;
+  right: 0px; }
+
+.main-page-subtitle {
+  font: 700 22px/1.27273 "Biennale", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0.3499999940395355px; }
+
+.main-page-subtitle.layout {
+  position: relative;
+  margin: 32px 20px 0px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.main-page-paragraph-body-box.layout {
+  position: relative;
+  margin: 36px 14px 0px 20px; }
+
+.main-page-paragraph-body {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 14px/1.57143 "Montserrat", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px;
+  white-space: pre-wrap; }
+
+.main-page-line {
+  background-color: #e1e1e1; }
+
+.main-page-line.layout {
+  position: relative;
+  height: 0.5px;
+  margin: 24px 21px 0px 20px; }
+
+.main-page-flex5 {
+  display: flex; }
+
+.main-page-flex5.layout {
+  position: relative;
+  overflow: visible;
+  margin: 16px 20px 0px; }
+
+.main-page-resolution {
+  font: 700 14px/1.57143 "Montserrat", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px; }
+
+.main-page-resolution.layout {
+  position: relative;
+  margin: 0px; }
+
+.main-page-flex5-spacer {
+  display: flex;
+  flex: 0 1 160px; }
+
+.main-page-flex5-col {
+  display: flex;
+  flex: 0 1 68px; }
+
+.main-page-text-body1 {
+  display: flex;
+  justify-content: flex-end;
+  font: 14px/1.57143 "Montserrat", Helvetica, Arial, serif;
+  color: black;
+  text-align: right;
+  letter-spacing: 0px; }
+
+.main-page-text-body1.layout {
+  position: relative;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-line.layout1 {
+  position: relative;
+  height: 0.5px;
+  margin: 9.5px 21px 0px 20px; }
+
+.main-page-flex6 {
+  display: flex; }
+
+.main-page-flex6.layout {
+  position: relative;
+  overflow: visible;
+  margin: 16px 20px 0px; }
+
+.main-page-fps {
+  font: 700 14px/1.57143 "Montserrat", Helvetica, Arial, serif;
+  color: black;
+  letter-spacing: 0px; }
+
+.main-page-fps.layout {
+  position: relative;
+  margin: 0px; }
+
+.main-page-flex6-spacer {
+  display: flex;
+  flex: 0 1 237px; }
+
+.main-page-flex6-col {
+  display: flex;
+  flex: 0 1 38px; }
+
+.main-page-text-body2 {
+  display: flex;
+  justify-content: flex-end;
+  font: 14px/1.57143 "Montserrat", Helvetica, Arial, serif;
+  color: black;
+  text-align: right;
+  letter-spacing: 0px; }
+
+.main-page-text-body2.layout {
+  position: relative;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-flex7 {
+  display: flex; }
+
+.main-page-flex7.layout {
+  position: relative;
+  overflow: visible;
+  margin: 26.5px 20px 20px; }
+
+.main-page-flex7-col {
+  display: flex;
+  flex: 0 1 140px; }
+
+.main-page-group3 {
+  display: flex;
+  background-color: white;
+  border-radius: 22.5px 22.5px 22.5px 22.5px;
+  font: 700 12px/1.2 "Montserrat", Helvetica, Arial, serif;
+  color: #232425;
+  letter-spacing: 0px;
+  justify-content: center;
+  padding: 15px 22.5px 15px 22.5px; }
+
+.main-page-group3.layout {
+  position: relative;
+  overflow: visible;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-flex7-spacer {
+  display: flex;
+  flex: 0 1 95px; }
+
+.main-page-flex7-col1 {
+  display: flex;
+  flex: 0 1 73px; }
+
+.main-page-download-btn-group .btn-primary {
+  background-color: white;
+  border-radius: 25px;
+  border-color: white;
+  color: black; }
+
+.main-page-download-btn-group .dropdown-menu {
+  background-color: white; }
+
+.main-page-learn-more {
+  display: flex;
+  cursor: pointer;
+  justify-content: flex-end;
+  font: 700 12px/1.735 "Montserrat", Helvetica, Arial, serif;
+  color: black;
+  text-align: right;
+  text-decoration: underline;
+  letter-spacing: 0px; }
+
+.main-page-learn-more.layout {
+  position: relative;
+  flex-grow: 1;
+  margin: 12px 0px; }
+
+.main-page-flex4-spacer {
+  display: flex;
+  flex: 0 1 16px; }
+  @media (max-width: 991.98px) {
+    .main-page-flex4-spacer {
+      flex: 0 0 100%;
+      min-height: 20px; } }
+
+.main-page-content-box3 {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  border-radius: 16px 16px 16px 16px; }
+
+.main-page-content-box3.layout {
+  position: relative;
+  overflow: hidden;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-image.layout1 {
+  position: relative;
+  height: 263px;
+  margin: 0px; }
+
+.main-page-paragraph-body1-box.layout {
+  position: relative;
+  margin: 36px 14px 0px 20px; }
+
+.main-page-flex8 {
+  display: flex; }
+
+.main-page-flex8.layout {
+  position: relative;
+  overflow: visible;
+  margin: 16px 20px 0px; }
+
+.main-page-flex8-spacer {
+  display: flex;
+  flex: 0 1 160px; }
+
+.main-page-flex8-col {
+  display: flex;
+  flex: 0 1 68px; }
+
+.main-page-text-body3 {
+  display: flex;
+  justify-content: flex-end;
+  font: 14px/1.57143 "Montserrat", Helvetica, Arial, serif;
+  color: black;
+  text-align: right;
+  letter-spacing: 0px; }
+
+.main-page-text-body3.layout {
+  position: relative;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-line.layout3 {
+  position: relative;
+  height: 0.5px;
+  margin: 9.5px 21px 0px 20px; }
+
+.main-page-flex9 {
+  display: flex; }
+
+.main-page-flex9.layout {
+  position: relative;
+  overflow: visible;
+  margin: 16px 20px 0px; }
+
+.main-page-flex9-spacer {
+  display: flex;
+  flex: 0 1 237px; }
+
+.main-page-flex9-col {
+  display: flex;
+  flex: 0 1 38px; }
+
+.main-page-text-body4 {
+  display: flex;
+  justify-content: flex-end;
+  font: 14px/1.57143 "Montserrat", Helvetica, Arial, serif;
+  color: black;
+  text-align: right;
+  letter-spacing: 0px; }
+
+.main-page-text-body4.layout {
+  position: relative;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-flex10 {
+  display: flex; }
+
+.main-page-flex10.layout {
+  position: relative;
+  overflow: visible;
+  margin: 26.5px 20px 20px; }
+
+.main-page-flex10-col {
+  display: flex;
+  flex: 0 1 140px; }
+
+.main-page-group4 {
+  display: flex;
+  background-color: white;
+  border-radius: 22.5px 22.5px 22.5px 22.5px;
+  font: 700 12px/1.2 "Montserrat", Helvetica, Arial, serif;
+  color: #232425;
+  letter-spacing: 0px;
+  justify-content: center;
+  padding: 15px 22.5px 15px 22.5px; }
+
+.main-page-group4.layout {
+  position: relative;
+  overflow: visible;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-flex10-spacer {
+  display: flex;
+  flex: 0 1 95px; }
+
+.main-page-flex10-col1 {
+  display: flex;
+  flex: 0 1 73px; }
+
+.main-page-content-box4 {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f3;
+  border-radius: 16px 16px 16px 16px; }
+
+.main-page-content-box4.layout {
+  position: relative;
+  overflow: hidden;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-image.layout2 {
+  position: relative;
+  height: 263px;
+  margin: 0px; }
+
+.main-page-paragraph-body2-box.layout {
+  position: relative;
+  margin: 36px 14px 0px 20px; }
+
+.main-page-flex11 {
+  display: flex; }
+
+.main-page-flex11.layout {
+  position: relative;
+  overflow: visible;
+  margin: 16px 20px 0px; }
+
+.main-page-flex11-spacer {
+  display: flex;
+  flex: 0 1 160px; }
+
+.main-page-flex11-col {
+  display: flex;
+  flex: 0 1 68px; }
+
+.main-page-text-body5 {
+  display: flex;
+  justify-content: flex-end;
+  font: 14px/1.57143 "Montserrat", Helvetica, Arial, serif;
+  color: black;
+  text-align: right;
+  letter-spacing: 0px; }
+
+.main-page-text-body5.layout {
+  position: relative;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-line.layout5 {
+  position: relative;
+  height: 0.5px;
+  margin: 9.5px 21px 0px 20px; }
+
+.main-page-flex12 {
+  display: flex; }
+
+.main-page-flex12.layout {
+  position: relative;
+  overflow: visible;
+  margin: 16px 20px 0px; }
+
+.main-page-flex12-spacer {
+  display: flex;
+  flex: 0 1 237px; }
+
+.main-page-flex12-col {
+  display: flex;
+  flex: 0 1 38px; }
+
+.main-page-text-body6 {
+  display: flex;
+  justify-content: flex-end;
+  font: 14px/1.57143 "Montserrat", Helvetica, Arial, serif;
+  color: black;
+  text-align: right;
+  letter-spacing: 0px; }
+
+.main-page-text-body6.layout {
+  position: relative;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-flex13 {
+  display: flex; }
+
+.main-page-flex13.layout {
+  position: relative;
+  overflow: visible;
+  margin: 26.5px 20px 20px; }
+
+.main-page-flex13-col {
+  display: flex;
+  flex: 0 1 140px; }
+
+.main-page-group5 {
+  display: flex;
+  background-color: white;
+  border-radius: 22.5px 22.5px 22.5px 22.5px;
+  font: 700 12px/1.2 "Montserrat", Helvetica, Arial, serif;
+  color: #232425;
+  letter-spacing: 0px;
+  justify-content: center;
+  padding: 15px 22.5px 15px 22.5px; }
+
+.main-page-group5.layout {
+  position: relative;
+  overflow: visible;
+  flex-grow: 1;
+  margin: 0px; }
+
+.main-page-flex13-spacer {
+  display: flex;
+  flex: 0 1 95px; }
+
+.main-page-flex13-col1 {
+  display: flex;
+  flex: 0 1 73px; }
+
+.main-page-rect {
+  background-color: #212121;
+  opacity: 0; }
+
+.main-page-rect.layout {
+  position: absolute;
+  top: 0px;
+  height: 1095px;
+  left: 0px;
+  width: 760px;
+  min-width: 760px;
+  margin: 0px 0px 257px; }
+  @media (max-width: 991.98px) {
+    .main-page-rect.layout {
+      top: 0px;
+      height: 1095px;
+      left: 0px;
+      width: 760px;
+      min-width: 760px;
+      margin: 0px 0px 129px; } }
+  @media (max-width: 767.98px) {
+    .main-page-rect.layout {
+      top: 0px;
+      height: 1095px;
+      left: 0px;
+      width: 760px;
+      min-width: 760px;
+      margin: 0px 0px 65px; } }
+  @media (max-width: 575.98px) {
+    .main-page-rect.layout {
+      top: 0px;
+      height: 1095px;
+      left: 0px;
+      width: 760px;
+      min-width: 760px;
+      margin: 0px 0px 33px; } }
+
+.zoo2-group {
+  display: flex;
+  background-color: white;
+  transition: width .2s ease-in-out;
+  width: 0; }
+  .zoo2-group.show {
+    width: 440px; }
+
+.zoo2-group.layout {
+  position: fixed;
+  overflow: scroll;
+  flex-grow: 1;
+  margin: 0px;
+  top: 0;
+  right: 0;
+  height: 100%; }
+
+.zoo2-rect {
+  background-color: #212121;
+  opacity: 0.8999999761581421;
+  display: none; }
+
+.zoo2-rect.show {
+  display: block; }
+
+.zoo2-rect.layout {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  left: 0px;
+  width: 100%;
+  margin: 0px; }
+
+.zoo2-content-box {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(33, 33, 33, 0.960784); }
+
+.zoo2-content-box.layout {
+  position: absolute;
+  overflow: visible;
+  top: 0px;
+  bottom: 0px;
+  min-height: 1095px;
+  width: 440px;
+  min-width: 440px;
+  right: 0px; }
+
+.zoo2-icon {
+  background: var(--src) center center/contain no-repeat; }
+
+.zoo2-icon.layout {
+  position: relative;
+  height: 16.01px;
+  width: 16px;
+  min-width: 16px;
+  margin: 23.02px 21px 0px auto; }
+
+.zoo2-hero-title-box.layout {
+  position: relative;
+  margin: 24.96px 10px 0px 32px; }
+
+.zoo2-hero-title {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 600 16px/1.2 "Biennale", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px;
+  white-space: pre-wrap; }
+
+.zoo2-cover-group {
+  display: flex;
+  background: var(--src) center center/contain no-repeat; }
+
+.zoo2-cover-group.layout {
+  position: relative;
+  overflow: visible;
+  min-height: 240px;
+  margin: 32px 33.9px 0px 32px; }
+
+.zoo2-cover-group1 {
+  display: flex;
+  background-color: black;
+  font: 600 92px/1.08696 "Biennale", Helvetica, Arial, serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: white;
+  letter-spacing: 0px;
+  justify-content: center;
+  padding: 9px 18px 8px 19px; }
+
+.zoo2-cover-group1.red {
+  background-color: #EB5757; }
+
+.zoo2-cover-group1.layout {
+  position: relative;
+  overflow: visible;
+  min-height: 37px;
+  width: 110px;
+  min-width: 110px;
+  margin: 8px 0px 195px 8px; }
+
+.zoo2-description {
+  font: 700 14px/1.8 "Biennale", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px; }
+
+.zoo2-description.layout {
+  position: relative;
+  margin: 32px 32px 0px; }
+
+.zoo2-highlights-box.layout {
+  position: relative;
+  margin: 16px 22px 0px 32px; }
+
+.zoo2-highlights {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 700 10px/1.4 "Biennale", Helvetica, Arial, serif;
+  font-size: 13px;
+  color: #f3f3f3;
+  letter-spacing: 0.18px;
+  white-space: pre-wrap; }
+
+.zoo2-input {
+  font: 700 14px/1.8 "Biennale", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px; }
+
+.zoo2-input.layout {
+  position: relative;
+  margin: 39px 32px 0px; }
+
+.zoo2-highlights1-box.layout {
+  position: relative;
+  margin: 18px 24px 0px 32px; }
+
+.zoo2-highlights1 {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 500 9px/1.56913 "Biennale", Helvetica, Arial, serif;
+  font-size: 13px;
+  color: white;
+  letter-spacing: 0.16px;
+  white-space: pre-wrap; }
+
+.zoo2-line {
+  background-color: #49474d; }
+
+.zoo2-line.layout {
+  position: relative;
+  height: 0.5px;
+  margin: 15.75px 32px 0px; }
+
+.zoo2-fps {
+  font: 700 14px/1.8 "Biennale", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px; }
+
+.zoo2-fps.layout {
+  position: relative;
+  margin: 40.75px 32px 0px; }
+
+.zoo2-highlights2-box.layout {
+  position: relative;
+  margin: 18px 24px 0px 32px; }
+
+.zoo2-highlights2 {
+  overflow: visible;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+  font: 500 9px/1.56913 "Biennale", Helvetica, Arial, serif;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 0.16px;
+  white-space: pre-wrap; }
+
+.zoo2-license {
+  font: 700 14px/1.8 "Biennale", Helvetica, Arial, serif;
+  color: white;
+  letter-spacing: 0px; }
+
+.zoo2-license.layout {
+  position: relative;
+  margin: 68.75px 32px 0px; }
+
+.zoo2-highlights3 {
+  font: 500 9px/1.56913 "Biennale", Helvetica, Arial, serif;
+  color: white;
+  text-decoration: underline;
+  letter-spacing: 0.16px;
+  font-size: 13px; }
+
+.zoo2-highlights3.layout {
+  position: relative;
+  margin: 18px 32px 0px; }
+
+.zoo2-flex {
+  display: flex;
+  margin-top: 10px; }
+  .zoo2-flex .dropdown-menu {
+    padding: 10px 20px; }
+    .zoo2-flex .dropdown-menu li a {
+      color: white; }
+    .zoo2-flex .dropdown-menu li a:hover {
+      color: #c0bebe; }
+
+.zoo2-flex.layout {
+  position: relative;
+  overflow: visible;
+  margin: 25px 25.55px 0; }
+
+.zoo2-flex-col {
+  display: flex;
+  flex: 0 1 118px; }
+
+.zoo2-view-source {
+  display: flex;
+  justify-content: center;
+  font: 700 12px/1.735 "Biennale", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 0px; }
+
+.zoo2-view-source.layout {
+  position: relative;
+  flex-grow: 1;
+  margin: 0px; }
+
+.zoo2-flex-spacer {
+  display: flex;
+  flex: 0 1 170.44px; }
+
+.zoo2-flex-col1 {
+  display: flex;
+  flex: 0 1 100px; }
+
+.zoo2-download {
+  display: flex;
+  justify-content: center;
+  font: 700 12px/1.735 "Biennale", Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  letter-spacing: 0px; }
+
+.zoo2-download.layout {
+  position: relative;
+  flex-grow: 1;
+  margin: 0px; }
