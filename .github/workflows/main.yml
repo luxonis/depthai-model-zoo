@@ -31,7 +31,7 @@ jobs:
         working-directory: website
       - run: python3 -m pip install -r requirements.txt
         working-directory: website
-      - run: python3 generate_website.py
+      - run: python3 populate_website.py
         working-directory: website
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.7.3
