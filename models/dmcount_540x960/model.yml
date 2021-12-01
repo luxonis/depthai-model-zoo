@@ -1,5 +1,5 @@
 description: >-
-  Crowd Counting using DM-Count model
+  Count dense or sparse crowds using density maps.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/dmcount_540x960
 task_type: feature_extraction
 files:
@@ -14,6 +14,8 @@ files:
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/dmcount_540x960
 meta:
+    verbose_name: DM-Count
+    thumbnail: https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-crowdcounting/imgs/example.gif
     inputs:
       - type: image
         shape: 3, 540, 960

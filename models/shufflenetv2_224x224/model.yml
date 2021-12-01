@@ -1,5 +1,5 @@
 description: >-
-  ImageNet Classification
+  Image classification with ShuffleNetV2 pretrained on ImageNet.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/shufflenetv2_224x224
 task_type: classification
 files:
@@ -14,6 +14,7 @@ files:
 framework: dldt
 license: https://github.com/pytorch/vision/tree/main/torchvision/models
 meta:
+    verbose_name: ShuffleNetV2
     inputs:
       - type: image
         shape: 3, 224, 224

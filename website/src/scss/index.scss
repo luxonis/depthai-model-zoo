@@ -1,0 +1,1206 @@
+/* This source code is exported from pxCode, you can get more document from https://www.pxcode.io */
+@import "mq";
+
+$font_type0: 600 16px/1.2 "Biennale", Helvetica, Arial, serif;
+$font_type1: 600 92px/1.0869565217391304 "Biennale", Helvetica, Arial, serif;
+$font_type2: 700 14px/1.7999999523162842 "Biennale", Helvetica, Arial, serif;
+$font_type3: 700 10px/1.399999976158142 "Biennale", Helvetica, Arial, serif;
+$font_type4: 500 9px/1.5691304736667209 "Biennale", Helvetica, Arial, serif;
+$font_type5: 700 12px/1.7350000143051147 "Biennale", Helvetica, Arial, serif;
+$font_type6: 700 22px/1.2727272727272727 "Biennale", Helvetica, Arial, serif;
+$font_type7: 14px/1.5714285714285714 "Montserrat", Helvetica, Arial, serif;
+$font_type8: 700 14px/1.5714285714285714 "Montserrat", Helvetica, Arial, serif;
+$font_type9: 700 12px/1.2 "Montserrat", Helvetica, Arial, serif;
+$font_type10: 700 12px/1.7350000143051147 "Montserrat", Helvetica, Arial, serif;
+
+$font_color_type0: rgb(255, 255, 255);
+$font_color_type1: rgb(0, 0, 0);
+$font_color_gold: rgb(235, 217, 0);
+$font_color_gold_dark: rgb(182, 166, 3);
+$font_color_type2: rgb(243, 243, 243);
+$font_color_type3: rgb(35, 36, 37);
+$font_color_type4: rgb(192, 190, 190);
+
+$background_type0: var(--src) center center / contain no-repeat;
+$background_type1: var(--src) center center / cover no-repeat;
+
+$border_radius_type0: 8px 8px 8px 8px;
+$border_radius_type1: 16px 16px 16px 16px;
+$border_radius_type2: 22.5px 22.5px 22.5px 22.5px;
+
+.main-page- {
+  &group {
+    display: flex;
+    background-color: $font_color_type0;
+  }
+  &group.layout {
+    position: relative;
+    overflow: visible;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &content-box {
+    display: flex;
+    flex-direction: column;
+  }
+  &content-box.layout {
+    position: relative;
+    overflow: hidden;
+    min-height: 1352px;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &flex {
+    display: flex;
+  }
+  &flex.layout {
+    position: relative;
+    overflow: visible;
+    flex: 0 0 auto;
+    margin: 28.5px 27px 0px 32px;
+    @include md {
+      margin: 14px 14px 0px 16px;
+    }
+    @include sm {
+      margin: 7px 10px 0px;
+    }
+    @include xs {
+      margin: 4px 10px 0px;
+    }
+  }
+  &image {
+    background: $background_type0;
+  }
+  &image.layout {
+    position: relative;
+    flex: 0 1 86.66px;
+    height: 11.44px;
+    width: 86.66px;
+    min-width: 86.66px;
+    margin: 3.5px 0px 5.06px;
+  }
+  &navbrand {
+    background: $background_type0;
+    position: relative;
+    flex: 0 1 86.66px;
+    height: 11.44px;
+    width: 86.66px;
+    min-width: 86.66px;
+    margin: 3.5px 0px 5.06px;
+  }
+  &nav-list {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+  &nav-link {
+    text-decoration: none;
+  }
+  &nav {
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &flex-spacer {
+    display: flex;
+    flex: 0 1 391.34px;
+  }
+  &shop {
+    font: $font_type0;
+    color: $font_color_type1;
+    letter-spacing: 0.32px;
+  }
+  &shop.layout {
+    position: relative;
+    margin: 0px;
+  }
+  &flex-spacer1 {
+    display: flex;
+    flex: 0 1 59px;
+  }
+  &zoo {
+    font: $font_type0;
+    color: $font_color_gold_dark;
+    letter-spacing: 0.32px;
+  }
+  &zoo.layout {
+    position: relative;
+    margin: 0px;
+  }
+  &flex-spacer2 {
+    display: flex;
+    flex: 0 1 59px;
+  }
+  &documentation {
+    font: $font_type0;
+    color: $font_color_type1;
+    letter-spacing: 0.32px;
+  }
+  &documentation.layout {
+    position: relative;
+    margin: 0px;
+  }
+  &flex-spacer3 {
+    display: flex;
+    flex: 0 1 64px;
+  }
+  &highlights {
+    font: $font_type0;
+    color: $font_color_type1;
+    letter-spacing: 0.32px;
+  }
+  &highlights.layout {
+    position: relative;
+    margin: 0px;
+  }
+  &flex-spacer4 {
+    display: flex;
+    flex: 0 1 62px;
+  }
+  &flex1 {
+    display: flex;
+    flex-direction: column;
+  }
+  &flex1.layout {
+    position: relative;
+    overflow: visible;
+    flex: 0 0 auto;
+    min-height: 355px;
+    width: 467px;
+    min-width: 467px;
+    margin: 108.5px 0px 0px 32px;
+    @include md {
+      min-height: 355px;
+      width: 467px;
+      min-width: 467px;
+      margin: 54px 0px 0px 32px;
+    }
+    @include sm {
+      min-height: 355px;
+      width: 467px;
+      min-width: 467px;
+      margin: 27px 0px 0px 32px;
+    }
+    @include xs {
+      min-height: 355px;
+      width: 467px;
+      min-width: 467px;
+      margin: 14px 0px 0px 32px;
+    }
+  }
+  &model-zoo {
+    font: $font_type1;
+    color: $font_color_type1;
+    letter-spacing: -1.84px;
+    @include lg {
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: 75px;
+      text-align: left;
+    }
+    @include md {
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: 72px;
+      text-align: left;
+    }
+    @include sm {
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: 68px;
+      text-align: left;
+    }
+  }
+  &model-zoo.layout {
+    position: relative;
+    margin: 0px;
+  }
+  &featured {
+    font: $font_type2;
+    color: $font_color_type1;
+    letter-spacing: 0.56px;
+  }
+  &featured.layout {
+    position: relative;
+    margin: 48px 0px 0px;
+    @include xs {
+      margin: 24px 0px 0px;
+    }
+  }
+  &flex2 {
+    display: flex;
+  }
+  &flex2.layout {
+    position: relative;
+    overflow: visible;
+    margin: 15px 0px 0px;
+    gap: 15px;
+    @include xs {
+      margin: 8px 0px 0px;
+    }
+  }
+  &icon {
+    background: $background_type1;
+    background-size: 100% 100%;
+    border-radius: $border_radius_type0;
+  }
+  &icon.layout {
+    position: relative;
+    flex: 0 1 122px;
+    height: 122px;
+    width: 122px;
+    min-width: 122px;
+    margin: 0px;
+  }
+  &task-type {
+    white-space: nowrap;
+    font: $font_type8;
+    color: $font_color_type1;
+    letter-spacing: 0;
+    position: relative;
+    margin: 0;
+  }
+  &flex2-spacer {
+    display: flex;
+    flex: 0 1 16px;
+  }
+  &flex3 {
+    display: flex;
+  }
+  &flex3.layout {
+    position: relative;
+    overflow: visible;
+    margin: 16px 0px 0px;
+    gap: 15px;
+    @include xs {
+      margin: 8px 0px 0px;
+    }
+  }
+  &flex3-col {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  &fast-depth-box.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px;
+    display: inline-block;
+  }
+  &fast-depth {
+    overflow: visible;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    font: $font_type3;
+    color: $font_color_type1;
+    letter-spacing: 0.4px;
+    white-space: pre-wrap;
+  }
+  &flex3-spacer {
+    display: flex;
+    flex: 0 1 10px;
+  }
+  &small-paragraph-body-box.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &small-paragraph-body {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    font: $font_type3;
+    color: $font_color_type1;
+    letter-spacing: 0.4px;
+    white-space: pre-wrap;
+  }
+  &mega-depth-box.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &mega-depth {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    font: $font_type3;
+    color: $font_color_type1;
+    letter-spacing: 0.4px;
+    white-space: pre-wrap;
+  }
+  &text-body {
+    font: $font_type2;
+    color: $font_color_type1;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+  }
+  &text-body.layout {
+    position: relative;
+    flex: 0 0 auto;
+    margin: 74px 32px 0px;
+    @include md {
+      margin: 37px 16px 0px;
+    }
+    @include sm {
+      margin: 19px 10px 0px;
+    }
+    @include xs {
+      margin: 10px 10px 0px;
+    }
+  }
+  &flex4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  &flex4.layout {
+    position: relative;
+    overflow: visible;
+    flex: 0 0 auto;
+    margin: 15px 32px 120px;
+    @include md {
+      margin: 15px 16px 60px;
+    }
+    @include sm {
+      margin: 15px 10px 30px;
+    }
+    @include xs {
+      margin: 15px 10px;
+    }
+  }
+  &flex4-col {
+    display: flex;
+    flex: 1 1 348px;
+    max-width: 350px;
+    min-width: 350px;
+
+    @include md {
+      flex: 0 0 100%;
+    }
+  }
+  &content-box1 {
+    display: flex;
+    flex-direction: column;
+    background-color: $font_color_type2;
+    border-radius: $border_radius_type1;
+  }
+  &content-box1.layout {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &group1-wrapper {
+    padding: 20px 20px;
+  }
+  &group1 {
+    display: flex;
+    cursor: pointer;
+    background: $background_type1;
+    background-size: 100% 100%;
+  }
+  &group1.layout {
+    position: relative;
+    overflow: visible;
+  }
+  &content-box2 {
+    display: flex;
+    background-color: $font_color_type1;
+    border-radius: $border_radius_type0;
+  }
+  &content-box2.layout {
+    position: relative;
+    overflow: visible;
+    min-height: 52px;
+    width: 158px;
+    min-width: 158px;
+    margin: 0 -15px 211px auto;
+  }
+  &icon3 {
+    background: $background_type0;
+    border-radius: 8px 0px 0px 8px;
+  }
+  &icon3.layout {
+    position: relative;
+    flex: 0 1 53px;
+    height: 52px;
+    width: 53px;
+    min-width: 53px;
+    margin: 0px;
+  }
+  &content-box2-col {
+    margin-left: 10px;
+    display: flex;
+    flex: 0 1 85px;
+  }
+  &group2 {
+    display: flex;
+  }
+  &group2.layout {
+    position: relative;
+    overflow: visible;
+    height: 33px;
+    flex-grow: 1;
+    margin: 11px 18px 8px 0px;
+  }
+  &powered-by {
+    font: $font_type4;
+    color: $font_color_type2;
+    letter-spacing: 0.30000001192092896px;
+  }
+  &powered-by.layout {
+    position: absolute;
+    top: 0px;
+    bottom: 18px;
+    left: 0px;
+    flex-grow: 1;
+    right: 0px;
+  }
+  &tom-kalina {
+    font: $font_type5;
+    color: $font_color_type2;
+    letter-spacing: 0px;
+  }
+  &tom-kalina.layout {
+    position: absolute;
+    top: 12px;
+    bottom: 0px;
+    left: 0px;
+    flex-grow: 1;
+    right: 0px;
+  }
+  &subtitle {
+    font: $font_type6;
+    color: $font_color_type1;
+    letter-spacing: 0.3499999940395355px;
+  }
+  &subtitle.layout {
+    position: relative;
+    margin: 32px 20px 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  &paragraph-body-box.layout {
+    position: relative;
+    margin: 36px 14px 0px 20px;
+  }
+  &paragraph-body {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    font: $font_type7;
+    color: $font_color_type1;
+    letter-spacing: 0px;
+    white-space: pre-wrap;
+  }
+  &line {
+    background-color: rgb(225, 225, 225);
+  }
+  &line.layout {
+    position: relative;
+    height: 0.5px;
+    margin: 24px 21px 0px 20px;
+  }
+  &flex5 {
+    display: flex;
+  }
+  &flex5.layout {
+    position: relative;
+    overflow: visible;
+    margin: 16px 20px 0px;
+  }
+  &resolution {
+    font: $font_type8;
+    color: $font_color_type1;
+    letter-spacing: 0px;
+  }
+  &resolution.layout {
+    position: relative;
+    margin: 0px;
+  }
+  &flex5-spacer {
+    display: flex;
+    flex: 0 1 160px;
+  }
+  &flex5-col {
+    display: flex;
+    flex: 0 1 68px;
+  }
+  &text-body1 {
+    display: flex;
+    justify-content: flex-end;
+    font: $font_type7;
+    color: $font_color_type1;
+    text-align: right;
+    letter-spacing: 0px;
+  }
+  &text-body1.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &line.layout1 {
+    position: relative;
+    height: 0.5px;
+    margin: 9.5px 21px 0px 20px;
+  }
+  &flex6 {
+    display: flex;
+  }
+  &flex6.layout {
+    position: relative;
+    overflow: visible;
+    margin: 16px 20px 0px;
+  }
+  &fps {
+    font: $font_type8;
+    color: $font_color_type1;
+    letter-spacing: 0px;
+  }
+  &fps.layout {
+    position: relative;
+    margin: 0px;
+  }
+  &flex6-spacer {
+    display: flex;
+    flex: 0 1 237px;
+  }
+  &flex6-col {
+    display: flex;
+    flex: 0 1 38px;
+  }
+  &text-body2 {
+    display: flex;
+    justify-content: flex-end;
+    font: $font_type7;
+    color: $font_color_type1;
+    text-align: right;
+    letter-spacing: 0px;
+  }
+  &text-body2.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &flex7 {
+    display: flex;
+  }
+  &flex7.layout {
+    position: relative;
+    overflow: visible;
+    margin: 26.5px 20px 20px;
+  }
+  &flex7-col {
+    display: flex;
+    flex: 0 1 140px;
+  }
+  &group3 {
+    display: flex;
+    background-color: $font_color_type0;
+    border-radius: $border_radius_type2;
+    font: $font_type9;
+    color: $font_color_type3;
+    letter-spacing: 0px;
+    justify-content: center;
+    padding: 15px 22.5px 15px 22.5px;
+  }
+  &group3.layout {
+    position: relative;
+    overflow: visible;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &flex7-spacer {
+    display: flex;
+    flex: 0 1 95px;
+  }
+  &flex7-col1 {
+    display: flex;
+    flex: 0 1 73px;
+  }
+  &download-btn-group {
+    .btn-primary {
+      background-color: white;
+      border-radius: 25px;
+      border-color: white;
+      color: $font_color_type1;
+    }
+    .dropdown-menu {
+      background-color: white;
+    }
+  }
+  &learn-more {
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-end;
+    font: $font_type10;
+    color: $font_color_type1;
+    text-align: right;
+    text-decoration: underline;
+    letter-spacing: 0px;
+  }
+  &learn-more.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 12px 0px;
+  }
+  &flex4-spacer {
+    display: flex;
+    flex: 0 1 16px;
+    @include md {
+      flex: 0 0 100%;
+      min-height: 20px;
+    }
+  }
+  &content-box3 {
+    display: flex;
+    flex-direction: column;
+    background-color: $font_color_type2;
+    border-radius: $border_radius_type1;
+  }
+  &content-box3.layout {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &image.layout1 {
+    position: relative;
+    height: 263px;
+    margin: 0px;
+  }
+  &paragraph-body1-box.layout {
+    position: relative;
+    margin: 36px 14px 0px 20px;
+  }
+  &flex8 {
+    display: flex;
+  }
+  &flex8.layout {
+    position: relative;
+    overflow: visible;
+    margin: 16px 20px 0px;
+  }
+  &flex8-spacer {
+    display: flex;
+    flex: 0 1 160px;
+  }
+  &flex8-col {
+    display: flex;
+    flex: 0 1 68px;
+  }
+  &text-body3 {
+    display: flex;
+    justify-content: flex-end;
+    font: $font_type7;
+    color: $font_color_type1;
+    text-align: right;
+    letter-spacing: 0px;
+  }
+  &text-body3.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &line.layout3 {
+    position: relative;
+    height: 0.5px;
+    margin: 9.5px 21px 0px 20px;
+  }
+  &flex9 {
+    display: flex;
+  }
+  &flex9.layout {
+    position: relative;
+    overflow: visible;
+    margin: 16px 20px 0px;
+  }
+  &flex9-spacer {
+    display: flex;
+    flex: 0 1 237px;
+  }
+  &flex9-col {
+    display: flex;
+    flex: 0 1 38px;
+  }
+  &text-body4 {
+    display: flex;
+    justify-content: flex-end;
+    font: $font_type7;
+    color: $font_color_type1;
+    text-align: right;
+    letter-spacing: 0px;
+  }
+  &text-body4.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &flex10 {
+    display: flex;
+  }
+  &flex10.layout {
+    position: relative;
+    overflow: visible;
+    margin: 26.5px 20px 20px;
+  }
+  &flex10-col {
+    display: flex;
+    flex: 0 1 140px;
+  }
+  &group4 {
+    display: flex;
+    background-color: $font_color_type0;
+    border-radius: $border_radius_type2;
+    font: $font_type9;
+    color: $font_color_type3;
+    letter-spacing: 0px;
+    justify-content: center;
+    padding: 15px 22.5px 15px 22.5px;
+  }
+  &group4.layout {
+    position: relative;
+    overflow: visible;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &flex10-spacer {
+    display: flex;
+    flex: 0 1 95px;
+  }
+  &flex10-col1 {
+    display: flex;
+    flex: 0 1 73px;
+  }
+  &content-box4 {
+    display: flex;
+    flex-direction: column;
+    background-color: $font_color_type2;
+    border-radius: $border_radius_type1;
+  }
+  &content-box4.layout {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &image.layout2 {
+    position: relative;
+    height: 263px;
+    margin: 0px;
+  }
+  &paragraph-body2-box.layout {
+    position: relative;
+    margin: 36px 14px 0px 20px;
+  }
+  &flex11 {
+    display: flex;
+  }
+  &flex11.layout {
+    position: relative;
+    overflow: visible;
+    margin: 16px 20px 0px;
+  }
+  &flex11-spacer {
+    display: flex;
+    flex: 0 1 160px;
+  }
+  &flex11-col {
+    display: flex;
+    flex: 0 1 68px;
+  }
+  &text-body5 {
+    display: flex;
+    justify-content: flex-end;
+    font: $font_type7;
+    color: $font_color_type1;
+    text-align: right;
+    letter-spacing: 0px;
+  }
+  &text-body5.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &line.layout5 {
+    position: relative;
+    height: 0.5px;
+    margin: 9.5px 21px 0px 20px;
+  }
+  &flex12 {
+    display: flex;
+  }
+  &flex12.layout {
+    position: relative;
+    overflow: visible;
+    margin: 16px 20px 0px;
+  }
+  &flex12-spacer {
+    display: flex;
+    flex: 0 1 237px;
+  }
+  &flex12-col {
+    display: flex;
+    flex: 0 1 38px;
+  }
+  &text-body6 {
+    display: flex;
+    justify-content: flex-end;
+    font: $font_type7;
+    color: $font_color_type1;
+    text-align: right;
+    letter-spacing: 0px;
+  }
+  &text-body6.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &flex13 {
+    display: flex;
+  }
+  &flex13.layout {
+    position: relative;
+    overflow: visible;
+    margin: 26.5px 20px 20px;
+  }
+  &flex13-col {
+    display: flex;
+    flex: 0 1 140px;
+  }
+  &group5 {
+    display: flex;
+    background-color: $font_color_type0;
+    border-radius: $border_radius_type2;
+    font: $font_type9;
+    color: $font_color_type3;
+    letter-spacing: 0px;
+    justify-content: center;
+    padding: 15px 22.5px 15px 22.5px;
+  }
+  &group5.layout {
+    position: relative;
+    overflow: visible;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &flex13-spacer {
+    display: flex;
+    flex: 0 1 95px;
+  }
+  &flex13-col1 {
+    display: flex;
+    flex: 0 1 73px;
+  }
+  &rect {
+    background-color: rgb(33, 33, 33);
+    opacity: 0;
+  }
+  &rect.layout {
+    position: absolute;
+    top: 0px;
+    height: 1095px;
+    left: 0px;
+    width: 760px;
+    min-width: 760px;
+    margin: 0px 0px 257px;
+    @include md {
+      top: 0px;
+      height: 1095px;
+      left: 0px;
+      width: 760px;
+      min-width: 760px;
+      margin: 0px 0px 129px;
+    }
+    @include sm {
+      top: 0px;
+      height: 1095px;
+      left: 0px;
+      width: 760px;
+      min-width: 760px;
+      margin: 0px 0px 65px;
+    }
+    @include xs {
+      top: 0px;
+      height: 1095px;
+      left: 0px;
+      width: 760px;
+      min-width: 760px;
+      margin: 0px 0px 33px;
+    }
+  }
+}
+
+.zoo2- {
+  &group {
+    display: flex;
+    background-color: $font_color_type0;
+    transition: width .2s ease-in-out;
+    width: 0;
+
+    &.show {
+      width: 440px;
+    }
+  }
+  &group.layout {
+    position: fixed;
+    overflow: scroll;
+    flex-grow: 1;
+    margin: 0px;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+  &rect {
+    background-color: rgb(33, 33, 33);
+    opacity: 0.8999999761581421;
+    display: none;
+  }
+  &rect.show {
+    display: block;
+  }
+  &rect.layout {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    left: 0px;
+    width: 100%;
+    margin: 0px;
+  }
+  &content-box {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(33, 33, 33, 0.9607843137254902);
+  }
+  &content-box.layout {
+    position: absolute;
+    overflow: visible;
+    top: 0px;
+    bottom: 0px;
+    min-height: 1095px;
+    width: 440px;
+    min-width: 440px;
+    right: 0px;
+  }
+  &icon {
+    background: $background_type0;
+  }
+  &icon.layout {
+    position: relative;
+    height: 16.01px;
+    width: 16px;
+    min-width: 16px;
+    margin: 23.02px 21px 0px auto;
+  }
+  &hero-title-box.layout {
+    position: relative;
+    margin: 24.96px 10px 0px 32px;
+  }
+  &hero-title {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    font: $font_type0;
+    color: $font_color_type0;
+    letter-spacing: 0px;
+    white-space: pre-wrap;
+  }
+  &cover-group {
+    display: flex;
+    background: $background_type0;
+  }
+  &cover-group.layout {
+    position: relative;
+    overflow: visible;
+    min-height: 240px;
+    margin: 32px 33.9px 0px 32px;
+  }
+  &cover-group1 {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    font: $font_type1;
+    font-size: 13px;
+    line-height: 20px;
+    color: $font_color_type0;
+    letter-spacing: 0px;
+    justify-content: center;
+    padding: 9px 18px 8px 19px;
+  }
+  &cover-group1.red {
+    background-color: #EB5757;
+  }
+  &cover-group1.layout {
+    position: relative;
+    overflow: visible;
+    min-height: 37px;
+    width: 110px;
+    min-width: 110px;
+    margin: 8px 0px 195px 8px;
+  }
+  &description {
+    font: $font_type2;
+    color: $font_color_type0;
+    letter-spacing: 0px;
+  }
+  &description.layout {
+    position: relative;
+    margin: 32px 32px 0px;
+  }
+  &highlights-box.layout {
+    position: relative;
+    margin: 16px 22px 0px 32px;
+  }
+  &highlights {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    font: $font_type3;
+    font-size: 13px;
+    color: rgb(243, 243, 243);
+    letter-spacing: 0.18px;
+    white-space: pre-wrap;
+  }
+  &input {
+    font: $font_type2;
+    color: $font_color_type0;
+    letter-spacing: 0px;
+  }
+  &input.layout {
+    position: relative;
+    margin: 39px 32px 0px;
+  }
+  &highlights1-box.layout {
+    position: relative;
+    margin: 18px 24px 0px 32px;
+  }
+  &highlights1 {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    font: $font_type4;
+    font-size: 13px;
+    color: $font_color_type0;
+    letter-spacing: 0.16px;
+    white-space: pre-wrap;
+  }
+  &line {
+    background-color: rgb(73, 71, 77);
+  }
+  &line.layout {
+    position: relative;
+    height: 0.5px;
+    margin: 15.75px 32px 0px;
+  }
+  &fps {
+    font: $font_type2;
+    color: $font_color_type0;
+    letter-spacing: 0px;
+  }
+  &fps.layout {
+    position: relative;
+    margin: 40.75px 32px 0px;
+  }
+  &highlights2-box.layout {
+    position: relative;
+    margin: 18px 24px 0px 32px;
+  }
+  &highlights2 {
+    overflow: visible;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0px;
+    font: $font_type4;
+    color: $font_color_type0;
+    font-size: 13px;
+    letter-spacing: 0.16px;
+    white-space: pre-wrap;
+  }
+  &license {
+    font: $font_type2;
+    color: $font_color_type0;
+    letter-spacing: 0px;
+  }
+  &license.layout {
+    position: relative;
+    margin: 68.75px 32px 0px;
+  }
+  &highlights3 {
+    font: $font_type4;
+    color: $font_color_type0;
+    text-decoration: underline;
+    letter-spacing: 0.16px;
+    font-size: 13px;
+  }
+  &highlights3.layout {
+    position: relative;
+    margin: 18px 32px 0px;
+  }
+  &flex {
+    display: flex;
+    margin-top: 10px;
+    .dropdown-menu {
+      padding: 10px 20px;
+      li a {
+        color: $font_color_type0
+      }
+      li a:hover {
+        color: $font_color_type4
+      }
+    }
+  }
+  &flex.layout {
+    position: relative;
+    overflow: visible;
+    margin: 25px 25.55px 0;
+  }
+  &flex-col {
+    display: flex;
+    flex: 0 1 118px;
+  }
+  &view-source {
+    display: flex;
+    justify-content: center;
+    font: $font_type5;
+    color: $font_color_type0;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 0px;
+  }
+  &view-source.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px;
+  }
+  &flex-spacer {
+    display: flex;
+    flex: 0 1 170.44px;
+  }
+  &flex-col1 {
+    display: flex;
+    flex: 0 1 100px;
+  }
+  &download {
+    display: flex;
+    justify-content: center;
+    font: $font_type5;
+    color: $font_color_type0;
+    text-align: center;
+    letter-spacing: 0px;
+  }
+  &download.layout {
+    position: relative;
+    flex-grow: 1;
+    margin: 0px;
+  }
+}
