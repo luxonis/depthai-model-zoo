@@ -952,7 +952,7 @@ $border_radius_type2: 22.5px 22.5px 22.5px 22.5px;
   }
   &group.layout {
     position: fixed;
-    overflow: hidden;
+    overflow: scroll;
     flex-grow: 1;
     margin: 0px;
     top: 0;
