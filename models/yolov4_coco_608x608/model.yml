@@ -1,0 +1,40 @@
+description: >-
+  Object detection with YoloV4 pre-trained on COCO data set.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov4_coco_608x608
+task_type: detection
+files:
+  - name: FP16/yolov4_coco_608x608.xml
+    size: 378792
+    sha256: 8d740fdf97fbf52673060e696b88694f7e68dedf306752dd1917653050bd6b10
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov4_coco_608x608/yolov4_coco_608x608.xml
+  - name: FP16/yolov4_coco_608x608.bin
+    size: 128660016
+    sha256: 29e0f3699e814212b044a371ac521d6de8c8efc3b19a5279f0b23728bcf6d17b
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov4_coco_608x608/yolov4_coco_608x608.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov4_coco_608x608
+meta:
+    verbose_name: YoloV4
+    thumbnail:
+    inputs:
+      - type: image
+        shape: 3, 608, 608
+        name: inputs
+    FPS:
+        mean: /
+        std: /
+    backbone: DarkNet
+    experiment:
+    uses_depth: false
+    featured: false
+    source:
+      - name: GitHub
+        url: https://github.com/AlexeyAB/darknet
+    license: 
+        name: YOLO
+        url: https://github.com/AlexeyAB/darknet/blob/master/LICENSE
+    downloads:
+      - name: yolov4_coco_608x608.xml
+        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov4_coco_608x608/yolov4_coco_608x608.xml
+      - name: yolov4_coco_608x608.bin
+        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov4_coco_608x608/yolov4_coco_608x608.bin

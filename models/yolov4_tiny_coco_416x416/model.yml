@@ -1,0 +1,40 @@
+description: >-
+  Real-time Object detection with YoloV4-tiny pre-trained on COCO data set.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov4_tiny_coco_416x416
+task_type: detection
+files:
+  - name: FP16/yolov4_tiny_coco_416x416.xml
+    size: 93678
+    sha256: c8884b377568406baa553120532bdc6d3b554391429e3498307c719ef3b3449e
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov4_tiny_coco_416x416/yolov4_tiny_coco_416x416.xml
+  - name: FP16/yolov4_tiny_coco_416x416.bin
+    size: 12107276
+    sha256: 99fa3a499fa50c9b06f4a3d5f1e4313129ca078abc77852166abf4bf5ac60115
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov4_tiny_coco_416x416/yolov4_tiny_coco_416x416.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov4_tiny_coco_416x416
+meta:
+    verbose_name: YoloV4-tiny
+    thumbnail:
+    inputs:
+      - type: image
+        shape: 3, 416, 416
+        name: inputs
+    FPS:
+        mean: /
+        std: /
+    backbone: DarkNet
+    experiment:
+    uses_depth: false
+    featured: true
+    source:
+      - name: GitHub
+        url: https://github.com/AlexeyAB/darknet
+    license: 
+        name: YOLO
+        url: https://github.com/AlexeyAB/darknet/blob/master/LICENSE
+    downloads:
+      - name: yolov4_tiny_coco_416x416.xml
+        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov4_tiny_coco_416x416/yolov4_tiny_coco_416x416.xml
+      - name: yolov4_tiny_coco_416x416.bin
+        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov4_tiny_coco_416x416/yolov4_tiny_coco_416x416.bin
