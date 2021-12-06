@@ -15,7 +15,7 @@ framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolop_320x320
 meta:
     verbose_name: YOLOP
-    thumbnail: https://github.com/luxonis/depthai-experiments/raw/master/gen2-yolop/imgs/example.gif
+    thumbnail: https://user-images.githubusercontent.com/56075061/144842281-3413133e-7a44-4030-a572-9887fad1bbc6.gif
     inputs:
       - type: image
         shape: 3, 320, 320
