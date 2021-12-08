@@ -1,0 +1,40 @@
+description: >-
+  Instance Segmentation with Mask R-CNN pre-trained on COCO data set.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/mask_rcnn_resnet50_coco_300x300
+task_type: instance_segmentation
+files:
+  - name: FP16/mask_rcnn_resnet50_coco_300x300.xml
+    size: 367816
+    sha256: d2061eb9be189d79802eb0300a56a1ea6fc1dc36227ed58c617c640b5a0ee926
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mask_rcnn_resnet50_coco_300x300/mask_rcnn_resnet50_coco_300x300.xml
+  - name: FP16/mask_rcnn_resnet50_coco_300x300.bin
+    size: 178076008
+    sha256: 7f0af56aeb56c26b15bd40cd17240f45f4c28b162788e6d32e7a9a99e6bd2d3a
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/mask_rcnn_resnet50_coco_300x300/mask_rcnn_resnet50_coco_300x300.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/mask_rcnn_resnet50_coco_300x300
+meta:
+    verbose_name: Mask R-CNN
+    thumbnail:
+    inputs:
+      - type: image
+        shape: 3, 300, 300
+        name: 16:0
+    FPS:
+        mean: /
+        std: /
+    backbone: ResNet-50
+    experiment:
+    uses_depth: false
+    featured: true
+    source:
+      - name: GitHub
+        url: https://github.com/openvinotoolkit/openvino_contrib/tree/master/modules/mo_pytorch
+    license: 
+        name: Apache-2.0
+        url: https://github.com/openvinotoolkit/openvino_contrib/blob/master/LICENSE
+    downloads:
+      - name: mask_rcnn_resnet50_coco_300x300.xml
+        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mask_rcnn_resnet50_coco_300x300/mask_rcnn_resnet50_coco_300x300.xml
+      - name: mask_rcnn_resnet50_coco_300x300.bin
+        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/mask_rcnn_resnet50_coco_300x300/mask_rcnn_resnet50_coco_300x300.bin

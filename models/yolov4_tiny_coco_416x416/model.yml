@@ -21,8 +21,8 @@ meta:
         shape: 3, 416, 416
         name: inputs
     FPS:
-        mean: /
-        std: /
+        mean: 39.80
+        std: 1.33
     backbone: DarkNet
     experiment:
     uses_depth: false
