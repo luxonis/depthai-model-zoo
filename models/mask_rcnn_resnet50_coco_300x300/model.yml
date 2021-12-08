@@ -21,8 +21,8 @@ meta:
         shape: 3, 300, 300
         name: 16:0
     FPS:
-        mean: /
-        std: /
+        mean: 3.11
+        std: 0.01
     backbone: ResNet-50
     experiment:
     uses_depth: false
