@@ -1,0 +1,38 @@
+description: >-
+  This is a person reidentification model for a general scenario. It uses a whole body image as an input and outputs an embedding vector to match a pair of images by the cosine distance. The model is based on the RMNet backbone developed for fast inference. A single reidentification head from the 1/16 scale feature map outputs an embedding vector of 256 floats.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/person-reidentification-retail-0031_96x48
+task_type: person_reidentification
+files:
+- name: FP16/person-reidentification-retail-0031_96x48.xml
+    size: 136089
+    sha256: 540e578f5aa87e85b5a25201cc7a6d389762e7f69b062acd88901275d398f592
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.xml
+  - name: FP16/person-reidentification-retail-0031_96x48.bin
+    size: 560124
+    sha256: 67e230352812b64ede186c62aaf7369a63fd6f5d8d9a8c98fb7138dac1dfd8bb
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.bin
+framework: dldt
+meta:
+    verbose_name: person-reidentification-retail-0031
+    thumbnail: https://user-images.githubusercontent.com/18037362/146060557-8f24ad93-c2bc-4f60-aa17-c7ce07ebe4a4.png
+    inputs:
+      - type: image
+        shape: 3, 96, 48
+        name: data
+    FPS:
+        mean: 60
+        std: 0
+    backbone: RMNet
+    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-pedestrian-reidentification
+    uses_depth: false
+    source:
+      - name: GitHub
+        url: https://docs.openvino.ai/2020.1/_models_intel_person_reidentification_retail_0031_description_person_reidentification_retail_0031.html
+    license:
+        name: Apache
+        url: https://github.com/openvinotoolkit/open_model_zoo/blob/master/LICENSE
+    downloads:
+      - name: person-reidentification-retail-0031_96x48.xml
+        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.xml
+      - name: person-reidentification-retail-0031_96x48.bin
+        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.bin
