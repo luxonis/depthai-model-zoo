@@ -3,7 +3,7 @@ description: >-
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/person-reidentification-retail-0031_96x48
 task_type: person_reidentification
 files:
-- name: FP16/person-reidentification-retail-0031_96x48.xml
+  - name: FP16/person-reidentification-retail-0031_96x48.xml
     size: 136089
     sha256: 540e578f5aa87e85b5a25201cc7a6d389762e7f69b062acd88901275d398f592
     source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.xml
