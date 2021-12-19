@@ -1,0 +1,42 @@
+description: >-
+  Detect 68 facial landmarks.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/facial_landmarks_68_160x160
+task_type: head_pose_estimation
+files:
+  - name: FP16/facial_landmarks_68_160x160.xml
+    size: 251699
+    sha256: c9c51dc34dd9f2c4e1eed21ac206cf0c5332fea4c0a2873f5ffdb8b5ae0aea86
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.xml
+  - name: FP16/facial_landmarks_68_160x160.bin
+    size: 1252042
+    sha256: 6f17fd871abd3ffc3b1a13256d2a0e285db84a07bf2145ebd39c4888d97a218f
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/facial_landmarks_68_160x160
+meta:
+    verbose_name: Facial landmarks 68 detection
+    thumbnail: addme
+    inputs:
+      - type: image
+        shape: 3, 160, 160
+        name: images
+    FPS:
+        mean: 0
+        std: 0
+    backbone: HRNetV2
+    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-fatigue-detection
+    uses_depth: false
+    source:
+      - name: 610265158/face_landmark
+        url: https://github.com/610265158/face_landmark
+      - name: PINTO_model_zoo
+        url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/043_face_landmark
+    license:
+        name: Apache-2.0 License
+        url: https://github.com/610265158/face_landmark/blob/master/LICENSE
+    featured: false
+    downloads:
+      - name: facial_landmarks_68_160x160.xml
+        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.xml
+      - name: facial_landmarks_68_160x160.bin
+        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.bin
