@@ -5,7 +5,7 @@
 
 ### Demo
 
-![Image demo]()
+![Model demo](https://user-images.githubusercontent.com/18037362/146679906-d7ecea5a-b0ac-4012-bcfb-bfe44ab91db4.gif)
 
 ## Inputs
 

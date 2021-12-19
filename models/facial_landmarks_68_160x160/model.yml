@@ -15,7 +15,7 @@ framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/facial_landmarks_68_160x160
 meta:
     verbose_name: Facial landmarks 68 detection
-    thumbnail: addme
+    thumbnail: https://user-images.githubusercontent.com/18037362/146679906-d7ecea5a-b0ac-4012-bcfb-bfe44ab91db4.gif
     inputs:
       - type: image
         shape: 3, 160, 160
