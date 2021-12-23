@@ -4,8 +4,8 @@ documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/per
 task_type: named_entity_recognition
 files:
   - name: FP16/person-reidentification-retail-0031_96x48.xml
-    size: 136089
-    sha256: 540e578f5aa87e85b5a25201cc7a6d389762e7f69b062acd88901275d398f592
+    size: 136104
+    sha256: 16d9f3761c63e14e0437b70c8eb4669dd58a8afbc583b6dac9b5b00a5c4d2ddd
     source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.xml
   - name: FP16/person-reidentification-retail-0031_96x48.bin
     size: 560124
