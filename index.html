@@ -79,6 +79,16 @@
           </div>
         </div>
         
+        <div class="main-page-flex3-col" onclick="openDetails('mask_rcnn_resnet50_coco_300x300')">
+          <div
+            style="--src:url('None')"
+            class="main-page-icon layout"
+          ></div>
+          <div class="main-page-fast-depth-box layout">
+            <pre class="main-page-fast-depth">Mask R-CNN</pre>
+          </div>
+        </div>
+        
         <div class="main-page-flex3-col" onclick="openDetails('megadepth')">
           <div
             style="--src:url('https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-mega-depth/imgs/example.gif')"
@@ -86,16 +96,6 @@
           ></div>
           <div class="main-page-fast-depth-box layout">
             <pre class="main-page-fast-depth">MegaDepth</pre>
-          </div>
-        </div>
-        
-        <div class="main-page-flex3-col" onclick="openDetails('fast_depth_256x320')">
-          <div
-            style="--src:url('https://user-images.githubusercontent.com/18037362/140495636-0721dea1-7eaf-461e-9a39-23a890513324.gif')"
-            class="main-page-icon layout"
-          ></div>
-          <div class="main-page-fast-depth-box layout">
-            <pre class="main-page-fast-depth">FastDepth</pre>
           </div>
         </div>
         
@@ -119,13 +119,13 @@
           </div>
         </div>
         
-        <div class="main-page-flex3-col" onclick="openDetails('mask_rcnn_resnet50_coco_300x300')">
+        <div class="main-page-flex3-col" onclick="openDetails('fast_depth_256x320')">
           <div
-            style="--src:url('None')"
+            style="--src:url('https://user-images.githubusercontent.com/18037362/140495636-0721dea1-7eaf-461e-9a39-23a890513324.gif')"
             class="main-page-icon layout"
           ></div>
           <div class="main-page-fast-depth-box layout">
-            <pre class="main-page-fast-depth">Mask R-CNN</pre>
+            <pre class="main-page-fast-depth">FastDepth</pre>
           </div>
         </div>
         
@@ -213,6 +213,83 @@
         </div>
       </div>
       
+      <div class="main-page-flex4-col" aria-type="model-box" id="mask_rcnn_resnet50_coco_300x300" data-name="mask_rcnn_resnet50_coco_300x300"
+           data-task-type="instance_segmentation"
+           data-fps="3.11" data-resolution="90000">
+        <div class="main-page-content-box1 layout">
+          <div class="main-page-group1-wrapper">
+            <figure
+              style="--src:url('None'); height: 263px;"
+              class="main-page-group1 layout"
+              onclick="openDetails('mask_rcnn_resnet50_coco_300x300')"
+            >
+              
+            </figure>
+          </div>
+          <h3 class="main-page-subtitle layout">Mask R-CNN</h3>
+          <div class="main-page-paragraph-body-box layout">
+            <pre class="main-page-paragraph-body">Instance Segmentation with Mask R-CNN pre-trained on COCO data set.</pre>
+          </div>
+          <hr class="main-page-line layout"/>
+          <div class="main-page-flex5 layout">
+            <div class="main-page-resolution layout">Resolution</div>
+            <div class="main-page-flex5-spacer"></div>
+            <div class="main-page-flex5-col">
+              <div class="main-page-text-body1 layout">
+                
+                <span>300x300x3</span>
+                
+              </div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-task-type layout">Task type</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">instance_segmentation</div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-fps layout">FPS</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">3.11</div>
+            </div>
+          </div>
+          <div class="main-page-flex7 layout">
+            <div class="main-page-flex7-col">
+              <div class="btn-group main-page-download-btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" id="mask_rcnn_resnet50_coco_300x300Download"
+                        data-bs-toggle="dropdown">
+                  Download &nbsp;
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="mask_rcnn_resnet50_coco_300x300Download">
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/mask_rcnn_resnet50_coco_300x300/mask_rcnn_resnet50_coco_300x300.xml">mask_rcnn_resnet50_coco_300x300.xml</a></li>
+                  
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/mask_rcnn_resnet50_coco_300x300/mask_rcnn_resnet50_coco_300x300.bin">mask_rcnn_resnet50_coco_300x300.bin</a></li>
+                  
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="main-page-flex7-spacer"></div>
+            <div class="main-page-flex7-col1">
+              <h5 class="main-page-learn-more layout" onclick="openDetails('mask_rcnn_resnet50_coco_300x300')">Learn
+                more</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="main-page-flex4-col" aria-type="model-box" id="megadepth" data-name="megadepth"
            data-task-type="monocular_depth_estimation"
            data-fps="4.8" data-resolution="49152">
@@ -284,83 +361,6 @@
             <div class="main-page-flex7-spacer"></div>
             <div class="main-page-flex7-col1">
               <h5 class="main-page-learn-more layout" onclick="openDetails('megadepth')">Learn
-                more</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="main-page-flex4-col" aria-type="model-box" id="fast_depth_256x320" data-name="fast_depth_256x320"
-           data-task-type="monocular_depth_estimation"
-           data-fps="40.32" data-resolution="81920">
-        <div class="main-page-content-box1 layout">
-          <div class="main-page-group1-wrapper">
-            <figure
-              style="--src:url('https://user-images.githubusercontent.com/18037362/140495636-0721dea1-7eaf-461e-9a39-23a890513324.gif'); height: 263px;"
-              class="main-page-group1 layout"
-              onclick="openDetails('fast_depth_256x320')"
-            >
-              
-            </figure>
-          </div>
-          <h3 class="main-page-subtitle layout">FastDepth</h3>
-          <div class="main-page-paragraph-body-box layout">
-            <pre class="main-page-paragraph-body">Estimate depth from RGB images using FastDepth from MIT.</pre>
-          </div>
-          <hr class="main-page-line layout"/>
-          <div class="main-page-flex5 layout">
-            <div class="main-page-resolution layout">Resolution</div>
-            <div class="main-page-flex5-spacer"></div>
-            <div class="main-page-flex5-col">
-              <div class="main-page-text-body1 layout">
-                
-                <span>320x256x3</span>
-                
-              </div>
-            </div>
-          </div>
-          <hr class="main-page-line layout1"/>
-          <div class="main-page-flex6 layout">
-            <div class="main-page-task-type layout">Task type</div>
-            <div class="main-page-flex6-spacer"></div>
-            <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">monocular_depth_estimation</div>
-            </div>
-          </div>
-          <hr class="main-page-line layout1"/>
-          <div class="main-page-flex6 layout">
-            <div class="main-page-fps layout">FPS</div>
-            <div class="main-page-flex6-spacer"></div>
-            <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">40.32</div>
-            </div>
-          </div>
-          <div class="main-page-flex7 layout">
-            <div class="main-page-flex7-col">
-              <div class="btn-group main-page-download-btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" id="fast_depth_256x320Download"
-                        data-bs-toggle="dropdown">
-                  Download &nbsp;
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="fast_depth_256x320Download">
-                  
-                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/fast_depth_256x320/fast_depth_256x320.xml">fast_depth_256x320.xml</a></li>
-                  
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  
-                  
-                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/fast_depth_256x320/fast_depth_256x320.bin">fast_depth_256x320.bin</a></li>
-                  
-                  
-                </ul>
-              </div>
-            </div>
-            <div class="main-page-flex7-spacer"></div>
-            <div class="main-page-flex7-col1">
-              <h5 class="main-page-learn-more layout" onclick="openDetails('fast_depth_256x320')">Learn
                 more</h5>
             </div>
           </div>
@@ -521,22 +521,22 @@
         </div>
       </div>
       
-      <div class="main-page-flex4-col" aria-type="model-box" id="mask_rcnn_resnet50_coco_300x300" data-name="mask_rcnn_resnet50_coco_300x300"
-           data-task-type="instance_segmentation"
-           data-fps="3.11" data-resolution="90000">
+      <div class="main-page-flex4-col" aria-type="model-box" id="fast_depth_256x320" data-name="fast_depth_256x320"
+           data-task-type="monocular_depth_estimation"
+           data-fps="40.32" data-resolution="81920">
         <div class="main-page-content-box1 layout">
           <div class="main-page-group1-wrapper">
             <figure
-              style="--src:url('None'); height: 263px;"
+              style="--src:url('https://user-images.githubusercontent.com/18037362/140495636-0721dea1-7eaf-461e-9a39-23a890513324.gif'); height: 263px;"
               class="main-page-group1 layout"
-              onclick="openDetails('mask_rcnn_resnet50_coco_300x300')"
+              onclick="openDetails('fast_depth_256x320')"
             >
               
             </figure>
           </div>
-          <h3 class="main-page-subtitle layout">Mask R-CNN</h3>
+          <h3 class="main-page-subtitle layout">FastDepth</h3>
           <div class="main-page-paragraph-body-box layout">
-            <pre class="main-page-paragraph-body">Instance Segmentation with Mask R-CNN pre-trained on COCO data set.</pre>
+            <pre class="main-page-paragraph-body">Estimate depth from RGB images using FastDepth from MIT.</pre>
           </div>
           <hr class="main-page-line layout"/>
           <div class="main-page-flex5 layout">
@@ -545,7 +545,7 @@
             <div class="main-page-flex5-col">
               <div class="main-page-text-body1 layout">
                 
-                <span>300x300x3</span>
+                <span>320x256x3</span>
                 
               </div>
             </div>
@@ -555,7 +555,7 @@
             <div class="main-page-task-type layout">Task type</div>
             <div class="main-page-flex6-spacer"></div>
             <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">instance_segmentation</div>
+              <div class="main-page-text-body2 layout">monocular_depth_estimation</div>
             </div>
           </div>
           <hr class="main-page-line layout1"/>
@@ -563,27 +563,27 @@
             <div class="main-page-fps layout">FPS</div>
             <div class="main-page-flex6-spacer"></div>
             <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">3.11</div>
+              <div class="main-page-text-body2 layout">40.32</div>
             </div>
           </div>
           <div class="main-page-flex7 layout">
             <div class="main-page-flex7-col">
               <div class="btn-group main-page-download-btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" id="mask_rcnn_resnet50_coco_300x300Download"
+                <button type="button" class="btn btn-primary dropdown-toggle" id="fast_depth_256x320Download"
                         data-bs-toggle="dropdown">
                   Download &nbsp;
                   <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="mask_rcnn_resnet50_coco_300x300Download">
+                <ul class="dropdown-menu" aria-labelledby="fast_depth_256x320Download">
                   
-                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/mask_rcnn_resnet50_coco_300x300/mask_rcnn_resnet50_coco_300x300.xml">mask_rcnn_resnet50_coco_300x300.xml</a></li>
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/fast_depth_256x320/fast_depth_256x320.xml">fast_depth_256x320.xml</a></li>
                   
                   <li>
                     <hr class="dropdown-divider">
                   </li>
                   
                   
-                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/mask_rcnn_resnet50_coco_300x300/mask_rcnn_resnet50_coco_300x300.bin">mask_rcnn_resnet50_coco_300x300.bin</a></li>
+                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/fast_depth_256x320/fast_depth_256x320.bin">fast_depth_256x320.bin</a></li>
                   
                   
                 </ul>
@@ -591,161 +591,7 @@
             </div>
             <div class="main-page-flex7-spacer"></div>
             <div class="main-page-flex7-col1">
-              <h5 class="main-page-learn-more layout" onclick="openDetails('mask_rcnn_resnet50_coco_300x300')">Learn
-                more</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="main-page-flex4-col" aria-type="model-box" id="yolov3_coco_416x416" data-name="yolov3_coco_416x416"
-           data-task-type="detection"
-           data-fps="4.16" data-resolution="173056">
-        <div class="main-page-content-box1 layout">
-          <div class="main-page-group1-wrapper">
-            <figure
-              style="--src:url('None'); height: 263px;"
-              class="main-page-group1 layout"
-              onclick="openDetails('yolov3_coco_416x416')"
-            >
-              
-            </figure>
-          </div>
-          <h3 class="main-page-subtitle layout">YoloV3</h3>
-          <div class="main-page-paragraph-body-box layout">
-            <pre class="main-page-paragraph-body">Object detection with YoloV3 pre-trained on COCO data set.</pre>
-          </div>
-          <hr class="main-page-line layout"/>
-          <div class="main-page-flex5 layout">
-            <div class="main-page-resolution layout">Resolution</div>
-            <div class="main-page-flex5-spacer"></div>
-            <div class="main-page-flex5-col">
-              <div class="main-page-text-body1 layout">
-                
-                <span>416x416x3</span>
-                
-              </div>
-            </div>
-          </div>
-          <hr class="main-page-line layout1"/>
-          <div class="main-page-flex6 layout">
-            <div class="main-page-task-type layout">Task type</div>
-            <div class="main-page-flex6-spacer"></div>
-            <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">detection</div>
-            </div>
-          </div>
-          <hr class="main-page-line layout1"/>
-          <div class="main-page-flex6 layout">
-            <div class="main-page-fps layout">FPS</div>
-            <div class="main-page-flex6-spacer"></div>
-            <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">4.16</div>
-            </div>
-          </div>
-          <div class="main-page-flex7 layout">
-            <div class="main-page-flex7-col">
-              <div class="btn-group main-page-download-btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" id="yolov3_coco_416x416Download"
-                        data-bs-toggle="dropdown">
-                  Download &nbsp;
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="yolov3_coco_416x416Download">
-                  
-                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov3_coco_416x416/yolov3_coco_416x416.xml">yolov3_coco_416x416.xml</a></li>
-                  
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  
-                  
-                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov3_coco_416x416/yolov3_coco_416x416.bin">yolov3_coco_416x416.bin</a></li>
-                  
-                  
-                </ul>
-              </div>
-            </div>
-            <div class="main-page-flex7-spacer"></div>
-            <div class="main-page-flex7-col1">
-              <h5 class="main-page-learn-more layout" onclick="openDetails('yolov3_coco_416x416')">Learn
-                more</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="main-page-flex4-col" aria-type="model-box" id="yolov4_coco_608x608" data-name="yolov4_coco_608x608"
-           data-task-type="detection"
-           data-fps="1.31" data-resolution="369664">
-        <div class="main-page-content-box1 layout">
-          <div class="main-page-group1-wrapper">
-            <figure
-              style="--src:url('None'); height: 263px;"
-              class="main-page-group1 layout"
-              onclick="openDetails('yolov4_coco_608x608')"
-            >
-              
-            </figure>
-          </div>
-          <h3 class="main-page-subtitle layout">YoloV4</h3>
-          <div class="main-page-paragraph-body-box layout">
-            <pre class="main-page-paragraph-body">Object detection with YoloV4 pre-trained on COCO data set.</pre>
-          </div>
-          <hr class="main-page-line layout"/>
-          <div class="main-page-flex5 layout">
-            <div class="main-page-resolution layout">Resolution</div>
-            <div class="main-page-flex5-spacer"></div>
-            <div class="main-page-flex5-col">
-              <div class="main-page-text-body1 layout">
-                
-                <span>608x608x3</span>
-                
-              </div>
-            </div>
-          </div>
-          <hr class="main-page-line layout1"/>
-          <div class="main-page-flex6 layout">
-            <div class="main-page-task-type layout">Task type</div>
-            <div class="main-page-flex6-spacer"></div>
-            <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">detection</div>
-            </div>
-          </div>
-          <hr class="main-page-line layout1"/>
-          <div class="main-page-flex6 layout">
-            <div class="main-page-fps layout">FPS</div>
-            <div class="main-page-flex6-spacer"></div>
-            <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">1.31</div>
-            </div>
-          </div>
-          <div class="main-page-flex7 layout">
-            <div class="main-page-flex7-col">
-              <div class="btn-group main-page-download-btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" id="yolov4_coco_608x608Download"
-                        data-bs-toggle="dropdown">
-                  Download &nbsp;
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="yolov4_coco_608x608Download">
-                  
-                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov4_coco_608x608/yolov4_coco_608x608.xml">yolov4_coco_608x608.xml</a></li>
-                  
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  
-                  
-                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov4_coco_608x608/yolov4_coco_608x608.bin">yolov4_coco_608x608.bin</a></li>
-                  
-                  
-                </ul>
-              </div>
-            </div>
-            <div class="main-page-flex7-spacer"></div>
-            <div class="main-page-flex7-col1">
-              <h5 class="main-page-learn-more layout" onclick="openDetails('yolov4_coco_608x608')">Learn
+              <h5 class="main-page-learn-more layout" onclick="openDetails('fast_depth_256x320')">Learn
                 more</h5>
             </div>
           </div>
@@ -829,22 +675,22 @@
         </div>
       </div>
       
-      <div class="main-page-flex4-col" aria-type="model-box" id="dmcount_540x960" data-name="dmcount_540x960"
-           data-task-type="feature_extraction"
-           data-fps="0.22" data-resolution="518400">
+      <div class="main-page-flex4-col" aria-type="model-box" id="yolov3_coco_416x416" data-name="yolov3_coco_416x416"
+           data-task-type="detection"
+           data-fps="4.16" data-resolution="173056">
         <div class="main-page-content-box1 layout">
           <div class="main-page-group1-wrapper">
             <figure
-              style="--src:url('https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-crowdcounting/imgs/example.gif'); height: 263px;"
+              style="--src:url('None'); height: 263px;"
               class="main-page-group1 layout"
-              onclick="openDetails('dmcount_540x960')"
+              onclick="openDetails('yolov3_coco_416x416')"
             >
               
             </figure>
           </div>
-          <h3 class="main-page-subtitle layout">DM-Count</h3>
+          <h3 class="main-page-subtitle layout">YoloV3</h3>
           <div class="main-page-paragraph-body-box layout">
-            <pre class="main-page-paragraph-body">Count dense or sparse crowds using density maps.</pre>
+            <pre class="main-page-paragraph-body">Object detection with YoloV3 pre-trained on COCO data set.</pre>
           </div>
           <hr class="main-page-line layout"/>
           <div class="main-page-flex5 layout">
@@ -853,7 +699,7 @@
             <div class="main-page-flex5-col">
               <div class="main-page-text-body1 layout">
                 
-                <span>960x540x3</span>
+                <span>416x416x3</span>
                 
               </div>
             </div>
@@ -863,7 +709,7 @@
             <div class="main-page-task-type layout">Task type</div>
             <div class="main-page-flex6-spacer"></div>
             <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">feature_extraction</div>
+              <div class="main-page-text-body2 layout">detection</div>
             </div>
           </div>
           <hr class="main-page-line layout1"/>
@@ -871,27 +717,27 @@
             <div class="main-page-fps layout">FPS</div>
             <div class="main-page-flex6-spacer"></div>
             <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">0.22</div>
+              <div class="main-page-text-body2 layout">4.16</div>
             </div>
           </div>
           <div class="main-page-flex7 layout">
             <div class="main-page-flex7-col">
               <div class="btn-group main-page-download-btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" id="dmcount_540x960Download"
+                <button type="button" class="btn btn-primary dropdown-toggle" id="yolov3_coco_416x416Download"
                         data-bs-toggle="dropdown">
                   Download &nbsp;
                   <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="dmcount_540x960Download">
+                <ul class="dropdown-menu" aria-labelledby="yolov3_coco_416x416Download">
                   
-                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.xml">dmcount_540x960.xml</a></li>
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov3_coco_416x416/yolov3_coco_416x416.xml">yolov3_coco_416x416.xml</a></li>
                   
                   <li>
                     <hr class="dropdown-divider">
                   </li>
                   
                   
-                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/dmcount_540x960/dmcount_540x960.bin">dmcount_540x960.bin</a></li>
+                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov3_coco_416x416/yolov3_coco_416x416.bin">yolov3_coco_416x416.bin</a></li>
                   
                   
                 </ul>
@@ -899,84 +745,7 @@
             </div>
             <div class="main-page-flex7-spacer"></div>
             <div class="main-page-flex7-col1">
-              <h5 class="main-page-learn-more layout" onclick="openDetails('dmcount_540x960')">Learn
-                more</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="main-page-flex4-col" aria-type="model-box" id="facial_landmarks_68_160x160" data-name="facial_landmarks_68_160x160"
-           data-task-type="head_pose_estimation"
-           data-fps="0" data-resolution="25600">
-        <div class="main-page-content-box1 layout">
-          <div class="main-page-group1-wrapper">
-            <figure
-              style="--src:url('https://user-images.githubusercontent.com/18037362/146679906-d7ecea5a-b0ac-4012-bcfb-bfe44ab91db4.gif'); height: 263px;"
-              class="main-page-group1 layout"
-              onclick="openDetails('facial_landmarks_68_160x160')"
-            >
-              
-            </figure>
-          </div>
-          <h3 class="main-page-subtitle layout">Facial landmarks 68 detection</h3>
-          <div class="main-page-paragraph-body-box layout">
-            <pre class="main-page-paragraph-body">Detect 68 facial landmarks.</pre>
-          </div>
-          <hr class="main-page-line layout"/>
-          <div class="main-page-flex5 layout">
-            <div class="main-page-resolution layout">Resolution</div>
-            <div class="main-page-flex5-spacer"></div>
-            <div class="main-page-flex5-col">
-              <div class="main-page-text-body1 layout">
-                
-                <span>160x160x3</span>
-                
-              </div>
-            </div>
-          </div>
-          <hr class="main-page-line layout1"/>
-          <div class="main-page-flex6 layout">
-            <div class="main-page-task-type layout">Task type</div>
-            <div class="main-page-flex6-spacer"></div>
-            <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">head_pose_estimation</div>
-            </div>
-          </div>
-          <hr class="main-page-line layout1"/>
-          <div class="main-page-flex6 layout">
-            <div class="main-page-fps layout">FPS</div>
-            <div class="main-page-flex6-spacer"></div>
-            <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">0</div>
-            </div>
-          </div>
-          <div class="main-page-flex7 layout">
-            <div class="main-page-flex7-col">
-              <div class="btn-group main-page-download-btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" id="facial_landmarks_68_160x160Download"
-                        data-bs-toggle="dropdown">
-                  Download &nbsp;
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="facial_landmarks_68_160x160Download">
-                  
-                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.xml">facial_landmarks_68_160x160.xml</a></li>
-                  
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  
-                  
-                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.bin">facial_landmarks_68_160x160.bin</a></li>
-                  
-                  
-                </ul>
-              </div>
-            </div>
-            <div class="main-page-flex7-spacer"></div>
-            <div class="main-page-flex7-col1">
-              <h5 class="main-page-learn-more layout" onclick="openDetails('facial_landmarks_68_160x160')">Learn
+              <h5 class="main-page-learn-more layout" onclick="openDetails('yolov3_coco_416x416')">Learn
                 more</h5>
             </div>
           </div>
@@ -1060,22 +829,22 @@
         </div>
       </div>
       
-      <div class="main-page-flex4-col" aria-type="model-box" id="depth_estimation_mbnv2_480x640" data-name="depth_estimation_mbnv2_480x640"
-           data-task-type="monocular_depth_estimation"
-           data-fps="/" data-resolution="307200">
+      <div class="main-page-flex4-col" aria-type="model-box" id="dmcount_540x960" data-name="dmcount_540x960"
+           data-task-type="feature_extraction"
+           data-fps="0.22" data-resolution="518400">
         <div class="main-page-content-box1 layout">
           <div class="main-page-group1-wrapper">
             <figure
-              style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png'); height: 263px;"
+              style="--src:url('https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-crowdcounting/imgs/example.gif'); height: 263px;"
               class="main-page-group1 layout"
-              onclick="openDetails('depth_estimation_mbnv2_480x640')"
+              onclick="openDetails('dmcount_540x960')"
             >
               
             </figure>
           </div>
-          <h3 class="main-page-subtitle layout">Depth MobileNetV2</h3>
+          <h3 class="main-page-subtitle layout">DM-Count</h3>
           <div class="main-page-paragraph-body-box layout">
-            <pre class="main-page-paragraph-body">Depth Estimation of a given input image.</pre>
+            <pre class="main-page-paragraph-body">Count dense or sparse crowds using density maps.</pre>
           </div>
           <hr class="main-page-line layout"/>
           <div class="main-page-flex5 layout">
@@ -1084,7 +853,7 @@
             <div class="main-page-flex5-col">
               <div class="main-page-text-body1 layout">
                 
-                <span>640x480x3</span>
+                <span>960x540x3</span>
                 
               </div>
             </div>
@@ -1094,7 +863,7 @@
             <div class="main-page-task-type layout">Task type</div>
             <div class="main-page-flex6-spacer"></div>
             <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">monocular_depth_estimation</div>
+              <div class="main-page-text-body2 layout">feature_extraction</div>
             </div>
           </div>
           <hr class="main-page-line layout1"/>
@@ -1102,27 +871,27 @@
             <div class="main-page-fps layout">FPS</div>
             <div class="main-page-flex6-spacer"></div>
             <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">/</div>
+              <div class="main-page-text-body2 layout">0.22</div>
             </div>
           </div>
           <div class="main-page-flex7 layout">
             <div class="main-page-flex7-col">
               <div class="btn-group main-page-download-btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" id="depth_estimation_mbnv2_480x640Download"
+                <button type="button" class="btn btn-primary dropdown-toggle" id="dmcount_540x960Download"
                         data-bs-toggle="dropdown">
                   Download &nbsp;
                   <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="depth_estimation_mbnv2_480x640Download">
+                <ul class="dropdown-menu" aria-labelledby="dmcount_540x960Download">
                   
-                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.xml">depth_estimation_mbnv2_480x640.xml</a></li>
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.xml">dmcount_540x960.xml</a></li>
                   
                   <li>
                     <hr class="dropdown-divider">
                   </li>
                   
                   
-                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.bin">depth_estimation_mbnv2_480x640.bin</a></li>
+                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/dmcount_540x960/dmcount_540x960.bin">dmcount_540x960.bin</a></li>
                   
                   
                 </ul>
@@ -1130,29 +899,29 @@
             </div>
             <div class="main-page-flex7-spacer"></div>
             <div class="main-page-flex7-col1">
-              <h5 class="main-page-learn-more layout" onclick="openDetails('depth_estimation_mbnv2_480x640')">Learn
+              <h5 class="main-page-learn-more layout" onclick="openDetails('dmcount_540x960')">Learn
                 more</h5>
             </div>
           </div>
         </div>
       </div>
       
-      <div class="main-page-flex4-col" aria-type="model-box" id="east_text_detection_256x256" data-name="east_text_detection_256x256"
+      <div class="main-page-flex4-col" aria-type="model-box" id="yolov4_coco_608x608" data-name="yolov4_coco_608x608"
            data-task-type="detection"
-           data-fps="22.5" data-resolution="65536">
+           data-fps="1.31" data-resolution="369664">
         <div class="main-page-content-box1 layout">
           <div class="main-page-group1-wrapper">
             <figure
-              style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png'); height: 263px;"
+              style="--src:url('None'); height: 263px;"
               class="main-page-group1 layout"
-              onclick="openDetails('east_text_detection_256x256')"
+              onclick="openDetails('yolov4_coco_608x608')"
             >
               
             </figure>
           </div>
-          <h3 class="main-page-subtitle layout">EAST</h3>
+          <h3 class="main-page-subtitle layout">YoloV4</h3>
           <div class="main-page-paragraph-body-box layout">
-            <pre class="main-page-paragraph-body">Detect text on images using EAST model.</pre>
+            <pre class="main-page-paragraph-body">Object detection with YoloV4 pre-trained on COCO data set.</pre>
           </div>
           <hr class="main-page-line layout"/>
           <div class="main-page-flex5 layout">
@@ -1161,7 +930,7 @@
             <div class="main-page-flex5-col">
               <div class="main-page-text-body1 layout">
                 
-                <span>256x256x3</span>
+                <span>608x608x3</span>
                 
               </div>
             </div>
@@ -1179,27 +948,27 @@
             <div class="main-page-fps layout">FPS</div>
             <div class="main-page-flex6-spacer"></div>
             <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">22.5</div>
+              <div class="main-page-text-body2 layout">1.31</div>
             </div>
           </div>
           <div class="main-page-flex7 layout">
             <div class="main-page-flex7-col">
               <div class="btn-group main-page-download-btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" id="east_text_detection_256x256Download"
+                <button type="button" class="btn btn-primary dropdown-toggle" id="yolov4_coco_608x608Download"
                         data-bs-toggle="dropdown">
                   Download &nbsp;
                   <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="east_text_detection_256x256Download">
+                <ul class="dropdown-menu" aria-labelledby="yolov4_coco_608x608Download">
                   
-                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/east_text_detection_256x256/east_text_detection_256x256.xml">east_text_detection_256x256.xml</a></li>
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov4_coco_608x608/yolov4_coco_608x608.xml">yolov4_coco_608x608.xml</a></li>
                   
                   <li>
                     <hr class="dropdown-divider">
                   </li>
                   
                   
-                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/east_text_detection_256x256/east_text_detection_256x256.bin">east_text_detection_256x256.bin</a></li>
+                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov4_coco_608x608/yolov4_coco_608x608.bin">yolov4_coco_608x608.bin</a></li>
                   
                   
                 </ul>
@@ -1207,29 +976,29 @@
             </div>
             <div class="main-page-flex7-spacer"></div>
             <div class="main-page-flex7-col1">
-              <h5 class="main-page-learn-more layout" onclick="openDetails('east_text_detection_256x256')">Learn
+              <h5 class="main-page-learn-more layout" onclick="openDetails('yolov4_coco_608x608')">Learn
                 more</h5>
             </div>
           </div>
         </div>
       </div>
       
-      <div class="main-page-flex4-col" aria-type="model-box" id="depth_estimation_mbnv2_240x320" data-name="depth_estimation_mbnv2_240x320"
-           data-task-type="monocular_depth_estimation"
-           data-fps="20.03" data-resolution="76800">
+      <div class="main-page-flex4-col" aria-type="model-box" id="facial_landmarks_68_160x160" data-name="facial_landmarks_68_160x160"
+           data-task-type="head_pose_estimation"
+           data-fps="0" data-resolution="25600">
         <div class="main-page-content-box1 layout">
           <div class="main-page-group1-wrapper">
             <figure
-              style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png'); height: 263px;"
+              style="--src:url('https://user-images.githubusercontent.com/18037362/146679906-d7ecea5a-b0ac-4012-bcfb-bfe44ab91db4.gif'); height: 263px;"
               class="main-page-group1 layout"
-              onclick="openDetails('depth_estimation_mbnv2_240x320')"
+              onclick="openDetails('facial_landmarks_68_160x160')"
             >
               
             </figure>
           </div>
-          <h3 class="main-page-subtitle layout">Depth MobileNetV2</h3>
+          <h3 class="main-page-subtitle layout">Facial landmarks 68 detection</h3>
           <div class="main-page-paragraph-body-box layout">
-            <pre class="main-page-paragraph-body">Estimate depth from a RGB image.</pre>
+            <pre class="main-page-paragraph-body">Detect 68 facial landmarks.</pre>
           </div>
           <hr class="main-page-line layout"/>
           <div class="main-page-flex5 layout">
@@ -1238,7 +1007,7 @@
             <div class="main-page-flex5-col">
               <div class="main-page-text-body1 layout">
                 
-                <span>320x240x3</span>
+                <span>160x160x3</span>
                 
               </div>
             </div>
@@ -1248,7 +1017,7 @@
             <div class="main-page-task-type layout">Task type</div>
             <div class="main-page-flex6-spacer"></div>
             <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">monocular_depth_estimation</div>
+              <div class="main-page-text-body2 layout">head_pose_estimation</div>
             </div>
           </div>
           <hr class="main-page-line layout1"/>
@@ -1256,27 +1025,27 @@
             <div class="main-page-fps layout">FPS</div>
             <div class="main-page-flex6-spacer"></div>
             <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">20.03</div>
+              <div class="main-page-text-body2 layout">0</div>
             </div>
           </div>
           <div class="main-page-flex7 layout">
             <div class="main-page-flex7-col">
               <div class="btn-group main-page-download-btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" id="depth_estimation_mbnv2_240x320Download"
+                <button type="button" class="btn btn-primary dropdown-toggle" id="facial_landmarks_68_160x160Download"
                         data-bs-toggle="dropdown">
                   Download &nbsp;
                   <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="depth_estimation_mbnv2_240x320Download">
+                <ul class="dropdown-menu" aria-labelledby="facial_landmarks_68_160x160Download">
                   
-                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.xml">depth_estimation_mbnv2_240x320.xml</a></li>
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.xml">facial_landmarks_68_160x160.xml</a></li>
                   
                   <li>
                     <hr class="dropdown-divider">
                   </li>
                   
                   
-                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.bin">depth_estimation_mbnv2_240x320.bin</a></li>
+                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.bin">facial_landmarks_68_160x160.bin</a></li>
                   
                   
                 </ul>
@@ -1284,161 +1053,7 @@
             </div>
             <div class="main-page-flex7-spacer"></div>
             <div class="main-page-flex7-col1">
-              <h5 class="main-page-learn-more layout" onclick="openDetails('depth_estimation_mbnv2_240x320')">Learn
-                more</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="main-page-flex4-col" aria-type="model-box" id="scdepth_256x832" data-name="scdepth_256x832"
-           data-task-type="monocular_depth_estimation"
-           data-fps="12.89" data-resolution="131072">
-        <div class="main-page-content-box1 layout">
-          <div class="main-page-group1-wrapper">
-            <figure
-              style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png'); height: 263px;"
-              class="main-page-group1 layout"
-              onclick="openDetails('scdepth_256x832')"
-            >
-              
-            </figure>
-          </div>
-          <h3 class="main-page-subtitle layout">SC-Depth</h3>
-          <div class="main-page-paragraph-body-box layout">
-            <pre class="main-page-paragraph-body">Depth estimation from a RGB image using SC-Depth model.</pre>
-          </div>
-          <hr class="main-page-line layout"/>
-          <div class="main-page-flex5 layout">
-            <div class="main-page-resolution layout">Resolution</div>
-            <div class="main-page-flex5-spacer"></div>
-            <div class="main-page-flex5-col">
-              <div class="main-page-text-body1 layout">
-                
-                <span>512x256x3</span>
-                
-              </div>
-            </div>
-          </div>
-          <hr class="main-page-line layout1"/>
-          <div class="main-page-flex6 layout">
-            <div class="main-page-task-type layout">Task type</div>
-            <div class="main-page-flex6-spacer"></div>
-            <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">monocular_depth_estimation</div>
-            </div>
-          </div>
-          <hr class="main-page-line layout1"/>
-          <div class="main-page-flex6 layout">
-            <div class="main-page-fps layout">FPS</div>
-            <div class="main-page-flex6-spacer"></div>
-            <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">12.89</div>
-            </div>
-          </div>
-          <div class="main-page-flex7 layout">
-            <div class="main-page-flex7-col">
-              <div class="btn-group main-page-download-btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" id="scdepth_256x832Download"
-                        data-bs-toggle="dropdown">
-                  Download &nbsp;
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="scdepth_256x832Download">
-                  
-                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/scdepth_256x832/scdepth_256x832.xml">scdepth_256x832.xml</a></li>
-                  
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  
-                  
-                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/scdepth_256x832/scdepth_256x832.bin">scdepth_256x832.bin</a></li>
-                  
-                  
-                </ul>
-              </div>
-            </div>
-            <div class="main-page-flex7-spacer"></div>
-            <div class="main-page-flex7-col1">
-              <h5 class="main-page-learn-more layout" onclick="openDetails('scdepth_256x832')">Learn
-                more</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="main-page-flex4-col" aria-type="model-box" id="ghostnet_320x256" data-name="ghostnet_320x256"
-           data-task-type="classification"
-           data-fps="53.13" data-resolution="81920">
-        <div class="main-page-content-box1 layout">
-          <div class="main-page-group1-wrapper">
-            <figure
-              style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png'); height: 263px;"
-              class="main-page-group1 layout"
-              onclick="openDetails('ghostnet_320x256')"
-            >
-              
-            </figure>
-          </div>
-          <h3 class="main-page-subtitle layout">GhostNet</h3>
-          <div class="main-page-paragraph-body-box layout">
-            <pre class="main-page-paragraph-body">Image classification with GhostNet pretrained on ImageNet.</pre>
-          </div>
-          <hr class="main-page-line layout"/>
-          <div class="main-page-flex5 layout">
-            <div class="main-page-resolution layout">Resolution</div>
-            <div class="main-page-flex5-spacer"></div>
-            <div class="main-page-flex5-col">
-              <div class="main-page-text-body1 layout">
-                
-                <span>256x320x3</span>
-                
-              </div>
-            </div>
-          </div>
-          <hr class="main-page-line layout1"/>
-          <div class="main-page-flex6 layout">
-            <div class="main-page-task-type layout">Task type</div>
-            <div class="main-page-flex6-spacer"></div>
-            <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">classification</div>
-            </div>
-          </div>
-          <hr class="main-page-line layout1"/>
-          <div class="main-page-flex6 layout">
-            <div class="main-page-fps layout">FPS</div>
-            <div class="main-page-flex6-spacer"></div>
-            <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">53.13</div>
-            </div>
-          </div>
-          <div class="main-page-flex7 layout">
-            <div class="main-page-flex7-col">
-              <div class="btn-group main-page-download-btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" id="ghostnet_320x256Download"
-                        data-bs-toggle="dropdown">
-                  Download &nbsp;
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="ghostnet_320x256Download">
-                  
-                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/ghostnet_320x256/ghostnet_320x256.xml">ghostnet_320x256.xml</a></li>
-                  
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  
-                  
-                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/ghostnet_320x256/ghostnet_320x256.bin">ghostnet_320x256.bin</a></li>
-                  
-                  
-                </ul>
-              </div>
-            </div>
-            <div class="main-page-flex7-spacer"></div>
-            <div class="main-page-flex7-col1">
-              <h5 class="main-page-learn-more layout" onclick="openDetails('ghostnet_320x256')">Learn
+              <h5 class="main-page-learn-more layout" onclick="openDetails('facial_landmarks_68_160x160')">Learn
                 more</h5>
             </div>
           </div>
@@ -1522,6 +1137,160 @@
         </div>
       </div>
       
+      <div class="main-page-flex4-col" aria-type="model-box" id="east_text_detection_256x256" data-name="east_text_detection_256x256"
+           data-task-type="detection"
+           data-fps="22.5" data-resolution="65536">
+        <div class="main-page-content-box1 layout">
+          <div class="main-page-group1-wrapper">
+            <figure
+              style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png'); height: 263px;"
+              class="main-page-group1 layout"
+              onclick="openDetails('east_text_detection_256x256')"
+            >
+              
+            </figure>
+          </div>
+          <h3 class="main-page-subtitle layout">EAST</h3>
+          <div class="main-page-paragraph-body-box layout">
+            <pre class="main-page-paragraph-body">Detect text on images using EAST model.</pre>
+          </div>
+          <hr class="main-page-line layout"/>
+          <div class="main-page-flex5 layout">
+            <div class="main-page-resolution layout">Resolution</div>
+            <div class="main-page-flex5-spacer"></div>
+            <div class="main-page-flex5-col">
+              <div class="main-page-text-body1 layout">
+                
+                <span>256x256x3</span>
+                
+              </div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-task-type layout">Task type</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">detection</div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-fps layout">FPS</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">22.5</div>
+            </div>
+          </div>
+          <div class="main-page-flex7 layout">
+            <div class="main-page-flex7-col">
+              <div class="btn-group main-page-download-btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" id="east_text_detection_256x256Download"
+                        data-bs-toggle="dropdown">
+                  Download &nbsp;
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="east_text_detection_256x256Download">
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/east_text_detection_256x256/east_text_detection_256x256.xml">east_text_detection_256x256.xml</a></li>
+                  
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/east_text_detection_256x256/east_text_detection_256x256.bin">east_text_detection_256x256.bin</a></li>
+                  
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="main-page-flex7-spacer"></div>
+            <div class="main-page-flex7-col1">
+              <h5 class="main-page-learn-more layout" onclick="openDetails('east_text_detection_256x256')">Learn
+                more</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="main-page-flex4-col" aria-type="model-box" id="inceptionv4_299x299" data-name="inceptionv4_299x299"
+           data-task-type="classification"
+           data-fps="8.02" data-resolution="89401">
+        <div class="main-page-content-box1 layout">
+          <div class="main-page-group1-wrapper">
+            <figure
+              style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png'); height: 263px;"
+              class="main-page-group1 layout"
+              onclick="openDetails('inceptionv4_299x299')"
+            >
+              
+            </figure>
+          </div>
+          <h3 class="main-page-subtitle layout">InceptionV4</h3>
+          <div class="main-page-paragraph-body-box layout">
+            <pre class="main-page-paragraph-body">Image classification with InceptionV4 pretrained on ImageNet.</pre>
+          </div>
+          <hr class="main-page-line layout"/>
+          <div class="main-page-flex5 layout">
+            <div class="main-page-resolution layout">Resolution</div>
+            <div class="main-page-flex5-spacer"></div>
+            <div class="main-page-flex5-col">
+              <div class="main-page-text-body1 layout">
+                
+                <span>299x299x3</span>
+                
+              </div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-task-type layout">Task type</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">classification</div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-fps layout">FPS</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">8.02</div>
+            </div>
+          </div>
+          <div class="main-page-flex7 layout">
+            <div class="main-page-flex7-col">
+              <div class="btn-group main-page-download-btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" id="inceptionv4_299x299Download"
+                        data-bs-toggle="dropdown">
+                  Download &nbsp;
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="inceptionv4_299x299Download">
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/inceptionv4_299x299/inceptionv4_299x299.xml">inceptionv4_299x299.xml</a></li>
+                  
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/inceptionv4_299x299/inceptionv4_299x299.bin">inceptionv4_299x299.bin</a></li>
+                  
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="main-page-flex7-spacer"></div>
+            <div class="main-page-flex7-col1">
+              <h5 class="main-page-learn-more layout" onclick="openDetails('inceptionv4_299x299')">Learn
+                more</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="main-page-flex4-col" aria-type="model-box" id="shufflenetv2_224x224" data-name="shufflenetv2_224x224"
            data-task-type="classification"
            data-fps="151.72" data-resolution="50176">
@@ -1593,6 +1362,237 @@
             <div class="main-page-flex7-spacer"></div>
             <div class="main-page-flex7-col1">
               <h5 class="main-page-learn-more layout" onclick="openDetails('shufflenetv2_224x224')">Learn
+                more</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="main-page-flex4-col" aria-type="model-box" id="depth_estimation_mbnv2_480x640" data-name="depth_estimation_mbnv2_480x640"
+           data-task-type="monocular_depth_estimation"
+           data-fps="/" data-resolution="307200">
+        <div class="main-page-content-box1 layout">
+          <div class="main-page-group1-wrapper">
+            <figure
+              style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png'); height: 263px;"
+              class="main-page-group1 layout"
+              onclick="openDetails('depth_estimation_mbnv2_480x640')"
+            >
+              
+            </figure>
+          </div>
+          <h3 class="main-page-subtitle layout">Depth MobileNetV2</h3>
+          <div class="main-page-paragraph-body-box layout">
+            <pre class="main-page-paragraph-body">Depth Estimation of a given input image.</pre>
+          </div>
+          <hr class="main-page-line layout"/>
+          <div class="main-page-flex5 layout">
+            <div class="main-page-resolution layout">Resolution</div>
+            <div class="main-page-flex5-spacer"></div>
+            <div class="main-page-flex5-col">
+              <div class="main-page-text-body1 layout">
+                
+                <span>640x480x3</span>
+                
+              </div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-task-type layout">Task type</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">monocular_depth_estimation</div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-fps layout">FPS</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">/</div>
+            </div>
+          </div>
+          <div class="main-page-flex7 layout">
+            <div class="main-page-flex7-col">
+              <div class="btn-group main-page-download-btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" id="depth_estimation_mbnv2_480x640Download"
+                        data-bs-toggle="dropdown">
+                  Download &nbsp;
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="depth_estimation_mbnv2_480x640Download">
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.xml">depth_estimation_mbnv2_480x640.xml</a></li>
+                  
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.bin">depth_estimation_mbnv2_480x640.bin</a></li>
+                  
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="main-page-flex7-spacer"></div>
+            <div class="main-page-flex7-col1">
+              <h5 class="main-page-learn-more layout" onclick="openDetails('depth_estimation_mbnv2_480x640')">Learn
+                more</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="main-page-flex4-col" aria-type="model-box" id="ghostnet_320x256" data-name="ghostnet_320x256"
+           data-task-type="classification"
+           data-fps="53.13" data-resolution="81920">
+        <div class="main-page-content-box1 layout">
+          <div class="main-page-group1-wrapper">
+            <figure
+              style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png'); height: 263px;"
+              class="main-page-group1 layout"
+              onclick="openDetails('ghostnet_320x256')"
+            >
+              
+            </figure>
+          </div>
+          <h3 class="main-page-subtitle layout">GhostNet</h3>
+          <div class="main-page-paragraph-body-box layout">
+            <pre class="main-page-paragraph-body">Image classification with GhostNet pretrained on ImageNet.</pre>
+          </div>
+          <hr class="main-page-line layout"/>
+          <div class="main-page-flex5 layout">
+            <div class="main-page-resolution layout">Resolution</div>
+            <div class="main-page-flex5-spacer"></div>
+            <div class="main-page-flex5-col">
+              <div class="main-page-text-body1 layout">
+                
+                <span>256x320x3</span>
+                
+              </div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-task-type layout">Task type</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">classification</div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-fps layout">FPS</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">53.13</div>
+            </div>
+          </div>
+          <div class="main-page-flex7 layout">
+            <div class="main-page-flex7-col">
+              <div class="btn-group main-page-download-btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" id="ghostnet_320x256Download"
+                        data-bs-toggle="dropdown">
+                  Download &nbsp;
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="ghostnet_320x256Download">
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/ghostnet_320x256/ghostnet_320x256.xml">ghostnet_320x256.xml</a></li>
+                  
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/ghostnet_320x256/ghostnet_320x256.bin">ghostnet_320x256.bin</a></li>
+                  
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="main-page-flex7-spacer"></div>
+            <div class="main-page-flex7-col1">
+              <h5 class="main-page-learn-more layout" onclick="openDetails('ghostnet_320x256')">Learn
+                more</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="main-page-flex4-col" aria-type="model-box" id="scdepth_256x832" data-name="scdepth_256x832"
+           data-task-type="monocular_depth_estimation"
+           data-fps="12.89" data-resolution="131072">
+        <div class="main-page-content-box1 layout">
+          <div class="main-page-group1-wrapper">
+            <figure
+              style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png'); height: 263px;"
+              class="main-page-group1 layout"
+              onclick="openDetails('scdepth_256x832')"
+            >
+              
+            </figure>
+          </div>
+          <h3 class="main-page-subtitle layout">SC-Depth</h3>
+          <div class="main-page-paragraph-body-box layout">
+            <pre class="main-page-paragraph-body">Depth estimation from a RGB image using SC-Depth model.</pre>
+          </div>
+          <hr class="main-page-line layout"/>
+          <div class="main-page-flex5 layout">
+            <div class="main-page-resolution layout">Resolution</div>
+            <div class="main-page-flex5-spacer"></div>
+            <div class="main-page-flex5-col">
+              <div class="main-page-text-body1 layout">
+                
+                <span>512x256x3</span>
+                
+              </div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-task-type layout">Task type</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">monocular_depth_estimation</div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-fps layout">FPS</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">12.89</div>
+            </div>
+          </div>
+          <div class="main-page-flex7 layout">
+            <div class="main-page-flex7-col">
+              <div class="btn-group main-page-download-btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" id="scdepth_256x832Download"
+                        data-bs-toggle="dropdown">
+                  Download &nbsp;
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="scdepth_256x832Download">
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/scdepth_256x832/scdepth_256x832.xml">scdepth_256x832.xml</a></li>
+                  
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/scdepth_256x832/scdepth_256x832.bin">scdepth_256x832.bin</a></li>
+                  
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="main-page-flex7-spacer"></div>
+            <div class="main-page-flex7-col1">
+              <h5 class="main-page-learn-more layout" onclick="openDetails('scdepth_256x832')">Learn
                 more</h5>
             </div>
           </div>
@@ -1676,22 +1676,22 @@
         </div>
       </div>
       
-      <div class="main-page-flex4-col" aria-type="model-box" id="inceptionv4_299x299" data-name="inceptionv4_299x299"
-           data-task-type="classification"
-           data-fps="8.02" data-resolution="89401">
+      <div class="main-page-flex4-col" aria-type="model-box" id="depth_estimation_mbnv2_240x320" data-name="depth_estimation_mbnv2_240x320"
+           data-task-type="monocular_depth_estimation"
+           data-fps="20.03" data-resolution="76800">
         <div class="main-page-content-box1 layout">
           <div class="main-page-group1-wrapper">
             <figure
               style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png'); height: 263px;"
               class="main-page-group1 layout"
-              onclick="openDetails('inceptionv4_299x299')"
+              onclick="openDetails('depth_estimation_mbnv2_240x320')"
             >
               
             </figure>
           </div>
-          <h3 class="main-page-subtitle layout">InceptionV4</h3>
+          <h3 class="main-page-subtitle layout">Depth MobileNetV2</h3>
           <div class="main-page-paragraph-body-box layout">
-            <pre class="main-page-paragraph-body">Image classification with InceptionV4 pretrained on ImageNet.</pre>
+            <pre class="main-page-paragraph-body">Estimate depth from a RGB image.</pre>
           </div>
           <hr class="main-page-line layout"/>
           <div class="main-page-flex5 layout">
@@ -1700,7 +1700,7 @@
             <div class="main-page-flex5-col">
               <div class="main-page-text-body1 layout">
                 
-                <span>299x299x3</span>
+                <span>320x240x3</span>
                 
               </div>
             </div>
@@ -1710,7 +1710,7 @@
             <div class="main-page-task-type layout">Task type</div>
             <div class="main-page-flex6-spacer"></div>
             <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">classification</div>
+              <div class="main-page-text-body2 layout">monocular_depth_estimation</div>
             </div>
           </div>
           <hr class="main-page-line layout1"/>
@@ -1718,27 +1718,27 @@
             <div class="main-page-fps layout">FPS</div>
             <div class="main-page-flex6-spacer"></div>
             <div class="main-page-flex6-col">
-              <div class="main-page-text-body2 layout">8.02</div>
+              <div class="main-page-text-body2 layout">20.03</div>
             </div>
           </div>
           <div class="main-page-flex7 layout">
             <div class="main-page-flex7-col">
               <div class="btn-group main-page-download-btn-group">
-                <button type="button" class="btn btn-primary dropdown-toggle" id="inceptionv4_299x299Download"
+                <button type="button" class="btn btn-primary dropdown-toggle" id="depth_estimation_mbnv2_240x320Download"
                         data-bs-toggle="dropdown">
                   Download &nbsp;
                   <span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu" aria-labelledby="inceptionv4_299x299Download">
+                <ul class="dropdown-menu" aria-labelledby="depth_estimation_mbnv2_240x320Download">
                   
-                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/inceptionv4_299x299/inceptionv4_299x299.xml">inceptionv4_299x299.xml</a></li>
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.xml">depth_estimation_mbnv2_240x320.xml</a></li>
                   
                   <li>
                     <hr class="dropdown-divider">
                   </li>
                   
                   
-                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/inceptionv4_299x299/inceptionv4_299x299.bin">inceptionv4_299x299.bin</a></li>
+                  <li class="dropdown-item"><a class="text-decoration-none" href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.bin">depth_estimation_mbnv2_240x320.bin</a></li>
                   
                   
                 </ul>
@@ -1746,7 +1746,7 @@
             </div>
             <div class="main-page-flex7-spacer"></div>
             <div class="main-page-flex7-col1">
-              <h5 class="main-page-learn-more layout" onclick="openDetails('inceptionv4_299x299')">Learn
+              <h5 class="main-page-learn-more layout" onclick="openDetails('depth_estimation_mbnv2_240x320')">Learn
                 more</h5>
             </div>
           </div>
@@ -1839,6 +1839,85 @@
       </div>
     </div>
   
+    <div class="zoo2 zoo2-group layout" id="mask_rcnn_resnet50_coco_300x300Details">
+      <div class="zoo2-content-box layout">
+        <div
+          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
+          class="zoo2-icon layout"
+          onclick="hideDetails()"
+        ></div>
+        <h1 class="zoo2-hero-title-box layout">
+            <pre class="zoo2-hero-title">Mask R-CNN</pre>
+        </h1>
+          <div
+            style="--src:url('None')"
+            class="zoo2-cover-group layout"
+          >
+            
+                <div class="zoo2-cover-group1 layout red">No Depth</div>
+            
+        </div>
+        <h5 class="zoo2-description layout">Description</h5>
+        <h4 class="zoo2-highlights-box layout">
+            <pre class="zoo2-highlights">Instance Segmentation with Mask R-CNN pre-trained on COCO data set.</pre>
+        </h4>
+        <h5 class="zoo2-input layout">Input</h5>
+        <h5 class="zoo2-highlights1-box layout">
+            <pre class="zoo2-highlights1">
+  
+    Name: 960
+    Type: image
+    Shape: 3, 300, 300
+  
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-fps layout">FPS</h5>
+        <h5 class="zoo2-highlights2-box layout">
+            <pre class="zoo2-highlights2">
+  Mean: 3.11
+  STD: 0.01
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-license layout">License</h5>
+        <a href="https://github.com/openvinotoolkit/openvino_contrib/blob/master/LICENSE">
+          <h5 class="zoo2-highlights3 layout">Apache-2.0 </h5>
+        </a>
+        <hr class="zoo2-line layout"/>
+        <div class="zoo2-flex layout">
+          <div class="zoo2-flex-col">
+            <h5 class="zoo2-view-source layout" id="mask_rcnn_resnet50_coco_300x300SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              VIEW SOURCE
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="mask_rcnn_resnet50_coco_300x300SourceTrigger">
+              
+                  <li><a href="https://github.com/openvinotoolkit/openvino_contrib/tree/master/modules/mo_pytorch" class="text-decoration-none">GitHub</a></li>
+                  
+              
+            </ul>
+          </div>
+          <div class="zoo2-flex-spacer"></div>
+          <div class="zoo2-flex-col1">
+            <h5 class="zoo2-download layout" id="mask_rcnn_resnet50_coco_300x300DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              DOWNLOAD
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="mask_rcnn_resnet50_coco_300x300DownloadTrigger">
+              
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/mask_rcnn_resnet50_coco_300x300/mask_rcnn_resnet50_coco_300x300.xml" class="text-decoration-none">mask_rcnn_resnet50_coco_300x300.xml</a></li>
+                  
+                      <li><hr class="dropdown-divider"></li>
+                  
+              
+                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/mask_rcnn_resnet50_coco_300x300/mask_rcnn_resnet50_coco_300x300.bin" class="text-decoration-none">mask_rcnn_resnet50_coco_300x300.bin</a></li>
+                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
     <div class="zoo2 zoo2-group layout" id="megadepthDetails">
       <div class="zoo2-content-box layout">
         <div
@@ -1915,90 +1994,6 @@
                   
               
                   <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/megadepth/megadepth.bin" class="text-decoration-none">megadepth.bin</a></li>
-                  
-              
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="zoo2 zoo2-group layout" id="fast_depth_256x320Details">
-      <div class="zoo2-content-box layout">
-        <div
-          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
-          class="zoo2-icon layout"
-          onclick="hideDetails()"
-        ></div>
-        <h1 class="zoo2-hero-title-box layout">
-            <pre class="zoo2-hero-title">FastDepth</pre>
-        </h1>
-          <div
-            style="--src:url('https://user-images.githubusercontent.com/18037362/140495636-0721dea1-7eaf-461e-9a39-23a890513324.gif')"
-            class="zoo2-cover-group layout"
-          >
-            
-                <div class="zoo2-cover-group1 layout red">No Depth</div>
-            
-        </div>
-        <h5 class="zoo2-description layout">Description</h5>
-        <h4 class="zoo2-highlights-box layout">
-            <pre class="zoo2-highlights">Estimate depth from RGB images using FastDepth from MIT.</pre>
-        </h4>
-        <h5 class="zoo2-input layout">Input</h5>
-        <h5 class="zoo2-highlights1-box layout">
-            <pre class="zoo2-highlights1">
-  
-    Name: input.1
-    Type: image
-    Shape: 3, 256, 320
-  
-            </pre>
-        </h5>
-        <hr class="zoo2-line layout"/>
-        <h5 class="zoo2-fps layout">FPS</h5>
-        <h5 class="zoo2-highlights2-box layout">
-            <pre class="zoo2-highlights2">
-  Mean: 40.32
-  STD: 0.14
-            </pre>
-        </h5>
-        <hr class="zoo2-line layout"/>
-        <h5 class="zoo2-license layout">License</h5>
-        <a href="https://github.com/dwofk/fast-depth/blob/master/LICENSE">
-          <h5 class="zoo2-highlights3 layout">MIT </h5>
-        </a>
-        <hr class="zoo2-line layout"/>
-        <div class="zoo2-flex layout">
-          <div class="zoo2-flex-col">
-            <h5 class="zoo2-view-source layout" id="fast_depth_256x320SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
-              VIEW SOURCE
-            </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="fast_depth_256x320SourceTrigger">
-              
-                  <li><a href="https://github.com/dwofk/fast-depth" class="text-decoration-none">GitHub</a></li>
-                  
-                      <li><hr class="dropdown-divider"></li>
-                  
-              
-                  <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/146_FastDepth" class="text-decoration-none">PINTO_model_zoo</a></li>
-                  
-              
-            </ul>
-          </div>
-          <div class="zoo2-flex-spacer"></div>
-          <div class="zoo2-flex-col1">
-            <h5 class="zoo2-download layout" id="fast_depth_256x320DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
-              DOWNLOAD
-            </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="fast_depth_256x320DownloadTrigger">
-              
-                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/fast_depth_256x320/fast_depth_256x320.xml" class="text-decoration-none">fast_depth_256x320.xml</a></li>
-                  
-                      <li><hr class="dropdown-divider"></li>
-                  
-              
-                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/fast_depth_256x320/fast_depth_256x320.bin" class="text-decoration-none">fast_depth_256x320.bin</a></li>
                   
               
             </ul>
@@ -2165,7 +2160,7 @@
       </div>
     </div>
   
-    <div class="zoo2 zoo2-group layout" id="mask_rcnn_resnet50_coco_300x300Details">
+    <div class="zoo2 zoo2-group layout" id="fast_depth_256x320Details">
       <div class="zoo2-content-box layout">
         <div
           style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
@@ -2173,10 +2168,10 @@
           onclick="hideDetails()"
         ></div>
         <h1 class="zoo2-hero-title-box layout">
-            <pre class="zoo2-hero-title">Mask R-CNN</pre>
+            <pre class="zoo2-hero-title">FastDepth</pre>
         </h1>
           <div
-            style="--src:url('None')"
+            style="--src:url('https://user-images.githubusercontent.com/18037362/140495636-0721dea1-7eaf-461e-9a39-23a890513324.gif')"
             class="zoo2-cover-group layout"
           >
             
@@ -2185,15 +2180,15 @@
         </div>
         <h5 class="zoo2-description layout">Description</h5>
         <h4 class="zoo2-highlights-box layout">
-            <pre class="zoo2-highlights">Instance Segmentation with Mask R-CNN pre-trained on COCO data set.</pre>
+            <pre class="zoo2-highlights">Estimate depth from RGB images using FastDepth from MIT.</pre>
         </h4>
         <h5 class="zoo2-input layout">Input</h5>
         <h5 class="zoo2-highlights1-box layout">
             <pre class="zoo2-highlights1">
   
-    Name: 960
+    Name: input.1
     Type: image
-    Shape: 3, 300, 300
+    Shape: 3, 256, 320
   
             </pre>
         </h5>
@@ -2201,199 +2196,46 @@
         <h5 class="zoo2-fps layout">FPS</h5>
         <h5 class="zoo2-highlights2-box layout">
             <pre class="zoo2-highlights2">
-  Mean: 3.11
-  STD: 0.01
-            </pre>
-        </h5>
-        <hr class="zoo2-line layout"/>
-        <h5 class="zoo2-license layout">License</h5>
-        <a href="https://github.com/openvinotoolkit/openvino_contrib/blob/master/LICENSE">
-          <h5 class="zoo2-highlights3 layout">Apache-2.0 </h5>
-        </a>
-        <hr class="zoo2-line layout"/>
-        <div class="zoo2-flex layout">
-          <div class="zoo2-flex-col">
-            <h5 class="zoo2-view-source layout" id="mask_rcnn_resnet50_coco_300x300SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
-              VIEW SOURCE
-            </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="mask_rcnn_resnet50_coco_300x300SourceTrigger">
-              
-                  <li><a href="https://github.com/openvinotoolkit/openvino_contrib/tree/master/modules/mo_pytorch" class="text-decoration-none">GitHub</a></li>
-                  
-              
-            </ul>
-          </div>
-          <div class="zoo2-flex-spacer"></div>
-          <div class="zoo2-flex-col1">
-            <h5 class="zoo2-download layout" id="mask_rcnn_resnet50_coco_300x300DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
-              DOWNLOAD
-            </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="mask_rcnn_resnet50_coco_300x300DownloadTrigger">
-              
-                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/mask_rcnn_resnet50_coco_300x300/mask_rcnn_resnet50_coco_300x300.xml" class="text-decoration-none">mask_rcnn_resnet50_coco_300x300.xml</a></li>
-                  
-                      <li><hr class="dropdown-divider"></li>
-                  
-              
-                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/mask_rcnn_resnet50_coco_300x300/mask_rcnn_resnet50_coco_300x300.bin" class="text-decoration-none">mask_rcnn_resnet50_coco_300x300.bin</a></li>
-                  
-              
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="zoo2 zoo2-group layout" id="yolov3_coco_416x416Details">
-      <div class="zoo2-content-box layout">
-        <div
-          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
-          class="zoo2-icon layout"
-          onclick="hideDetails()"
-        ></div>
-        <h1 class="zoo2-hero-title-box layout">
-            <pre class="zoo2-hero-title">YoloV3</pre>
-        </h1>
-          <div
-            style="--src:url('None')"
-            class="zoo2-cover-group layout"
-          >
-            
-                <div class="zoo2-cover-group1 layout red">No Depth</div>
-            
-        </div>
-        <h5 class="zoo2-description layout">Description</h5>
-        <h4 class="zoo2-highlights-box layout">
-            <pre class="zoo2-highlights">Object detection with YoloV3 pre-trained on COCO data set.</pre>
-        </h4>
-        <h5 class="zoo2-input layout">Input</h5>
-        <h5 class="zoo2-highlights1-box layout">
-            <pre class="zoo2-highlights1">
-  
-    Name: inputs
-    Type: image
-    Shape: 3, 416, 416
-  
-            </pre>
-        </h5>
-        <hr class="zoo2-line layout"/>
-        <h5 class="zoo2-fps layout">FPS</h5>
-        <h5 class="zoo2-highlights2-box layout">
-            <pre class="zoo2-highlights2">
-  Mean: 4.16
+  Mean: 40.32
   STD: 0.14
             </pre>
         </h5>
         <hr class="zoo2-line layout"/>
         <h5 class="zoo2-license layout">License</h5>
-        <a href="https://github.com/AlexeyAB/darknet/blob/master/LICENSE">
-          <h5 class="zoo2-highlights3 layout">YOLO </h5>
+        <a href="https://github.com/dwofk/fast-depth/blob/master/LICENSE">
+          <h5 class="zoo2-highlights3 layout">MIT </h5>
         </a>
         <hr class="zoo2-line layout"/>
         <div class="zoo2-flex layout">
           <div class="zoo2-flex-col">
-            <h5 class="zoo2-view-source layout" id="yolov3_coco_416x416SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5 class="zoo2-view-source layout" id="fast_depth_256x320SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
               VIEW SOURCE
             </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="yolov3_coco_416x416SourceTrigger">
+            <ul class="dropdown-menu bg-dark" aria-labelledby="fast_depth_256x320SourceTrigger">
               
-                  <li><a href="https://github.com/AlexeyAB/darknet" class="text-decoration-none">GitHub</a></li>
+                  <li><a href="https://github.com/dwofk/fast-depth" class="text-decoration-none">GitHub</a></li>
+                  
+                      <li><hr class="dropdown-divider"></li>
+                  
+              
+                  <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/146_FastDepth" class="text-decoration-none">PINTO_model_zoo</a></li>
                   
               
             </ul>
           </div>
           <div class="zoo2-flex-spacer"></div>
           <div class="zoo2-flex-col1">
-            <h5 class="zoo2-download layout" id="yolov3_coco_416x416DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5 class="zoo2-download layout" id="fast_depth_256x320DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
               DOWNLOAD
             </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="yolov3_coco_416x416DownloadTrigger">
+            <ul class="dropdown-menu bg-dark" aria-labelledby="fast_depth_256x320DownloadTrigger">
               
-                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov3_coco_416x416/yolov3_coco_416x416.xml" class="text-decoration-none">yolov3_coco_416x416.xml</a></li>
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/fast_depth_256x320/fast_depth_256x320.xml" class="text-decoration-none">fast_depth_256x320.xml</a></li>
                   
                       <li><hr class="dropdown-divider"></li>
                   
               
-                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov3_coco_416x416/yolov3_coco_416x416.bin" class="text-decoration-none">yolov3_coco_416x416.bin</a></li>
-                  
-              
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="zoo2 zoo2-group layout" id="yolov4_coco_608x608Details">
-      <div class="zoo2-content-box layout">
-        <div
-          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
-          class="zoo2-icon layout"
-          onclick="hideDetails()"
-        ></div>
-        <h1 class="zoo2-hero-title-box layout">
-            <pre class="zoo2-hero-title">YoloV4</pre>
-        </h1>
-          <div
-            style="--src:url('None')"
-            class="zoo2-cover-group layout"
-          >
-            
-                <div class="zoo2-cover-group1 layout red">No Depth</div>
-            
-        </div>
-        <h5 class="zoo2-description layout">Description</h5>
-        <h4 class="zoo2-highlights-box layout">
-            <pre class="zoo2-highlights">Object detection with YoloV4 pre-trained on COCO data set.</pre>
-        </h4>
-        <h5 class="zoo2-input layout">Input</h5>
-        <h5 class="zoo2-highlights1-box layout">
-            <pre class="zoo2-highlights1">
-  
-    Name: inputs
-    Type: image
-    Shape: 3, 608, 608
-  
-            </pre>
-        </h5>
-        <hr class="zoo2-line layout"/>
-        <h5 class="zoo2-fps layout">FPS</h5>
-        <h5 class="zoo2-highlights2-box layout">
-            <pre class="zoo2-highlights2">
-  Mean: 1.31
-  STD: 0.01
-            </pre>
-        </h5>
-        <hr class="zoo2-line layout"/>
-        <h5 class="zoo2-license layout">License</h5>
-        <a href="https://github.com/AlexeyAB/darknet/blob/master/LICENSE">
-          <h5 class="zoo2-highlights3 layout">YOLO </h5>
-        </a>
-        <hr class="zoo2-line layout"/>
-        <div class="zoo2-flex layout">
-          <div class="zoo2-flex-col">
-            <h5 class="zoo2-view-source layout" id="yolov4_coco_608x608SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
-              VIEW SOURCE
-            </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="yolov4_coco_608x608SourceTrigger">
-              
-                  <li><a href="https://github.com/AlexeyAB/darknet" class="text-decoration-none">GitHub</a></li>
-                  
-              
-            </ul>
-          </div>
-          <div class="zoo2-flex-spacer"></div>
-          <div class="zoo2-flex-col1">
-            <h5 class="zoo2-download layout" id="yolov4_coco_608x608DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
-              DOWNLOAD
-            </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="yolov4_coco_608x608DownloadTrigger">
-              
-                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov4_coco_608x608/yolov4_coco_608x608.xml" class="text-decoration-none">yolov4_coco_608x608.xml</a></li>
-                  
-                      <li><hr class="dropdown-divider"></li>
-                  
-              
-                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov4_coco_608x608/yolov4_coco_608x608.bin" class="text-decoration-none">yolov4_coco_608x608.bin</a></li>
+                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/fast_depth_256x320/fast_depth_256x320.bin" class="text-decoration-none">fast_depth_256x320.bin</a></li>
                   
               
             </ul>
@@ -2481,7 +2323,7 @@
       </div>
     </div>
   
-    <div class="zoo2 zoo2-group layout" id="dmcount_540x960Details">
+    <div class="zoo2 zoo2-group layout" id="yolov3_coco_416x416Details">
       <div class="zoo2-content-box layout">
         <div
           style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
@@ -2489,10 +2331,10 @@
           onclick="hideDetails()"
         ></div>
         <h1 class="zoo2-hero-title-box layout">
-            <pre class="zoo2-hero-title">DM-Count</pre>
+            <pre class="zoo2-hero-title">YoloV3</pre>
         </h1>
           <div
-            style="--src:url('https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-crowdcounting/imgs/example.gif')"
+            style="--src:url('None')"
             class="zoo2-cover-group layout"
           >
             
@@ -2501,15 +2343,15 @@
         </div>
         <h5 class="zoo2-description layout">Description</h5>
         <h4 class="zoo2-highlights-box layout">
-            <pre class="zoo2-highlights">Count dense or sparse crowds using density maps.</pre>
+            <pre class="zoo2-highlights">Object detection with YoloV3 pre-trained on COCO data set.</pre>
         </h4>
         <h5 class="zoo2-input layout">Input</h5>
         <h5 class="zoo2-highlights1-box layout">
             <pre class="zoo2-highlights1">
   
-    Name: input.1
+    Name: inputs
     Type: image
-    Shape: 3, 540, 960
+    Shape: 3, 416, 416
   
             </pre>
         </h5>
@@ -2517,125 +2359,41 @@
         <h5 class="zoo2-fps layout">FPS</h5>
         <h5 class="zoo2-highlights2-box layout">
             <pre class="zoo2-highlights2">
-  Mean: 0.22
-  STD: 0.01
+  Mean: 4.16
+  STD: 0.14
             </pre>
         </h5>
         <hr class="zoo2-line layout"/>
         <h5 class="zoo2-license layout">License</h5>
-        <a href="https://github.com/cvlab-stonybrook/DM-Count/blob/master/LICENSE">
-          <h5 class="zoo2-highlights3 layout">MIT </h5>
+        <a href="https://github.com/AlexeyAB/darknet/blob/master/LICENSE">
+          <h5 class="zoo2-highlights3 layout">YOLO </h5>
         </a>
         <hr class="zoo2-line layout"/>
         <div class="zoo2-flex layout">
           <div class="zoo2-flex-col">
-            <h5 class="zoo2-view-source layout" id="dmcount_540x960SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5 class="zoo2-view-source layout" id="yolov3_coco_416x416SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
               VIEW SOURCE
             </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="dmcount_540x960SourceTrigger">
+            <ul class="dropdown-menu bg-dark" aria-labelledby="yolov3_coco_416x416SourceTrigger">
               
-                  <li><a href="https://github.com/cvlab-stonybrook/DM-Count" class="text-decoration-none">GitHub</a></li>
+                  <li><a href="https://github.com/AlexeyAB/darknet" class="text-decoration-none">GitHub</a></li>
                   
               
             </ul>
           </div>
           <div class="zoo2-flex-spacer"></div>
           <div class="zoo2-flex-col1">
-            <h5 class="zoo2-download layout" id="dmcount_540x960DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5 class="zoo2-download layout" id="yolov3_coco_416x416DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
               DOWNLOAD
             </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="dmcount_540x960DownloadTrigger">
+            <ul class="dropdown-menu bg-dark" aria-labelledby="yolov3_coco_416x416DownloadTrigger">
               
-                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.xml" class="text-decoration-none">dmcount_540x960.xml</a></li>
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov3_coco_416x416/yolov3_coco_416x416.xml" class="text-decoration-none">yolov3_coco_416x416.xml</a></li>
                   
                       <li><hr class="dropdown-divider"></li>
                   
               
-                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/dmcount_540x960/dmcount_540x960.bin" class="text-decoration-none">dmcount_540x960.bin</a></li>
-                  
-              
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="zoo2 zoo2-group layout" id="facial_landmarks_68_160x160Details">
-      <div class="zoo2-content-box layout">
-        <div
-          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
-          class="zoo2-icon layout"
-          onclick="hideDetails()"
-        ></div>
-        <h1 class="zoo2-hero-title-box layout">
-            <pre class="zoo2-hero-title">Facial landmarks 68 detection</pre>
-        </h1>
-          <div
-            style="--src:url('https://user-images.githubusercontent.com/18037362/146679906-d7ecea5a-b0ac-4012-bcfb-bfe44ab91db4.gif')"
-            class="zoo2-cover-group layout"
-          >
-            
-                <div class="zoo2-cover-group1 layout red">No Depth</div>
-            
-        </div>
-        <h5 class="zoo2-description layout">Description</h5>
-        <h4 class="zoo2-highlights-box layout">
-            <pre class="zoo2-highlights">Detect 68 facial landmarks.</pre>
-        </h4>
-        <h5 class="zoo2-input layout">Input</h5>
-        <h5 class="zoo2-highlights1-box layout">
-            <pre class="zoo2-highlights1">
-  
-    Name: images
-    Type: image
-    Shape: 3, 160, 160
-  
-            </pre>
-        </h5>
-        <hr class="zoo2-line layout"/>
-        <h5 class="zoo2-fps layout">FPS</h5>
-        <h5 class="zoo2-highlights2-box layout">
-            <pre class="zoo2-highlights2">
-  Mean: 0
-  STD: 0
-            </pre>
-        </h5>
-        <hr class="zoo2-line layout"/>
-        <h5 class="zoo2-license layout">License</h5>
-        <a href="https://github.com/610265158/face_landmark/blob/master/LICENSE">
-          <h5 class="zoo2-highlights3 layout">Apache-2.0 License </h5>
-        </a>
-        <hr class="zoo2-line layout"/>
-        <div class="zoo2-flex layout">
-          <div class="zoo2-flex-col">
-            <h5 class="zoo2-view-source layout" id="facial_landmarks_68_160x160SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
-              VIEW SOURCE
-            </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="facial_landmarks_68_160x160SourceTrigger">
-              
-                  <li><a href="https://github.com/610265158/face_landmark" class="text-decoration-none">610265158/face_landmark</a></li>
-                  
-                      <li><hr class="dropdown-divider"></li>
-                  
-              
-                  <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/043_face_landmark" class="text-decoration-none">PINTO_model_zoo</a></li>
-                  
-              
-            </ul>
-          </div>
-          <div class="zoo2-flex-spacer"></div>
-          <div class="zoo2-flex-col1">
-            <h5 class="zoo2-download layout" id="facial_landmarks_68_160x160DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
-              DOWNLOAD
-            </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="facial_landmarks_68_160x160DownloadTrigger">
-              
-                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.xml" class="text-decoration-none">facial_landmarks_68_160x160.xml</a></li>
-                  
-                      <li><hr class="dropdown-divider"></li>
-                  
-              
-                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.bin" class="text-decoration-none">facial_landmarks_68_160x160.bin</a></li>
+                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov3_coco_416x416/yolov3_coco_416x416.bin" class="text-decoration-none">yolov3_coco_416x416.bin</a></li>
                   
               
             </ul>
@@ -2728,7 +2486,7 @@
       </div>
     </div>
   
-    <div class="zoo2 zoo2-group layout" id="depth_estimation_mbnv2_480x640Details">
+    <div class="zoo2 zoo2-group layout" id="dmcount_540x960Details">
       <div class="zoo2-content-box layout">
         <div
           style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
@@ -2736,7 +2494,249 @@
           onclick="hideDetails()"
         ></div>
         <h1 class="zoo2-hero-title-box layout">
-            <pre class="zoo2-hero-title">Depth MobileNetV2</pre>
+            <pre class="zoo2-hero-title">DM-Count</pre>
+        </h1>
+          <div
+            style="--src:url('https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-crowdcounting/imgs/example.gif')"
+            class="zoo2-cover-group layout"
+          >
+            
+                <div class="zoo2-cover-group1 layout red">No Depth</div>
+            
+        </div>
+        <h5 class="zoo2-description layout">Description</h5>
+        <h4 class="zoo2-highlights-box layout">
+            <pre class="zoo2-highlights">Count dense or sparse crowds using density maps.</pre>
+        </h4>
+        <h5 class="zoo2-input layout">Input</h5>
+        <h5 class="zoo2-highlights1-box layout">
+            <pre class="zoo2-highlights1">
+  
+    Name: input.1
+    Type: image
+    Shape: 3, 540, 960
+  
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-fps layout">FPS</h5>
+        <h5 class="zoo2-highlights2-box layout">
+            <pre class="zoo2-highlights2">
+  Mean: 0.22
+  STD: 0.01
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-license layout">License</h5>
+        <a href="https://github.com/cvlab-stonybrook/DM-Count/blob/master/LICENSE">
+          <h5 class="zoo2-highlights3 layout">MIT </h5>
+        </a>
+        <hr class="zoo2-line layout"/>
+        <div class="zoo2-flex layout">
+          <div class="zoo2-flex-col">
+            <h5 class="zoo2-view-source layout" id="dmcount_540x960SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              VIEW SOURCE
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="dmcount_540x960SourceTrigger">
+              
+                  <li><a href="https://github.com/cvlab-stonybrook/DM-Count" class="text-decoration-none">GitHub</a></li>
+                  
+              
+            </ul>
+          </div>
+          <div class="zoo2-flex-spacer"></div>
+          <div class="zoo2-flex-col1">
+            <h5 class="zoo2-download layout" id="dmcount_540x960DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              DOWNLOAD
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="dmcount_540x960DownloadTrigger">
+              
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.xml" class="text-decoration-none">dmcount_540x960.xml</a></li>
+                  
+                      <li><hr class="dropdown-divider"></li>
+                  
+              
+                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/dmcount_540x960/dmcount_540x960.bin" class="text-decoration-none">dmcount_540x960.bin</a></li>
+                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="zoo2 zoo2-group layout" id="yolov4_coco_608x608Details">
+      <div class="zoo2-content-box layout">
+        <div
+          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
+          class="zoo2-icon layout"
+          onclick="hideDetails()"
+        ></div>
+        <h1 class="zoo2-hero-title-box layout">
+            <pre class="zoo2-hero-title">YoloV4</pre>
+        </h1>
+          <div
+            style="--src:url('None')"
+            class="zoo2-cover-group layout"
+          >
+            
+                <div class="zoo2-cover-group1 layout red">No Depth</div>
+            
+        </div>
+        <h5 class="zoo2-description layout">Description</h5>
+        <h4 class="zoo2-highlights-box layout">
+            <pre class="zoo2-highlights">Object detection with YoloV4 pre-trained on COCO data set.</pre>
+        </h4>
+        <h5 class="zoo2-input layout">Input</h5>
+        <h5 class="zoo2-highlights1-box layout">
+            <pre class="zoo2-highlights1">
+  
+    Name: inputs
+    Type: image
+    Shape: 3, 608, 608
+  
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-fps layout">FPS</h5>
+        <h5 class="zoo2-highlights2-box layout">
+            <pre class="zoo2-highlights2">
+  Mean: 1.31
+  STD: 0.01
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-license layout">License</h5>
+        <a href="https://github.com/AlexeyAB/darknet/blob/master/LICENSE">
+          <h5 class="zoo2-highlights3 layout">YOLO </h5>
+        </a>
+        <hr class="zoo2-line layout"/>
+        <div class="zoo2-flex layout">
+          <div class="zoo2-flex-col">
+            <h5 class="zoo2-view-source layout" id="yolov4_coco_608x608SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              VIEW SOURCE
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="yolov4_coco_608x608SourceTrigger">
+              
+                  <li><a href="https://github.com/AlexeyAB/darknet" class="text-decoration-none">GitHub</a></li>
+                  
+              
+            </ul>
+          </div>
+          <div class="zoo2-flex-spacer"></div>
+          <div class="zoo2-flex-col1">
+            <h5 class="zoo2-download layout" id="yolov4_coco_608x608DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              DOWNLOAD
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="yolov4_coco_608x608DownloadTrigger">
+              
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov4_coco_608x608/yolov4_coco_608x608.xml" class="text-decoration-none">yolov4_coco_608x608.xml</a></li>
+                  
+                      <li><hr class="dropdown-divider"></li>
+                  
+              
+                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov4_coco_608x608/yolov4_coco_608x608.bin" class="text-decoration-none">yolov4_coco_608x608.bin</a></li>
+                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="zoo2 zoo2-group layout" id="facial_landmarks_68_160x160Details">
+      <div class="zoo2-content-box layout">
+        <div
+          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
+          class="zoo2-icon layout"
+          onclick="hideDetails()"
+        ></div>
+        <h1 class="zoo2-hero-title-box layout">
+            <pre class="zoo2-hero-title">Facial landmarks 68 detection</pre>
+        </h1>
+          <div
+            style="--src:url('https://user-images.githubusercontent.com/18037362/146679906-d7ecea5a-b0ac-4012-bcfb-bfe44ab91db4.gif')"
+            class="zoo2-cover-group layout"
+          >
+            
+                <div class="zoo2-cover-group1 layout red">No Depth</div>
+            
+        </div>
+        <h5 class="zoo2-description layout">Description</h5>
+        <h4 class="zoo2-highlights-box layout">
+            <pre class="zoo2-highlights">Detect 68 facial landmarks.</pre>
+        </h4>
+        <h5 class="zoo2-input layout">Input</h5>
+        <h5 class="zoo2-highlights1-box layout">
+            <pre class="zoo2-highlights1">
+  
+    Name: images
+    Type: image
+    Shape: 3, 160, 160
+  
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-fps layout">FPS</h5>
+        <h5 class="zoo2-highlights2-box layout">
+            <pre class="zoo2-highlights2">
+  Mean: 0
+  STD: 0
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-license layout">License</h5>
+        <a href="https://github.com/610265158/face_landmark/blob/master/LICENSE">
+          <h5 class="zoo2-highlights3 layout">Apache-2.0 License </h5>
+        </a>
+        <hr class="zoo2-line layout"/>
+        <div class="zoo2-flex layout">
+          <div class="zoo2-flex-col">
+            <h5 class="zoo2-view-source layout" id="facial_landmarks_68_160x160SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              VIEW SOURCE
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="facial_landmarks_68_160x160SourceTrigger">
+              
+                  <li><a href="https://github.com/610265158/face_landmark" class="text-decoration-none">610265158/face_landmark</a></li>
+                  
+                      <li><hr class="dropdown-divider"></li>
+                  
+              
+                  <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/043_face_landmark" class="text-decoration-none">PINTO_model_zoo</a></li>
+                  
+              
+            </ul>
+          </div>
+          <div class="zoo2-flex-spacer"></div>
+          <div class="zoo2-flex-col1">
+            <h5 class="zoo2-download layout" id="facial_landmarks_68_160x160DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              DOWNLOAD
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="facial_landmarks_68_160x160DownloadTrigger">
+              
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.xml" class="text-decoration-none">facial_landmarks_68_160x160.xml</a></li>
+                  
+                      <li><hr class="dropdown-divider"></li>
+                  
+              
+                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.bin" class="text-decoration-none">facial_landmarks_68_160x160.bin</a></li>
+                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="zoo2 zoo2-group layout" id="micronet_m0_224x224Details">
+      <div class="zoo2-content-box layout">
+        <div
+          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
+          class="zoo2-icon layout"
+          onclick="hideDetails()"
+        ></div>
+        <h1 class="zoo2-hero-title-box layout">
+            <pre class="zoo2-hero-title">MicroNet-M0</pre>
         </h1>
           <div
             style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png')"
@@ -2748,7 +2748,7 @@
         </div>
         <h5 class="zoo2-description layout">Description</h5>
         <h4 class="zoo2-highlights-box layout">
-            <pre class="zoo2-highlights">Depth Estimation of a given input image.</pre>
+            <pre class="zoo2-highlights">Image classification with MicroNet-M0 pretrained on ImageNet.</pre>
         </h4>
         <h5 class="zoo2-input layout">Input</h5>
         <h5 class="zoo2-highlights1-box layout">
@@ -2756,7 +2756,7 @@
   
     Name: input.1
     Type: image
-    Shape: 3, 480, 640
+    Shape: 3, 224, 224
   
             </pre>
         </h5>
@@ -2764,46 +2764,41 @@
         <h5 class="zoo2-fps layout">FPS</h5>
         <h5 class="zoo2-highlights2-box layout">
             <pre class="zoo2-highlights2">
-  Mean: /
-  STD: /
+  Mean: 34.36
+  STD: 0.04
             </pre>
         </h5>
         <hr class="zoo2-line layout"/>
         <h5 class="zoo2-license layout">License</h5>
-        <a href="https://github.com/alinstein/Depth_estimation/blob/master/LICENSE">
+        <a href="https://github.com/liyunsheng13/micronet/blob/main/LICENSE">
           <h5 class="zoo2-highlights3 layout">MIT </h5>
         </a>
         <hr class="zoo2-line layout"/>
         <div class="zoo2-flex layout">
           <div class="zoo2-flex-col">
-            <h5 class="zoo2-view-source layout" id="depth_estimation_mbnv2_480x640SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5 class="zoo2-view-source layout" id="micronet_m0_224x224SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
               VIEW SOURCE
             </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="depth_estimation_mbnv2_480x640SourceTrigger">
+            <ul class="dropdown-menu bg-dark" aria-labelledby="micronet_m0_224x224SourceTrigger">
               
-                  <li><a href="https://github.com/alinstein/Depth_estimation" class="text-decoration-none">GitHub</a></li>
-                  
-                      <li><hr class="dropdown-divider"></li>
-                  
-              
-                  <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/149_depth_estimation" class="text-decoration-none">PINTO_model_zoo/tree/main/149_depth_estimation</a></li>
+                  <li><a href="https://github.com/liyunsheng13/micronet" class="text-decoration-none">GitHub</a></li>
                   
               
             </ul>
           </div>
           <div class="zoo2-flex-spacer"></div>
           <div class="zoo2-flex-col1">
-            <h5 class="zoo2-download layout" id="depth_estimation_mbnv2_480x640DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5 class="zoo2-download layout" id="micronet_m0_224x224DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
               DOWNLOAD
             </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="depth_estimation_mbnv2_480x640DownloadTrigger">
+            <ul class="dropdown-menu bg-dark" aria-labelledby="micronet_m0_224x224DownloadTrigger">
               
-                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.xml" class="text-decoration-none">depth_estimation_mbnv2_480x640.xml</a></li>
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/micronet_m0_224x224/micronet_m0_224x224.xml" class="text-decoration-none">micronet_m0_224x224.xml</a></li>
                   
                       <li><hr class="dropdown-divider"></li>
                   
               
-                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.bin" class="text-decoration-none">depth_estimation_mbnv2_480x640.bin</a></li>
+                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/micronet_m0_224x224/micronet_m0_224x224.bin" class="text-decoration-none">micronet_m0_224x224.bin</a></li>
                   
               
             </ul>
@@ -2896,7 +2891,165 @@
       </div>
     </div>
   
-    <div class="zoo2 zoo2-group layout" id="depth_estimation_mbnv2_240x320Details">
+    <div class="zoo2 zoo2-group layout" id="inceptionv4_299x299Details">
+      <div class="zoo2-content-box layout">
+        <div
+          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
+          class="zoo2-icon layout"
+          onclick="hideDetails()"
+        ></div>
+        <h1 class="zoo2-hero-title-box layout">
+            <pre class="zoo2-hero-title">InceptionV4</pre>
+        </h1>
+          <div
+            style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png')"
+            class="zoo2-cover-group layout"
+          >
+            
+                <div class="zoo2-cover-group1 layout red">No Depth</div>
+            
+        </div>
+        <h5 class="zoo2-description layout">Description</h5>
+        <h4 class="zoo2-highlights-box layout">
+            <pre class="zoo2-highlights">Image classification with InceptionV4 pretrained on ImageNet.</pre>
+        </h4>
+        <h5 class="zoo2-input layout">Input</h5>
+        <h5 class="zoo2-highlights1-box layout">
+            <pre class="zoo2-highlights1">
+  
+    Name: input
+    Type: image
+    Shape: 3, 299, 299
+  
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-fps layout">FPS</h5>
+        <h5 class="zoo2-highlights2-box layout">
+            <pre class="zoo2-highlights2">
+  Mean: 8.02
+  STD: 0.03
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-license layout">License</h5>
+        <a href="https://github.com/tensorflow/models/blob/master/LICENSE">
+          <h5 class="zoo2-highlights3 layout">Apache-2.0 </h5>
+        </a>
+        <hr class="zoo2-line layout"/>
+        <div class="zoo2-flex layout">
+          <div class="zoo2-flex-col">
+            <h5 class="zoo2-view-source layout" id="inceptionv4_299x299SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              VIEW SOURCE
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="inceptionv4_299x299SourceTrigger">
+              
+                  <li><a href="https://github.com/tensorflow/models/tree/master/research/slim/nets" class="text-decoration-none">TF</a></li>
+                  
+              
+            </ul>
+          </div>
+          <div class="zoo2-flex-spacer"></div>
+          <div class="zoo2-flex-col1">
+            <h5 class="zoo2-download layout" id="inceptionv4_299x299DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              DOWNLOAD
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="inceptionv4_299x299DownloadTrigger">
+              
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/inceptionv4_299x299/inceptionv4_299x299.xml" class="text-decoration-none">inceptionv4_299x299.xml</a></li>
+                  
+                      <li><hr class="dropdown-divider"></li>
+                  
+              
+                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/inceptionv4_299x299/inceptionv4_299x299.bin" class="text-decoration-none">inceptionv4_299x299.bin</a></li>
+                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="zoo2 zoo2-group layout" id="shufflenetv2_224x224Details">
+      <div class="zoo2-content-box layout">
+        <div
+          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
+          class="zoo2-icon layout"
+          onclick="hideDetails()"
+        ></div>
+        <h1 class="zoo2-hero-title-box layout">
+            <pre class="zoo2-hero-title">ShuffleNetV2</pre>
+        </h1>
+          <div
+            style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png')"
+            class="zoo2-cover-group layout"
+          >
+            
+                <div class="zoo2-cover-group1 layout red">No Depth</div>
+            
+        </div>
+        <h5 class="zoo2-description layout">Description</h5>
+        <h4 class="zoo2-highlights-box layout">
+            <pre class="zoo2-highlights">Image classification with ShuffleNetV2 pretrained on ImageNet.</pre>
+        </h4>
+        <h5 class="zoo2-input layout">Input</h5>
+        <h5 class="zoo2-highlights1-box layout">
+            <pre class="zoo2-highlights1">
+  
+    Name: input.1
+    Type: image
+    Shape: 3, 224, 224
+  
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-fps layout">FPS</h5>
+        <h5 class="zoo2-highlights2-box layout">
+            <pre class="zoo2-highlights2">
+  Mean: 151.72
+  STD: 2.55
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-license layout">License</h5>
+        <a href="https://github.com/pytorch/vision/blob/main/LICENSE">
+          <h5 class="zoo2-highlights3 layout">BSD-3 </h5>
+        </a>
+        <hr class="zoo2-line layout"/>
+        <div class="zoo2-flex layout">
+          <div class="zoo2-flex-col">
+            <h5 class="zoo2-view-source layout" id="shufflenetv2_224x224SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              VIEW SOURCE
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="shufflenetv2_224x224SourceTrigger">
+              
+                  <li><a href="https://github.com/pytorch/vision/tree/main/torchvision/models" class="text-decoration-none">GitHub</a></li>
+                  
+              
+            </ul>
+          </div>
+          <div class="zoo2-flex-spacer"></div>
+          <div class="zoo2-flex-col1">
+            <h5 class="zoo2-download layout" id="shufflenetv2_224x224DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              DOWNLOAD
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="shufflenetv2_224x224DownloadTrigger">
+              
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/shufflenetv2_224x224/shufflenetv2_224x224.xml" class="text-decoration-none">shufflenetv2_224x224.xml</a></li>
+                  
+                      <li><hr class="dropdown-divider"></li>
+                  
+              
+                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/shufflenetv2_224x224/shufflenetv2_224x224.bin" class="text-decoration-none">shufflenetv2_224x224.bin</a></li>
+                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="zoo2 zoo2-group layout" id="depth_estimation_mbnv2_480x640Details">
       <div class="zoo2-content-box layout">
         <div
           style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
@@ -2916,7 +3069,7 @@
         </div>
         <h5 class="zoo2-description layout">Description</h5>
         <h4 class="zoo2-highlights-box layout">
-            <pre class="zoo2-highlights">Estimate depth from a RGB image.</pre>
+            <pre class="zoo2-highlights">Depth Estimation of a given input image.</pre>
         </h4>
         <h5 class="zoo2-input layout">Input</h5>
         <h5 class="zoo2-highlights1-box layout">
@@ -2924,7 +3077,7 @@
   
     Name: input.1
     Type: image
-    Shape: 3, 240, 320
+    Shape: 3, 480, 640
   
             </pre>
         </h5>
@@ -2932,8 +3085,8 @@
         <h5 class="zoo2-fps layout">FPS</h5>
         <h5 class="zoo2-highlights2-box layout">
             <pre class="zoo2-highlights2">
-  Mean: 20.03
-  STD: 0.7
+  Mean: /
+  STD: /
             </pre>
         </h5>
         <hr class="zoo2-line layout"/>
@@ -2944,10 +3097,10 @@
         <hr class="zoo2-line layout"/>
         <div class="zoo2-flex layout">
           <div class="zoo2-flex-col">
-            <h5 class="zoo2-view-source layout" id="depth_estimation_mbnv2_240x320SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5 class="zoo2-view-source layout" id="depth_estimation_mbnv2_480x640SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
               VIEW SOURCE
             </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="depth_estimation_mbnv2_240x320SourceTrigger">
+            <ul class="dropdown-menu bg-dark" aria-labelledby="depth_estimation_mbnv2_480x640SourceTrigger">
               
                   <li><a href="https://github.com/alinstein/Depth_estimation" class="text-decoration-none">GitHub</a></li>
                   
@@ -2961,96 +3114,17 @@
           </div>
           <div class="zoo2-flex-spacer"></div>
           <div class="zoo2-flex-col1">
-            <h5 class="zoo2-download layout" id="depth_estimation_mbnv2_240x320DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5 class="zoo2-download layout" id="depth_estimation_mbnv2_480x640DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
               DOWNLOAD
             </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="depth_estimation_mbnv2_240x320DownloadTrigger">
+            <ul class="dropdown-menu bg-dark" aria-labelledby="depth_estimation_mbnv2_480x640DownloadTrigger">
               
-                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.xml" class="text-decoration-none">depth_estimation_mbnv2_240x320.xml</a></li>
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.xml" class="text-decoration-none">depth_estimation_mbnv2_480x640.xml</a></li>
                   
                       <li><hr class="dropdown-divider"></li>
                   
               
-                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.bin" class="text-decoration-none">depth_estimation_mbnv2_240x320.bin</a></li>
-                  
-              
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="zoo2 zoo2-group layout" id="scdepth_256x832Details">
-      <div class="zoo2-content-box layout">
-        <div
-          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
-          class="zoo2-icon layout"
-          onclick="hideDetails()"
-        ></div>
-        <h1 class="zoo2-hero-title-box layout">
-            <pre class="zoo2-hero-title">SC-Depth</pre>
-        </h1>
-          <div
-            style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png')"
-            class="zoo2-cover-group layout"
-          >
-            
-                <div class="zoo2-cover-group1 layout red">No Depth</div>
-            
-        </div>
-        <h5 class="zoo2-description layout">Description</h5>
-        <h4 class="zoo2-highlights-box layout">
-            <pre class="zoo2-highlights">Depth estimation from a RGB image using SC-Depth model.</pre>
-        </h4>
-        <h5 class="zoo2-input layout">Input</h5>
-        <h5 class="zoo2-highlights1-box layout">
-            <pre class="zoo2-highlights1">
-  
-    Name: input.1
-    Type: image
-    Shape: 3, 256, 512
-  
-            </pre>
-        </h5>
-        <hr class="zoo2-line layout"/>
-        <h5 class="zoo2-fps layout">FPS</h5>
-        <h5 class="zoo2-highlights2-box layout">
-            <pre class="zoo2-highlights2">
-  Mean: 12.89
-  STD: 0.33
-            </pre>
-        </h5>
-        <hr class="zoo2-line layout"/>
-        <h5 class="zoo2-license layout">License</h5>
-        <a href="https://github.com/JiawangBian/SC-SfMLearner-Release/blob/master/LICENSE">
-          <h5 class="zoo2-highlights3 layout">GPL-3.0 </h5>
-        </a>
-        <hr class="zoo2-line layout"/>
-        <div class="zoo2-flex layout">
-          <div class="zoo2-flex-col">
-            <h5 class="zoo2-view-source layout" id="scdepth_256x832SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
-              VIEW SOURCE
-            </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="scdepth_256x832SourceTrigger">
-              
-                  <li><a href="https://github.com/JiawangBian/SC-SfMLearner-Release" class="text-decoration-none">GitHub</a></li>
-                  
-              
-            </ul>
-          </div>
-          <div class="zoo2-flex-spacer"></div>
-          <div class="zoo2-flex-col1">
-            <h5 class="zoo2-download layout" id="scdepth_256x832DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
-              DOWNLOAD
-            </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="scdepth_256x832DownloadTrigger">
-              
-                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/scdepth_256x832/scdepth_256x832.xml" class="text-decoration-none">scdepth_256x832.xml</a></li>
-                  
-                      <li><hr class="dropdown-divider"></li>
-                  
-              
-                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/scdepth_256x832/scdepth_256x832.bin" class="text-decoration-none">scdepth_256x832.bin</a></li>
+                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.bin" class="text-decoration-none">depth_estimation_mbnv2_480x640.bin</a></li>
                   
               
             </ul>
@@ -3138,7 +3212,7 @@
       </div>
     </div>
   
-    <div class="zoo2 zoo2-group layout" id="micronet_m0_224x224Details">
+    <div class="zoo2 zoo2-group layout" id="scdepth_256x832Details">
       <div class="zoo2-content-box layout">
         <div
           style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
@@ -3146,7 +3220,7 @@
           onclick="hideDetails()"
         ></div>
         <h1 class="zoo2-hero-title-box layout">
-            <pre class="zoo2-hero-title">MicroNet-M0</pre>
+            <pre class="zoo2-hero-title">SC-Depth</pre>
         </h1>
           <div
             style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png')"
@@ -3158,7 +3232,7 @@
         </div>
         <h5 class="zoo2-description layout">Description</h5>
         <h4 class="zoo2-highlights-box layout">
-            <pre class="zoo2-highlights">Image classification with MicroNet-M0 pretrained on ImageNet.</pre>
+            <pre class="zoo2-highlights">Depth estimation from a RGB image using SC-Depth model.</pre>
         </h4>
         <h5 class="zoo2-input layout">Input</h5>
         <h5 class="zoo2-highlights1-box layout">
@@ -3166,7 +3240,7 @@
   
     Name: input.1
     Type: image
-    Shape: 3, 224, 224
+    Shape: 3, 256, 512
   
             </pre>
         </h5>
@@ -3174,120 +3248,41 @@
         <h5 class="zoo2-fps layout">FPS</h5>
         <h5 class="zoo2-highlights2-box layout">
             <pre class="zoo2-highlights2">
-  Mean: 34.36
-  STD: 0.04
+  Mean: 12.89
+  STD: 0.33
             </pre>
         </h5>
         <hr class="zoo2-line layout"/>
         <h5 class="zoo2-license layout">License</h5>
-        <a href="https://github.com/liyunsheng13/micronet/blob/main/LICENSE">
-          <h5 class="zoo2-highlights3 layout">MIT </h5>
+        <a href="https://github.com/JiawangBian/SC-SfMLearner-Release/blob/master/LICENSE">
+          <h5 class="zoo2-highlights3 layout">GPL-3.0 </h5>
         </a>
         <hr class="zoo2-line layout"/>
         <div class="zoo2-flex layout">
           <div class="zoo2-flex-col">
-            <h5 class="zoo2-view-source layout" id="micronet_m0_224x224SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5 class="zoo2-view-source layout" id="scdepth_256x832SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
               VIEW SOURCE
             </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="micronet_m0_224x224SourceTrigger">
+            <ul class="dropdown-menu bg-dark" aria-labelledby="scdepth_256x832SourceTrigger">
               
-                  <li><a href="https://github.com/liyunsheng13/micronet" class="text-decoration-none">GitHub</a></li>
+                  <li><a href="https://github.com/JiawangBian/SC-SfMLearner-Release" class="text-decoration-none">GitHub</a></li>
                   
               
             </ul>
           </div>
           <div class="zoo2-flex-spacer"></div>
           <div class="zoo2-flex-col1">
-            <h5 class="zoo2-download layout" id="micronet_m0_224x224DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5 class="zoo2-download layout" id="scdepth_256x832DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
               DOWNLOAD
             </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="micronet_m0_224x224DownloadTrigger">
+            <ul class="dropdown-menu bg-dark" aria-labelledby="scdepth_256x832DownloadTrigger">
               
-                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/micronet_m0_224x224/micronet_m0_224x224.xml" class="text-decoration-none">micronet_m0_224x224.xml</a></li>
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/scdepth_256x832/scdepth_256x832.xml" class="text-decoration-none">scdepth_256x832.xml</a></li>
                   
                       <li><hr class="dropdown-divider"></li>
                   
               
-                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/micronet_m0_224x224/micronet_m0_224x224.bin" class="text-decoration-none">micronet_m0_224x224.bin</a></li>
-                  
-              
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="zoo2 zoo2-group layout" id="shufflenetv2_224x224Details">
-      <div class="zoo2-content-box layout">
-        <div
-          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
-          class="zoo2-icon layout"
-          onclick="hideDetails()"
-        ></div>
-        <h1 class="zoo2-hero-title-box layout">
-            <pre class="zoo2-hero-title">ShuffleNetV2</pre>
-        </h1>
-          <div
-            style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png')"
-            class="zoo2-cover-group layout"
-          >
-            
-                <div class="zoo2-cover-group1 layout red">No Depth</div>
-            
-        </div>
-        <h5 class="zoo2-description layout">Description</h5>
-        <h4 class="zoo2-highlights-box layout">
-            <pre class="zoo2-highlights">Image classification with ShuffleNetV2 pretrained on ImageNet.</pre>
-        </h4>
-        <h5 class="zoo2-input layout">Input</h5>
-        <h5 class="zoo2-highlights1-box layout">
-            <pre class="zoo2-highlights1">
-  
-    Name: input.1
-    Type: image
-    Shape: 3, 224, 224
-  
-            </pre>
-        </h5>
-        <hr class="zoo2-line layout"/>
-        <h5 class="zoo2-fps layout">FPS</h5>
-        <h5 class="zoo2-highlights2-box layout">
-            <pre class="zoo2-highlights2">
-  Mean: 151.72
-  STD: 2.55
-            </pre>
-        </h5>
-        <hr class="zoo2-line layout"/>
-        <h5 class="zoo2-license layout">License</h5>
-        <a href="https://github.com/pytorch/vision/blob/main/LICENSE">
-          <h5 class="zoo2-highlights3 layout">BSD-3 </h5>
-        </a>
-        <hr class="zoo2-line layout"/>
-        <div class="zoo2-flex layout">
-          <div class="zoo2-flex-col">
-            <h5 class="zoo2-view-source layout" id="shufflenetv2_224x224SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
-              VIEW SOURCE
-            </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="shufflenetv2_224x224SourceTrigger">
-              
-                  <li><a href="https://github.com/pytorch/vision/tree/main/torchvision/models" class="text-decoration-none">GitHub</a></li>
-                  
-              
-            </ul>
-          </div>
-          <div class="zoo2-flex-spacer"></div>
-          <div class="zoo2-flex-col1">
-            <h5 class="zoo2-download layout" id="shufflenetv2_224x224DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
-              DOWNLOAD
-            </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="shufflenetv2_224x224DownloadTrigger">
-              
-                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/shufflenetv2_224x224/shufflenetv2_224x224.xml" class="text-decoration-none">shufflenetv2_224x224.xml</a></li>
-                  
-                      <li><hr class="dropdown-divider"></li>
-                  
-              
-                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/shufflenetv2_224x224/shufflenetv2_224x224.bin" class="text-decoration-none">shufflenetv2_224x224.bin</a></li>
+                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/scdepth_256x832/scdepth_256x832.bin" class="text-decoration-none">scdepth_256x832.bin</a></li>
                   
               
             </ul>
@@ -3380,7 +3375,7 @@
       </div>
     </div>
   
-    <div class="zoo2 zoo2-group layout" id="inceptionv4_299x299Details">
+    <div class="zoo2 zoo2-group layout" id="depth_estimation_mbnv2_240x320Details">
       <div class="zoo2-content-box layout">
         <div
           style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
@@ -3388,7 +3383,7 @@
           onclick="hideDetails()"
         ></div>
         <h1 class="zoo2-hero-title-box layout">
-            <pre class="zoo2-hero-title">InceptionV4</pre>
+            <pre class="zoo2-hero-title">Depth MobileNetV2</pre>
         </h1>
           <div
             style="--src:url('https://user-images.githubusercontent.com/5244214/144071726-449a1264-5a63-44b6-91f8-6dba9da02576.png')"
@@ -3400,15 +3395,15 @@
         </div>
         <h5 class="zoo2-description layout">Description</h5>
         <h4 class="zoo2-highlights-box layout">
-            <pre class="zoo2-highlights">Image classification with InceptionV4 pretrained on ImageNet.</pre>
+            <pre class="zoo2-highlights">Estimate depth from a RGB image.</pre>
         </h4>
         <h5 class="zoo2-input layout">Input</h5>
         <h5 class="zoo2-highlights1-box layout">
             <pre class="zoo2-highlights1">
   
-    Name: input
+    Name: input.1
     Type: image
-    Shape: 3, 299, 299
+    Shape: 3, 240, 320
   
             </pre>
         </h5>
@@ -3416,41 +3411,46 @@
         <h5 class="zoo2-fps layout">FPS</h5>
         <h5 class="zoo2-highlights2-box layout">
             <pre class="zoo2-highlights2">
-  Mean: 8.02
-  STD: 0.03
+  Mean: 20.03
+  STD: 0.7
             </pre>
         </h5>
         <hr class="zoo2-line layout"/>
         <h5 class="zoo2-license layout">License</h5>
-        <a href="https://github.com/tensorflow/models/blob/master/LICENSE">
-          <h5 class="zoo2-highlights3 layout">Apache-2.0 </h5>
+        <a href="https://github.com/alinstein/Depth_estimation/blob/master/LICENSE">
+          <h5 class="zoo2-highlights3 layout">MIT </h5>
         </a>
         <hr class="zoo2-line layout"/>
         <div class="zoo2-flex layout">
           <div class="zoo2-flex-col">
-            <h5 class="zoo2-view-source layout" id="inceptionv4_299x299SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5 class="zoo2-view-source layout" id="depth_estimation_mbnv2_240x320SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
               VIEW SOURCE
             </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="inceptionv4_299x299SourceTrigger">
+            <ul class="dropdown-menu bg-dark" aria-labelledby="depth_estimation_mbnv2_240x320SourceTrigger">
               
-                  <li><a href="https://github.com/tensorflow/models/tree/master/research/slim/nets" class="text-decoration-none">TF</a></li>
+                  <li><a href="https://github.com/alinstein/Depth_estimation" class="text-decoration-none">GitHub</a></li>
+                  
+                      <li><hr class="dropdown-divider"></li>
+                  
+              
+                  <li><a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/149_depth_estimation" class="text-decoration-none">PINTO_model_zoo/tree/main/149_depth_estimation</a></li>
                   
               
             </ul>
           </div>
           <div class="zoo2-flex-spacer"></div>
           <div class="zoo2-flex-col1">
-            <h5 class="zoo2-download layout" id="inceptionv4_299x299DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5 class="zoo2-download layout" id="depth_estimation_mbnv2_240x320DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
               DOWNLOAD
             </h5>
-            <ul class="dropdown-menu bg-dark" aria-labelledby="inceptionv4_299x299DownloadTrigger">
+            <ul class="dropdown-menu bg-dark" aria-labelledby="depth_estimation_mbnv2_240x320DownloadTrigger">
               
-                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/inceptionv4_299x299/inceptionv4_299x299.xml" class="text-decoration-none">inceptionv4_299x299.xml</a></li>
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.xml" class="text-decoration-none">depth_estimation_mbnv2_240x320.xml</a></li>
                   
                       <li><hr class="dropdown-divider"></li>
                   
               
-                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/inceptionv4_299x299/inceptionv4_299x299.bin" class="text-decoration-none">inceptionv4_299x299.bin</a></li>
+                  <li><a href="http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.bin" class="text-decoration-none">depth_estimation_mbnv2_240x320.bin</a></li>
                   
               
             </ul>
