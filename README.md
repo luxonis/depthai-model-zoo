@@ -5,7 +5,7 @@
 
 
 
-DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and the community. A web interface for easier navigation is available at [zoo.luxonis.com](zoo.luxonis.com).
+DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and the community. A web interface for easier navigation is available at [zoo.luxonis.com](https://zoo.luxonis.com).
 
 We try to provide already converted latest state-of-the-art models ready for use with DepthAI and our OAK cameras. Most models are accompanied by additional metadata (FPS, accuracy, number of parameters, and FLOPs) and links to the experiments that show the example usage of each model.
 
