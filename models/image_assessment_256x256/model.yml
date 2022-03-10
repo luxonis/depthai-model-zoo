@@ -1,0 +1,38 @@
+description: >-
+  Image quality assessment from RGB image using EdgeSegNet-Classifier.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/image_assessment_256x256
+task_type: image_quality_assessment
+files:
+  - name: FP16/image_quality_assessment_256x256.xml
+    size: 80983
+    sha256: 7493f6069e07f291419ce0b86498fd251a9575e20d37f344b34ced9e8c3998b6
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/image_quality_assessment_256x256/image_quality_assessment_256x256.xml
+  - name: FP16/image_quality_assessment_256x256.bin
+    size: 16800184
+    sha256: 419f071ada278e180a2dc63dd308ad0bc5a607a5e947fda399ac5aa2a16a394f
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/image_quality_assessment_256x256/image_quality_assessment_256x256.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/raw/main/models/image_quality_assessment_256x256
+meta:
+    verbose_name: Image-quality-assessment-classification
+    inputs:
+      - type: image
+        shape: 3, 256, 256
+        name: input.1
+    FPS:
+        mean: 13.65
+        std: 2.73
+    backbone: EdgeSegNet
+    experiment: None
+    uses_depth: false
+    source:
+      - name: GitHub
+        url: https://github.com/luxonis/depthai-model-zoo/tree/main/models/image_assessment_256x256
+    license: 
+        name: MIT
+        url: https://github.com/luxonis/depthai-model-zoo/tree/main/models/image_assessment_256x256
+    downloads:
+      - name: image_quality_assessment_256x256.xml
+        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/image_quality_assessment_256x256/image_quality_assessment_256x256.xml
+      - name: image_quality_assessment_256x256.bin
+        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/image_quality_assessment_256x256/image_quality_assessment_256x256.bin
