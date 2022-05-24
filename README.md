@@ -1,5 +1,11 @@
 # DepthAI - Model ZOO
-[![GitHub](https://img.shields.io/github/license/luxonis/depthai-model-zoo?color=blue&style=flat-square&label=LICENSE)](https://github.com/luxonis/depthai-model-zoo/blob/main/LICENSE) [![stars](https://img.shields.io/github/stars/luxonis?affiliations=OWNER&label=LUXONIS%20STARS&style=flat-square)](https://github.com/luxonis) [![maintained](https://img.shields.io/maintenance/yes/2021?label=MAINTAINED&style=flat-square)](https://zoo.luxonis.com/) [![web-interface](https://img.shields.io/static/v1?label=WEB&message=INTERFACE&color=orange&style=flat-square)](https://zoo.luxonis.com/)
+
+[![Discord](https://img.shields.io/discord/790680891252932659?label=Discord)](https://discord.gg/luxonis)
+[![Forum](https://img.shields.io/badge/Forum-discuss-orange)](https://discuss.luxonis.com/)
+[![Docs](https://img.shields.io/badge/Docs-DepthAI-yellow)](https://docs.luxonis.com)
+[![GitHub](https://img.shields.io/github/license/luxonis/depthai-model-zoo?color=blue&style=flat-square&label=LICENSE)](https://github.com/luxonis/depthai-model-zoo/blob/main/LICENSE)
+[![stars](https://img.shields.io/github/stars/luxonis?affiliations=OWNER&label=LUXONIS%20STARS&style=flat-square)](https://github.com/luxonis)
+[![web-interface](https://img.shields.io/static/v1?label=WEB&message=INTERFACE&color=orange&style=flat-square)](https://zoo.luxonis.com/)
 
 ![DepthAI-Model-Zoo](https://user-images.githubusercontent.com/56075061/141786001-33055085-693f-4a7b-a359-90adb5f3509d.png)
 
