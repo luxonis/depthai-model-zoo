@@ -1,0 +1,40 @@
+description: >-
+  Real-time Object detection with YoloV5n pre-trained on COCO data set.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov5n_coco_416x416
+task_type: detection
+files:
+  - name: FP16/yolov5n_coco_416x416.xml
+    size: 179841
+    sha256: 2315359775cb49755cefdc90c991f904ab7e63a66e8b1862f90db4b7f088d0e2
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov5n_coco_416x416/yolov5n_coco_416x416.xml
+  - name: FP16/yolov4_tiny_coco_416x416.bin
+    size: 3734878
+    sha256: 369e6cd9ec1a02947b44d8af1408cc0f4dc3834442e2ccd67faa0a4b6bfb301e
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov5n_coco_416x416/yolov5n_coco_416x416.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov5n_coco_416x416
+meta:
+    verbose_name: YoloV5 Nano
+    thumbnail:
+    inputs:
+      - type: image
+        shape: 3, 416, 416
+        name: inputs
+    FPS:
+        mean: /
+        std: /
+    backbone: DarkNet
+    experiment:
+    uses_depth: false
+    featured: true
+    source:
+      - name: GitHub
+        url: https://github.com/ultralytics/yolov5
+    license: 
+        name: GNU GPL-3
+        url: https://github.com/ultralytics/yolov5/blob/master/LICENSE
+    downloads:
+      - name: yolov5n_coco_416x416.xml
+        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov5n_coco_416x416/yolov5n_coco_416x416.xml
+      - name: yolov5n_coco_416x416.bin
+        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov5n_coco_416x416/yolov5n_coco_416x416.bin
