@@ -1,0 +1,40 @@
+description: >-
+  Face mask classification model
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/sbd_mask_classification_224x224
+task_type: classification
+files:
+  - name: FP16/sbd_mask_classification_224x224.xml
+    size: 100455
+    sha256: 151c0cabc9993261b1508dc65af251c8e900cd84b6d72900e8daeedae80c5d67
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/sbd_mask_classification_224x224/sbd_mask_classification_224x224.xml
+  - name: FP16/sbd_mask_classification_224x224.bin
+    size: 3308392
+    sha256: 7659359d079eb7d6464e61d774aed802c9e76255bf2e46d6b1ff504f6df1ea46
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/sbd_mask_classification_224x224/sbd_mask_classification_224x224.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/sbd_mask_classification_224x224
+meta:
+    verbose_name: SBD-mask classification
+    thumbnail:
+    inputs:
+      - type: image
+        shape: 3, 224, 224
+        name: '32:0'
+    FPS:
+        mean: 0
+        std: 0
+    backbone: /
+    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-mask-detection
+    uses_depth: false
+    featured: false
+    source:
+      - name: GitHub
+        url: https://github.com/sbdcv/sbd_mask
+    license:
+        name: /
+        url: /
+    downloads:
+      - name: sbd_mask_classification_224x224.xml
+        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/sbd_mask_classification_224x224/sbd_mask_classification_224x224.xml
+      - name: sbd_mask_classification_224x224.bin
+        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/sbd_mask_classification_224x224/sbd_mask_classification_224x224.bin
