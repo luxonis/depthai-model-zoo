@@ -10,7 +10,7 @@ files:
   - name: FP16/palm_detection_128x128.bin
     size: 1920502
     sha256: dcf6ae8423a1c2aa1137224667b30a0308620c347380622f9122d19172702d86
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/palm_detection_128x128/palm_detection_128x128.bin
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/palm_detection_128x128/palm_detection_128x128.bin
 framework: dldt
 license: https://github.com/google/mediapipe/blob/master/LICENSE
 meta:
