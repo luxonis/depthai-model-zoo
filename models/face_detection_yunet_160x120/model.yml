@@ -1,0 +1,39 @@
+description: >-
+  YuNet face detection model
+task_type: object_detection
+files:
+  - name: FP16/face_detection_yunet_160x120.xml
+    size: 124430
+    sha256: 45bc4238554c9f17fce97b37edca02985523b20d98139cfe8b5df6bedb91ab47
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/face_detection_yunet_160x120/face_detection_yunet_160x120.xml
+  - name: FP16/face_detection_yunet_160x120.bin
+    size: 166136
+    sha256: d9716ba3e0c68416f98044da21783bd545b1d144c070167f716546075cab3ce7
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/face_detection_yunet_160x120/face_detection_yunet_160x120.bin
+framework: dldt
+license: https://github.com/ShiqiYu/libfacedetection/blob/master/LICENSE
+meta:
+    verbose_name: YuNet face detection model
+    thumbnail:
+    inputs:
+      - type: image
+        shape: 3, 120, 160
+        name: data
+    FPS:
+        mean: 0
+        std: 0
+    backbone: YuNet
+    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-face-detection
+    uses_depth: false
+    featured: false
+    source:
+      - name: GitHub
+        url: https://github.com/ShiqiYu/libfacedetection
+    license:
+      - name: BSD License
+        url: https://github.com/ShiqiYu/libfacedetection/blob/master/LICENSE
+    downloads:
+      - name: face_detection_yunet_160x120.xml
+        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/face_detection_yunet_160x120/face_detection_yunet_160x120.xml
+      - name: face_detection_yunet_160x120.bin
+        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/face_detection_yunet_160x120/face_detection_yunet_160x120.bin
