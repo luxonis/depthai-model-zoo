@@ -1,0 +1,39 @@
+description: >-
+  Mediapipe's Palm detection model
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/palm_detection_128x128
+task_type: detection
+files:
+  - name: FP16/palm_detection_128x128.xml
+    size: 251169
+    sha256: 736156d6b7de668c5b1d4ef4135335b544180d33fbf66b510e35d9ed9e090d70
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/palm_detection_128x128/palm_detection_128x128.xml
+  - name: FP16/palm_detection_128x128.bin
+    size: 1920502
+    sha256: dcf6ae8423a1c2aa1137224667b30a0308620c347380622f9122d19172702d86
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/palm_detection_128x128/palm_detection_128x128.bin
+framework: dldt
+license: https://github.com/google/mediapipe/blob/master/LICENSE
+meta:
+    verbose_name: Mediapipe's Palm detection model
+    inputs:
+      - type: image
+        shape: 3, 128, 128
+        name: images
+    FPS:
+        mean: 0
+        std: 0
+    backbone: /
+    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-fatigue-detection
+    uses_depth: false
+    featured: false
+    source:
+      - name: Github
+        url: https://github.com/google/mediapipe
+    license:
+        name: Apache-2.0 License
+        url: https://github.com/google/mediapipe/blob/master/LICENSE
+    downloads:
+      - name: palm_detection_128x128.xml
+        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/palm_detection_128x128/palm_detection_128x128.xml
+      - name: palm_detection_128x128.bin
+        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/palm_detection_128x128/palm_detection_128x128.bin
