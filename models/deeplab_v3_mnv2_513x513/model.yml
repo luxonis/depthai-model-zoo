@@ -1,0 +1,39 @@
+description: >-
+  Deeplab-V3+ person segmentation model
+task_type: semantic_segmentation
+files:
+  - name: FP16/deeplab_v3_mnv2_513x513.xml
+    size: 171901
+    sha256: f9ee6a801b97d2f80064f8bb6811bd5a6814c33a92fdaf9d1fe74da6f10c55f0
+    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/deeplab_v3_mnv2_513x513/deeplab_v3_mnv2_513x513.xml
+  - name: FP16/deeplab_v3_mnv2_513x513.bin
+    size: 4481932
+    sha256: 085d04bebbe97f099873179370e26f9af3c22ba4591569cb2c3ae123460836e8
+    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/deeplab_v3_mnv2_513x513/deeplab_v3_mnv2_513x513.bin
+framework: dldt
+license: https://github.com/deepinsight/insightface/blob/master/LICENSE
+meta:
+    verbose_name: Deeplab-V3+ person segmentation model
+    thumbnail:
+    inputs:
+      - type: image
+        shape: 3, 513, 513
+        name: data
+    FPS:
+        mean: 0
+        std: 0
+    backbone: /
+    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-deeplabv3_depth
+    uses_depth: false
+    featured: false
+    source:
+      - name: GitHub
+        url: https://github.com/nolanliou/mobile-deeplab-v3-plus
+    license:
+        name: MIT License
+        url: https://github.com/nolanliou/mobile-deeplab-v3-plus/blob/master/LICENSE
+    downloads:
+      - name: deeplab_v3_mnv2_513x513.xml
+        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/deeplab_v3_mnv2_513x513/deeplab_v3_mnv2_513x513.xml
+      - name: deeplab_v3_mnv2_513x513.bin
+        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/deeplab_v3_mnv2_513x513/deeplab_v3_mnv2_513x513.bin
