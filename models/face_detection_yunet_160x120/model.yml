@@ -1,6 +1,6 @@
 description: >-
   YuNet face detection model
-task_type: object_detection
+task_type: detection
 files:
   - name: FP16/face_detection_yunet_160x120.xml
     size: 124430
