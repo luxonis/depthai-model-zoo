@@ -10,7 +10,7 @@ files:
   - name: FP16/image_quality_assessment_256x256.bin
     size: 16800184
     sha256: 419f071ada278e180a2dc63dd308ad0bc5a607a5e947fda399ac5aa2a16a394f
-    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/image_quality_assessment_256x256/image_quality_assessment_256x256.bin
+    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/image_quality_assessment_256x256/image_quality_assessment_256x256.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/raw/main/models/image_quality_assessment_256x256
 meta:
@@ -35,4 +35,4 @@ meta:
       - name: image_quality_assessment_256x256.xml
         url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/image_quality_assessment_256x256/image_quality_assessment_256x256.xml
       - name: image_quality_assessment_256x256.bin
-        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/image_quality_assessment_256x256/image_quality_assessment_256x256.bin
+        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/image_quality_assessment_256x256/image_quality_assessment_256x256.bin

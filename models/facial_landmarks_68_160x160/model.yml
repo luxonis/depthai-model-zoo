@@ -10,7 +10,7 @@ files:
   - name: FP16/facial_landmarks_68_160x160.bin
     size: 1252042
     sha256: 6f17fd871abd3ffc3b1a13256d2a0e285db84a07bf2145ebd39c4888d97a218f
-    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.bin
+    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/facial_landmarks_68_160x160
 meta:
@@ -39,4 +39,4 @@ meta:
       - name: facial_landmarks_68_160x160.xml
         url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.xml
       - name: facial_landmarks_68_160x160.bin
-        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.bin
+        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.bin

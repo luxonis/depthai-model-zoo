@@ -9,7 +9,7 @@ files:
   - name: FP16/deeplab_v3_mnv2_513x513.bin
     size: 4481932
     sha256: 085d04bebbe97f099873179370e26f9af3c22ba4591569cb2c3ae123460836e8
-    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/deeplab_v3_mnv2_513x513/deeplab_v3_mnv2_513x513.bin
+    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/deeplab_v3_mnv2_513x513/deeplab_v3_mnv2_513x513.bin
 framework: dldt
 license: https://github.com/deepinsight/insightface/blob/master/LICENSE
 meta:
@@ -36,4 +36,4 @@ meta:
       - name: deeplab_v3_mnv2_513x513.xml
         url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/deeplab_v3_mnv2_513x513/deeplab_v3_mnv2_513x513.xml
       - name: deeplab_v3_mnv2_513x513.bin
-        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/deeplab_v3_mnv2_513x513/deeplab_v3_mnv2_513x513.bin
+        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/deeplab_v3_mnv2_513x513/deeplab_v3_mnv2_513x513.bin

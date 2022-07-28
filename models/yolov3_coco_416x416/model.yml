@@ -10,7 +10,7 @@ files:
   - name: FP16/yolov3_coco_416x416.bin
     size: 123845808
     sha256: c1e6425613f302501e7e8861a7d9a439605fa9e27f1b6daee59d1b07ef7a8cd1
-    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov3_coco_416x416/yolov3_coco_416x416.bin
+    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov3_coco_416x416/yolov3_coco_416x416.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov3_coco_416x416
 meta:
@@ -37,4 +37,4 @@ meta:
       - name: yolov3_coco_416x416.xml
         url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov3_coco_416x416/yolov3_coco_416x416.xml
       - name: yolov3_coco_416x416.bin
-        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/yolov3_coco_416x416/yolov3_coco_416x416.bin
+        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov3_coco_416x416/yolov3_coco_416x416.bin

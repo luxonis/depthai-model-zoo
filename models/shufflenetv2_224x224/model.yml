@@ -10,7 +10,7 @@ files:
   - name: FP16/shufflenetv2_224x224.bin
     size: 4527920
     sha256: 67a20b803941ded4fced169e96a6db67ca58a374ffbd534460fee5306798ca87
-    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/shufflenetv2_224x224/shufflenetv2_224x224.bin
+    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/shufflenetv2_224x224/shufflenetv2_224x224.bin
 framework: dldt
 license: https://github.com/pytorch/vision/tree/main/torchvision/models
 meta:
@@ -35,4 +35,4 @@ meta:
       - name: shufflenetv2_224x224.xml
         url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/shufflenetv2_224x224/shufflenetv2_224x224.xml
       - name: shufflenetv2_224x224.bin
-        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/shufflenetv2_224x224/shufflenetv2_224x224.bin
+        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/shufflenetv2_224x224/shufflenetv2_224x224.bin

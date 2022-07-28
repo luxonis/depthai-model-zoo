@@ -10,7 +10,7 @@ files:
   - name: FP16/depth_estimation_mbnv2_240x320.bin
     size: 26252162
     sha256: 45bd048477078fcf4cf6575f608027ce754c0ac533c43cf668eef3cdac250570
-    source: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.bin
+    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.bin
 framework: dldt
 license: https://github.com/alinstein/Depth_estimation/blob/master/LICENSE
 meta:
@@ -37,4 +37,4 @@ meta:
       - name: depth_estimation_mbnv2_240x320.xml
         url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.xml
       - name: depth_estimation_mbnv2_240x320.bin
-        url: http://69.164.214.171:5001/luxonis/depthai-model-zoo/main/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.bin
+        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/depth_estimation_mbnv2_240x320/depth_estimation_mbnv2_240x320.bin
