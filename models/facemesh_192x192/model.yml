@@ -16,6 +16,10 @@ license: https://github.com/google/mediapipe/blob/master/LICENSE
 meta:
     verbose_name: MediaPipe Facemesh - 468 facial landmarks
     experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-facemesh
+    inputs:
+      - type: image
+        shape: 3, 192, 192
+        name: images
     source:
       - name: GitHub
         url: https://github.com/google/mediapipe/
