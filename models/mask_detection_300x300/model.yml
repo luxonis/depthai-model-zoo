@@ -26,6 +26,9 @@ meta:
     backbone: MobileNetV2
     experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-coronamask
     uses_depth: false
+    license: 
+        name: None
+        url: #
     downloads:
       - name: mask_detection_300x300.xml
         url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mask_detection_300x300/mask_detection_300x300.xml
