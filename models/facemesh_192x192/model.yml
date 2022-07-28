@@ -20,6 +20,9 @@ meta:
       - type: image
         shape: 3, 192, 192
         name: images
+    FPS:
+        mean:  /
+        std:  /
     source:
       - name: GitHub
         url: https://github.com/google/mediapipe/
