@@ -13,6 +13,7 @@ DepthAI Model Zoo is a collection of open-source neural network models and datas
 
 We try to provide already converted latest state-of-the-art models ready for use with DepthAI and our OAK cameras. Most models are accompanied by additional metadata (FPS, accuracy, number of parameters, and FLOPs) and links to the experiments that show the example usage of each model.
 
+Models in `depthai-model-zoo` should be in **BGR color order** and **CHW (planar) channel layout**.
 
 ## Usage
 
