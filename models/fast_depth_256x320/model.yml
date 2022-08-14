@@ -1,42 +1,43 @@
-description: >-
-  Estimate depth from RGB images using FastDepth from MIT.
+description: Estimate depth from RGB images using FastDepth from MIT.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/fast_depth_256x320
-task_type: monocular_depth_estimation
 files:
-  - name: FP16/fast_depth_256x320.xml
-    size: 131278
-    sha256: 6d4b7159e95be258d8c1b9726a02f57713a32998eeab418d12e04313d310ccf1
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/fast_depth_256x320/fast_depth_256x320.xml
-  - name: FP16/fast_depth_256x320.bin
-    size: 2704518
-    sha256: 403fe398b8f94d989e9db1f90d57c0e3209b839f60759ddca60f17f3eda52ec1
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/fast_depth_256x320/fast_depth_256x320.bin
+- checksum: abbb4d904267466dbf5df7431a1a6769cbda61f67da39f5d7ac234e6a379c8ad4cf425e5883d3ab1695261db09b92200
+  name: FP16/fast_depth_256x320.xml
+  sha256: 6d4b7159e95be258d8c1b9726a02f57713a32998eeab418d12e04313d310ccf1
+  size: 131278
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/fast_depth_256x320/fast_depth_256x320.xml
+- checksum: f28d22aaccdb399ece375f9010382ccdd7e3c7ec3811ebba7cb1f26e26b9685414eee52ced19e79702f63906b941d81f
+  name: FP16/fast_depth_256x320.bin
+  sha256: 403fe398b8f94d989e9db1f90d57c0e3209b839f60759ddca60f17f3eda52ec1
+  size: 2704518
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/fast_depth_256x320/fast_depth_256x320.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/fast_depth_256x320
 meta:
-    verbose_name: FastDepth
-    thumbnail: https://user-images.githubusercontent.com/18037362/140495636-0721dea1-7eaf-461e-9a39-23a890513324.gif
-    inputs:
-      - type: image
-        shape: 3, 256, 320
-        name: input.1
-    FPS:
-        mean: 40.32
-        std: 0.14
-    backbone: MobileNet
-    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-fast-depth
-    uses_depth: false
-    source:
-      - name: GitHub
-        url: https://github.com/dwofk/fast-depth
-      - name: PINTO_model_zoo
-        url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/146_FastDepth
-    license: 
-        name: MIT
-        url: https://github.com/dwofk/fast-depth/blob/master/LICENSE
-    featured: true
-    downloads:
-      - name: fast_depth_256x320.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/fast_depth_256x320/fast_depth_256x320.xml
-      - name: fast_depth_256x320.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/fast_depth_256x320/fast_depth_256x320.bin
+  FPS:
+    mean: 40.32
+    std: 0.14
+  backbone: MobileNet
+  downloads:
+  - name: fast_depth_256x320.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/fast_depth_256x320/fast_depth_256x320.xml
+  - name: fast_depth_256x320.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/fast_depth_256x320/fast_depth_256x320.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-fast-depth
+  featured: true
+  inputs:
+  - name: input.1
+    shape: 3, 256, 320
+    type: image
+  license:
+    name: MIT
+    url: https://github.com/dwofk/fast-depth/blob/master/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/dwofk/fast-depth
+  - name: PINTO_model_zoo
+    url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/146_FastDepth
+  thumbnail: https://user-images.githubusercontent.com/18037362/140495636-0721dea1-7eaf-461e-9a39-23a890513324.gif
+  uses_depth: false
+  verbose_name: FastDepth
+task_type: monocular_depth_estimation

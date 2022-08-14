@@ -1,40 +1,41 @@
-description: >-
-  WeChat's QR code detection model
+description: WeChat's QR code detection model
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/qr_code_detection_384x384
-task_type: detection
 files:
-  - name: FP16/qr_code_detection_384x384.xml
-    size: 244019
-    sha256: e7efbe163b80bf95bb11ce2bd6f2a7d17a982b0e0854f9f9e17003e4bc7eef71
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/qr_code_detection_384x384/qr_code_detection_384x384.xml
-  - name: FP16/qr_code_detection_384x384.bin
-    size: 471218
-    sha256: 12e33aeb0917568ba3999163a21c67f4c453c424cd1e1e1c6a29a1ea6616e9b7
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/qr_code_detection_384x384/qr_code_detection_384x384.bin
+- checksum: cbdffdfd0d5bfce66f7697416527346603912f14c1e291e3f89ac1c51d1b998ff294eca17ddf92a4cd763542b46a6a26
+  name: FP16/qr_code_detection_384x384.xml
+  sha256: e7efbe163b80bf95bb11ce2bd6f2a7d17a982b0e0854f9f9e17003e4bc7eef71
+  size: 244019
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/qr_code_detection_384x384/qr_code_detection_384x384.xml
+- checksum: ff2d42bf24c4ee87213fe05e89b966b5bb77d822630240ba244029dd74bf6928f69f9f7e050dc4016ca04d14e5a7b733
+  name: FP16/qr_code_detection_384x384.bin
+  sha256: 12e33aeb0917568ba3999163a21c67f4c453c424cd1e1e1c6a29a1ea6616e9b7
+  size: 471218
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/qr_code_detection_384x384/qr_code_detection_384x384.bin
 framework: dldt
 license: https://github.com/opencv/opencv_contrib/blob/master/modules/wechat_qrcode/LICENSE
 meta:
-    verbose_name: WeChat's QR code detection model
-    thumbnail:
-    inputs:
-      - type: image
-        shape: 3, 384, 384
-        name: input
-    FPS:
-        mean: 0
-        std: 0
-    backbone: /
-    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-qr-code-scanner
-    uses_depth: false
-    featured: false
-    source:
-      - name: GitHub
-        url: https://github.com/opencv/opencv_contrib/tree/master/modules/wechat_qrcode
-    license:
-        name: Apache License Version 2.0
-        url: https://github.com/opencv/opencv_contrib/blob/master/modules/wechat_qrcode/LICENSE
-    downloads:
-      - name: qr_code_detection_384x384.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/qr_code_detection_384x384/qr_code_detection_384x384.xml
-      - name: qr_code_detection_384x384.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/qr_code_detection_384x384/qr_code_detection_384x384.bin
+  FPS:
+    mean: 0
+    std: 0
+  backbone: /
+  downloads:
+  - name: qr_code_detection_384x384.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/qr_code_detection_384x384/qr_code_detection_384x384.xml
+  - name: qr_code_detection_384x384.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/qr_code_detection_384x384/qr_code_detection_384x384.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-qr-code-scanner
+  featured: false
+  inputs:
+  - name: input
+    shape: 3, 384, 384
+    type: image
+  license:
+    name: Apache License Version 2.0
+    url: https://github.com/opencv/opencv_contrib/blob/master/modules/wechat_qrcode/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/opencv/opencv_contrib/tree/master/modules/wechat_qrcode
+  thumbnail: null
+  uses_depth: false
+  verbose_name: WeChat's QR code detection model
+task_type: detection

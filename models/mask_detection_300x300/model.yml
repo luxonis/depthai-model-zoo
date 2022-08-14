@@ -1,36 +1,38 @@
-description: >-
-  Face mask detection model, trained by the notebook available at depthai-ml-training repository.
+description: Face mask detection model, trained by the notebook available at depthai-ml-training
+  repository.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/mask_detection_300x300
-task_type: detection
 files:
-  - name: FP16/mask_detection_300x300.xml
-    size: 248159
-    sha256: f7c330038de1141503c46d0f2f09e5856cf670b40c24d255f7fb6882a139295a
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mask_detection_300x300/mask_detection_300x300.xml
-  - name: FP16/mask_detection_300x300.bin
-    size: 9217330
-    sha256: bbd4fcf67da94cb2269d0084af5e3fa8fd10130959bebc21135f5e73e07a8d6e
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/mask_detection_300x300/mask_detection_300x300.bin
+- checksum: df028a9c43ff7646c8d9b83f27c4cfc2f23ea2cb7499c0fe14ff689081030d44fdf043064b22e2fa4c909aad96d4b9b7
+  name: FP16/mask_detection_300x300.xml
+  sha256: f7c330038de1141503c46d0f2f09e5856cf670b40c24d255f7fb6882a139295a
+  size: 248159
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mask_detection_300x300/mask_detection_300x300.xml
+- checksum: b72667cc1c963bbe80fd9165ae040a22248d05446ce21dfa7546d2647b6547f0995232ea1109b8259cd09fd54c4048ea
+  name: FP16/mask_detection_300x300.bin
+  sha256: bbd4fcf67da94cb2269d0084af5e3fa8fd10130959bebc21135f5e73e07a8d6e
+  size: 9217330
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/mask_detection_300x300/mask_detection_300x300.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/mask_detection_300x300
 meta:
-    verbose_name: Face-mask-detection
-    thumbnail:
-    inputs:
-      - type: image
-        shape: 3, 300, 300
-        name: image_tensor
-    FPS:
-        mean: /
-        std: /
-    backbone: MobileNetV2
-    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-coronamask
-    uses_depth: false
-    license: 
-        name: None
-        url: #
-    downloads:
-      - name: mask_detection_300x300.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mask_detection_300x300/mask_detection_300x300.xml
-      - name: mask_detection_300x300.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/mask_detection_300x300/mask_detection_300x300.bin
+  FPS:
+    mean: /
+    std: /
+  backbone: MobileNetV2
+  downloads:
+  - name: mask_detection_300x300.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mask_detection_300x300/mask_detection_300x300.xml
+  - name: mask_detection_300x300.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/mask_detection_300x300/mask_detection_300x300.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-coronamask
+  inputs:
+  - name: image_tensor
+    shape: 3, 300, 300
+    type: image
+  license:
+    name: None
+    url: null
+  thumbnail: null
+  uses_depth: false
+  verbose_name: Face-mask-detection
+task_type: detection

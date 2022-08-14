@@ -1,38 +1,39 @@
-description: >-
-  Image classification with MicroNet-M0 pretrained on ImageNet.
+description: Image classification with MicroNet-M0 pretrained on ImageNet.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/micronet_m0_224x224
-task_type: classification
 files:
-  - name: FP16/micronet_m0_224x224.xml
-    size: 423574
-    sha256: 069559d8d050369e26ed5daa267eb540dce31b48b5a918c89ca378eb88a7b2a8
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/micronet_m0_224x224/micronet_m0_224x224.xml
-  - name: FP16/micronet_m0_224x224.bin
-    size: 2036680
-    sha256: ec03740e655e0871850c7156246489cc69df1fa29731f85fa47bb3c1e2817295
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/micronet_m0_224x224/micronet_m0_224x224.bin
+- checksum: f8a8e555d463922358b3bd967c1df6032d29618bf858ea88b0a8826216b10abef015bde59ce04d51378b3191327c8d19
+  name: FP16/micronet_m0_224x224.xml
+  sha256: 069559d8d050369e26ed5daa267eb540dce31b48b5a918c89ca378eb88a7b2a8
+  size: 423574
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/micronet_m0_224x224/micronet_m0_224x224.xml
+- checksum: 2d301d76a5e564c79416dbb7e9fbc99b7f40f120f02cdb39dead885ca00711ef549cf8a72099a23ce14bbc7737d5b3eb
+  name: FP16/micronet_m0_224x224.bin
+  sha256: ec03740e655e0871850c7156246489cc69df1fa29731f85fa47bb3c1e2817295
+  size: 2036680
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/micronet_m0_224x224/micronet_m0_224x224.bin
 framework: dldt
 license: https://github.com/liyunsheng13/micronet/blob/main/LICENSE
 meta:
-    verbose_name: MicroNet-M0
-    inputs:
-      - type: image
-        shape: 3, 224, 224
-        name: input.1
-    FPS:
-        mean: 34.36
-        std: 0.04
-    backbone: /
-    experiment: None
-    uses_depth: false
-    source:
-      - name: GitHub
-        url: https://github.com/liyunsheng13/micronet
-    license: 
-        name: MIT
-        url: https://github.com/liyunsheng13/micronet/blob/main/LICENSE
-    downloads:
-      - name: micronet_m0_224x224.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/micronet_m0_224x224/micronet_m0_224x224.xml
-      - name: micronet_m0_224x224.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/micronet_m0_224x224/micronet_m0_224x224.bin
+  FPS:
+    mean: 34.36
+    std: 0.04
+  backbone: /
+  downloads:
+  - name: micronet_m0_224x224.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/micronet_m0_224x224/micronet_m0_224x224.xml
+  - name: micronet_m0_224x224.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/micronet_m0_224x224/micronet_m0_224x224.bin
+  experiment: None
+  inputs:
+  - name: input.1
+    shape: 3, 224, 224
+    type: image
+  license:
+    name: MIT
+    url: https://github.com/liyunsheng13/micronet/blob/main/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/liyunsheng13/micronet
+  uses_depth: false
+  verbose_name: MicroNet-M0
+task_type: classification

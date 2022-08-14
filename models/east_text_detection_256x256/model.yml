@@ -1,40 +1,41 @@
-description: >-
-  Detect text on images using EAST model.
+description: Detect text on images using EAST model.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/east_text_detection_256x256
-task_type: detection
 files:
-  - name: FP16/east_text_detection_256x256.xml
-    size: 185041
-    sha256: 2a14f4d8ab3d60a2662fd7aa8552ca42b156f0542133e01c1107c0236ff342df
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/east_text_detection_256x256/east_text_detection_256x256.xml
-  - name: FP16/east_text_detection_256x256.bin
-    size: 48082568
-    sha256: 20037458959ef725cef7c64bdef233f41bc7853fc5e05d878d08249c9d6985a0
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/east_text_detection_256x256/east_text_detection_256x256.bin
+- checksum: b79c21ad8bf4daa7456d6875f9b7bed76c0c02142e82c9490019eb75abee2697f170f94e9e9e39ec1c656d2bb2070472
+  name: FP16/east_text_detection_256x256.xml
+  sha256: 2a14f4d8ab3d60a2662fd7aa8552ca42b156f0542133e01c1107c0236ff342df
+  size: 185041
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/east_text_detection_256x256/east_text_detection_256x256.xml
+- checksum: 0ce2ee602780c07225f7101b4a98f733f092b4e3d099e95c4d51f933ea0c224f6f3547e533117bf4ef74b03c9c4902a2
+  name: FP16/east_text_detection_256x256.bin
+  sha256: 20037458959ef725cef7c64bdef233f41bc7853fc5e05d878d08249c9d6985a0
+  size: 48082568
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/east_text_detection_256x256/east_text_detection_256x256.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/east_text_detection_256x256
 meta:
-    verbose_name: EAST
-    inputs:
-      - type: image
-        shape: 3, 256, 256
-        name: input_images
-    FPS:
-        mean: 22.50
-        std: 0.22
-    backbone: PVANet
-    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-ocr#gen2-text-detection--optical-character-recognition-ocr-pipeline
-    uses_depth: false
-    source:
-      - name: GitHub
-        url: https://github.com/argman/EAST
-      - name: PINTO_model_zoo
-        url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/051_East_Text_Detection
-    license: 
-        name: GPL-3.0
-        url: https://github.com/argman/EAST/blob/master/LICENSE
-    downloads:
-      - name: east_text_detection_256x256.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/east_text_detection_256x256/east_text_detection_256x256.xml
-      - name: east_text_detection_256x256.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/east_text_detection_256x256/east_text_detection_256x256.bin
+  FPS:
+    mean: 22.5
+    std: 0.22
+  backbone: PVANet
+  downloads:
+  - name: east_text_detection_256x256.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/east_text_detection_256x256/east_text_detection_256x256.xml
+  - name: east_text_detection_256x256.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/east_text_detection_256x256/east_text_detection_256x256.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-ocr#gen2-text-detection--optical-character-recognition-ocr-pipeline
+  inputs:
+  - name: input_images
+    shape: 3, 256, 256
+    type: image
+  license:
+    name: GPL-3.0
+    url: https://github.com/argman/EAST/blob/master/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/argman/EAST
+  - name: PINTO_model_zoo
+    url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/051_East_Text_Detection
+  uses_depth: false
+  verbose_name: EAST
+task_type: detection

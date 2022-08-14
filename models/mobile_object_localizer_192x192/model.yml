@@ -1,40 +1,41 @@
-description: >-
-  A class-agnostic mobile object detector.
+description: A class-agnostic mobile object detector.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/mobile_object_localizer_192x192
-task_type: detection
 files:
-  - name: FP16/mobile_object_localizer_192x192.xml
-    size: 305434
-    sha256: 941d9ff9fd4ac40f40a9f17e0be2e43ffafeb5d402b1e94fdcca2f617fe1ae9a
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.xml
-  - name: FP16/mobile_object_localizer_192x192.bin
-    size: 3488504
-    sha256: ce1e7e25b6f644b0dcb90ae71a955e6cbc9a7d80632979e9482eb83d9d18fc66
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.bin
+- checksum: 78c05f4a930f2b56afe5c4e4f98ebdbde50000cecfdfb979af43154e43291328c5f9ba98bc77883dd50deec856c1250a
+  name: FP16/mobile_object_localizer_192x192.xml
+  sha256: 941d9ff9fd4ac40f40a9f17e0be2e43ffafeb5d402b1e94fdcca2f617fe1ae9a
+  size: 305434
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.xml
+- checksum: bc918c83260c982a662a5c50b9f4577cac28c29b5c2be1670889be8312240277c4d295c5868031128145726789340c3b
+  name: FP16/mobile_object_localizer_192x192.bin
+  sha256: ce1e7e25b6f644b0dcb90ae71a955e6cbc9a7d80632979e9482eb83d9d18fc66
+  size: 3488504
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.bin
 framework: dldt
 license: https://tfhub.dev/google/lite-model/object_detection/mobile_object_localizer_v1/1/default/1
 meta:
-    verbose_name: Mobile Object Localizer
-    thumbnail: https://user-images.githubusercontent.com/18037362/140496684-e886fc00-612d-44dd-a6fe-c0d47988246f.gif
-    inputs:
-      - type: image
-        shape: 3, 192, 192
-        name: normalized_input_image_tensor
-    FPS:
-        mean: 41.02
-        std: 0.01
-    backbone: MobileNetV2
-    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-mobile-object-localizer
-    uses_depth: false
-    source:
-      - name: TF-Hub
-        url: https://tfhub.dev/google/lite-model/object_detection/mobile_object_localizer_v1/1/default/1
-    license: 
-        name: Apache-2.0
-        url: https://opensource.org/licenses/Apache-2.0
-    featured: true
-    downloads:
-      - name: mobile_object_localizer_192x192.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.xml
-      - name: mobile_object_localizer_192x192.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.bin
+  FPS:
+    mean: 41.02
+    std: 0.01
+  backbone: MobileNetV2
+  downloads:
+  - name: mobile_object_localizer_192x192.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.xml
+  - name: mobile_object_localizer_192x192.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/mobile_object_localizer_192x192/mobile_object_localizer_192x192.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-mobile-object-localizer
+  featured: true
+  inputs:
+  - name: normalized_input_image_tensor
+    shape: 3, 192, 192
+    type: image
+  license:
+    name: Apache-2.0
+    url: https://opensource.org/licenses/Apache-2.0
+  source:
+  - name: TF-Hub
+    url: https://tfhub.dev/google/lite-model/object_detection/mobile_object_localizer_v1/1/default/1
+  thumbnail: https://user-images.githubusercontent.com/18037362/140496684-e886fc00-612d-44dd-a6fe-c0d47988246f.gif
+  uses_depth: false
+  verbose_name: Mobile Object Localizer
+task_type: detection

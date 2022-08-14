@@ -1,36 +1,37 @@
-description: >-
-  MediaPipe Facemesh model that provides 468 facial landmarks
+description: MediaPipe Facemesh model that provides 468 facial landmarks
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/facemesh_192x192
-task_type: object_attributes
 files:
-  - name: FP16/facemesh_192x192.xml
-    size: 147051
-    sha256: 1daa1d7afceaff68ef63c251b85069157365a860bdb68bf14cac2b92cdb1c9dd
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/facemesh_192x192/facemesh_192x192.xml
-  - name: FP16/facemesh_192x192.bin
-    size: 1206940
-    sha256: 4daedda8c5e0d517268d5348cb4557182bfe4c56de6616f15e32ea13c2d690f1
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/facemesh_192x192/facemesh_192x192.bin
+- checksum: 77abb7ed9c5fd99cff2577d74ec8e0c401e60dddd8f5fdc1782f56ef3d4dd3f83c1fdc2eaf9abce65ee2eb3aeab3878d
+  name: FP16/facemesh_192x192.xml
+  sha256: 1daa1d7afceaff68ef63c251b85069157365a860bdb68bf14cac2b92cdb1c9dd
+  size: 147051
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/facemesh_192x192/facemesh_192x192.xml
+- checksum: a21bdb55baf58eb5fbba192be2c4c4921ca41d9f6eba6792744a9886d8e77ad53a78f5769a6da70266de81f6ea92d885
+  name: FP16/facemesh_192x192.bin
+  sha256: 4daedda8c5e0d517268d5348cb4557182bfe4c56de6616f15e32ea13c2d690f1
+  size: 1206940
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/facemesh_192x192/facemesh_192x192.bin
 framework: dldt
 license: https://github.com/google/mediapipe/blob/master/LICENSE
 meta:
-    verbose_name: MediaPipe Facemesh - 468 facial landmarks
-    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-facemesh
-    inputs:
-      - type: image
-        shape: 3, 192, 192
-        name: images
-    FPS:
-        mean:  /
-        std:  /
-    source:
-      - name: GitHub
-        url: https://github.com/google/mediapipe/
-    license:
-        name: Apache License Version 2.0
-        url: https://github.com/google/mediapipe/blob/master/LICENSE
-    downloads:
-      - name: facemesh_192x192.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/facemesh_192x192/facemesh_192x192.xml
-      - name: facemesh_192x192.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/facemesh_192x192/facemesh_192x192.bin
+  FPS:
+    mean: /
+    std: /
+  downloads:
+  - name: facemesh_192x192.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/facemesh_192x192/facemesh_192x192.xml
+  - name: facemesh_192x192.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/facemesh_192x192/facemesh_192x192.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-facemesh
+  inputs:
+  - name: images
+    shape: 3, 192, 192
+    type: image
+  license:
+    name: Apache License Version 2.0
+    url: https://github.com/google/mediapipe/blob/master/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/google/mediapipe/
+  verbose_name: MediaPipe Facemesh - 468 facial landmarks
+task_type: object_attributes

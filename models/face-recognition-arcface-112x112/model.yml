@@ -1,39 +1,41 @@
-description: >-
-  Deep face recognition net with MobileFaceNet backbone and Arcface loss <https://arxiv.org/abs/1801.07698>
-task_type: face_recognition
+description: Deep face recognition net with MobileFaceNet backbone and Arcface loss
+  <https://arxiv.org/abs/1801.07698>
 files:
-  - name: FP16/face-recognition-arcface-112x112.xml
-    size: 147751
-    sha256: 094f66db968e066cedc292171092805940fb7c084e025b0f684ee64ed2aefe08
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/face-recognition-arcface-112x112/face-recognition-arcface-112x112.xml
-  - name: FP16/face-recognition-arcface-112x112.bin
-    size: 2001812
-    sha256: 593d3e0d8a71321d430ff0764d7313000323204fd07250a43f857c356cf15da2
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/face-recognition-arcface-112x112/face-recognition-arcface-112x112.bin
+- checksum: e48a3d9b8dbd2dc0c9bd8d5669360274da4d41a9bb18c915700240319f4baf59fe40bdc1e86e017746ae28a244bec18e
+  name: FP16/face-recognition-arcface-112x112.xml
+  sha256: 094f66db968e066cedc292171092805940fb7c084e025b0f684ee64ed2aefe08
+  size: 147751
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/face-recognition-arcface-112x112/face-recognition-arcface-112x112.xml
+- checksum: dc2f23955e1fb39dbf60ec70e96cebf9713afbef3df0a218a5af5f6374bdd1650634fc2c290dc041348fefd777f9fab1
+  name: FP16/face-recognition-arcface-112x112.bin
+  sha256: 593d3e0d8a71321d430ff0764d7313000323204fd07250a43f857c356cf15da2
+  size: 2001812
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/face-recognition-arcface-112x112/face-recognition-arcface-112x112.bin
 framework: dldt
 license: https://github.com/deepinsight/insightface/blob/master/LICENSE
 meta:
-    verbose_name: Face recognition MobileFaceNet ArcFace
-    thumbnail:
-    inputs:
-      - type: image
-        shape: 3, 112, 112
-        name: data
-    FPS:
-        mean: 0
-        std: 0
-    backbone: MobileFaceNet
-    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-face-recognition
-    uses_depth: false
-    featured: false
-    source:
-      - name: GitHub
-        url: https://github.com/deepinsight/insightface
-    license:
-      - name: MIT License
-        url: https://github.com/deepinsight/insightface/blob/master/LICENSE
-    downloads:
-      - name: face-recognition-arcface-112x112.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/face-recognition-arcface-112x112/face-recognition-arcface-112x112.xml
-      - name: face-recognition-arcface-112x112.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/face-recognition-arcface-112x112/face-recognition-arcface-112x112.bin
+  FPS:
+    mean: 0
+    std: 0
+  backbone: MobileFaceNet
+  downloads:
+  - name: face-recognition-arcface-112x112.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/face-recognition-arcface-112x112/face-recognition-arcface-112x112.xml
+  - name: face-recognition-arcface-112x112.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/face-recognition-arcface-112x112/face-recognition-arcface-112x112.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-face-recognition
+  featured: false
+  inputs:
+  - name: data
+    shape: 3, 112, 112
+    type: image
+  license:
+  - name: MIT License
+    url: https://github.com/deepinsight/insightface/blob/master/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/deepinsight/insightface
+  thumbnail: null
+  uses_depth: false
+  verbose_name: Face recognition MobileFaceNet ArcFace
+task_type: face_recognition

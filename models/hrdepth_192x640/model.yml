@@ -1,40 +1,41 @@
-description: >-
-  Depth estimation from RGB image using HR-Depth model.
+description: Depth estimation from RGB image using HR-Depth model.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/hrdepth_192x640
-task_type: monocular_depth_estimation
 files:
-  - name: FP16/hrdepth_192x640.xml
-    size: 467357
-    sha256: 566b71be2693aa5ed0558e101e084fce6f0ac31d5b787e1e9558531644e7e002
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/hrdepth_192x640/hrdepth_192x640.xml
-  - name: FP16/hrdepth_192x640.bin
-    size: 6198078
-    sha256: afae2dca3f9948ad77c79aa28af33a00eae575c4c20051cdb6b159ff420affb1
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/hrdepth_192x640/hrdepth_192x640.bin
+- checksum: 40e737092998da37f6fc467cdfa2fd927e6a4c1e904032d3a1e022f03e5acebdd3abeaddcde864b0b8657e1105d14339
+  name: FP16/hrdepth_192x640.xml
+  sha256: 566b71be2693aa5ed0558e101e084fce6f0ac31d5b787e1e9558531644e7e002
+  size: 467357
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/hrdepth_192x640/hrdepth_192x640.xml
+- checksum: cd7c45c7608ce0e0e9512447b9c13a2788b0b629cfcb4c5a873ea1243e2c4c52138c86c4c3270a8df45ac89114a56019
+  name: FP16/hrdepth_192x640.bin
+  sha256: afae2dca3f9948ad77c79aa28af33a00eae575c4c20051cdb6b159ff420affb1
+  size: 6198078
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/hrdepth_192x640/hrdepth_192x640.bin
 framework: dldt
 license: https://github.com/shawLyu/HR-Depth/blob/main/LICENSE
 meta:
-    verbose_name: HR-Depth
-    inputs:
-      - type: image
-        shape: 3, 192, 256
-        name: input.1
-    FPS:
-        mean: 4.80
-        std: 0.01
-    backbone: HG
-    experiment: None
-    uses_depth: false
-    source:
-      - name: GitHub
-        url: https://github.com/shawLyu/HR-Depth
-      - name: PINTO_model_zoo
-        url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/158_HR-Depth
-    license: 
-        name: MIT
-        url: https://github.com/shawLyu/HR-Depth/blob/main/LICENSE
-    downloads:
-      - name: hrdepth_192x640.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/hrdepth_192x640/hrdepth_192x640.xml
-      - name: hrdepth_192x640.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/hrdepth_192x640/hrdepth_192x640.bin
+  FPS:
+    mean: 4.8
+    std: 0.01
+  backbone: HG
+  downloads:
+  - name: hrdepth_192x640.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/hrdepth_192x640/hrdepth_192x640.xml
+  - name: hrdepth_192x640.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/hrdepth_192x640/hrdepth_192x640.bin
+  experiment: None
+  inputs:
+  - name: input.1
+    shape: 3, 192, 256
+    type: image
+  license:
+    name: MIT
+    url: https://github.com/shawLyu/HR-Depth/blob/main/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/shawLyu/HR-Depth
+  - name: PINTO_model_zoo
+    url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/158_HR-Depth
+  uses_depth: false
+  verbose_name: HR-Depth
+task_type: monocular_depth_estimation

@@ -1,42 +1,43 @@
-description: >-
-  Estimate depth from a RGB image.
+description: Estimate depth from a RGB image.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/megadepth
-task_type: monocular_depth_estimation
 files:
-  - name: FP16/megadepth.xml
-    size: 441968
-    sha256: c9715a849b850704a9a3374ec90ecb9a94e734607228b68211736b3b6b98fc34
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/megadepth/megadepth.xml
-  - name: FP16/megadepth.bin
-    size: 10713862
-    sha256: 45b913bde12e19e156985289a2cf7faf8b6166a8a8f8a20aa637eb736a4902d6
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/megadepth/megadepth.bin
+- checksum: 89d29a06f93121bed77290252337aefe008db9856727978d41778237c27ee1e7918cc5e21d145f4182b1d18fe85934f8
+  name: FP16/megadepth.xml
+  sha256: c9715a849b850704a9a3374ec90ecb9a94e734607228b68211736b3b6b98fc34
+  size: 441968
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/megadepth/megadepth.xml
+- checksum: 5b1f18ee28b29583e7f0a8ae7903881ee04ad67d9898b894f08c5952164b616cbe17f8c94cf87c52ac15fedf2e553d50
+  name: FP16/megadepth.bin
+  sha256: 45b913bde12e19e156985289a2cf7faf8b6166a8a8f8a20aa637eb736a4902d6
+  size: 10713862
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/megadepth/megadepth.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/megadepth
 meta:
-    verbose_name: MegaDepth
-    thumbnail: https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-mega-depth/imgs/example.gif
-    inputs:
-      - type: image
-        shape: 3, 192, 256
-        name: input.1
-    FPS:
-        mean: 4.80
-        std: 0.01
-    backbone: HG
-    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-mega-depth
-    uses_depth: false
-    source:
-      - name: GitHub
-        url: https://github.com/zl548/MegaDepth
-      - name: PINTO_model_zoo
-        url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/153_MegaDepth
-    license: 
-        name: MIT
-        url: https://github.com/zl548/MegaDepth/blob/master/LICENSE
-    downloads:
-      - name: megadepth.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/megadepth/megadepth.xml
-      - name: megadepth.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/megadepth/megadepth.bin
-    featured: true
+  FPS:
+    mean: 4.8
+    std: 0.01
+  backbone: HG
+  downloads:
+  - name: megadepth.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/megadepth/megadepth.xml
+  - name: megadepth.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/megadepth/megadepth.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-mega-depth
+  featured: true
+  inputs:
+  - name: input.1
+    shape: 3, 192, 256
+    type: image
+  license:
+    name: MIT
+    url: https://github.com/zl548/MegaDepth/blob/master/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/zl548/MegaDepth
+  - name: PINTO_model_zoo
+    url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/153_MegaDepth
+  thumbnail: https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-mega-depth/imgs/example.gif
+  uses_depth: false
+  verbose_name: MegaDepth
+task_type: monocular_depth_estimation

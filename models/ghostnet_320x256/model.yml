@@ -1,38 +1,39 @@
-description: >-
-  Image classification with GhostNet pretrained on ImageNet.
+description: Image classification with GhostNet pretrained on ImageNet.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/ghostnet_320x256
-task_type: classification
 files:
-  - name: FP16/ghostnet_320x256.xml
-    size: 378237
-    sha256: cab6b1f884a3d0c18222a62bf1eb826a4085e80032aeb8d1fc0a5b8faef16d36
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/ghostnet_320x256/ghostnet_320x256.xml
-  - name: FP16/ghostnet_320x256.bin
-    size: 10343636
-    sha256: 76dae5b674803575204189869a28fdd7e3faa303082493c83094f37c712022b2
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/ghostnet_320x256/ghostnet_320x256.bin
+- checksum: 56848d087119bf2690f4eb9b5e457b10323279e884ae819f98eb92619df436e07dd4ffabfb3ff32c13df5db34e717623
+  name: FP16/ghostnet_320x256.xml
+  sha256: cab6b1f884a3d0c18222a62bf1eb826a4085e80032aeb8d1fc0a5b8faef16d36
+  size: 378237
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/ghostnet_320x256/ghostnet_320x256.xml
+- checksum: e838db057c1d628b163279c0a905d951d584de8b32765ff73c232f59a7d40d926c774391bbc16648b529ed97893500bf
+  name: FP16/ghostnet_320x256.bin
+  sha256: 76dae5b674803575204189869a28fdd7e3faa303082493c83094f37c712022b2
+  size: 10343636
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/ghostnet_320x256/ghostnet_320x256.bin
 framework: dldt
 license: https://github.com/huawei-noah/CV-Backbones
 meta:
-    verbose_name: GhostNet
-    inputs:
-      - type: image
-        shape: 3, 320, 256
-        name: input.1
-    FPS:
-        mean: 53.13
-        std: 0.92
-    backbone: /
-    experiment: None
-    uses_depth: false
-    source:
-      - name: GitHub
-        url: https://github.com/huawei-noah/CV-Backbones
-    license: 
-        name: None
-        url: #
-    downloads:
-      - name: ghostnet_320x256.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/ghostnet_320x256/ghostnet_320x256.xml
-      - name: ghostnet_320x256.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/ghostnet_320x256/ghostnet_320x256.bin
+  FPS:
+    mean: 53.13
+    std: 0.92
+  backbone: /
+  downloads:
+  - name: ghostnet_320x256.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/ghostnet_320x256/ghostnet_320x256.xml
+  - name: ghostnet_320x256.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/ghostnet_320x256/ghostnet_320x256.bin
+  experiment: None
+  inputs:
+  - name: input.1
+    shape: 3, 320, 256
+    type: image
+  license:
+    name: None
+    url: null
+  source:
+  - name: GitHub
+    url: https://github.com/huawei-noah/CV-Backbones
+  uses_depth: false
+  verbose_name: GhostNet
+task_type: classification

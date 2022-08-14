@@ -1,40 +1,41 @@
-description: >-
-  You Only Look at Once for Panoptic driving Perception.
+description: You Only Look at Once for Panoptic driving Perception.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolop_320x320
-task_type: detection
 files:
-  - name: FP16/yolop_320x320.xml
-    size: 582488
-    sha256: 96586619ad12e863a0747172aa485d1ca7b1d55f9030bb00a7efffb80bfd3e6d
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolop_320x320/yolop_320x320.xml
-  - name: FP16/yolop_320x320.bin
-    size: 15872074
-    sha256: 43d8c3539605a0cc2e4be5b355c9c2ca0c3544683e1a725cf1071390375d084a
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolop_320x320/yolop_320x320.bin
+- checksum: 5fbe04c44bb0bdb4f515bd4b90633194afe35092f64e0bb7b997720230b4beb731f40c51cbc3009cb81894afa4c953aa
+  name: FP16/yolop_320x320.xml
+  sha256: 96586619ad12e863a0747172aa485d1ca7b1d55f9030bb00a7efffb80bfd3e6d
+  size: 582488
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolop_320x320/yolop_320x320.xml
+- checksum: 39dda95431c6d37f9ce06ff8ec7086ca010b0c6d06320df309c5047c30d42bb5f58d98d8544a218a20738199418c85d7
+  name: FP16/yolop_320x320.bin
+  sha256: 43d8c3539605a0cc2e4be5b355c9c2ca0c3544683e1a725cf1071390375d084a
+  size: 15872074
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolop_320x320/yolop_320x320.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolop_320x320
 meta:
-    verbose_name: YOLOP
-    thumbnail: https://user-images.githubusercontent.com/56075061/144842281-3413133e-7a44-4030-a572-9887fad1bbc6.gif
-    inputs:
-      - type: image
-        shape: 3, 320, 320
-        name: images
-    FPS:
-        mean: 11.40
-        std: 0.01
-    backbone: CSPDarkNet
-    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-yolop
-    uses_depth: false
-    featured: true
-    source:
-      - name: GitHub
-        url: https://github.com/hustvl/YOLOP
-    license: 
-        name: MIT
-        url: https://github.com/hustvl/YOLOP/blob/main/LICENSE
-    downloads:
-      - name: yolop_320x320.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolop_320x320/yolop_320x320.xml
-      - name: yolop_320x320.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolop_320x320/yolop_320x320.bin
+  FPS:
+    mean: 11.4
+    std: 0.01
+  backbone: CSPDarkNet
+  downloads:
+  - name: yolop_320x320.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolop_320x320/yolop_320x320.xml
+  - name: yolop_320x320.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolop_320x320/yolop_320x320.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-yolop
+  featured: true
+  inputs:
+  - name: images
+    shape: 3, 320, 320
+    type: image
+  license:
+    name: MIT
+    url: https://github.com/hustvl/YOLOP/blob/main/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/hustvl/YOLOP
+  thumbnail: https://user-images.githubusercontent.com/56075061/144842281-3413133e-7a44-4030-a572-9887fad1bbc6.gif
+  uses_depth: false
+  verbose_name: YOLOP
+task_type: detection

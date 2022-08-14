@@ -1,40 +1,41 @@
-description: >-
-  Depth Estimation of a given input image.
+description: Depth Estimation of a given input image.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/depth-mbnv2
-task_type: monocular_depth_estimation
 files:
-  - name: FP16/depth_estimation_mbnv2_480x640.xml
-    size: 216453
-    sha256: 82e306a2a5ca19aad452ffa7df00a421fdd37e04cc5d1b54c5ffaa6a390d0112
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.xml
-  - name: FP16/depth_estimation_mbnv2_480x640.bin
-    size: 26252162
-    sha256: 5696790752f7f172fca80d48354c342b2297ecb8e6e5259472812c1dddf01743
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.bin
+- checksum: dceb382639d1eafc49a8de13bab7dd35160706271c9742d4cf7bdf316d4693808e3be97fb4eedbd49542b24cc5372546
+  name: FP16/depth_estimation_mbnv2_480x640.xml
+  sha256: 82e306a2a5ca19aad452ffa7df00a421fdd37e04cc5d1b54c5ffaa6a390d0112
+  size: 216453
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.xml
+- checksum: 8afba9ec107c20613ab4b20a83b38313cbbd79e8fb19b01822f4cdd00322cf5447025b13098db858989b3764e1a1a829
+  name: FP16/depth_estimation_mbnv2_480x640.bin
+  sha256: 5696790752f7f172fca80d48354c342b2297ecb8e6e5259472812c1dddf01743
+  size: 26252162
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.bin
 framework: dldt
 license: https://github.com/alinstein/Depth_estimation/blob/master/LICENSE
 meta:
-    verbose_name: Depth MobileNetV2
-    inputs:
-      - type: image
-        shape: 3, 480, 640
-        name: input.1
-    FPS:
-        mean: /
-        std: /
-    backbone: MobileNetV2
-    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-depth-mbnv2
-    uses_depth: false
-    source:
-      - name: GitHub
-        url: https://github.com/alinstein/Depth_estimation
-      - name: PINTO_model_zoo/tree/main/149_depth_estimation
-        url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/149_depth_estimation
-    license: 
-        name: MIT
-        url: https://github.com/alinstein/Depth_estimation/blob/master/LICENSE
-    downloads:
-      - name: depth_estimation_mbnv2_480x640.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.xml
-      - name: depth_estimation_mbnv2_480x640.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.bin
+  FPS:
+    mean: /
+    std: /
+  backbone: MobileNetV2
+  downloads:
+  - name: depth_estimation_mbnv2_480x640.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.xml
+  - name: depth_estimation_mbnv2_480x640.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/depth_estimation_mbnv2_480x640/depth_estimation_mbnv2_480x640.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-depth-mbnv2
+  inputs:
+  - name: input.1
+    shape: 3, 480, 640
+    type: image
+  license:
+    name: MIT
+    url: https://github.com/alinstein/Depth_estimation/blob/master/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/alinstein/Depth_estimation
+  - name: PINTO_model_zoo/tree/main/149_depth_estimation
+    url: https://github.com/PINTO0309/PINTO_model_zoo/tree/main/149_depth_estimation
+  uses_depth: false
+  verbose_name: Depth MobileNetV2
+task_type: monocular_depth_estimation

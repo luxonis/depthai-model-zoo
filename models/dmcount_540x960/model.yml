@@ -1,39 +1,40 @@
-description: >-
-  Count dense or sparse crowds using density maps.
+description: Count dense or sparse crowds using density maps.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/dmcount_540x960
-task_type: feature_extraction
 files:
-  - name: FP16/dmcount_540x960.xml
-    size: 60776
-    sha256: 4e80e67e4ae7ffe2337260699f89b29e72605a5fa85fb9c412f06735c467a239
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.xml
-  - name: FP16/dmcount_540x960.bin
-    size: 42998994
-    sha256: 4e0f50ade192687d48d6c1f86aece40bbfdb19079f4a26099df68426143e2b69
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/dmcount_540x960/dmcount_540x960.bin
+- checksum: 9eb58982875d04bb1f74d800b266a8a509bf906f746e0b47f2db8b67494b0661c58b16b6d55f06d227a4040e6480baf4
+  name: FP16/dmcount_540x960.xml
+  sha256: 4e80e67e4ae7ffe2337260699f89b29e72605a5fa85fb9c412f06735c467a239
+  size: 60776
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.xml
+- checksum: eeee0bab727ed33b33bfa1ce286bb0d2423f60c722ad4bb38e87e686597f63463bef9230e44fd2c9f3625e18937417bf
+  name: FP16/dmcount_540x960.bin
+  sha256: 4e0f50ade192687d48d6c1f86aece40bbfdb19079f4a26099df68426143e2b69
+  size: 42998994
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/dmcount_540x960/dmcount_540x960.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/dmcount_540x960
 meta:
-    verbose_name: DM-Count
-    thumbnail: https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-crowdcounting/imgs/example.gif
-    inputs:
-      - type: image
-        shape: 3, 540, 960
-        name: input.1
-    FPS:
-        mean: 0.22
-        std: 0.01
-    backbone: VGG19
-    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-crowdcounting
-    uses_depth: false
-    source:
-      - name: GitHub
-        url: https://github.com/cvlab-stonybrook/DM-Count
-    license: 
-        name: MIT
-        url: https://github.com/cvlab-stonybrook/DM-Count/blob/master/LICENSE
-    downloads:
-      - name: dmcount_540x960.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.xml
-      - name: dmcount_540x960.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/dmcount_540x960/dmcount_540x960.bin
+  FPS:
+    mean: 0.22
+    std: 0.01
+  backbone: VGG19
+  downloads:
+  - name: dmcount_540x960.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/dmcount_540x960/dmcount_540x960.xml
+  - name: dmcount_540x960.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/dmcount_540x960/dmcount_540x960.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-crowdcounting
+  inputs:
+  - name: input.1
+    shape: 3, 540, 960
+    type: image
+  license:
+    name: MIT
+    url: https://github.com/cvlab-stonybrook/DM-Count/blob/master/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/cvlab-stonybrook/DM-Count
+  thumbnail: https://raw.githubusercontent.com/luxonis/depthai-experiments/master/gen2-crowdcounting/imgs/example.gif
+  uses_depth: false
+  verbose_name: DM-Count
+task_type: feature_extraction

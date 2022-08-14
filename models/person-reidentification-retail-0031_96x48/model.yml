@@ -1,38 +1,43 @@
-description: >-
-  This is a person reidentification model for a general scenario. It uses a whole body image as an input and outputs an embedding vector to match a pair of images by the cosine distance. The model is based on the RMNet backbone developed for fast inference. A single reidentification head from the 1/16 scale feature map outputs an embedding vector of 256 floats.
+description: This is a person reidentification model for a general scenario. It uses
+  a whole body image as an input and outputs an embedding vector to match a pair of
+  images by the cosine distance. The model is based on the RMNet backbone developed
+  for fast inference. A single reidentification head from the 1/16 scale feature map
+  outputs an embedding vector of 256 floats.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/person-reidentification-retail-0031_96x48
-task_type: named_entity_recognition
 files:
-  - name: FP16/person-reidentification-retail-0031_96x48.xml
-    size: 136104
-    sha256: 16d9f3761c63e14e0437b70c8eb4669dd58a8afbc583b6dac9b5b00a5c4d2ddd
-    source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.xml
-  - name: FP16/person-reidentification-retail-0031_96x48.bin
-    size: 560124
-    sha256: 67e230352812b64ede186c62aaf7369a63fd6f5d8d9a8c98fb7138dac1dfd8bb
-    source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.bin
+- checksum: 56ad7441b16c4d2df301869e8e4efe3527f559132870e1adbbe550c9a6c0d03f4cb5a7ee4a44cda9ee51c8f7ffc429f9
+  name: FP16/person-reidentification-retail-0031_96x48.xml
+  sha256: 16d9f3761c63e14e0437b70c8eb4669dd58a8afbc583b6dac9b5b00a5c4d2ddd
+  size: 136104
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.xml
+- checksum: c48caac7eadcef48c44cf6848077e4f35cd152e17449a18519e67c76072d8efb5388d101bf0abe88e8b3ea81293ba82b
+  name: FP16/person-reidentification-retail-0031_96x48.bin
+  sha256: 67e230352812b64ede186c62aaf7369a63fd6f5d8d9a8c98fb7138dac1dfd8bb
+  size: 560124
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.bin
 framework: dldt
 meta:
-    verbose_name: person-reidentification-retail-0031
-    thumbnail: https://user-images.githubusercontent.com/18037362/146060557-8f24ad93-c2bc-4f60-aa17-c7ce07ebe4a4.png
-    inputs:
-      - type: image
-        shape: 3, 96, 48
-        name: data
-    FPS:
-        mean: 60
-        std: 0
-    backbone: RMNet
-    experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-pedestrian-reidentification
-    uses_depth: false
-    source:
-      - name: GitHub
-        url: https://docs.openvino.ai/2020.1/_models_intel_person_reidentification_retail_0031_description_person_reidentification_retail_0031.html
-    license:
-        name: Apache
-        url: https://github.com/openvinotoolkit/open_model_zoo/blob/master/LICENSE
-    downloads:
-      - name: person-reidentification-retail-0031_96x48.xml
-        url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.xml
-      - name: person-reidentification-retail-0031_96x48.bin
-        url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.bin
+  FPS:
+    mean: 60
+    std: 0
+  backbone: RMNet
+  downloads:
+  - name: person-reidentification-retail-0031_96x48.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.xml
+  - name: person-reidentification-retail-0031_96x48.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-pedestrian-reidentification
+  inputs:
+  - name: data
+    shape: 3, 96, 48
+    type: image
+  license:
+    name: Apache
+    url: https://github.com/openvinotoolkit/open_model_zoo/blob/master/LICENSE
+  source:
+  - name: GitHub
+    url: https://docs.openvino.ai/2020.1/_models_intel_person_reidentification_retail_0031_description_person_reidentification_retail_0031.html
+  thumbnail: https://user-images.githubusercontent.com/18037362/146060557-8f24ad93-c2bc-4f60-aa17-c7ce07ebe4a4.png
+  uses_depth: false
+  verbose_name: person-reidentification-retail-0031
+task_type: named_entity_recognition
