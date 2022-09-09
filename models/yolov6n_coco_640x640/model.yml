@@ -1,14 +1,14 @@
 description: Real-time Object detection with YoloV6n pre-trained on COCO data set.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov6n_coco_640x640
 files:
-- checksum: 37a8953dc41f0e829c75706ae276f5ebf2d1dd618f7f8c56bff47a1afabeb1859ecd4c66f3dfa637f947c013b19fadbc
+- checksum: 6ddc5be65da0889594ffacb4657b2756bd34c4c2f467b1ff2572949c2eb2ef6a48a63521c68a934d4e34eaa095a465d2
   name: FP16/yolov6n_coco_640x640.xml
-  sha256: a7eb82304dc9534550a287ef8fa2bf066fd5ffb737fefa58ba927b5da5e0d1a0
-  size: 271172
+  sha256: cf49c2842e64572583e47cb65455233d3437dd69030784a2128fba8f6c346960
+  size: 164287
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6n_coco_640x640/yolov6n_coco_640x640.xml
-- checksum: 54db3423ad2ac842bbc419d4d038f31445d30e9ee1a1eab8fc3d7ef11c57befe2ed1865b92368953c4feef815e2c3e50
+- checksum: 3498f11f35f94ecbb830981a309a86047e54b28e9a6df824207bd4136c87892bd433a71e1d29b82cb84ae733517f2d5e
   name: FP16/yolov6n_coco_640x640.bin
-  sha256: 73cee31d63937a7c2476cb6bb4b5084c5d8990946035987cdd4f192137dd9dce
+  sha256: 913f23e0d2cc807ac9519ab862f6c0f26208b1cfe05ab67fa4a96e86ec7cd7ca
   size: 8701818
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov6n_coco_640x640/yolov6n_coco_640x640.bin
 framework: dldt
