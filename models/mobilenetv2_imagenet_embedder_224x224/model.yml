@@ -1,22 +1,22 @@
 description: Feature extractor with MobileNetV2 pretrained on ImageNet.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/mobilenetv2_imagenet_embedder_224x224
 files:
-- checksum: 28ba5b56c1b1034e79793e3791440c2dd6a77eab4151b5def6921212270fd6b39876df9a7e5c5c285be371493589b9a0
+- checksum: 196b8e276a968ef5cce167167e76c828eceb216487da1d012bb607fd6dea1fc3408808591629a4504540f19d9bb8b715
   name: FP16/mobilenetv2_imagenet_embedder_224x224.xml
-  sha256: 4425fe82c53817395f0becc576ebf5ef6dad9d3e9bea37335e6e12692bd1338e
-  size: 409461
+  sha256: 5a9d63b0506469f3f04fdfd46403e62efa5d0254550772295a3a9c89858ae66f
+  size: 139875
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobilenetv2_imagenet_embedder_224x224/mobilenetv2_imagenet_embedder_224x224.xml
-- checksum: 530cbaaa12815d7d041942b11b593ce39c96d5ee2e0bae70102676772197fd1a2d26a2715c3867f9d3a88e041cb5e894
+- checksum: 161156257e68c3826575eabccd3a672a3d203a05741c315febc7b2d0e42a4289c6bdc1a29b5d0b943506275d12c2c8e7
   name: FP16/mobilenetv2_imagenet_embedder_224x224.bin
-  sha256: 67a20b803941ded4fced169e96a6db67ca58a374ffbd534460fee5306798ca87
-  size: 4527920
+  sha256: 4b5998967e1aa22498b7fa188ecf0645a2dec9d9624cac6cc38fb27aedd3c08c
+  size: 4413684
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/mobilenetv2_imagenet_embedder_224x224/mobilenetv2_imagenet_embedder_224x224.bin
 framework: dldt
 license: https://github.com/pytorch/vision/tree/main/torchvision/models
 meta:
   FPS:
-    mean: 151.72
-    std: 2.55
+    mean: 47.27
+    std: 0.03
   backbone: /
   downloads:
   - name: mobilenetv2_imagenet_embedder_224x224.xml
@@ -36,4 +36,4 @@ meta:
     url: https://github.com/pytorch/vision/tree/main/torchvision/models
   uses_depth: false
   verbose_name: MobileNetV2
-task_type: embedder
+task_type: feature_extraction
