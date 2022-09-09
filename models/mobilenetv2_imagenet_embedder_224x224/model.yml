@@ -1,0 +1,39 @@
+description: Feature extractor with MobileNetV2 pretrained on ImageNet.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/mobilenetv2_imagenet_embedder_224x224
+files:
+- checksum: 28ba5b56c1b1034e79793e3791440c2dd6a77eab4151b5def6921212270fd6b39876df9a7e5c5c285be371493589b9a0
+  name: FP16/mobilenetv2_imagenet_embedder_224x224.xml
+  sha256: 4425fe82c53817395f0becc576ebf5ef6dad9d3e9bea37335e6e12692bd1338e
+  size: 409461
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobilenetv2_imagenet_embedder_224x224/mobilenetv2_imagenet_embedder_224x224.xml
+- checksum: 530cbaaa12815d7d041942b11b593ce39c96d5ee2e0bae70102676772197fd1a2d26a2715c3867f9d3a88e041cb5e894
+  name: FP16/mobilenetv2_imagenet_embedder_224x224.bin
+  sha256: 67a20b803941ded4fced169e96a6db67ca58a374ffbd534460fee5306798ca87
+  size: 4527920
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/mobilenetv2_imagenet_embedder_224x224/mobilenetv2_imagenet_embedder_224x224.bin
+framework: dldt
+license: https://github.com/pytorch/vision/tree/main/torchvision/models
+meta:
+  FPS:
+    mean: 151.72
+    std: 2.55
+  backbone: /
+  downloads:
+  - name: mobilenetv2_imagenet_embedder_224x224.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobilenetv2_imagenet_embedder_224x224/mobilenetv2_imagenet_embedder_224x224.xml
+  - name: mobilenetv2_imagenet_embedder_224x224.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/mobilenetv2_imagenet_embedder_224x224/mobilenetv2_imagenet_embedder_224x224.bin
+  experiment: None
+  inputs:
+  - name: input.1
+    shape: 3, 224, 224
+    type: image
+  license:
+    name: BSD-3
+    url: https://github.com/pytorch/vision/blob/main/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/pytorch/vision/tree/main/torchvision/models
+  uses_depth: false
+  verbose_name: MobileNetV2
+task_type: embedder
