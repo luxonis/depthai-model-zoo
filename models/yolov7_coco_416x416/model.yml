@@ -1,0 +1,41 @@
+description: Real-time Object detection with YoloV7 pre-trained on COCO data set.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov7_coco_416x416
+files:
+- checksum: 0e1236c11e4ab28f04d094d3a334dbc48580d67d066da2a57a27c2f30b0a51a6a87506fe406514be536a9e902577b18c
+  name: FP16/yolov7_coco_416x416.xml
+  sha256: c7d26c3bb76800dd37b49c056fdf3b7a767be8a066575a61a47b0a580c64f531
+  size: 269114
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov7_coco_416x416/yolov7_coco_416x416.xml
+- checksum: aaa6499fcb135dea13c6ddc8914c1ffab5d1b1b748f380f1f689f8386a007b71de0673593994c93b66635bfacc2c3d76
+  name: FP16/yolov7_coco_416x416.bin
+  sha256: b5200ddd0d8d3dacccad68b2529264496650f368b142b19c86b56edd86756b96
+  size: 73810750
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov7_coco_416x416/yolov7_coco_416x416.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov7_coco_416x416
+meta:
+  FPS:
+    mean: /
+    std: /
+  backbone: E-ELAN
+  downloads:
+  - name: yolov7_coco_416x416.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov7_coco_416x416/yolov7_coco_416x416.xml
+  - name: yolov7_coco_416x416.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov7_coco_416x416/yolov7_coco_416x416.bin
+  experiment: null
+  featured: true
+  inputs:
+  - name: images
+    shape: 3, 416, 416
+    type: image
+  license:
+    name: GNU GPL-3
+    url: https://github.com/WongKinYiu/yolov7/blob/main/LICENSE.md
+  source:
+  - name: GitHub
+    url: https://github.com/WongKinYiu/yolov7
+  thumbnail: null
+  uses_depth: false
+  verbose_name: YoloV7
+task_type: detection

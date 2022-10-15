@@ -1,0 +1,41 @@
+description: Real-time Object detection with YoloV6n pre-trained on COCO data set.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov6n_coco_416x416
+files:
+- checksum: 9eb66ef917d8842ab9b92bc2dd3eeef1f04fdf96e156ec2a882a352416b0eafbcdab9d45da23df70788efe24be7e0135
+  name: FP16/yolov6n_coco_416x416.xml
+  sha256: 5251cd540f1c8b037cbd82c1c236c4e789d3f2de55cd8ab5c77f899c11c8ac9a
+  size: 163533
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6n_coco_416x416/yolov6n_coco_416x416.xml
+- checksum: 18073f2307e417d7f0864229226837f2fa324311eb356bdb9e573e835b6355096022a631674ab82510df3ebd49079a22
+  name: FP16/yolov6n_coco_416x416.bin
+  sha256: d1da9fab6844ab54f99e49b7b9cc7bfa74cf62c70e5744a47ee1edbdb5aead1e
+  size: 8634878
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov6n_coco_416x416/yolov6n_coco_416x416.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov6n_coco_416x416
+meta:
+  FPS:
+    mean: /
+    std: /
+  backbone: EfficientRep
+  downloads:
+  - name: yolov6n_coco_416x416.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6n_coco_416x416/yolov6n_coco_416x416.xml
+  - name: yolov6n_coco_416x416.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov6n_coco_416x416/yolov6n_coco_416x416.bin
+  experiment: null
+  featured: true
+  inputs:
+  - name: images
+    shape: 3, 416, 416
+    type: image
+  license:
+    name: GNU GPL-3
+    url: https://github.com/meituan/YOLOv6/blob/main/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/meituan/YOLOv6
+  thumbnail: null
+  uses_depth: false
+  verbose_name: YoloV6 Nano
+task_type: detection
