@@ -169,6 +169,16 @@
           </div>
         </div>
         
+        <div class="main-page-flex3-col" onclick="openDetails('yolov7tiny_coco_416x416')">
+          <div
+            style="--src:url('None')"
+            class="main-page-icon layout"
+          ></div>
+          <div class="main-page-fast-depth-box layout">
+            <pre class="main-page-fast-depth">YoloV7 Tiny</pre>
+          </div>
+        </div>
+        
         <div class="main-page-flex3-col" onclick="openDetails('yolov6t_coco_416x416')">
           <div
             style="--src:url('None')"
@@ -950,6 +960,83 @@
             <div class="main-page-flex7-spacer"></div>
             <div class="main-page-flex7-col1">
               <h5 class="main-page-learn-more layout" onclick="openDetails('yolop_320x320')">Learn
+                more</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="main-page-flex4-col" aria-type="model-box" id="yolov7tiny_coco_416x416" data-name="yolov7tiny_coco_416x416"
+           data-task-type="detection"
+           data-fps="/" data-resolution="173056">
+        <div class="main-page-content-box1 layout">
+          <div class="main-page-group1-wrapper">
+            <figure
+              style="--src:url('None'); height: 263px;"
+              class="main-page-group1 layout"
+              onclick="openDetails('yolov7tiny_coco_416x416')"
+            >
+              
+            </figure>
+          </div>
+          <h3 class="main-page-subtitle layout">YoloV7 Tiny</h3>
+          <div class="main-page-paragraph-body-box layout">
+            <pre class="main-page-paragraph-body">Real-time Object detection with YoloV7-tiny pre-trained on COCO data set.</pre>
+          </div>
+          <hr class="main-page-line layout"/>
+          <div class="main-page-flex5 layout">
+            <div class="main-page-resolution layout">Resolution</div>
+            <div class="main-page-flex5-spacer"></div>
+            <div class="main-page-flex5-col">
+              <div class="main-page-text-body1 layout">
+                
+                <span>416x416x3</span>
+                
+              </div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-task-type layout">Task type</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">detection</div>
+            </div>
+          </div>
+          <hr class="main-page-line layout1"/>
+          <div class="main-page-flex6 layout">
+            <div class="main-page-fps layout">FPS</div>
+            <div class="main-page-flex6-spacer"></div>
+            <div class="main-page-flex6-col">
+              <div class="main-page-text-body2 layout">/</div>
+            </div>
+          </div>
+          <div class="main-page-flex7 layout">
+            <div class="main-page-flex7-col">
+              <div class="btn-group main-page-download-btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" id="yolov7tiny_coco_416x416Download"
+                        data-bs-toggle="dropdown">
+                  Download &nbsp;
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="yolov7tiny_coco_416x416Download">
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov7tiny_coco_416x416/yolov7tiny_coco_416x416.xml">yolov7tiny_coco_416x416.xml</a></li>
+                  
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  
+                  
+                  <li class="dropdown-item"><a class="text-decoration-none" href="https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov7tiny_coco_416x416/yolov7tiny_coco_416x416.bin">yolov7tiny_coco_416x416.bin</a></li>
+                  
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="main-page-flex7-spacer"></div>
+            <div class="main-page-flex7-col1">
+              <h5 class="main-page-learn-more layout" onclick="openDetails('yolov7tiny_coco_416x416')">Learn
                 more</h5>
             </div>
           </div>
@@ -3834,6 +3921,85 @@
                   
               
                   <li><a href="https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolop_320x320/yolop_320x320.bin" class="text-decoration-none">yolop_320x320.bin</a></li>
+                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="zoo2 zoo2-group layout" id="yolov7tiny_coco_416x416Details">
+      <div class="zoo2-content-box layout">
+        <div
+          style="--src:url('https://user-images.githubusercontent.com/5244214/144098174-a9427c49-d30a-4f5a-941f-7dc996b5ee6c.png')"
+          class="zoo2-icon layout"
+          onclick="hideDetails()"
+        ></div>
+        <h1 class="zoo2-hero-title-box layout">
+            <pre class="zoo2-hero-title">YoloV7 Tiny</pre>
+        </h1>
+          <div
+            style="--src:url('None')"
+            class="zoo2-cover-group layout"
+          >
+            
+                <div class="zoo2-cover-group1 layout red">No Depth</div>
+            
+        </div>
+        <h5 class="zoo2-description layout">Description</h5>
+        <h4 class="zoo2-highlights-box layout">
+            <pre class="zoo2-highlights">Real-time Object detection with YoloV7-tiny pre-trained on COCO data set.</pre>
+        </h4>
+        <h5 class="zoo2-input layout">Input</h5>
+        <h5 class="zoo2-highlights1-box layout">
+            <pre class="zoo2-highlights1">
+  
+    Name: images
+    Type: image
+    Shape: 3, 416, 416
+  
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-fps layout">FPS</h5>
+        <h5 class="zoo2-highlights2-box layout">
+            <pre class="zoo2-highlights2">
+  Mean: /
+  STD: /
+            </pre>
+        </h5>
+        <hr class="zoo2-line layout"/>
+        <h5 class="zoo2-license layout">License</h5>
+        <a href="https://github.com/WongKinYiu/yolov7/blob/main/LICENSE.md">
+          <h5 class="zoo2-highlights3 layout">GNU GPL-3 </h5>
+        </a>
+        <hr class="zoo2-line layout"/>
+        <div class="zoo2-flex layout">
+          <div class="zoo2-flex-col">
+            <h5 class="zoo2-view-source layout" id="yolov7tiny_coco_416x416SourceTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              VIEW SOURCE
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="yolov7tiny_coco_416x416SourceTrigger">
+              
+                  <li><a href="https://github.com/WongKinYiu/yolov7" class="text-decoration-none">GitHub</a></li>
+                  
+              
+            </ul>
+          </div>
+          <div class="zoo2-flex-spacer"></div>
+          <div class="zoo2-flex-col1">
+            <h5 class="zoo2-download layout" id="yolov7tiny_coco_416x416DownloadTrigger" data-bs-toggle="dropdown" aria-expanded="false">
+              DOWNLOAD
+            </h5>
+            <ul class="dropdown-menu bg-dark" aria-labelledby="yolov7tiny_coco_416x416DownloadTrigger">
+              
+                  <li><a href="https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov7tiny_coco_416x416/yolov7tiny_coco_416x416.xml" class="text-decoration-none">yolov7tiny_coco_416x416.xml</a></li>
+                  
+                      <li><hr class="dropdown-divider"></li>
+                  
+              
+                  <li><a href="https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov7tiny_coco_416x416/yolov7tiny_coco_416x416.bin" class="text-decoration-none">yolov7tiny_coco_416x416.bin</a></li>
                   
               
             </ul>
