@@ -36,4 +36,4 @@ meta:
     url: https://github.com/openvinotoolkit/anomalib
   uses_depth: false
   verbose_name: PaDiM-Wood
-task_type: anomaly
+task_type: detection
