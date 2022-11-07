@@ -1,0 +1,39 @@
+description: PaDiM anomaly detection model trained to detect anomalies in wood
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/padim_wood_256x256
+files:
+- checksum: 4b9422fd3569de79209b353040a40222a399dea15593a85f96c62491f7fd7f5729514a37c045ee9c10be6ef136cb0d7d
+  name: FP16/padim_wood_256x256.xml
+  sha256: c018fe8fb667f3f8e30f981df38c91a33a78c59eba56878bb12d65ca92243201
+  size: 113441
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/padim_wood_256x256/padim_wood_256x256.xml
+- checksum: 2a92401fd8aa5cf325960d9636ccae03f68c954032ab543bf6a4d57a6af8e40ee868c49c0f514967b223749f3e513fd8
+  name: FP16/padim_wood_256x256.bin
+  sha256: bdb74a19b1c7dad5f046719dc7ee0f4fb5cd06ebe0885b8d3144f60acbe34541
+  size: 88303118
+  source: https://fra1.digitaloceanspaces.com/robothub/models/padim_wood_256x256/padim_wood_256x256.bin
+framework: dldt
+license: https://github.com/xiahaifeng1995/PaDiM-Anomaly-Detection-Localization-master/blob/main/LICENSE
+meta:
+  FPS:
+    mean: 9.62
+    std: 0.03
+  backbone: /
+  downloads:
+  - name: padim_wood_256x256.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/padim_wood_256x256/padim_wood_256x256.xml
+  - name: padim_wood_256x256.bin
+    url: https://fra1.digitaloceanspaces.com/robothub/models/padim_wood_256x256/padim_wood_256x256.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-anomaly-detection
+  inputs:
+  - name: input.1
+    shape: 3, 256, 256
+    type: image
+  license:
+    name: Apache 2.0
+    url: https://github.com/xiahaifeng1995/PaDiM-Anomaly-Detection-Localization-master/blob/main/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/openvinotoolkit/anomalib
+  uses_depth: false
+  verbose_name: PaDiM-Wood
+task_type: anomaly
