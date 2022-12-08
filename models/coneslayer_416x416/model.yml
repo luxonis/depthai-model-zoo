@@ -6,7 +6,7 @@ files:
   sha256: ee709227f5a8d56f13bc3ea5d0148a7d19afd3cd26b50b299d6009ba3a781f74
   size: 198843
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/coneslayer_416x416/coneslayer_416x416.xml
-- checksum:
+- checksum: FIXME
   name: FP16/coneslayer_416x416.bin
   sha256: fca6dbd744bfcce548912a2a3f368e85e4488a5d3f328c027af2633240b6fcca
   size: 12013364
