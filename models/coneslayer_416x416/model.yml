@@ -1,16 +1,16 @@
 description: A lightweight neural-network for rapid detection of orange traffic cones
 documentation: https://github.com/mkrupczak3/Coneslayer
 files:
-- checksum: FIXME
+- checksum: 3b0cd03f858712f3e923793c17a934d9ae9aa72bb5811b4af296ea0753a2a47749dd3d0d3a12926f34977f39e47f34fb
   name: FP16/coneslayer_416x416.xml
-  sha256: ee709227f5a8d56f13bc3ea5d0148a7d19afd3cd26b50b299d6009ba3a781f74
-  size: 198843
+  sha256: 126b66d31c3286a1ecb0a1e12e6f302a910e849d607106ea4282c8f9983a22ed
+  size: 206147
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/coneslayer_416x416/coneslayer_416x416.xml
-- checksum: FIXME
+- checksum: 3c6ade58546e5bffc00a51600b40edbe13e89a77a0e04be9e3e3ec95ddf662862bfb3d6be245e9d0a3a60e04973e2482
   name: FP16/coneslayer_416x416.bin
   sha256: fca6dbd744bfcce548912a2a3f368e85e4488a5d3f328c027af2633240b6fcca
   size: 12013364
-  source: FIXME
+  source: https://robothub.fra1.digitaloceanspaces.com/models/coneslayer_416x416/coneslayer_416x416.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/coneslayer_416x416
 meta:
@@ -20,9 +20,9 @@ meta:
   backbone: E-ELAN
   downloads:
   - name: coneslayer_416x416.xml
-    url: FIXME
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/coneslayer_416x416/coneslayer_416x416.xml
   - name: coneslayer_416x416.bin
-    url: FIXME
+    url: https://robothub.fra1.digitaloceanspaces.com/models/coneslayer_416x416/coneslayer_416x416.bin
   experiment: null
   featured: true
   inputs:
