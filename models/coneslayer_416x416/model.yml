@@ -35,7 +35,7 @@ meta:
   source:
   - name: GitHub
     url: https://github.com/mkrupczak3/Coneslayer
-  thumbnail: https://github.com/mkrupczak3/Coneslayer/blob/main/assets/trackvid_inference_highlight.gif
+  thumbnail: https://github.com/mkrupczak3/Coneslayer/raw/main/assets/trackvid_inference_highlight.gif
   uses_depth: false
   verbose_name: Coneslayer YoloV7 Tiny
 task_type: detection
