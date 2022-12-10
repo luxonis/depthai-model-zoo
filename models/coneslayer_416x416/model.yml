@@ -15,8 +15,8 @@ framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/coneslayer_416x416
 meta:
   FPS:
-    mean: /
-    std: /
+    mean: 30.0
+    std: 0.01
   backbone: E-ELAN
   downloads:
   - name: coneslayer_416x416.xml
@@ -31,11 +31,11 @@ meta:
     type: image
   license:
     name: GNU GPL-3
-    url: https://github.com/WongKinYiu/yolov7/blob/main/LICENSE.md
+    url: https://raw.githubusercontent.com/mkrupczak3/Coneslayer/main/LICENSE
   source:
   - name: GitHub
-    url: https://github.com/WongKinYiu/yolov7
-  thumbnail: null
+    url: https://github.com/mkrupczak3/Coneslayer
+  thumbnail: https://github.com/mkrupczak3/Coneslayer/blob/main/assets/trackvid_inference_highlight.gif
   uses_depth: false
-  verbose_name: Coneslayer YoloV7 Tiny Variant
+  verbose_name: Coneslayer YoloV7 Tiny
 task_type: detection
