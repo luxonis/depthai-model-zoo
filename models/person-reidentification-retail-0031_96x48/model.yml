@@ -16,6 +16,7 @@ files:
   size: 560124
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/person-reidentification-retail-0031_96x48/person-reidentification-retail-0031_96x48.bin
 framework: dldt
+license: https://docs.openvino.ai/2020.1/_models_intel_person_reidentification_retail_0031_description_person_reidentification_retail_0031.html
 meta:
   FPS:
     mean: 60
