@@ -12,6 +12,7 @@ files:
   size: 10611004
   source: https://robothub.fra1.digitaloceanspaces.com/models/7_segment_recognition_256x750/7_segment_recognition_256x750.bin
 framework: dldt
+license: MIT
 meta:
   FPS:
     mean: /
