@@ -1,0 +1,41 @@
+description: Real-time Object detection with YoloV8n pre-trained on COCO data set.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov8n_coco_640x352
+files:
+- checksum: 8399f41719fca1b14b8ee7af63f0ea14c7d50f66a6cebf71713fcb391aa273783a172de674c4d25d46a93611ce9bf1f2
+  name: FP16/yolov8n_coco_640x352.xml
+  sha256: a96e4a3f9629f18d6775c57af506a9a5c315504bdcb33261d108435704ddd97e
+  size: 220987
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov8n_coco_640x352/yolov8n_coco_640x352.xml
+- checksum: 5ccdaff1bedf262acc020283c11bb91f696b8573f32580cc6bf9921c26ee5323bc2a27f38606f46ca7700f9ef8c8a16f
+  name: FP16/yolov8n_coco_640x352.bin
+  sha256: 94140a1d8aa227698bf8bcb46dc8b292d001922e88df68434cb2a185919d55f1
+  size: 6304248
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov8n_coco_640x352/yolov8n_coco_640x352.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov8n_coco_640x352
+meta:
+  FPS:
+    mean: /
+    std: /
+  backbone: P5
+  downloads:
+  - name: yolov8n_coco_640x352.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov8n_coco_640x352/yolov8n_coco_640x352.xml
+  - name: yolov8n_coco_640x352.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov8n_coco_640x352/yolov8n_coco_640x352.bin
+  experiment: null
+  featured: true
+  inputs:
+  - name: images
+    shape: 3, 352, 640
+    type: image
+  license:
+    name: GNU GPL-3
+    url: https://github.com/ultralytics/ultralytics/blob/main/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/ultralytics/ultralytics
+  thumbnail: null
+  uses_depth: false
+  verbose_name: YoloV8n
+task_type: detection

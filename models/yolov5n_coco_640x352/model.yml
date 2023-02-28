@@ -1,0 +1,41 @@
+description: Real-time Object detection with YoloV5n pre-trained on COCO data set.
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov5n_coco_640x352
+files:
+- checksum: a6c1c708780e70daae1c76a8ee616f769f6fcd22426330192d808eec8e09a7eec915c5ca774aa04e7cd20b38c4f1491b
+  name: FP16/yolov5n_coco_640x352.xml
+  sha256: fc7692ca913a313e7f9307efe745486e0d934695eb0453b315eb819cb02aaf84
+  size: 182051
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov5n_coco_640x352/yolov5n_coco_640x352.xml
+- checksum: b860bd10c88adae1ae8b10ecff321815e8f7acfda026f77391ecff146e293cd41b04cbd37a822bd8f7f79ea531d5011f
+  name: FP16/yolov5n_coco_640x352.bin
+  sha256: a8322c1fc1a62c208068f6fbe1a019e92a1f4d91cffe27ce8aaef8be34a6bca9
+  size: 3734878
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov5n_coco_640x352/yolov5n_coco_640x352.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov5n_coco_640x352
+meta:
+  FPS:
+    mean: /
+    std: /
+  backbone: DarkNet
+  downloads:
+  - name: yolov5n_coco_640x352.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov5n_coco_640x352/yolov5n_coco_640x352.xml
+  - name: yolov5n_coco_640x352.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov5n_coco_640x352/yolov5n_coco_640x352.bin
+  experiment: null
+  featured: true
+  inputs:
+  - name: inputs
+    shape: 3, 352, 640
+    type: image
+  license:
+    name: GNU GPL-3
+    url: https://github.com/ultralytics/yolov5/blob/master/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/ultralytics/yolov5
+  thumbnail: null
+  uses_depth: false
+  verbose_name: YoloV5 Nano
+task_type: detection
