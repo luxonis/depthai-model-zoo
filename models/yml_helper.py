@@ -80,7 +80,10 @@ def make_file_record(file: Path, is_int8=False):
     name_prefix = 'FP16-INT8' if is_int8 else 'FP16'
 
     if file.suffix == '.xml':
-        source = f'https://github.com/luxonis/depthai-model-zoo/raw/main/models/{file.stem}/{file.name}'
+        stem = file.stem
+        if is_int8:
+            stem = stem.replace('_int8', '')
+        source = f'https://github.com/luxonis/depthai-model-zoo/raw/main/models/{stem}/{file.name}'
     else:
         source = 'EDIT'
 
