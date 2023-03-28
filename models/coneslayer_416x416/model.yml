@@ -10,7 +10,7 @@ files:
   name: FP16/coneslayer_416x416.bin
   sha256: fca6dbd744bfcce548912a2a3f368e85e4488a5d3f328c027af2633240b6fcca
   size: 12013364
-  source: https://robothub.fra1.digitaloceanspaces.com/models/coneslayer_416x416/coneslayer_416x416.bin
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/coneslayer_416x416/coneslayer_416x416.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/coneslayer_416x416
 meta:

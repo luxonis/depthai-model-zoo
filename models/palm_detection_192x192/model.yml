@@ -1,0 +1,25 @@
+description: empty
+files:
+- checksum: 63f032862f84df53617b18818c7db14dbd29c1cdfc644490e87a45cfd009c788ef26d193cfe880b970e8e92872cb4824
+  name: FP16/palm_detection_192x192.xml
+  sha256: 03c417c8594d4a1f9b6d098b6608bacd7e201043a3cc08e6e4f4c32f55bcd743
+  size: 464865
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/palm_detection_192x192/palm_detection_192x192.xml
+- checksum: d3ea2d4ca1be4a180f98660eaf87a4203cbae9f03d6f61b1d79af472806f9c518221b745b073ef92ce1b648a6b60d5fd
+  name: FP16/palm_detection_192x192.bin
+  sha256: abd4fae5d9bac8bfb708f94ba6e3f2763054654aea3da9fb7605423300451b90
+  size: 1919532
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/palm_detection_192x192/palm_detection_192x192.bin
+- checksum: 8b1f8f71ca47706ae016f2a5a45021702459349a0cfa62a3eae125899a8f5feaf825ac1d461e824db3380c819152ffcb
+  name: FP16-INT8/palm_detection_192x192_int8.xml
+  sha256: 35522e410bf734035cb352dd7192a515b226ecad26d1fd02af5f9ba1b6490179
+  size: 1034258
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/palm_detection_192x192/palm_detection_192x192_int8.xml
+- checksum: afe8aadbf87971ee7953cb46e65eccd69f29ee35d644a07b8f60803468588cf24b59f7c6cf67e29666140effbf1c136b
+  name: FP16-INT8/palm_detection_192x192_int8.bin
+  sha256: 45879a0085124450ade31eae33575fad8a865b2e64a7f12d411759c5e9a4d269
+  size: 1041263
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/palm_detection_192x192/palm_detection_192x192_int8.bin
+framework: dldt
+license: empty
+task_type: object_attributes

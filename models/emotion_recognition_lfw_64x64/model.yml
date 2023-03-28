@@ -1,0 +1,25 @@
+description: empty
+files:
+- checksum: 8edb7c5fe071d46a6040b6530f1f3e577b583a362324eb83fd4035e462370b85390927110f7f5b56c6241b8b79458afb
+  name: FP16/emotion_recognition_lfw_64x64.xml
+  sha256: a930f1c639bffe4aeeea4c3bf431c458f2c4a177859c6f7e19623ccf6c377c73
+  size: 64117
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/emotion_recognition_lfw_64x64/emotion_recognition_lfw_64x64.xml
+- checksum: 707923353b0e5bec597a3f6b0372d4c400f2c0dddad6994e041967c883d28d8dbae99f69bb7b2a835edbc0f3c5d43fc1
+  name: FP16/emotion_recognition_lfw_64x64.bin
+  sha256: 309fac628b99b84ea33dac0cbb6356836f2cbe8a62e5769c8a729b0fd401bc19
+  size: 4965014
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/emotion_recognition_lfw_64x64/emotion_recognition_lfw_64x64.bin
+- checksum: 49667156f484286757e879971de3d885bd99aa3a37958b11a5f50009e99917d8b72a55dc867a6425bc341d99014fb1c8
+  name: FP16-INT8/emotion_recognition_lfw_64x64_int8.xml
+  sha256: be34327267c0c81af75e6e4c1b7880467bff9920d2e4399a973236e0ea8b5e93
+  size: 143694
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/emotion_recognition_lfw_64x64/emotion_recognition_lfw_64x64_int8.xml
+- checksum: 6a867fd6b55a466b2513a0d966fecaa243e294a79c19984ea1a3a96be06d321ce29e9517d9a5d1b8a1297093674cc160
+  name: FP16-INT8/emotion_recognition_lfw_64x64_int8.bin
+  sha256: 8d650d314066dc81e86737017948302c2b037c98e9c0f6c77ded0e39e81a4a14
+  size: 2503530
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/emotion_recognition_lfw_64x64/emotion_recognition_lfw_64x64_int8.bin
+framework: dldt
+license: empty
+task_type: object_attributes

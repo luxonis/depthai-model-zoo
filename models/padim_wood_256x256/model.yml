@@ -10,7 +10,7 @@ files:
   name: FP16/padim_wood_256x256.bin
   sha256: bdb74a19b1c7dad5f046719dc7ee0f4fb5cd06ebe0885b8d3144f60acbe34541
   size: 88303118
-  source: https://fra1.digitaloceanspaces.com/robothub/models/padim_wood_256x256/padim_wood_256x256.bin
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/padim_wood_256x256/padim_wood_256x256.bin
 framework: dldt
 license: https://github.com/xiahaifeng1995/PaDiM-Anomaly-Detection-Localization-master/blob/main/LICENSE
 meta:

@@ -1,0 +1,25 @@
+description: empty
+files:
+- checksum: 523f10f200519d7c28cf8c6519a835e87978e0587212165c1dae3655af07a03f2c9477276710980dbe91b8b19fdea136
+  name: FP16/hand_landmark_224x224.xml
+  sha256: 7784d6e367d116f1411a7595a554f5b7abed1e24260a9001459088d45717dff2
+  size: 243693
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/hand_landmark_224x224/hand_landmark_224x224.xml
+- checksum: 18e98190581693a306dc85f139ac6e4d68bddbd12cdf9c65cb36a2a20facf6cf54463b39bab63344eb48e54632b32aac
+  name: FP16/hand_landmark_224x224.bin
+  sha256: 0f4616f1ee47ab88af7fc1c7dac08dd38d62eb1a179da20d1aaeeaaa3c89621d
+  size: 2023440
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/hand_landmark_224x224/hand_landmark_224x224.bin
+- checksum: 3c47a14f9e3c7285a4e229b605eeded4607aa33b0c63d174be3bec13e10dc37064d53364d10e6ab3aabb7bf033dccb25
+  name: FP16-INT8/hand_landmark_224x224_int8.xml
+  sha256: 6a8dd8cb5353ae6975fc6cc824a1a7ae1f31f10c91c7ad649e7a8ec718106efd
+  size: 452908
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/hand_landmark_224x224/hand_landmark_224x224_int8.xml
+- checksum: e54168091c4eb033b77b289e41a39236e096878d47b229e2b2c44556710db6e7f756871a9803dd619604cdd33a2cd114
+  name: FP16-INT8/hand_landmark_224x224_int8.bin
+  sha256: a707d99b80b852c5e33b032882c35d587103536a0f8bef82d8ac8cc3d0138cc7
+  size: 1144128
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/hand_landmark_224x224/hand_landmark_224x224_int8.bin
+framework: dldt
+license: empty
+task_type: object_attributes

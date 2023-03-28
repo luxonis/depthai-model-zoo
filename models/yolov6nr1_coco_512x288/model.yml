@@ -1,0 +1,25 @@
+description: YoloV6n R1 Object detection model 512x288
+files:
+- checksum: 0639041fcd8cd8941a4bb35ae16e792f84d915b256724d92b34ecd79263177d1924b168c10ef1b4262a58d924586309a
+  name: FP16/yolov6nr1_coco_512x288.xml
+  sha256: f591d5c66e40d84e994a0f188a1e1337b72549c92bb9430c02a208a9325432f8
+  size: 257570
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6nr1_coco_512x288/yolov6nr1_coco_512x288.xml
+- checksum: 1e6707fa93f9c8cd2374624900bb4257d1a08ae618409d33408493cc20ba2b00472af2a6c9a3f1c09cb862b9a285484a
+  name: FP16/yolov6nr1_coco_512x288.bin
+  sha256: 20dafb2d6ce2a3bf8741c09c4bfa05830528a9100785f99a5c71d38a2eb6b944
+  size: 8634878
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov6nr1_coco_512x288/yolov6nr1_coco_512x288.bin
+- checksum: 871cbbb371f6bda82a0490db724575d910530aa9d8896c45eda766f1c531ed14d390d6e14426f23075bb14895391df49
+  name: FP16-INT8/yolov6nr1_coco_512x288_int8.xml
+  sha256: cd7ff85119290d4a1ecbea846222d50f01978dbc6e6b0a8edd9ed7096a6cf0eb
+  size: 485063
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6nr1_coco_512x288/yolov6nr1_coco_512x288_int8.xml
+- checksum: 6d2f97946bdc220f06bb390a355812ed7cfde564b1558570ec35921b775ad367cf4f4da1005be47622757303954404b3
+  name: FP16-INT8/yolov6nr1_coco_512x288_int8.bin
+  sha256: 5552c6d2749ce99fd5d2158fb20ec7386fc9cfcefcc7a8df337095eb0d39994c
+  size: 4381002
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov6nr1_coco_512x288/yolov6nr1_coco_512x288_int8.bin
+framework: dldt
+license: GPL-3.0
+task_type: Object detection
