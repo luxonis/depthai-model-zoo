@@ -22,4 +22,4 @@ files:
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/hand_landmark_224x224/hand_landmark_224x224_int8.bin
 framework: dldt
 license: empty
-task_type: object_attributes
+task_type: detection
