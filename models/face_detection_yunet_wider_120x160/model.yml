@@ -11,12 +11,12 @@ files:
   size: 166220
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/face_detection_yunet_wider_120x160/face_detection_yunet_wider_120x160.bin
 - checksum: 6325c4a221c3dc471f2fb6ade6a6ff6187041652bb791d331f84f2cac476d7fa89761770cbad3410891f56e572590d35
-  name: FP16-INT8/face_detection_yunet_wider_120x160_int8.xml
+  name: FP16/face_detection_yunet_wider_120x160.xml
   sha256: 7520e0e09cfc6077fbb12a504fd71a9f3aff09beec3033f94c6b991b1b4cee93
   size: 372351
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/face_detection_yunet_wider_120x160/face_detection_yunet_wider_120x160_int8.xml
 - checksum: b2016717dc5cf5b1d216bf4baee71d2bb19d4f80062eba680e8cf8743109365415f62b120f1a7d74a68baf71c04d142f
-  name: FP16-INT8/face_detection_yunet_wider_120x160_int8.bin
+  name: FP16-INT8/face_detection_yunet_wider_120x160.bin
   sha256: fe5b78f31276e15a0d5c5b2a5de5c90c471a640008ac8ecfc9f54b25ad9495dd
   size: 113826
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/face_detection_yunet_wider_120x160/face_detection_yunet_wider_120x160_int8.bin
