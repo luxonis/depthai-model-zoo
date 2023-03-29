@@ -11,7 +11,7 @@ files:
   size: 1919532
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/palm_detection_192x192/palm_detection_192x192.bin
 - checksum: 8b1f8f71ca47706ae016f2a5a45021702459349a0cfa62a3eae125899a8f5feaf825ac1d461e824db3380c819152ffcb
-  name: FP16/palm_detection_192x192.xml
+  name: FP16-INT8/palm_detection_192x192.xml
   sha256: 35522e410bf734035cb352dd7192a515b226ecad26d1fd02af5f9ba1b6490179
   size: 1034258
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/palm_detection_192x192/palm_detection_192x192_int8.xml

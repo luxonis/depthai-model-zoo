@@ -11,7 +11,7 @@ files:
   size: 2023440
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/hand_landmark_224x224/hand_landmark_224x224.bin
 - checksum: 3c47a14f9e3c7285a4e229b605eeded4607aa33b0c63d174be3bec13e10dc37064d53364d10e6ab3aabb7bf033dccb25
-  name: FP16/hand_landmark_224x224.xml
+  name: FP16-INT8/hand_landmark_224x224.xml
   sha256: 6a8dd8cb5353ae6975fc6cc824a1a7ae1f31f10c91c7ad649e7a8ec718106efd
   size: 452908
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/hand_landmark_224x224/hand_landmark_224x224_int8.xml
