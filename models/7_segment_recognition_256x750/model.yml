@@ -1,5 +1,4 @@
 description: Seven segment display recognition model
-task_type: object_attributes
 files:
 - checksum: 312ffcd1420b54aad40d970e87254a53de374d4efb3322d0449d30f5927f37c5be27f7249bda353c2e7110f72cb861f0
   name: FP16/7_segment_recognition_256x750.xml
@@ -10,7 +9,7 @@ files:
   name: FP16/7_segment_recognition_256x750.bin
   sha256: 76494103b9332c9ac0e3990aa668459bcfdd95f6ea1b193f65cde4a2393b3a8d
   size: 10611004
-  source: https://robothub.fra1.digitaloceanspaces.com/models/7_segment_recognition_256x750/7_segment_recognition_256x750.bin
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/7_segment_recognition_256x750/7_segment_recognition_256x750.bin
 framework: dldt
 license: MIT
 meta:
@@ -26,3 +25,4 @@ meta:
   - name: images
     shape: 1, 256, 750
     type: image
+task_type: object_attributes

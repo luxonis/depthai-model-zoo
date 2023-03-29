@@ -1,4 +1,5 @@
-description: Real-time Object detection with YoloV7-tiny pre-trained on COCO data set.
+description: Real-time Object detection with YoloV7-tiny pre-trained on COCO data
+  set.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov7tiny_coco_416x416
 files:
 - checksum: ca8386370c1417d1b23a6427633234e6da0315999ce582f4328069e61ebe2d46d0551167b0f430ed18185ffeb0ffeb84
