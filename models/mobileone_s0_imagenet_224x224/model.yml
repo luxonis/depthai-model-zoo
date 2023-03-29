@@ -11,7 +11,7 @@ files:
   size: 4157046
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/mobileone_s0_imagenet_224x224/mobileone_s0_imagenet_224x224.bin
 - checksum: 3273c391141364ad2c57b878b1132136cfea7a010c3882daf2b26a6d46685af62f79ea31204907494889c1b941bb6b3f
-  name: FP16/mobileone_s0_imagenet_224x224.xml
+  name: FP16-INT8/mobileone_s0_imagenet_224x224.xml
   sha256: c691fe21c0676557687d428fb818a2e91d39b632283b02f22c1fe605cc8bd713
   size: 382830
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/mobileone_s0_imagenet_224x224/mobileone_s0_imagenet_224x224_int8.xml
