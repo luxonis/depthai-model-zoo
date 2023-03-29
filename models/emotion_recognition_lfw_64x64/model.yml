@@ -11,12 +11,12 @@ files:
   size: 4965014
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/emotion_recognition_lfw_64x64/emotion_recognition_lfw_64x64.bin
 - checksum: 49667156f484286757e879971de3d885bd99aa3a37958b11a5f50009e99917d8b72a55dc867a6425bc341d99014fb1c8
-  name: FP16-INT8/emotion_recognition_lfw_64x64_int8.xml
+  name: FP16/emotion_recognition_lfw_64x64.xml
   sha256: be34327267c0c81af75e6e4c1b7880467bff9920d2e4399a973236e0ea8b5e93
   size: 143694
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/emotion_recognition_lfw_64x64/emotion_recognition_lfw_64x64_int8.xml
 - checksum: 6a867fd6b55a466b2513a0d966fecaa243e294a79c19984ea1a3a96be06d321ce29e9517d9a5d1b8a1297093674cc160
-  name: FP16-INT8/emotion_recognition_lfw_64x64_int8.bin
+  name: FP16-INT8/emotion_recognition_lfw_64x64.bin
   sha256: 8d650d314066dc81e86737017948302c2b037c98e9c0f6c77ded0e39e81a4a14
   size: 2503530
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/emotion_recognition_lfw_64x64/emotion_recognition_lfw_64x64_int8.bin
