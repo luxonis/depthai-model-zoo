@@ -1,14 +1,14 @@
 description: A lightweight neural-network for rapid detection of orange traffic cones
 documentation: https://github.com/mkrupczak3/Coneslayer
 files:
-- checksum: 782f876bfde707f407137d13c491e27a6ade186321e37ae81b13094e69a03effa5547bf05003db873db246dd3e5f59bd
+- checksum: 3f3ee96d80c7a015e58b9d387e7471a52ad5a366f09c81c42f32acc8b1303b902ebd1d31620c999cfb489d304516b5f0
   name: FP16/coneslayer_416x416.xml
-  sha256: ee709227f5a8d56f13bc3ea5d0148a7d19afd3cd26b50b299d6009ba3a781f74
+  sha256: 1a0cd4e3874b41e931fadebe813ceab213b2fddf028248eddb0ede9974863ffd
   size: 198843
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/coneslayer_416x416/coneslayer_416x416.xml
-- checksum: 3c6ade58546e5bffc00a51600b40edbe13e89a77a0e04be9e3e3ec95ddf662862bfb3d6be245e9d0a3a60e04973e2482
+- checksum: 07ac0c3a4ef29fa648bb97734813d86ecdf230cb4935d5da66d798642992dc110cb00d106ed8094e87a957e5870557fb
   name: FP16/coneslayer_416x416.bin
-  sha256: fca6dbd744bfcce548912a2a3f368e85e4488a5d3f328c027af2633240b6fcca
+  sha256: 352304617fd9368def1f37621db6129431457aa270336b4ad41392dc4c862dc9
   size: 12013364
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/coneslayer_416x416/coneslayer_416x416.bin
 framework: dldt
