@@ -7,6 +7,8 @@
 
 ![Model demo](https://user-images.githubusercontent.com/18037362/146679906-d7ecea5a-b0ac-4012-bcfb-bfe44ab91db4.gif)
 
+**App demo**: https://github.com/luxonis/depthai-experiments/tree/master/gen2-facemesh
+
 ## Inputs
 
 Input shape: `1 x 3 x 160 x 160`
