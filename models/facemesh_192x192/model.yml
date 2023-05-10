@@ -1,15 +1,15 @@
 description: MediaPipe Facemesh model that provides 468 facial landmarks
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/facemesh_192x192
 files:
-- checksum: 77abb7ed9c5fd99cff2577d74ec8e0c401e60dddd8f5fdc1782f56ef3d4dd3f83c1fdc2eaf9abce65ee2eb3aeab3878d
+- checksum: f20a096d399296ecd510bbc7fdcdac5946b6ebfeb7355c8463ef5d81d2a9a78069a956ea4d1c59656486bccfff5042eb
   name: FP16/facemesh_192x192.xml
-  sha256: 1daa1d7afceaff68ef63c251b85069157365a860bdb68bf14cac2b92cdb1c9dd
-  size: 147051
+  sha256: 7f6ea405a4aa4b80979561ccb50ec1f9d91b2df7320c9e3e79030e6919469faf
+  size: 175897
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/facemesh_192x192/facemesh_192x192.xml
-- checksum: a21bdb55baf58eb5fbba192be2c4c4921ca41d9f6eba6792744a9886d8e77ad53a78f5769a6da70266de81f6ea92d885
+- checksum: bd31c4e4343f4c08f4959be9fbbba48298d1f50ef767b92879b114be72fad2ef71bd566689de451ff6acd5cbc931108a
   name: FP16/facemesh_192x192.bin
-  sha256: 4daedda8c5e0d517268d5348cb4557182bfe4c56de6616f15e32ea13c2d690f1
-  size: 1206940
+  sha256: 8793724f4430cb9a9a2c77473983e13dc4c9820773d524622bbf38095578d940
+  size: 1206428
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/facemesh_192x192/facemesh_192x192.bin
 framework: dldt
 license: https://github.com/google/mediapipe/blob/master/LICENSE
