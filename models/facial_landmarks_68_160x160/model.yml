@@ -1,15 +1,15 @@
-description: Detects 68 facial landmarks.
+description: Detect 68 facial landmarks.
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/facial_landmarks_68_160x160
 files:
-- checksum: f20a096d399296ecd510bbc7fdcdac5946b6ebfeb7355c8463ef5d81d2a9a78069a956ea4d1c59656486bccfff5042eb
+- checksum: 795902fd2c8d9485da412b4e17322eceec824e8364b380c9d9b1aa0bfbc81cb852a1566b4e4eea2e6000669de96297f6
   name: FP16/facial_landmarks_68_160x160.xml
-  sha256: 7f6ea405a4aa4b80979561ccb50ec1f9d91b2df7320c9e3e79030e6919469faf
-  size: 175897
+  sha256: c9c51dc34dd9f2c4e1eed21ac206cf0c5332fea4c0a2873f5ffdb8b5ae0aea86
+  size: 251699
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.xml
-- checksum: bd31c4e4343f4c08f4959be9fbbba48298d1f50ef767b92879b114be72fad2ef71bd566689de451ff6acd5cbc931108a
+- checksum: 6ec358cb3397726744bcc8c0e517a74d82e9c9610a50b26b31a811231624247bb50bd90bf2c265446a87954dd516825d
   name: FP16/facial_landmarks_68_160x160.bin
-  sha256: 8793724f4430cb9a9a2c77473983e13dc4c9820773d524622bbf38095578d940
-  size: 1206428
+  sha256: 6f17fd871abd3ffc3b1a13256d2a0e285db84a07bf2145ebd39c4888d97a218f
+  size: 1252042
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/facial_landmarks_68_160x160/facial_landmarks_68_160x160.bin
 framework: dldt
 license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/facial_landmarks_68_160x160
