@@ -1,0 +1,15 @@
+description: empty
+license: empty
+task_type: object_attributes
+files:
+- checksum: 81e4ee876722281cf70949394d736311d63ad5a316e5897da0fb24c03e6c8bc1b5e84beb336f2cec74e2f0da12bdea6e
+  name: FP16/palm_detection_128x128_decoding.xml
+  sha256: b590294e40880b0f694e47997339ba9edaff376692bf6e2279df007ef10d33f1
+  size: 38920
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/palm_detection_128x128_decoding/palm_detection_128x128_decoding.xml
+- checksum: 05a81d7a9591937d808ca41a073c178393bae06d63bb7be3ea5f430f0f64241481bb9c895d8a7bf85a3319c11ff557f5
+  name: FP16/palm_detection_128x128_decoding.bin
+  sha256: 22115ca239ddf6ace0b4b8d3a640ee3e0fb91e34cb141c91ad950ad0f7a5d71a
+  size: 32440
+source: empty
+framework: dldt
