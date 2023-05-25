@@ -54,6 +54,6 @@ files:
   name: FP16/{bin.name}
   sha256: {sha256sum(bin)}
   size: {bin.stat().st_size}
-  source: EDIT
+source: empty
 framework: dldt
 """)
