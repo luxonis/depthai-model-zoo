@@ -11,5 +11,5 @@ files:
   name: FP16/palm_detection_128x128_decoding.bin
   sha256: 22115ca239ddf6ace0b4b8d3a640ee3e0fb91e34cb141c91ad950ad0f7a5d71a
   size: 32440
-source: empty
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/palm_detection_128x128_decoding/palm_detection_128x128_decoding.bin
 framework: dldt

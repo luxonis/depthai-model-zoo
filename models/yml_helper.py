@@ -54,6 +54,6 @@ files:
   name: FP16/{bin.name}
   sha256: {sha256sum(bin)}
   size: {bin.stat().st_size}
-source: empty
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/{bin.stem}/{bin.name}
 framework: dldt
 """)
