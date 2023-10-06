@@ -1,8 +1,8 @@
 {
-    "model":
+    "model": 
     {
-        "model_name": "yolov7tiny_waldo_288x512",
-        "zoo": "depthai"
+        "bin": "yolov7tiny_waldo_288x512.bin",
+        "xml": "yolov7tiny_waldo_288x512.xml"
     },
     "nn_config": {
         "output_format": "detection",
