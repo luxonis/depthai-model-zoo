@@ -1,0 +1,40 @@
+description: ResNet18 image encoder for NanoSAM
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/nanosam_resnet18_image_encoder_1024x1024
+files:
+- checksum: b752ae5aea32961a95957750c74c1c076953d3c392427303e2b60040a891b1f4c1d58f6deb8d7eee1c2d0246a323fc3a
+  name: FP16/nanosam_resnet18_image_encoder_1024x1024.xml
+  sha256: b9acf6c0314a48a52b2ca92b09b03f3159015ad0080f946e5f88da3d415953d0
+  size: 120264
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/nanosam_resnet18_image_encoder_1024x1024/nanosam_resnet18_image_encoder_1024x1024.xml
+- checksum: a8b93b905982c62043c3fff927a51094d3807ec4417f1326d9e9b73b3e384ed428c517f97881c4bcf77331629f8cecec
+  name: FP16/nanosam_resnet18_image_encoder_1024x1024.bin
+  sha256: 037a83d8b8666f6157d08e06417a0795a4f4a8c666b1b4c679321d2fcb6f323a
+  size: 31652102
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/nanosam_resnet18_image_encoder_1024x1024/nanosam_resnet18_image_encoder_1024x1024.bin
+framework: dldt
+license: https://github.com/NVIDIA-AI-IOT/nanosam/tree/main
+meta:
+  FPS:
+    mean: 2.0
+    std: 0.1
+  backbone: ResNet18
+  downloads:
+  - name: nanosam_resnet18_image_encoder_1024x1024.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/nanosam_resnet18_image_encoder_1024x1024/nanosam_resnet18_image_encoder_1024x1024.xml
+  - name: nanosam_resnet18_image_encoder_1024x1024.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/nanosam_resnet18_image_encoder_1024x1024/nanosam_resnet18_image_encoder_1024x1024.bin
+  experiment: https://github.com/luxonis/depthai-experiments/tree/master/gen2-nanosam
+  featured: false
+  inputs:
+  - name: images
+    shape: 3, 1024, 1024
+    type: image
+  license:
+    name: Apache-2.0
+    url: https://opensource.org/licenses/Apache-2.0
+  source:
+  - name: NanoSAM
+    url: https://github.com/NVIDIA-AI-IOT/nanosam
+  uses_depth: false
+  verbose_name: NanoSAM embedder
+task_type: classification
