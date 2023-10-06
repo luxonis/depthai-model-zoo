@@ -1,0 +1,76 @@
+{
+    "model":
+    {
+        "model_name": "yolov7tiny_waldo_416x768",
+        "zoo": "depthai"
+    },
+    "nn_config": {
+        "output_format": "detection",
+        "NN_family": "YOLO",
+        "input_size": "768x416",
+        "NN_specific_metadata": {
+            "classes": 16,
+            "coordinates": 4,
+            "anchors": [
+                5.53125,
+                5.3359375,
+                7.96484375,
+                13.8828125,
+                14.03125,
+                8.125,
+                15.8828125,
+                15.8203125,
+                26.546875,
+                22.640625,
+                37.5,
+                38.5625,
+                59.71875,
+                54.6875,
+                86.9375,
+                88.5625,
+                143.875,
+                132.375
+            ],
+            "anchor_masks": {
+                "side96": [
+                    0,
+                    1,
+                    2
+                ],
+                "side48": [
+                    3,
+                    4,
+                    5
+                ],
+                "side24": [
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "iou_threshold": 0.50,
+            "confidence_threshold": 0.50
+        }
+    },
+    "mappings": {
+        "labels": [
+            "car",
+            "van",
+            "truck",
+            "building",
+            "human",
+            "gastank",
+            "digger",
+            "container",
+            "bus",
+            "pylon",
+            "boat",
+            "bike",
+            "smoke",
+            "solarpanels",
+            "mil",
+            "plane"
+        ]
+    },
+    "version": 1
+}
