@@ -1,6 +1,6 @@
 description: Real-time overhead object detection model (288x512)
 documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov7tiny_waldo_288x512
-license: TODO
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov7tiny_waldo_288x512
 task_type: detection
 files:
 - checksum: b6840e41b542c3085c76e65add4110cdd2f9dedebf90dd479f2fa0d77a305b211709a92f14a26fa999082ce61b558c60
@@ -16,15 +16,15 @@ files:
 framework: dldt
 meta:
   FPS:
-    mean: TODO
-    std: TODO
+    mean: 34.5
+    std: 0.1
   backbone: YOLOv7-tiny
   downloads:
   - name: yolov7tiny_waldo_288x512.xml
     url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov7tiny_waldo_288x512/yolov7tiny_waldo_288x512.xml
   - name: yolov7tiny_waldo_288x512.bin
     url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov7tiny_waldo_288x512/yolov7tiny_waldo_288x512.bin
-  experiment: TODO
+  experiment: TBA
   featured: false
   inputs:
   - name: images
@@ -37,4 +37,4 @@ meta:
   - name: yolov7-tiny-W25-MS_rect_1280_736_bs192-best-topk-200
     url: https://bit.ly/3P7UdZ6
   uses_depth: false
-  verbose_name: TODO
+  verbose_name: WALDO
