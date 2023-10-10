@@ -31,7 +31,7 @@ meta:
     shape: 3, 288, 512
     type: image
   license:
-    name: MIT License
+    name: MIT
     url: https://github.com/stephansturges/WALDO#unless-otherwise-specified-all-code-in-this-release-is-published-with-thelicence-conditions-below
   source:
   - name: yolov7-tiny-W25-MS_rect_1280_736_bs192-best-topk-200
