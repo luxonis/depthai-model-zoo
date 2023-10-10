@@ -1,0 +1,40 @@
+description: Real-time overhead object detection model (288x512)
+documentation: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov7tiny_waldo_288x512
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov7tiny_waldo_288x512
+task_type: detection
+files:
+- checksum: b6840e41b542c3085c76e65add4110cdd2f9dedebf90dd479f2fa0d77a305b211709a92f14a26fa999082ce61b558c60
+  name: FP16/yolov7tiny_waldo_288x512.xml
+  sha256: d7ba4a1e4401eeb6352839f2eebcd3d759f2232d494ab41f7528dfde60c22480
+  size: 290774
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov7tiny_waldo_288x512/yolov7tiny_waldo_288x512.xml
+- checksum: 1713c7fdc2468ef64c9a34648fa9277f4b9cd5cc3a6aa801bbe85efd7d1dab211cfa5fd5cbd402cecb87649b5aeaf028
+  name: FP16/yolov7tiny_waldo_288x512.bin
+  sha256: 008848c12d3a0db824d5841c9ae2498f642eacfb102f978b5faac7920d64c263
+  size: 12094220
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov7tiny_waldo_288x512/yolov7tiny_waldo_288x512.bin
+framework: dldt
+meta:
+  FPS:
+    mean: 34.5
+    std: 0.1
+  backbone: YOLOv7-tiny
+  downloads:
+  - name: yolov7tiny_waldo_288x512.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov7tiny_waldo_288x512/yolov7tiny_waldo_288x512.xml
+  - name: yolov7tiny_waldo_288x512.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov7tiny_waldo_288x512/yolov7tiny_waldo_288x512.bin
+  experiment: TBA
+  featured: false
+  inputs:
+  - name: images
+    shape: 3, 288, 512
+    type: image
+  license:
+    name: MIT
+    url: https://github.com/stephansturges/WALDO#unless-otherwise-specified-all-code-in-this-release-is-published-with-thelicence-conditions-below
+  source:
+  - name: yolov7-tiny-W25-MS_rect_1280_736_bs192-best-topk-200
+    url: https://bit.ly/3P7UdZ6
+  uses_depth: false
+  verbose_name: WALDO
