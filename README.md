@@ -9,21 +9,21 @@
 ![DepthAI-Model-Zoo](https://user-images.githubusercontent.com/56075061/141786001-33055085-693f-4a7b-a359-90adb5f3509d.png)
 
 
-DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and the community. A web interface for easier navigation is available at [zoo.luxonis.com](https://zoo.luxonis.com).
+DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and the community.
 
-We try to provide already converted latest state-of-the-art models ready for use with DepthAI and our OAK cameras. Most models are accompanied by additional metadata (FPS, accuracy, number of parameters, and FLOPs) and links to the experiments that show the example usage of each model.
+We provide already converted latest state-of-the-art models ready for use with DepthAI and our OAK cameras. Most models are accompanied by additional metadata (FPS, accuracy, number of parameters, and FLOPs) and links to the experiments that show the example usage of each model. Refer to `model.yml` inside each directory fr more information.
 
-Models in DepthAI Model ZOO should be in **BGR color order** and **CHW (planar) channel layout**. You can change these values with [Model Optimizer's](https://docs.openvino.ai/2022.1/openvino_docs_MO_DG_Additional_Optimization_Use_Cases.html) `--layout` and `reverse_input_channels` arguments.
+Models in DepthAI Model ZOO should expect **BGR color order** and **CHW (planar) channel layout**. You can change these values with [Model Optimizer's](https://docs.openvino.ai/2022.1/openvino_docs_MO_DG_Additional_Optimization_Use_Cases.html) `--layout` and `reverse_input_channels` arguments.
 
 ## Usage
 
-You can download each model from our [web interface](https://zoo.luxonis.com/). Alternatively, you can use the [blobconverter](https://github.com/luxonis/blobconverter) API:
+To use the models on camera, use [blobconverter](https://github.com/luxonis/blobconverter) API:
 
 1. install `blobconverter` using `pip`:
     ```
     pip install blobconverter
     ```
-2. use the following snippet to download the YOLOP model and get its blob path:
+2. use the following snippet to download a model and get its blob path:
     ```
     model_path = blobconverter.from_zoo(name="yolop_320x320",
                                         zoo_type="depthai",
@@ -37,7 +37,7 @@ In the example above we use the YOLOP model from the DepthAI Model ZOO. In case 
 
 For more information please visit:
 
-* [blobconverter](https://github.com/luxonis/blobconverter) repository for more information on how to use the API,
+* [blobconverter](https://github.com/luxonis/blobconverter) repository for instructions related to the API,
 * [blobconverter web interface](https://blobconverter.luxonis.com/) for easy conversion of the models that are not in our model zoo,
 * our [documentation](https://docs.luxonis.com/en/latest/) for more information on how to convert and deploy the models.
 
