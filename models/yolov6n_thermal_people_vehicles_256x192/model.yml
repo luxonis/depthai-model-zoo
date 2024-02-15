@@ -1,0 +1,40 @@
+description: Real-time Object detection with YoloV6n pre-trained on Teledyne FLIR Free ADAS Thermal Dataset v2
+files:
+- checksum: 3295edb4c28b116551649d4a82f9e47f45c118e75d87f4e8f7fe2134be6544b6a17210bcaff9ebca4d82b6dde406c161
+  name: FP16/yolov6n_thermal_people_vehicles_256x192.xml
+  sha256: d94c7b35296895d2d59eb62cb3dc0459eaf69c3a15e694c2add39cb28a152557
+  size: 300300
+  source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6n_thermal_people_vehicles_256x192/yolov6n_thermal_people_vehicles_256x192.xml
+- checksum: 4a827e1b07ec9c94ff28d77e3daa01836d4822d1fa390d223774d5c2f8f28da76d14f8a3b816bb193884d38ec3e67d68
+  name: FP16/yolov6n_thermal_people_vehicles_256x192.bin
+  sha256: ec45b8c573011e52d6857925a0cd823767acb27bd1408abb42f3fdf98e855bed
+  size: 9257900
+  source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov6n_thermal_people_vehicles_256x192/yolov6n_thermal_people_vehicles_256x192.bin
+framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov6n_coco_640x640
+meta:
+  FPS:
+    mean: /
+    std: /
+  backbone: EfficientRep
+  downloads:
+  - name: yolov6n_thermal_people_vehicles_256x192.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6n_thermal_people_vehicles_256x192/yolov6n_thermal_people_vehicles_256x192.xml
+  - name: yolov6n_thermal_people_vehicles_256x192.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov6n_thermal_people_vehicles_256x192/yolov6n_thermal_people_vehicles_256x192.bin
+  experiment: null
+  featured: true
+  inputs:
+  - name: images
+    shape: 1, 192, 256
+    type: image
+  license:
+    name: GNU GPL-3
+    url: https://github.com/meituan/YOLOv6/blob/main/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/meituan/YOLOv6
+  thumbnail: null
+  uses_depth: false
+  verbose_name: YoloV6 Nano
+task_type: detection
