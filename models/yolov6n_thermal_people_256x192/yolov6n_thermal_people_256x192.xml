@@ -8258,10 +8258,10 @@
 			</output>
 		</layer>
 		<layer id="427" name="detect.cls_preds.2.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="2, 128, 1, 1" offset="9061064" size="512" />
+			<data element_type="f16" shape="1, 128, 1, 1" offset="9061064" size="256" />
 			<output>
 				<port id="0" precision="FP16">
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>128</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -8275,7 +8275,7 @@
 			</rt_info>
 			<input>
 				<port id="0" precision="FP16">
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>128</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -8283,7 +8283,7 @@
 			</input>
 			<output>
 				<port id="1" precision="FP32" names="detect.cls_preds.2.weight">
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>128</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -8300,7 +8300,7 @@
 					<dim>8</dim>
 				</port>
 				<port id="1" precision="FP32">
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>128</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -8309,18 +8309,18 @@
 			<output>
 				<port id="2" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>6</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="430" name="Reshape_1238_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 2, 1, 1" offset="9061576" size="4" />
+			<data element_type="f16" shape="1, 1, 1, 1" offset="9061320" size="2" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -8334,7 +8334,7 @@
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -8342,7 +8342,7 @@
 			<output>
 				<port id="1" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -8353,13 +8353,13 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>6</dim>
 					<dim>8</dim>
 				</port>
 				<port id="1" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -8367,7 +8367,7 @@
 			<output>
 				<port id="2" precision="FP32" names="/detect/cls_preds.2/Conv_output_0">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>6</dim>
 					<dim>8</dim>
 				</port>
@@ -8377,7 +8377,7 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>6</dim>
 					<dim>8</dim>
 				</port>
@@ -8385,14 +8385,14 @@
 			<output>
 				<port id="1" precision="FP32" names="/detect/Sigmoid_2_output_0">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>6</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="434" name="Constant_1281" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="9061580" size="8" />
+			<data element_type="i64" shape="1" offset="9061322" size="8" />
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
@@ -8404,7 +8404,7 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>6</dim>
 					<dim>8</dim>
 				</port>
@@ -8438,7 +8438,7 @@
 				</port>
 				<port id="2" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>6</dim>
 					<dim>8</dim>
 				</port>
@@ -8446,14 +8446,14 @@
 			<output>
 				<port id="3" precision="FP32" names="output3_yolov6r2">
 					<dim>1</dim>
-					<dim>7</dim>
+					<dim>6</dim>
 					<dim>6</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="438" name="detect.stems.1.block.conv.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="64, 64, 1, 1" offset="9061588" size="8192" />
+			<data element_type="f16" shape="64, 64, 1, 1" offset="9061330" size="8192" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>64</dim>
@@ -8511,7 +8511,7 @@
 			</output>
 		</layer>
 		<layer id="441" name="Reshape_1122_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 64, 1, 1" offset="9069780" size="128" />
+			<data element_type="f16" shape="1, 64, 1, 1" offset="9069522" size="128" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -8587,7 +8587,7 @@
 			</output>
 		</layer>
 		<layer id="445" name="detect.reg_convs.1.block.conv.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="64, 64, 3, 3" offset="9069908" size="73728" />
+			<data element_type="f16" shape="64, 64, 3, 3" offset="9069650" size="73728" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>64</dim>
@@ -8645,7 +8645,7 @@
 			</output>
 		</layer>
 		<layer id="448" name="Reshape_1171_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 64, 1, 1" offset="9143636" size="128" />
+			<data element_type="f16" shape="1, 64, 1, 1" offset="9143378" size="128" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -8721,7 +8721,7 @@
 			</output>
 		</layer>
 		<layer id="452" name="detect.reg_preds.1.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="4, 64, 1, 1" offset="9143764" size="512" />
+			<data element_type="f16" shape="4, 64, 1, 1" offset="9143506" size="512" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>4</dim>
@@ -8779,7 +8779,7 @@
 			</output>
 		</layer>
 		<layer id="455" name="Reshape_1188_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 4, 1, 1" offset="9144276" size="8" />
+			<data element_type="f16" shape="1, 4, 1, 1" offset="9144018" size="8" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -8837,7 +8837,7 @@
 			</output>
 		</layer>
 		<layer id="458" name="detect.cls_convs.1.block.conv.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="64, 64, 3, 3" offset="9144284" size="73728" />
+			<data element_type="f16" shape="64, 64, 3, 3" offset="9144026" size="73728" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>64</dim>
@@ -8895,7 +8895,7 @@
 			</output>
 		</layer>
 		<layer id="461" name="Reshape_1139_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 64, 1, 1" offset="9218012" size="128" />
+			<data element_type="f16" shape="1, 64, 1, 1" offset="9217754" size="128" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -8971,10 +8971,10 @@
 			</output>
 		</layer>
 		<layer id="465" name="detect.cls_preds.1.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="2, 64, 1, 1" offset="9218140" size="256" />
+			<data element_type="f16" shape="1, 64, 1, 1" offset="9217882" size="128" />
 			<output>
 				<port id="0" precision="FP16">
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>64</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -8988,7 +8988,7 @@
 			</rt_info>
 			<input>
 				<port id="0" precision="FP16">
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>64</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -8996,7 +8996,7 @@
 			</input>
 			<output>
 				<port id="1" precision="FP32" names="detect.cls_preds.1.weight">
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>64</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -9013,7 +9013,7 @@
 					<dim>16</dim>
 				</port>
 				<port id="1" precision="FP32">
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>64</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -9022,18 +9022,18 @@
 			<output>
 				<port id="2" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>12</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="468" name="Reshape_1156_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 2, 1, 1" offset="9218396" size="4" />
+			<data element_type="f16" shape="1, 1, 1, 1" offset="9218010" size="2" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -9047,7 +9047,7 @@
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -9055,7 +9055,7 @@
 			<output>
 				<port id="1" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -9066,13 +9066,13 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>12</dim>
 					<dim>16</dim>
 				</port>
 				<port id="1" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -9080,7 +9080,7 @@
 			<output>
 				<port id="2" precision="FP32" names="/detect/cls_preds.1/Conv_output_0">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>12</dim>
 					<dim>16</dim>
 				</port>
@@ -9090,7 +9090,7 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>12</dim>
 					<dim>16</dim>
 				</port>
@@ -9098,14 +9098,14 @@
 			<output>
 				<port id="1" precision="FP32" names="/detect/Sigmoid_1_output_0">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>12</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="472" name="Constant_1278" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="9061580" size="8" />
+			<data element_type="i64" shape="1" offset="9061322" size="8" />
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
@@ -9117,7 +9117,7 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>12</dim>
 					<dim>16</dim>
 				</port>
@@ -9151,7 +9151,7 @@
 				</port>
 				<port id="2" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>12</dim>
 					<dim>16</dim>
 				</port>
@@ -9159,14 +9159,14 @@
 			<output>
 				<port id="3" precision="FP32" names="output2_yolov6r2">
 					<dim>1</dim>
-					<dim>7</dim>
+					<dim>6</dim>
 					<dim>12</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="476" name="detect.stems.0.block.conv.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="32, 32, 1, 1" offset="9218400" size="2048" />
+			<data element_type="f16" shape="32, 32, 1, 1" offset="9218012" size="2048" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>32</dim>
@@ -9224,7 +9224,7 @@
 			</output>
 		</layer>
 		<layer id="479" name="Reshape_1040_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 32, 1, 1" offset="9220448" size="64" />
+			<data element_type="f16" shape="1, 32, 1, 1" offset="9220060" size="64" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -9300,7 +9300,7 @@
 			</output>
 		</layer>
 		<layer id="483" name="detect.reg_convs.0.block.conv.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="32, 32, 3, 3" offset="9220512" size="18432" />
+			<data element_type="f16" shape="32, 32, 3, 3" offset="9220124" size="18432" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>32</dim>
@@ -9358,7 +9358,7 @@
 			</output>
 		</layer>
 		<layer id="486" name="Reshape_1089_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 32, 1, 1" offset="9238944" size="64" />
+			<data element_type="f16" shape="1, 32, 1, 1" offset="9238556" size="64" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -9434,7 +9434,7 @@
 			</output>
 		</layer>
 		<layer id="490" name="detect.reg_preds.0.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="4, 32, 1, 1" offset="9239008" size="256" />
+			<data element_type="f16" shape="4, 32, 1, 1" offset="9238620" size="256" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>4</dim>
@@ -9492,7 +9492,7 @@
 			</output>
 		</layer>
 		<layer id="493" name="Reshape_1106_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 4, 1, 1" offset="9239264" size="8" />
+			<data element_type="f16" shape="1, 4, 1, 1" offset="9238876" size="8" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -9550,7 +9550,7 @@
 			</output>
 		</layer>
 		<layer id="496" name="detect.cls_convs.0.block.conv.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="32, 32, 3, 3" offset="9239272" size="18432" />
+			<data element_type="f16" shape="32, 32, 3, 3" offset="9238884" size="18432" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>32</dim>
@@ -9608,7 +9608,7 @@
 			</output>
 		</layer>
 		<layer id="499" name="Reshape_1057_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 32, 1, 1" offset="9257704" size="64" />
+			<data element_type="f16" shape="1, 32, 1, 1" offset="9257316" size="64" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
@@ -9684,10 +9684,10 @@
 			</output>
 		</layer>
 		<layer id="503" name="detect.cls_preds.0.weight_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="2, 32, 1, 1" offset="9257768" size="128" />
+			<data element_type="f16" shape="1, 32, 1, 1" offset="9257380" size="64" />
 			<output>
 				<port id="0" precision="FP16">
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>32</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -9701,7 +9701,7 @@
 			</rt_info>
 			<input>
 				<port id="0" precision="FP16">
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>32</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -9709,7 +9709,7 @@
 			</input>
 			<output>
 				<port id="1" precision="FP32" names="detect.cls_preds.0.weight">
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>32</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -9726,7 +9726,7 @@
 					<dim>32</dim>
 				</port>
 				<port id="1" precision="FP32">
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>32</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -9735,18 +9735,18 @@
 			<output>
 				<port id="2" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>24</dim>
 					<dim>32</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="506" name="Reshape_1074_compressed" type="Const" version="opset1">
-			<data element_type="f16" shape="1, 2, 1, 1" offset="9257896" size="4" />
+			<data element_type="f16" shape="1, 1, 1, 1" offset="9257444" size="2" />
 			<output>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -9760,7 +9760,7 @@
 			<input>
 				<port id="0" precision="FP16">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -9768,7 +9768,7 @@
 			<output>
 				<port id="1" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -9779,13 +9779,13 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>24</dim>
 					<dim>32</dim>
 				</port>
 				<port id="1" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -9793,7 +9793,7 @@
 			<output>
 				<port id="2" precision="FP32" names="/detect/cls_preds.0/Conv_output_0">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>24</dim>
 					<dim>32</dim>
 				</port>
@@ -9803,7 +9803,7 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>24</dim>
 					<dim>32</dim>
 				</port>
@@ -9811,14 +9811,14 @@
 			<output>
 				<port id="1" precision="FP32" names="/detect/Sigmoid_output_0">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>24</dim>
 					<dim>32</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="510" name="Constant_1275" type="Const" version="opset1">
-			<data element_type="i64" shape="1" offset="9061580" size="8" />
+			<data element_type="i64" shape="1" offset="9061322" size="8" />
 			<output>
 				<port id="0" precision="I64">
 					<dim>1</dim>
@@ -9830,7 +9830,7 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>24</dim>
 					<dim>32</dim>
 				</port>
@@ -9864,7 +9864,7 @@
 				</port>
 				<port id="2" precision="FP32">
 					<dim>1</dim>
-					<dim>2</dim>
+					<dim>1</dim>
 					<dim>24</dim>
 					<dim>32</dim>
 				</port>
@@ -9872,7 +9872,7 @@
 			<output>
 				<port id="3" precision="FP32" names="output1_yolov6r2">
 					<dim>1</dim>
-					<dim>7</dim>
+					<dim>6</dim>
 					<dim>24</dim>
 					<dim>32</dim>
 				</port>
@@ -9882,7 +9882,7 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>7</dim>
+					<dim>6</dim>
 					<dim>24</dim>
 					<dim>32</dim>
 				</port>
@@ -9892,7 +9892,7 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>7</dim>
+					<dim>6</dim>
 					<dim>12</dim>
 					<dim>16</dim>
 				</port>
@@ -9902,7 +9902,7 @@
 			<input>
 				<port id="0" precision="FP32">
 					<dim>1</dim>
-					<dim>7</dim>
+					<dim>6</dim>
 					<dim>6</dim>
 					<dim>8</dim>
 				</port>
@@ -10445,9 +10445,9 @@
 		<Runtime_version value="2023.0.1-11005-fa1c41994f3-releases/2023/0" />
 		<conversion_parameters>
 			<compress_to_fp16 value="True" />
-			<input_model value="DIR\yolov6n_sim.onnx" />
+			<input_model value="DIR\yolov6n_people.onnx" />
 			<is_python_api_used value="False" />
-			<model_name value="yolov6n_cars_people" />
+			<model_name value="yolov6n_people" />
 			<output value="output1_yolov6r2,output2_yolov6r2,output3_yolov6r2" />
 			<scale value="255.0" />
 		</conversion_parameters>
