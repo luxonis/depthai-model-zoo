@@ -11,7 +11,7 @@ files:
   size: 9257900
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov6n_thermal_people_vehicles_256x192/yolov6n_thermal_people_vehicles_256x192.bin
 framework: dldt
-license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov6n_coco_640x640
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov6n_thermal_people_vehicles_256x192
 meta:
   FPS:
     mean: /
