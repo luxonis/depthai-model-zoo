@@ -1,8 +1,8 @@
 description: Real-time Object detection with YoloV6n pre-trained on Teledyne FLIR Free ADAS Thermal Dataset v2
 files:
-- checksum: 3295edb4c28b116551649d4a82f9e47f45c118e75d87f4e8f7fe2134be6544b6a17210bcaff9ebca4d82b6dde406c161
+- checksum: da0d8a45de87502acbc1a2e5273d098f1910660c86d8f5c77705eab405b69ad42bb376b95d3179a6249283a532efa44e
   name: FP16/yolov6n_thermal_people_vehicles_256x192.xml
-  sha256: d94c7b35296895d2d59eb62cb3dc0459eaf69c3a15e694c2add39cb28a152557
+  sha256: a8241bc5cb42c46fcbfc43326897d80edf806a6844197cdc82f1a961a8a4fe3d
   size: 289844
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6n_thermal_people_vehicles_256x192/yolov6n_thermal_people_vehicles_256x192.xml
 - checksum: 4a827e1b07ec9c94ff28d77e3daa01836d4822d1fa390d223774d5c2f8f28da76d14f8a3b816bb193884d38ec3e67d68
