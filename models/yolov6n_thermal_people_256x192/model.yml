@@ -1,6 +1,4 @@
-description: empty
-license: empty
-task_type: object_attributes
+description: Real-time Object detection with YoloV6n pre-trained on SCUT FIR Pedestrian Dataset
 files:
 - checksum: e19a11597400fe0567f7f1d08a01842e1684aa79b8047c0c2634a658f3745c2765668c063c0b87920c1973a1b5566f09
   name: FP16/yolov6n_thermal_people_256x192.xml
@@ -13,3 +11,30 @@ files:
   size: 9257446
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov6n_thermal_people_256x192/yolov6n_thermal_people_256x192.bin
 framework: dldt
+license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov6n_thermal_people_256x192
+meta:
+  FPS:
+    mean: /
+    std: /
+  backbone: EfficientRep
+  downloads:
+  - name: yolov6n_thermal_people_vehicles_256x192.xml
+    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6n_thermal_people_256x192/yolov6n_thermal_people_256x192.xml
+  - name: yolov6n_thermal_people_vehicles_256x192.bin
+    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov6n_thermal_people_256x192/yolov6n_thermal_people_256x192.bin
+  experiment: null
+  featured: true
+  inputs:
+  - name: images
+    shape: 1, 192, 256
+    type: image
+  license:
+    name: GNU GPL-3
+    url: https://github.com/meituan/YOLOv6/blob/main/LICENSE
+  source:
+  - name: GitHub
+    url: https://github.com/meituan/YOLOv6
+  thumbnail: null
+  uses_depth: false
+  verbose_name: YoloV6 Nano
+task_type: detection
