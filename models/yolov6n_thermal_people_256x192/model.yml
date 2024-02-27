@@ -1,9 +1,9 @@
 description: Real-time Object detection with YoloV6n pre-trained on SCUT FIR Pedestrian Dataset
 files:
-- checksum: 08a48754bab99f7c77439b1b1d260ab5578484fcccf039551e8e7304d5c15b6c0a789670ca8a37f05b7e7d06d9e5eeff
+- checksum: e19a11597400fe0567f7f1d08a01842e1684aa79b8047c0c2634a658f3745c2765668c063c0b87920c1973a1b5566f09
   name: FP16/yolov6n_thermal_people_256x192.xml
-  sha256: 3f04fd9914c1d7c6c1e0d18272c8c22eceed8278cde3c4e1eb3d56e9cd277ea5
-  size: 300296
+  sha256: bf9dafd9932e8c269b0823b5171c1406b55bfa4d98f3413946b2c9f45a8d5d64
+  size: 300312
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6n_thermal_people_256x192/yolov6n_thermal_people_256x192.xml
 - checksum: 589c88d37ba3ea81f14a87cf4d055023e86a50d6f6a4565bee096e35230725598d2ef0fcc7077cdca8870a8cf05c4d84
   name: FP16/yolov6n_thermal_people_256x192.bin
