@@ -10445,11 +10445,11 @@
 		<Runtime_version value="2023.0.1-11005-fa1c41994f3-releases/2023/0" />
 		<conversion_parameters>
 			<compress_to_fp16 value="True" />
-			<input_model value="DIR\yolov6n_sim.onnx" />
+			<input_model value="DIR\yolov6n_cars_people.onnx" />
 			<is_python_api_used value="False" />
 			<model_name value="yolov6n_cars_people" />
 			<output value="output1_yolov6r2,output2_yolov6r2,output3_yolov6r2" />
-			<scale value="255.0" />
+			<scale value="50.0" />
 		</conversion_parameters>
 		<legacy_frontend value="False" />
 	</rt_info>

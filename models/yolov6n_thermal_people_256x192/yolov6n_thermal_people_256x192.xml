@@ -10449,7 +10449,7 @@
 			<is_python_api_used value="False" />
 			<model_name value="yolov6n_people" />
 			<output value="output1_yolov6r2,output2_yolov6r2,output3_yolov6r2" />
-			<scale value="255.0" />
+			<scale value="50.0" />
 		</conversion_parameters>
 		<legacy_frontend value="False" />
 	</rt_info>
