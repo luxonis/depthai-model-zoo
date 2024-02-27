@@ -1,9 +1,11 @@
-description: Real-time Object detection with YoloV6n pre-trained on Teledyne FLIR Free ADAS Thermal Dataset v2
+description: empty
+license: empty
+task_type: object_attributes
 files:
-- checksum: 4682cea6149e7f145ead47dec7ef672241ff9df1ad92244241773be5531556698c7761c4cd454fd3a69485848243bb79
+- checksum: f2e57b2ef5864913cd26e0e644ad671676475e1f53d244bba11449042e29990c1c99a98fc8ef2c8f49f2d1723e352182
   name: FP16/yolov6n_thermal_people_vehicles_256x192.xml
-  sha256: 652e4e8b47e6731493c509a7d23693c756c39014d0b4cf97924f6a8d8d48547b
-  size: 300307
+  sha256: 2d2e8b5e51dcea5935f2e8e315d6e55b6e6778edf617a5a9375eaf16681da270
+  size: 300327
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6n_thermal_people_vehicles_256x192/yolov6n_thermal_people_vehicles_256x192.xml
 - checksum: 33d16e73f5bb12afbe3894dc5881c020f793465980a21e57c5390d549f48cc4b68707691bd530f97e759aea648537e25
   name: FP16/yolov6n_thermal_people_vehicles_256x192.bin
@@ -11,30 +13,3 @@ files:
   size: 9257900
   source: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov6n_thermal_people_vehicles_256x192/yolov6n_thermal_people_vehicles_256x192.bin
 framework: dldt
-license: https://github.com/luxonis/depthai-model-zoo/tree/main/models/yolov6n_thermal_people_vehicles_256x192
-meta:
-  FPS:
-    mean: /
-    std: /
-  backbone: EfficientRep
-  downloads:
-  - name: yolov6n_thermal_people_vehicles_256x192.xml
-    url: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6n_thermal_people_vehicles_256x192/yolov6n_thermal_people_vehicles_256x192.xml
-  - name: yolov6n_thermal_people_vehicles_256x192.bin
-    url: https://robothub.fra1.cdn.digitaloceanspaces.com/models/yolov6n_thermal_people_vehicles_256x192/yolov6n_thermal_people_vehicles_256x192.bin
-  experiment: null
-  featured: true
-  inputs:
-  - name: images
-    shape: 1, 192, 256
-    type: image
-  license:
-    name: GNU GPL-3
-    url: https://github.com/meituan/YOLOv6/blob/main/LICENSE
-  source:
-  - name: GitHub
-    url: https://github.com/meituan/YOLOv6
-  thumbnail: null
-  uses_depth: false
-  verbose_name: YoloV6 Nano
-task_type: detection
