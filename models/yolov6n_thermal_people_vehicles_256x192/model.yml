@@ -3,7 +3,7 @@ files:
 - checksum: 6c2ce7976a764e6542a152964fb87d39c7c6ecc769cc7e626b58e812c3abad0f562e3e453272dafce7ba8861834d9f1e
   name: FP16/yolov6n_thermal_people_vehicles_256x192.xml
   sha256: 19e6c242702eb051503fcdc0ba04951e829bf196130026254ab0950935b2dfc3
-  size: 300327
+  size: 289871
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6n_thermal_people_vehicles_256x192/yolov6n_thermal_people_vehicles_256x192.xml
 - checksum: 33d16e73f5bb12afbe3894dc5881c020f793465980a21e57c5390d549f48cc4b68707691bd530f97e759aea648537e25
   name: FP16/yolov6n_thermal_people_vehicles_256x192.bin
