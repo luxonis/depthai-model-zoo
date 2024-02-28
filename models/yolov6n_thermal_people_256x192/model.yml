@@ -3,7 +3,7 @@ files:
 - checksum: e19a11597400fe0567f7f1d08a01842e1684aa79b8047c0c2634a658f3745c2765668c063c0b87920c1973a1b5566f09
   name: FP16/yolov6n_thermal_people_256x192.xml
   sha256: bf9dafd9932e8c269b0823b5171c1406b55bfa4d98f3413946b2c9f45a8d5d64
-  size: 300312
+  size: 289856
   source: https://github.com/luxonis/depthai-model-zoo/raw/main/models/yolov6n_thermal_people_256x192/yolov6n_thermal_people_256x192.xml
 - checksum: 589c88d37ba3ea81f14a87cf4d055023e86a50d6f6a4565bee096e35230725598d2ef0fcc7077cdca8870a8cf05c4d84
   name: FP16/yolov6n_thermal_people_256x192.bin
