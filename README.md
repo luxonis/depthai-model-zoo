@@ -11,9 +11,9 @@
 
 DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and the community.
 
-We try to provide already converted latest state-of-the-art models ready for use with DepthAI and our OAK cameras. Most models are accompanied by additional metadata (FPS, accuracy, number of parameters, and FLOPs) and links to the experiments that show the example usage of each model.
+We provide already converted latest state-of-the-art models ready for use with DepthAI and our OAK cameras. Most models are accompanied by additional metadata (FPS, accuracy, number of parameters, and FLOPs) and links to the experiments that show the example usage of each model. Refer to `model.yml` inside each directory fr more information.
 
-Models in DepthAI Model ZOO should be in **BGR color order** and **CHW (planar) channel layout**. You can change these values with [Model Optimizer's](https://docs.openvino.ai/2022.1/openvino_docs_MO_DG_Additional_Optimization_Use_Cases.html) `--layout` and `reverse_input_channels` arguments.
+Models in DepthAI Model ZOO should expect **BGR color order** and **CHW (planar) channel layout**. You can change these values with [Model Optimizer's](https://docs.openvino.ai/2022.1/openvino_docs_MO_DG_Additional_Optimization_Use_Cases.html) `--layout` and `reverse_input_channels` arguments.
 
 ## Usage
 
@@ -23,7 +23,7 @@ To use the models on camera, use [blobconverter](https://github.com/luxonis/blob
     ```
     pip install blobconverter
     ```
-2. use the following snippet to download the YOLOP model and get its blob path:
+2. use the following snippet to download a model and get its blob path:
     ```
     model_path = blobconverter.from_zoo(name="yolop_320x320",
                                         zoo_type="depthai",
@@ -37,7 +37,7 @@ In the example above we use the YOLOP model from the DepthAI Model ZOO. In case 
 
 For more information please visit:
 
-* [blobconverter](https://github.com/luxonis/blobconverter) repository for more information on how to use the API,
+* [blobconverter](https://github.com/luxonis/blobconverter) repository for instructions related to the API,
 * [blobconverter web interface](https://blobconverter.luxonis.com/) for easy conversion of the models that are not in our model zoo,
 * our [documentation](https://docs.luxonis.com/en/latest/) for more information on how to convert and deploy the models.
 
