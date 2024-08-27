@@ -9,7 +9,7 @@
 ![DepthAI-Model-Zoo](https://user-images.githubusercontent.com/56075061/141786001-33055085-693f-4a7b-a359-90adb5f3509d.png)
 
 
-DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and the community. A web interface for easier navigation is available at [zoo.luxonis.com](https://zoo.luxonis.com).
+DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and the community.
 
 We try to provide already converted latest state-of-the-art models ready for use with DepthAI and our OAK cameras. Most models are accompanied by additional metadata (FPS, accuracy, number of parameters, and FLOPs) and links to the experiments that show the example usage of each model.
 
@@ -17,7 +17,7 @@ Models in DepthAI Model ZOO should be in **BGR color order** and **CHW (planar) 
 
 ## Usage
 
-You can download each model from our [web interface](https://zoo.luxonis.com/). Alternatively, you can use the [blobconverter](https://github.com/luxonis/blobconverter) API:
+To use the models on camera, use [blobconverter](https://github.com/luxonis/blobconverter) API:
 
 1. install `blobconverter` using `pip`:
     ```
