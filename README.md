@@ -4,10 +4,13 @@
 [![Forum](https://img.shields.io/badge/Forum-discuss-orange)](https://discuss.luxonis.com/)
 [![Docs](https://img.shields.io/badge/Docs-DepthAI-yellow)](https://docs.luxonis.com)
 [![GitHub](https://img.shields.io/github/license/luxonis/depthai-model-zoo?color=blue&style=flat-square&label=License)](https://github.com/luxonis/depthai-model-zoo/blob/main/LICENSE)
-[![web-interface](https://img.shields.io/static/v1?label=Web&message=page&color=orange&style=flat-square)](https://zoo.luxonis.com/)
+[![web-interface](https://img.shields.io/static/v1?label=Web&message=new%20zoo&color=orange&style=flat-square)](https://models.luxonis.com/)
 
 ![DepthAI-Model-Zoo](https://user-images.githubusercontent.com/56075061/141786001-33055085-693f-4a7b-a359-90adb5f3509d.png)
 
+> [!WARNING]
+> This repository is deprecated. Please use the new Luxonis Model Zoo instead:
+> https://models.luxonis.com/
 
 DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and the community.
 
