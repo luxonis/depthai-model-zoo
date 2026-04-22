@@ -9,8 +9,7 @@
 ![DepthAI-Model-Zoo](https://user-images.githubusercontent.com/56075061/141786001-33055085-693f-4a7b-a359-90adb5f3509d.png)
 
 > [!WARNING]
-> This repository is deprecated. Please use the new Luxonis Model Zoo instead:
-> https://models.luxonis.com/
+> This repository is deprecated. Please use the new [Luxonis Model Zoo](https://models.luxonis.com/) instead:
 
 DepthAI Model Zoo is a collection of open-source neural network models and datasets created and maintained by DepthAI developers and the community.
 
