@@ -37,4 +37,4 @@ meta:
     url: https://github.com/NVIDIA-AI-IOT/nanosam
   uses_depth: false
   verbose_name: NanoSAM embedder
-task_type: classification
+task_type: feature_extraction
